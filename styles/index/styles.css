@@ -253,7 +253,7 @@
   }
   #main #section2 #charInfos2 #textAreasDiv1 #backgroundArea {
     min-height: 250px;
-    font-size: 15px;
+    font-size: 18px;
     resize: none;
   }
   #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 {
@@ -266,7 +266,7 @@
   #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 .infoTextarea {
     resize: none;
     min-height: 120px;
-    font-size: 15px;
+    font-size: 18px;
   }
   #main #section2 #charInfos2 #textAreasDiv2 {
     display: -ms-grid;
