@@ -1,285 +1,141 @@
-#main {
+* {
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
 
-    #section1 {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-        #charInfos {
-            display: flex;
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(58, 58, 58);
+  }
 
-            #imgDiv {
-                display: grid;
+body {
+    background-color: black;
+    background-image: url(/imgs/backgroundRed.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 
-                #imgLabel {
-                    background-color: black;
-                    text-align: center;
-                    font-weight: bold;
-                    cursor: pointer;
-                    border-left: 2px solid gray;
-                    border-top: 2px solid gray;
-        
-                    #imgSelectBtnFake {
-                        font-size: 20px;
-                    }
-                }
-        
-                #imgLabel:hover {
-                    background-color: white;
-        
-                    #imgSelectBtnFake {
-                        color: black;
-                    }
-                }
-
-                #charImg {
-                    background-color: black;
-                    width: 25em;
-                    height: 22.5em;
-                    border: solid 1px gray;
-                    object-fit: cover;
-                    object-position: 20% 10%;
-                }
-            }
-    
-            input {
-                background-color: black;
-            }
-    
-            #infoInput {
-                background-color: black;
-                border: solid 1px gray;
-                padding: 10px;
-                width: 100%;
-                display: grid;
-                grid-template-columns: auto auto;
-                column-gap: 30px;
-    
-                .infoInputDiv {
-                    display: grid;
-                    align-items: center;
-                    padding: 10px;
-    
-                    span {
-                        font-size: 20px;
-                        font-weight: bold;
-                    }
-                    
-                    input {
-                        background-color: black;
-                        height: 100%;
-                        padding: 10px;
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
+    input:hover {
+        border-color: white;
     }
+}
 
-    #section2 {
-        margin-top: 25px;
+#header {
 
-        h1 {
-            margin-bottom: 10px;
-        }
+    #navigationBar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        text-align: center;
+        background-color: black;
 
-        #charInfos2 {
-            display: grid;
-            grid-template-columns: auto auto;
-            column-gap: 10px;
+        .headerImgDiv {
             width: 100%;
-
-            #textAreasDiv1 {
-                display: grid;
-                row-gap: 15px;
-
-                #backgroundArea {
-                    background-color: black;
-                    width: 100%;
-                    height: auto;
-                    resize: vertical;
-                    min-height: 300px;
-                    font-size: 20px;
-                    padding: 10px;
-                }
-
-                #textAreasDiv3 {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    column-gap: 10px;
-
-                    .infoTextarea {
-                        background-color: black;
-                        resize: vertical;
-                        width: 100%;
-                        min-height: 100px;
-                        font-size: 20px;
-                        padding: 10px;
-                    }
-                }
-            }
-
-            #textAreasDiv2 {
-                display: grid;
-                row-gap: 15px;
-                width: 100%;
-
-                .infoTextarea {
-                    background-color: black;
-                    resize: vertical;
-                    min-height: 100px;
-                    font-size: 20px;
-                    padding: 10px;
-                }
-            }
+            border: solid 1px gray;
+            padding: 7px;
+    
+            .headerImgs {
+                width: 35px;
+            }  
+        }
+    
+        .headerImgDiv:hover {
+            border-color: white;
         }
     }
+
+    #saveLoadBtnsDiv {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 15px;
+        justify-content: right;
+        padding: 20px;
+        margin: 60px 80px 0 0;
+
+        .saveLoadBtn {
+            background-color: black;
+            font-size: 23px;
+        }
+
+        .saveLoadBtn:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+
+#main {
+    margin: 0 100px 20px 100px;
 }
 
 @media only screen and (max-width: 1450px) {
 
-    #main {
-        margin: 0 30px 50px 30px;
+    #header {
 
-        #section1 {
-
-            #charInfos {
-                display: grid;
-                
-                #imgDiv {
-
-                    #imgLabel {
-
-                        #imgSelectBtnFake {
-                            font-size: 25px;
-                        }
-                    }
-
-                    #charImg {
-                        width: 100%;
-                        resize: vertical;
-                        overflow: auto;
-                        min-height: 22.5em;
-                    }
-                }
+        #navigationBar {
     
+            .headerImgDiv {
+        
+                .headerImgs {
+                    width: 45px;
+                }  
+            }
+        }
+        
+        #saveLoadBtnsDiv {
+            margin: 85px 0 0 0;
+            justify-content: space-between;
+
+            .saveLoadBtn {
+                font-size: 30px;
             }
         }
     }
-}
-
-@media only screen and (max-width: 1100px) {
 
     #main {
-
-        #section2 {
-    
-            #charInfos2 {
-                display: block;
-    
-                #textAreasDiv1 {
-                    display: block;
-
-                    #textAreasDiv3 {
-                        display: block;
-                    }
-                }
-            }
-        }
+        margin: 0 30px 50px 30px;
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 700px) {
 
     #main {
-        
-        #section1 {
+        margin: 0 0 20px 0 !important;
+    }
 
-            #charInfos {
-    
-                #imgDiv {
-                    display: grid;
-    
-                    #imgLabel {
-            
-                        #imgSelectBtnFake {
-                            font-size: 15px;
-                        }
-                    }
-            
-                    #imgLabel:hover {
-                        background-color: white;
-            
-                        #imgSelectBtnFake {
-                            color: black;
-                        }
-                    }
-    
-                    #charImg {
-                        object-position: 20% 10%;
-                        width: 100%;
-                        height: 20em;
-                    }
-                }
+    #header {
         
-                #infoInput {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    column-gap: 30px;
-        
-                    .infoInputDiv {
-        
-                        span {
-                            font-size: 15px;
-                        }
-                        
-                        input {
-                            font-size: 15px;
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    
-        #section2 {
-            
-            h1 {
-                font-size: 20px;
-            }
-    
-            #charInfos2 {
-                display: grid;
-                grid-template-columns: auto;
-                row-gap: 30px;
-    
-                #textAreasDiv1 {
-                    display: grid;
-                    row-gap: 30px;
-    
-                    #backgroundArea {
-                        min-height: 300px;
-                        font-size: 15px;
-                    }
-    
-                    #textAreasDiv3 {
-                        display: grid;
-                        grid-template-columns: auto;
-                        row-gap: 30px;
-    
-                        .infoTextarea {
-                            min-height: 200px;
-                            font-size: 15px;
-                        }
-                    }
-                }
-    
-                #textAreasDiv2 {
-                    display: grid;
-                    row-gap: 30px;
-    
-                    .infoTextarea {
-                        min-height: 200px;
-                        font-size: 15px;
-                    }
-                }
+        #saveLoadBtnsDiv {
+            justify-content: center;
+
+            .saveLoadBtn {
+                font-size: 23px;
             }
         }
     }

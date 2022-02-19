@@ -1,255 +1,133 @@
-#main #section1 #charInfos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-#main #section1 #charInfos #imgDiv {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+body {
+  background-color: black;
+  background-image: url(/imgs/backgroundRed.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body input:hover {
+  border-color: white;
+}
+
+#header #navigationBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   display: -ms-grid;
   display: grid;
-}
-
-#main #section1 #charInfos #imgDiv #imgLabel {
-  background-color: black;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
   text-align: center;
-  font-weight: bold;
+  background-color: black;
+}
+
+#header #navigationBar .headerImgDiv {
+  width: 100%;
+  border: solid 1px gray;
+  padding: 7px;
+}
+
+#header #navigationBar .headerImgDiv .headerImgs {
+  width: 35px;
+}
+
+#header #navigationBar .headerImgDiv:hover {
+  border-color: white;
+}
+
+#header #saveLoadBtnsDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding: 20px;
+  margin: 60px 80px 0 0;
+}
+
+#header #saveLoadBtnsDiv .saveLoadBtn {
+  background-color: black;
+  font-size: 23px;
+}
+
+#header #saveLoadBtnsDiv .saveLoadBtn:hover {
   cursor: pointer;
-  border-left: 2px solid gray;
-  border-top: 2px solid gray;
-}
-
-#main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
-  font-size: 20px;
-}
-
-#main #section1 #charInfos #imgDiv #imgLabel:hover {
   background-color: white;
-}
-
-#main #section1 #charInfos #imgDiv #imgLabel:hover #imgSelectBtnFake {
   color: black;
-}
-
-#main #section1 #charInfos #imgDiv #charImg {
-  background-color: black;
-  width: 25em;
-  height: 22.5em;
-  border: solid 1px gray;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 20% 10%;
-     object-position: 20% 10%;
-}
-
-#main #section1 #charInfos input {
-  background-color: black;
-}
-
-#main #section1 #charInfos #infoInput {
-  background-color: black;
-  border: solid 1px gray;
-  padding: 10px;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-}
-
-#main #section1 #charInfos #infoInput .infoInputDiv {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-
-#main #section1 #charInfos #infoInput .infoInputDiv span {
-  font-size: 20px;
   font-weight: bold;
 }
 
-#main #section1 #charInfos #infoInput .infoInputDiv input {
-  background-color: black;
-  height: 100%;
-  padding: 10px;
-  font-size: 20px;
-}
-
-#main #section2 {
-  margin-top: 25px;
-}
-
-#main #section2 h1 {
-  margin-bottom: 10px;
-}
-
-#main #section2 #charInfos2 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  width: 100%;
-}
-
-#main #section2 #charInfos2 #textAreasDiv1 {
-  display: -ms-grid;
-  display: grid;
-  row-gap: 15px;
-}
-
-#main #section2 #charInfos2 #textAreasDiv1 #backgroundArea {
-  background-color: black;
-  width: 100%;
-  height: auto;
-  resize: vertical;
-  min-height: 300px;
-  font-size: 20px;
-  padding: 10px;
-}
-
-#main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-}
-
-#main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 .infoTextarea {
-  background-color: black;
-  resize: vertical;
-  width: 100%;
-  min-height: 100px;
-  font-size: 20px;
-  padding: 10px;
-}
-
-#main #section2 #charInfos2 #textAreasDiv2 {
-  display: -ms-grid;
-  display: grid;
-  row-gap: 15px;
-  width: 100%;
-}
-
-#main #section2 #charInfos2 #textAreasDiv2 .infoTextarea {
-  background-color: black;
-  resize: vertical;
-  min-height: 100px;
-  font-size: 20px;
-  padding: 10px;
+#main {
+  margin: 0 100px 20px 100px;
 }
 
 @media only screen and (max-width: 1450px) {
+  #header #navigationBar .headerImgDiv .headerImgs {
+    width: 45px;
+  }
+  #header #saveLoadBtnsDiv {
+    margin: 85px 0 0 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #header #saveLoadBtnsDiv .saveLoadBtn {
+    font-size: 30px;
+  }
   #main {
     margin: 0 30px 50px 30px;
-  }
-  #main #section1 #charInfos {
-    display: -ms-grid;
-    display: grid;
-  }
-  #main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
-    font-size: 25px;
-  }
-  #main #section1 #charInfos #imgDiv #charImg {
-    width: 100%;
-    resize: vertical;
-    overflow: auto;
-    min-height: 22.5em;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  #main #section2 #charInfos2 {
-    display: block;
-  }
-  #main #section2 #charInfos2 #textAreasDiv1 {
-    display: block;
-  }
-  #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 {
-    display: block;
+    font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  #main #section1 #charInfos #imgDiv {
-    display: -ms-grid;
-    display: grid;
+  #main {
+    margin: 0 0 20px 0 !important;
   }
-  #main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
-    font-size: 15px;
+  #header #saveLoadBtnsDiv {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  #main #section1 #charInfos #imgDiv #imgLabel:hover {
-    background-color: white;
-  }
-  #main #section1 #charInfos #imgDiv #imgLabel:hover #imgSelectBtnFake {
-    color: black;
-  }
-  #main #section1 #charInfos #imgDiv #charImg {
-    -o-object-position: 20% 10%;
-       object-position: 20% 10%;
-    width: 100%;
-    height: 20em;
-  }
-  #main #section1 #charInfos #infoInput {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -webkit-column-gap: 30px;
-            column-gap: 30px;
-  }
-  #main #section1 #charInfos #infoInput .infoInputDiv span {
-    font-size: 15px;
-  }
-  #main #section1 #charInfos #infoInput .infoInputDiv input {
-    font-size: 15px;
-    width: 100%;
-  }
-  #main #section2 h1 {
-    font-size: 20px;
-  }
-  #main #section2 #charInfos2 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    row-gap: 30px;
-  }
-  #main #section2 #charInfos2 #textAreasDiv1 {
-    display: -ms-grid;
-    display: grid;
-    row-gap: 30px;
-  }
-  #main #section2 #charInfos2 #textAreasDiv1 #backgroundArea {
-    min-height: 300px;
-    font-size: 15px;
-  }
-  #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    row-gap: 30px;
-  }
-  #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 .infoTextarea {
-    min-height: 200px;
-    font-size: 15px;
-  }
-  #main #section2 #charInfos2 #textAreasDiv2 {
-    display: -ms-grid;
-    display: grid;
-    row-gap: 30px;
-  }
-  #main #section2 #charInfos2 #textAreasDiv2 .infoTextarea {
-    min-height: 200px;
-    font-size: 15px;
+  #header #saveLoadBtnsDiv .saveLoadBtn {
+    font-size: 23px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
