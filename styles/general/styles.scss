@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(58, 58, 58);
+  }
+
+body {
+    background-color: black;
+    background-image: url(/imgs/backgroundRed.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    input:hover {
+        border-color: white;
+    }
+}
+
+#header {
+
+    #navigationBar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        text-align: center;
+        background-color: black;
+
+        .headerImgDiv {
+            width: 100%;
+            border: solid 1px gray;
+            padding: 7px;
+    
+            .headerImgs {
+                width: 35px;
+            }  
+        }
+    
+        .headerImgDiv:hover {
+            border-color: white;
+        }
+    }
+
+    #saveLoadBtnsDiv {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 15px;
+        justify-content: right;
+        padding: 20px;
+        margin: 60px 80px 0 0;
+
+        .saveLoadBtn {
+            background-color: black;
+            font-size: 23px;
+        }
+
+        .saveLoadBtn:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
+
+#main {
+    margin: 0 100px 20px 100px;
+}
+
+@media only screen and (max-width: 1450px) {
+
+    #header {
+
+        #navigationBar {
+    
+            .headerImgDiv {
+        
+                .headerImgs {
+                    width: 45px;
+                }  
+            }
+        }
+        
+        #saveLoadBtnsDiv {
+            margin: 85px 0 0 0;
+            justify-content: space-between;
+
+            .saveLoadBtn {
+                font-size: 30px;
+            }
+        }
+    }
+
+    #main {
+        margin: 0 30px 50px 30px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    #header {
+        
+        #saveLoadBtnsDiv {
+            justify-content: center;
+
+            .saveLoadBtn {
+                font-size: 23px;
+            }
+        }
+    }
+}
