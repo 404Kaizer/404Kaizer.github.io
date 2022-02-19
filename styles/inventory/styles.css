@@ -170,9 +170,15 @@
     -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   }
+  #main #section1 #editContent1 #editableArea1, #main #section1 #editContent2 #editableArea1 {
+    min-height: 250px;
+    height: 250px;
+  }
   #main #section1 #editContent1 .editableArea, #main #section1 #editContent2 .editableArea {
     resize: none;
     font-size: 15px;
+    min-height: 250px;
+    height: 250px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

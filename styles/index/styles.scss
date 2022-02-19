@@ -37,6 +37,22 @@
                     object-fit: cover;
                     object-position: 20% 10%;
                 }
+
+                #perInfoBtn, #perInfoBtnFake {
+                    display: none;
+                }
+
+                #perInfoBtn, #perInfoBtnFake {
+                    background-color: black;
+                    width: 100%;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                #perInfoBtn:hover, #perInfoBtnFake:hover {
+                    background-color: white;
+                    color: black;
+                }
             }
     
             input {
@@ -217,11 +233,19 @@
                         width: 100%;
                         height: 20em;
                     }
+
+                    #perInfoBtn {
+                        display: block;
+                    }
+
+                    #perInfoBtn, #perInfoBtnFake {
+                        font-size: 15px;
+                    }
                 }
-        
+
                 #infoInput {
-                    display: grid;
-                    grid-template-columns: auto auto;
+                    display: none;
+                    grid-template-columns: auto;
                     column-gap: 30px;
         
                     .infoInputDiv {
@@ -255,8 +279,9 @@
                     row-gap: 30px;
     
                     #backgroundArea {
-                        min-height: 300px;
+                        min-height: 250px;
                         font-size: 15px;
+                        resize: none;
                     }
     
                     #textAreasDiv3 {
@@ -265,7 +290,8 @@
                         row-gap: 30px;
     
                         .infoTextarea {
-                            min-height: 200px;
+                            resize: none;
+                            min-height: 120px;
                             font-size: 15px;
                         }
                     }
@@ -276,7 +302,8 @@
                     row-gap: 30px;
     
                     .infoTextarea {
-                        min-height: 200px;
+                        resize: none;
+                        min-height: 120px;
                         font-size: 15px;
                     }
                 }
