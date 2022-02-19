@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+body {
+  background-color: black;
+  background-image: url(/imgs/backgroundRed.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body input:hover {
+  border-color: white;
+}
+
+#header #navigationBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  background-color: black;
+}
+
+#header #navigationBar .headerImgDiv {
+  width: 100%;
+  border: solid 1px gray;
+  padding: 7px;
+}
+
+#header #navigationBar .headerImgDiv .headerImgs {
+  width: 35px;
+}
+
+#header #navigationBar .headerImgDiv:hover {
+  border-color: white;
+}
+
+#header #saveLoadBtnsDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding: 20px;
+  margin: 60px 80px 0 0;
+}
+
+#header #saveLoadBtnsDiv .saveLoadBtn {
+  background-color: black;
+  font-size: 23px;
+}
+
+#header #saveLoadBtnsDiv .saveLoadBtn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+#main {
+  margin: 0 100px 20px 100px;
+}
+
+@media only screen and (max-width: 1450px) {
+  #header #navigationBar .headerImgDiv .headerImgs {
+    width: 45px;
+  }
+  #header #saveLoadBtnsDiv {
+    margin: 85px 0 0 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #header #saveLoadBtnsDiv .saveLoadBtn {
+    font-size: 30px;
+  }
+  #main {
+    margin: 0 30px 50px 30px;
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

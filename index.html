@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general/styles.css">
+    <link rel="stylesheet" href="styles/index/styles.css">
+    <link rel="shortcut icon" href="imgs/pentagram.ico" type="image/x-icon">
+    <title id="title">?</title>
+</head>
+<body>
+    <header id="header">
+        <nav id="navigationBar">
+            <a href="index.html"><div class="headerImgDiv" title="Página Inicial"><img class="headerImgs" src="imgs/playerInfo.png" alt="Página Inicial"></div></a>
+            <a href="atributes.html"><div class="headerImgDiv" title="Página de Atributos"><img class="headerImgs" src="imgs/atributes.png" alt="Página de Atributos"></div></a>
+            <a href="combat.html"><div class="headerImgDiv" title="Página de Combate"><img class="headerImgs" src="imgs/combatBtn.png" alt="Página de Combate"></div></a>
+            <a href="inventory.html"><div class="headerImgDiv" title="Página de Inventário"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div></a>
+            <a href="notes.html"><div class="headerImgDiv" title="Página de Anotações"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div></a>
+        </nav>
+        <div id="saveLoadBtnsDiv">
+            <input type="button" value="Salvar" class="saveLoadBtn">
+            <input type="button" value="Trocar Ficha" class="saveLoadBtn">
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="section1">
+            <div id="charInfos">
+                <div id="imgDiv">
+                    <label id="imgLabel">
+                        <span id="imgSelectBtnFake">Selecionar Imagem do Personagem</span>
+                        <input id="imgSelectBtn" type="file" name="characterImage" style="display: none;">
+                    </label>
+                    <img id="charImg" src="" alt="Imagem do Personagem">
+                </div>
+                <div id="infoInput">
+                    <div class="infoInputDiv"><span>Nome:</span><input id="charName" type="text" name="name" placeholder="Nome..."></div>
+                    <div class="infoInputDiv"><span>Experiência:</span><input id="charExp" type="text" name="exp" placeholder="Porcentagem..."></div>
+                    <div class="infoInputDiv"><span>Raça e Sexo:</span><input id="charRaceSex" type="text" name="race" placeholder="Raça e Sexo..."></div>
+                    <div class="infoInputDiv"><span>Origem e Expertise:</span><input id="charExpert" type="text" name="arch" placeholder="Expertise e Origem..."></div>
+                    <div class="infoInputDiv"><span>Idade:</span><input id="charAge" type="text" name="age" placeholder="Idade..."></div>
+                    <div class="infoInputDiv"><span>Tendência:</span><input id="charAlignment" type="text" name="align" placeholder="Tendência..."></div>
+                    <div class="infoInputDiv"><span>Peso e Altura:</span><input id="charStature" type="text" name="stature" placeholder="Peso e Altura..."></div>
+                    <div class="infoInputDiv"><span>Idiomas Falados:</span><input id="charLangs" type="text" name="langs" placeholder="Idiomas Falados..."></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h1>Sobre seu Personagem</h1>
+            <div id="charInfos2">
+                <div id="textAreasDiv1">
+                    <textarea id="backgroundArea" name="background" placeholder="Escreva Sua Hitória e Seus Objetivos..."></textarea>
+                    <div id="textAreasDiv3">
+                        <textarea id="textArea1" class="infoTextarea" placeholder="Escreva o Que Você Gosta..."></textarea>
+                        <textarea id="textArea2" class="infoTextarea" placeholder="Escreva o Que Você Não Gosta..."></textarea>
+                    </div>
+                </div>
+                <div id="textAreasDiv2">
+                    <textarea id="textArea3" class="infoTextarea" placeholder="Escreva Suas Fobias e Manias..."></textarea>
+                    <textarea id="textArea4" class="infoTextarea" placeholder="Escreva Suas Qualidades e Defeitos..."></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="scripts/index/script.js"></script>
+
+</html>

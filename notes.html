@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general/styles.css">
+    <link rel="stylesheet" href="styles/notes/styles.css">
+    <link rel="shortcut icon" href="imgs/pentagram.ico" type="image/x-icon">
+    <title>Anotações de Campanha</title>
+</head>
+<body>
+    <header id="header">
+        <nav id="navigationBar">
+            <a href="index.html"><div class="headerImgDiv" title="Página Inicial"><img class="headerImgs" src="imgs/playerInfo.png" alt="Página Inicial"></div></a>
+            <a href="atributes.html"><div class="headerImgDiv" title="Página de Atributos"><img class="headerImgs" src="imgs/atributes.png" alt="Página de Atributos"></div></a>
+            <a href="combat.html"><div class="headerImgDiv" title="Página de Combate"><img class="headerImgs" src="imgs/combatBtn.png" alt="Página de Combate"></div></a>
+            <a href="inventory.html"><div class="headerImgDiv" title="Página de Inventário"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div></a>
+            <a href="notes.html"><div class="headerImgDiv" title="Página de Anotações"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div></a>
+        </nav>
+        <div id="saveLoadBtnsDiv">
+            <input type="button" value="Salvar" class="saveLoadBtn">
+            <input type="button" value="Trocar Ficha" class="saveLoadBtn">
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="notes">
+            <h1>Anotações de Campanha</h1>
+            <fieldset class="editOpts">
+                <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                    <select class="fontColor" id="myColor" onclick="chooseColor()" onchange="chooseColor()" title="Mudar a Cor do Texto">
+                        <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                        <option value="#000000" style="background-color: #000000;"></option>
+                        <option value="#ff0000" style="background-color: #ff0000;"></option>
+                        <option value="#0000ff" style="background-color: #0000ff;"></option>
+                        <option value="#800080" style="background-color: #800080;"></option>
+                        <option value="#ffff00" style="background-color: #ffff00;"></option>
+                        <option value="#008000" style="background-color: #008000;"></option>
+                    </select>
+                    <select id="fontSize" class="inputStyle" onclick="changeSize()" title="Mudar Tamanho da Fonte">
+                        <option style="font-size: 11px;" value="1">11px</option>
+                        <option style="font-size: 13px;" value="2">13px</option>
+                        <option style="font-size: 16px;" value="3" selected>*16px</option>
+                        <option style="font-size: 19px;" value="4">19px</option>
+                        <option style="font-size: 24px;" value="5">24px</option>
+                        <option style="font-size: 32px;" value="6">32px</option>
+                        <option style="font-size: 48px;" value="7">48px</option>
+                    </select>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                <button class="fontStyle fontStyleEditor" onclick="createTable()" title="Adicionar Tabela"><img class="editorImgs editorList" src="imgs/table.png" alt=""></button>
+            </fieldset>
+            <div id="editableArea" contenteditable="true"></div>
+        </section>
+    </main>
+</body>
+</html>
