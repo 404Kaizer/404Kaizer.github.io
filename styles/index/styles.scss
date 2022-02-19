@@ -38,7 +38,7 @@
                     object-position: 20% 10%;
                 }
 
-                #perInfoBtn, #perInfoBtnFake {
+                #perInfoBtn {
                     display: none;
                 }
 
@@ -234,9 +234,6 @@
                         height: 20em;
                     }
 
-                    #perInfoBtn {
-                        display: block;
-                    }
 
                     #perInfoBtn, #perInfoBtnFake {
                         font-size: 15px;
