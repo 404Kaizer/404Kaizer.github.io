@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/general/styles.css">
+    <link rel="stylesheet" href="styles/global/styles.css">
     <link rel="stylesheet" href="styles/combat/styles.css">
     <link rel="shortcut icon" href="imgs/pentagram.ico" type="image/x-icon">
     <title>Armas e Habilidades</title>
@@ -19,8 +19,8 @@
             <a href="notes.html"><div class="headerImgDiv" title="Página de Anotações"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div></a>
         </nav>
         <div id="saveLoadBtnsDiv">
-            <input type="button" value="Salvar" class="saveLoadBtn">
-            <input type="button" value="Trocar Ficha" class="saveLoadBtn">
+            <button class="saveLoadBtn" id="saveSheet" onclick="setInputValues()">Salvar</button>
+            <button class="saveLoadBtn" id="chooseSheet" onclick="chooseSheet()">Escolher Ficha</button>
         </div>
     </header>
 
@@ -182,6 +182,7 @@
     </main>
 </body>
 
-<script src="scripts/combat/script.js"></script>
+<script src="scripts/global/script.js"></script>
+<script src="scripts/index/script.js"></script>
 
 </html>
