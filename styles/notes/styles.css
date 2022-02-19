@@ -98,7 +98,7 @@
   }
   #main #notes #editableArea {
     resize: none;
-    font-size: 15px;
+    font-size: 18px;
     min-height: 1100px;
   }
 }

@@ -216,7 +216,7 @@
                     #imgLabel {
             
                         #imgSelectBtnFake {
-                            font-size: 15px;
+                            font-size: 18px;
                         }
                     }
             
@@ -234,9 +234,16 @@
                         height: 20em;
                     }
 
+                    #perInfoBtnFake {
+                        display: none;
+                    }
+
+                    #perInfoBtn {
+                        display: block;
+                    }
 
                     #perInfoBtn, #perInfoBtnFake {
-                        font-size: 15px;
+                        font-size: 18px;
                     }
                 }
 
@@ -248,11 +255,11 @@
                     .infoInputDiv {
         
                         span {
-                            font-size: 15px;
+                            font-size: 18px;
                         }
                         
                         input {
-                            font-size: 15px;
+                            font-size: 18px;
                             width: 100%;
                         }
                     }

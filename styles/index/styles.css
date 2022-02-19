@@ -199,7 +199,7 @@
     display: grid;
   }
   #main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
-    font-size: 15px;
+    font-size: 18px;
   }
   #main #section1 #charInfos #imgDiv #imgLabel:hover {
     background-color: white;
@@ -213,8 +213,14 @@
     width: 100%;
     height: 20em;
   }
+  #main #section1 #charInfos #imgDiv #perInfoBtnFake {
+    display: none;
+  }
+  #main #section1 #charInfos #imgDiv #perInfoBtn {
+    display: block;
+  }
   #main #section1 #charInfos #imgDiv #perInfoBtn, #main #section1 #charInfos #imgDiv #perInfoBtnFake {
-    font-size: 15px;
+    font-size: 18px;
   }
   #main #section1 #charInfos #infoInput {
     display: none;
@@ -224,10 +230,10 @@
             column-gap: 30px;
   }
   #main #section1 #charInfos #infoInput .infoInputDiv span {
-    font-size: 15px;
+    font-size: 18px;
   }
   #main #section1 #charInfos #infoInput .infoInputDiv input {
-    font-size: 15px;
+    font-size: 18px;
     width: 100%;
   }
   #main #section2 h1 {
