@@ -1,6 +1,6 @@
 # hugopcr3282441.github.io
 
-Uma ficha como projeto pessoal de aprendizado e diversão. 
+Uma ficha de personagem de RPG de mesa que desenvolvo como projeto pessoal para aprendizado e também diversão. 
 Surgindo como necessidade minha e de alguns amigos os quais jogo RPG de mesa, retirando o "precisamos imprimir a ficha" para jogar, e agora, utilizando o 
 Notebook ou o Celular para armazenar as informações de seus personagens.
 
