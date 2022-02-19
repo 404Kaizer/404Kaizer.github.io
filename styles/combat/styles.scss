@@ -177,23 +177,24 @@
     #main {
 
         #section1 {
-    
+
             #editContentBtn {
-    
+                gap: 20px;
+
                 .editBtnDiv {
-    
+                    
                     .editBtn {
-                        width: 65px;
-    
+                        width: 80px;
+            
                         .imgBtn {
-                            width: 35px;
+                            width: 50px;
                             padding: 5px;
                         }
                     }
-    
+            
                     .xBtn {
-                        width: 65px;
-                        font-size: 33.5px;
+                        width: 80px;
+                        font-size: 47px;
                     }
                 }
             }
@@ -215,6 +216,36 @@
                     font-size: 15px;
                     min-height: 250px;
                     height: auto;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    
+    #main {
+
+        #section1 {
+            
+            #editContentBtn {
+    
+                .editBtnDiv {
+                    
+                    .editBtn {
+                        width: 65px;
+            
+                        .imgBtn {
+                            width: 40px;
+                            padding: 2px;
+                        }
+                    }
+            
+                    .xBtn {
+                        width: 60px;
+                        font-size: 39px;
+                    }
                 }
             }
         }

@@ -178,16 +178,19 @@
 }
 
 @media only screen and (max-width: 700px) {
+  #main #section1 #editContentBtn {
+    gap: 20px;
+  }
   #main #section1 #editContentBtn .editBtnDiv .editBtn {
-    width: 65px;
+    width: 80px;
   }
   #main #section1 #editContentBtn .editBtnDiv .editBtn .imgBtn {
-    width: 35px;
+    width: 50px;
     padding: 5px;
   }
   #main #section1 #editContentBtn .editBtnDiv .xBtn {
-    width: 65px;
-    font-size: 33.5px;
+    width: 80px;
+    font-size: 47px;
   }
   #main #section1 #editContent {
     gap: 30px;
@@ -206,6 +209,20 @@
     font-size: 15px;
     min-height: 250px;
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main #section1 #editContentBtn .editBtnDiv .editBtn {
+    width: 65px;
+  }
+  #main #section1 #editContentBtn .editBtnDiv .editBtn .imgBtn {
+    width: 40px;
+    padding: 2px;
+  }
+  #main #section1 #editContentBtn .editBtnDiv .xBtn {
+    width: 60px;
+    font-size: 39px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
