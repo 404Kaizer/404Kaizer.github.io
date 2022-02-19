@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/global/styles.css">
     <link rel="stylesheet" href="styles/combat/styles.css">
     <link rel="shortcut icon" href="imgs/pentagram.ico" type="image/x-icon">
-    <title>Armas e Habilidades</title>
+    <title id="title"></title>
 </head>
 <body>
     <header id="header">
@@ -19,8 +19,8 @@
             <a href="notes.html"><div class="headerImgDiv" title="Página de Anotações"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div></a>
         </nav>
         <div id="saveLoadBtnsDiv">
-            <button class="saveLoadBtn" id="saveSheet" onclick="setInputValues()">Salvar</button>
-            <button class="saveLoadBtn" id="chooseSheet" onclick="chooseSheet()">Escolher Ficha</button>
+            <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues()">
+            <input type="button" class="saveLoadBtn" id="chooseSheet" value="Escolher Ficha" onclick="chooseSheet()">
         </div>
     </header>
 
@@ -76,7 +76,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea1" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea3" contenteditable="true"></div>
                 </div>
                 <div id="passiveAb">
                     <h1>Habilidades Passivas</h1>
@@ -109,7 +109,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea2" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea4" contenteditable="true"></div>
                 </div>
                 <div id="spellsDiv">
                     <h1>Magias</h1>
@@ -142,7 +142,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea3" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea5" contenteditable="true"></div>
                 </div>
                 <div id="weaponsDiv">
                     <h1>Armas</h1>
@@ -175,14 +175,13 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea4" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea6" contenteditable="true"></div>
                 </div>
             </div>
         </section>
     </main>
 </body>
 
-<script src="scripts/global/script.js"></script>
-<script src="scripts/index/script.js"></script>
+<script src="scripts/combat/script.js"></script>
 
 </html>

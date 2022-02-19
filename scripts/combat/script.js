@@ -1,3 +1,27 @@
+let = nameCheck = localStorage.getItem('nameCheck');
+
+function setInputValues() {
+
+    // COMBAT PAGE
+    localStorage.setItem("nameCheck", document.getElementById("title").innerHTML);
+    localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerText);
+    localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerText);
+    localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerText);
+    localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerText);
+
+    window.alert('Ficha Salva: ' + nameCheck.toUpperCase() + '\n\nLembre-se de Fazer Backup de Sua Ficha!');
+};
+
+window.onload = function getInputValues() {
+
+    // COMBAT PAGE
+    document.getElementById("title").innerHTML = localStorage.getItem("nameCheck");
+    document.getElementById("editableArea3").innerText = localStorage.getItem("editableArea3" + nameCheck);
+    document.getElementById("editableArea4").innerText = localStorage.getItem("editableArea4" + nameCheck);
+    document.getElementById("editableArea5").innerText = localStorage.getItem("editableArea5" + nameCheck);
+    document.getElementById("editableArea6").innerText = localStorage.getItem("editableArea6" + nameCheck);
+};
+
 let xBtn1 = document.getElementById("xBtn1");
 let imgBtn1 = document.getElementById("imgBtn1");
 let editBtn1 = document.getElementById("editBtn1");
