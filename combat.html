@@ -19,7 +19,7 @@
             <a href="notes.html" onclick="setInputValues()"><div class="headerImgDiv" title="Página de Anotações"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div></a>
         </nav>
         <div id="saveLoadBtnsDiv">
-            <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues()">
+            <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues(), window.alert('Ficha Salva: ' + nameCheck.toUpperCase() + '\n\nLembre-se de Fazer Backup de Sua Ficha!')">
             <input type="button" class="saveLoadBtn" id="chooseSheet" value="Escolher Ficha" onclick="chooseSheet()">
         </div>
     </header>
