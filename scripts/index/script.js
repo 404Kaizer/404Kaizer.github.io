@@ -31,8 +31,6 @@ function setInputValues() {
     localStorage.setItem("textArea2" + nameCheck, document.getElementById("textArea2").value);
     localStorage.setItem("textArea3" + nameCheck, document.getElementById("textArea3").value);
     localStorage.setItem("textArea4" + nameCheck, document.getElementById("textArea4").value);
-
-    window.alert('Ficha Salva: ' + nameCheck.toUpperCase() + '\n\nLembre-se de Fazer Backup de Sua Ficha!');
 };
 
 window.onload = function getInputValues() {

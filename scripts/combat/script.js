@@ -8,8 +8,6 @@ function setInputValues() {
     localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerText);
     localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerText);
     localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerText);
-
-    window.alert('Ficha Salva: ' + nameCheck.toUpperCase() + '\n\nLembre-se de Fazer Backup de Sua Ficha!');
 };
 
 window.onload = function getInputValues() {
