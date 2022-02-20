@@ -1,20 +1,30 @@
-let = nameCheck = localStorage.getItem('nameCheck');
+let = nameCheck = localStorage.getItem("nameCheck");
 function chooseSheet() {
     nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
-    if (!nameCheck) {
-        while (!nameCheck) {
+    if (nameCheck == "") {
+        while (nameCheck == "") {
+            alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
             nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
         }
     } else {
+        if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
+            alert("Esta Ficha Ainda Não Existe. Cuidado Ao Salvar.");
+        }
         location.reload();
     }
-    nameCheck = localStorage.setItem('nameCheck', nameCheck);
+    nameCheck = localStorage.setItem("nameCheck", nameCheck);
+}
+
+function changeTitle(name) {
+    var changeTitleNamePersonagem = name;  
+    var newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
+    localStorage.setItem('titlePersonagem', newTitlePersonagem);
 }
 
 function setInputValues() {
 
     // INDEX PAGE
-    localStorage.setItem("nameCheck", document.getElementById("title").innerHTML);
+    localStorage.setItem("charName" + nameCheck, document.getElementById("title").innerText);
 
     localStorage.setItem("charImg" + nameCheck, document.getElementById("charImg").src);
     localStorage.setItem("charName" + nameCheck, document.getElementById("charName").value);
@@ -36,7 +46,7 @@ function setInputValues() {
 window.onload = function getInputValues() {
 
     // INDEX PAGE
-    document.getElementById("title").innerHTML = localStorage.getItem("nameCheck");
+    document.getElementById("title").innerText = localStorage.getItem("charName" + nameCheck);
 
     document.getElementById("charImg").src = localStorage.getItem("charImg" + nameCheck);
     document.getElementById("charName").value = localStorage.getItem("charName" + nameCheck);

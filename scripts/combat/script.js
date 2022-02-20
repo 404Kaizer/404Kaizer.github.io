@@ -1,9 +1,15 @@
 let = nameCheck = localStorage.getItem('nameCheck');
 
+function changeTitle(name) {
+    var changeTitleNamePersonagem = name;  
+    var newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
+    localStorage.setItem('titlePersonagem', newTitlePersonagem);
+}
+
 function setInputValues() {
 
     // COMBAT PAGE
-    localStorage.setItem("nameCheck", document.getElementById("title").innerHTML);
+    localStorage.setItem("charName" + nameCheck, document.getElementById("title").innerText);
     localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerText);
     localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerText);
     localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerText);
@@ -13,7 +19,7 @@ function setInputValues() {
 window.onload = function getInputValues() {
 
     // COMBAT PAGE
-    document.getElementById("title").innerHTML = localStorage.getItem("nameCheck");
+    document.getElementById("title").innerText = localStorage.getItem("charName" + nameCheck);
     document.getElementById("editableArea3").innerText = localStorage.getItem("editableArea3" + nameCheck);
     document.getElementById("editableArea4").innerText = localStorage.getItem("editableArea4" + nameCheck);
     document.getElementById("editableArea5").innerText = localStorage.getItem("editableArea5" + nameCheck);
