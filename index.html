@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/global/styles.css">
-    <link rel="stylesheet" href="styles/index/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="imgs/pentagram.ico" type="image/x-icon">
     <title id="title"></title>
 </head>
 <body>
     <header id="header">
         <nav id="navigationBar">
-            <a href="index.html" onclick="setInputValues()"><div class="headerImgDiv" title="Página Inicial"><img class="headerImgs" src="imgs/playerInfo.png" alt="Página Inicial"></div></a>
-            <a href="atributes.html" onclick="setInputValues()"><div class="headerImgDiv" title="Página de Atributos"><img class="headerImgs" src="imgs/atributes.png" alt="Página de Atributos"></div></a>
-            <a href="combat.html" onclick="setInputValues()"><div class="headerImgDiv" title="Página de Combate"><img class="headerImgs" src="imgs/combatBtn.png" alt="Página de Combate"></div></a>
-            <a href="inventory.html" onclick="setInputValues()"><div class="headerImgDiv" title="Página de Inventário"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div></a>
-            <a href="notes.html" onclick="setInputValues()"><div class="headerImgDiv" title="Página de Anotações"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div></a>
+            <div class="headerImgDiv" title="Página Inicial" onclick="indexPage()"><img class="headerImgs" src="imgs/playerInfo.png" alt="Página Inicial"></div>
+            <div class="headerImgDiv" title="Página de Atributos" onclick="skillsPage()"><img class="headerImgs" src="imgs/atributes.png" alt="Página de Atributos"></div>
+            <div class="headerImgDiv" title="Página de Combate" onclick="combatPage()"><img class="headerImgs" src="imgs/combatBtn.png" alt="Página de Combate"></div>
+            <div class="headerImgDiv" title="Página de Inventário" onclick="inventoryPage()"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div>
+            <div class="headerImgDiv" title="Página de Anotações" onclick="notesPage()"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div>
         </nav>
         <div id="saveLoadBtnsDiv">
             <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues(), window.alert('Ficha Salva: ' + nameCheck.toUpperCase() + '\n\nLembre-se de Fazer Backup de Sua Ficha!')">
@@ -25,7 +24,7 @@
     </header>
 
     <main id="main">
-        <section id="section1">
+        <section id="section1">                 <!--Informações Pessoais Primárias do Personagem-->
             <div id="charInfos">
                 <div id="imgDiv">
                     <label id="imgLabel">
@@ -49,7 +48,7 @@
             </div>
         </section>
 
-        <section id="section2">
+        <section id="section2">                 <!--Informações Pessoais Secundárias do Personagem-->
             <h1>Sobre seu Personagem</h1>
             <div id="charInfos2">
                 <div id="textAreasDiv1">
@@ -65,9 +64,274 @@
                 </div>
             </div>
         </section>
+
+        <section id="section4">                 <!--Parte de Informações de Combate: Habilidades, Magias...-->
+            <div id="editContentBtn">
+                <div class="editBtnDiv">
+                    <button class="xBtn" id="xBtn1" type="button">X</button>
+                    <button class="editBtn" id="editBtn1" type="button"><img title="Aba de Habilidades Ativas" class="imgBtn" id="imgBtn1" src="imgs/activeSkills.png" alt="Abrir Aba de Habilidades Ativas"></button>
+                </div>
+                <div class="editBtnDiv">
+                    <button class="xBtn" id="xBtn2" type="button">X</button>
+                    <button class="editBtn" id="editBtn2" type="button"><img title="Aba de Habilidades Passivas" class="imgBtn" id="imgBtn2" src="imgs/passiveSkills.png" alt="Abrir Aba de Habilidades Passivas"></button>
+                </div>
+                <div class="editBtnDiv">
+                    <button class="xBtn" id="xBtn3" type="button">X</button>
+                    <button class="editBtn" id="editBtn3" type="button"><img title="Aba de Armas" class="imgBtn" id="imgBtn3" src="imgs/guns.png" alt="Abrir Aba de Armas"></button>
+                </div>
+                <div class="editBtnDiv">
+                    <button class="xBtn" id="xBtn4" type="button">X</button>
+                    <button class="editBtn" id="editBtn4" type="button"><img title="Aba de Magias" class="imgBtn" id="imgBtn4" src="imgs/spells.png" alt="Abrir Aba de Magias"></button>
+                </div>
+            </div>
+            <div id="editContent">
+                <div id="activeAb">
+                    <h1>Habilidades Ativas</h1>
+                    <fieldset class="editOpts">
+                        <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                        <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                        <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                        <select class="fontColor" id="myColor1" onchange="chooseColor1()" title="Mudar a Cor do Texto">
+                            <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                            <option value="#000000" style="background-color: #000000;"></option>
+                            <option value="#ff0000" style="background-color: #ff0000;"></option>
+                            <option value="#0000ff" style="background-color: #0000ff;"></option>
+                            <option value="#800080" style="background-color: #800080;"></option>
+                            <option value="#ffff00" style="background-color: #ffff00;"></option>
+                            <option value="#008000" style="background-color: #008000;"></option>
+                        </select>
+                        <select id="fontSize1" class="inputStyle" onclick="changeSize1()" title="Mudar Tamanho da Fonte">
+                            <option style="font-size: 11px;" value="1">11px</option>
+                            <option style="font-size: 13px;" value="2">13px</option>
+                            <option style="font-size: 16px;" value="3" selected>*16px</option>
+                            <option style="font-size: 19px;" value="4">19px</option>
+                            <option style="font-size: 24px;" value="5">24px</option>
+                            <option style="font-size: 32px;" value="6">32px</option>
+                            <option style="font-size: 48px;" value="7">48px</option>
+                        </select>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                    </fieldset>
+                    <div class="editableArea" id="editableArea3" contenteditable="true"></div>
+                </div>
+                <div id="passiveAb">
+                    <h1>Habilidades Passivas</h1>
+                    <fieldset class="editOpts">
+                        <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                        <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                        <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                        <select class="fontColor" id="myColor2" onchange="chooseColor2()" title="Mudar a Cor do Texto">
+                            <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                            <option value="#000000" style="background-color: #000000;"></option>
+                            <option value="#ff0000" style="background-color: #ff0000;"></option>
+                            <option value="#0000ff" style="background-color: #0000ff;"></option>
+                            <option value="#800080" style="background-color: #800080;"></option>
+                            <option value="#ffff00" style="background-color: #ffff00;"></option>
+                            <option value="#008000" style="background-color: #008000;"></option>
+                        </select>
+                        <select id="fontSize2" class="inputStyle" onclick="changeSize2()" title="Mudar Tamanho da Fonte">
+                            <option style="font-size: 11px;" value="1">11px</option>
+                            <option style="font-size: 13px;" value="2">13px</option>
+                            <option style="font-size: 16px;" value="3" selected>*16px</option>
+                            <option style="font-size: 19px;" value="4">19px</option>
+                            <option style="font-size: 24px;" value="5">24px</option>
+                            <option style="font-size: 32px;" value="6">32px</option>
+                            <option style="font-size: 48px;" value="7">48px</option>
+                        </select>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                    </fieldset>
+                    <div class="editableArea" id="editableArea4" contenteditable="true"></div>
+                </div>
+                <div id="spellsDiv">
+                    <h1>Magias</h1>
+                    <fieldset class="editOpts">
+                        <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                        <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                        <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                        <select class="fontColor" id="myColor3" onchange="chooseColor3()" title="Mudar a Cor do Texto">
+                            <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                            <option value="#000000" style="background-color: #000000;"></option>
+                            <option value="#ff0000" style="background-color: #ff0000;"></option>
+                            <option value="#0000ff" style="background-color: #0000ff;"></option>
+                            <option value="#800080" style="background-color: #800080;"></option>
+                            <option value="#ffff00" style="background-color: #ffff00;"></option>
+                            <option value="#008000" style="background-color: #008000;"></option>
+                        </select>
+                        <select id="fontSize3" class="inputStyle" onclick="changeSize3()" title="Mudar Tamanho da Fonte">
+                            <option style="font-size: 11px;" value="1">11px</option>
+                            <option style="font-size: 13px;" value="2">13px</option>
+                            <option style="font-size: 16px;" value="3" selected>*16px</option>
+                            <option style="font-size: 19px;" value="4">19px</option>
+                            <option style="font-size: 24px;" value="5">24px</option>
+                            <option style="font-size: 32px;" value="6">32px</option>
+                            <option style="font-size: 48px;" value="7">48px</option>
+                        </select>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                    </fieldset>
+                    <div class="editableArea" id="editableArea5" contenteditable="true"></div>
+                </div>
+                <div id="weaponsDiv">
+                    <h1>Armas</h1>
+                    <fieldset class="editOpts">
+                        <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                        <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                        <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                        <select class="fontColor" id="myColor4" onchange="chooseColor4()" title="Mudar a Cor do Texto">
+                            <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                            <option value="#000000" style="background-color: #000000;"></option>
+                            <option value="#ff0000" style="background-color: #ff0000;"></option>
+                            <option value="#0000ff" style="background-color: #0000ff;"></option>
+                            <option value="#800080" style="background-color: #800080;"></option>
+                            <option value="#ffff00" style="background-color: #ffff00;"></option>
+                            <option value="#008000" style="background-color: #008000;"></option>
+                        </select>
+                        <select id="fontSize4" class="inputStyle" onclick="changeSize4()" title="Mudar Tamanho da Fonte">
+                            <option style="font-size: 11px;" value="1">11px</option>
+                            <option style="font-size: 13px;" value="2">13px</option>
+                            <option style="font-size: 16px;" value="3" selected>*16px</option>
+                            <option style="font-size: 19px;" value="4">19px</option>
+                            <option style="font-size: 24px;" value="5">24px</option>
+                            <option style="font-size: 32px;" value="6">32px</option>
+                            <option style="font-size: 48px;" value="7">48px</option>
+                        </select>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                    </fieldset>
+                    <div class="editableArea" id="editableArea6" contenteditable="true"></div>
+                </div>
+            </div>
+        </section>
+        <section id="section5">                 <!--Inventário do Personagem: Mochila, Dinheiro...-->
+            <div id="editContent1">
+                <div id="wealth">
+                    <h1>Dinheiro</h1>
+                    <div>
+                        <input class="wealthInput" type="number" name="carteira" id="coin1" placeholder="$Carteira">
+                        <input class="wealthInput" type="number" name="guardado" id="coin2" placeholder="$Guardado">
+                    </div>
+                </div>
+                <div>
+                    <h1>Sua Mochila</h1>
+                    <fieldset class="editOpts">
+                        <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                        <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                        <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                        <select class="fontColor" id="myColor5" onchange="chooseColor5()" title="Mudar a Cor do Texto">
+                            <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                            <option value="#000000" style="background-color: #000000;"></option>
+                            <option value="#ff0000" style="background-color: #ff0000;"></option>
+                            <option value="#0000ff" style="background-color: #0000ff;"></option>
+                            <option value="#800080" style="background-color: #800080;"></option>
+                            <option value="#ffff00" style="background-color: #ffff00;"></option>
+                            <option value="#008000" style="background-color: #008000;"></option>
+                        </select>
+                        <select id="fontSize5" class="inputStyle" onclick="changeSize5()" title="Mudar Tamanho da Fonte">
+                            <option style="font-size: 11px;" value="1">11px</option>
+                            <option style="font-size: 13px;" value="2">13px</option>
+                            <option style="font-size: 16px;" value="3" selected>*16px</option>
+                            <option style="font-size: 19px;" value="4">19px</option>
+                            <option style="font-size: 24px;" value="5">24px</option>
+                            <option style="font-size: 32px;" value="6">32px</option>
+                            <option style="font-size: 48px;" value="7">48px</option>
+                        </select>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                    </fieldset>
+                    <div class="editableArea" id="editableArea1" contenteditable="true"></div>
+                </div>
+            </div>
+            <div id="editContent2">
+                <h1>Itens Guardados</h1>
+                <fieldset class="editOpts">
+                    <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                    <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                    <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                    <select class="fontColor" id="myColor6" onchange="chooseColor6()" title="Mudar a Cor do Texto">
+                        <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                        <option value="#000000" style="background-color: #000000;"></option>
+                        <option value="#ff0000" style="background-color: #ff0000;"></option>
+                        <option value="#0000ff" style="background-color: #0000ff;"></option>
+                        <option value="#800080" style="background-color: #800080;"></option>
+                        <option value="#ffff00" style="background-color: #ffff00;"></option>
+                        <option value="#008000" style="background-color: #008000;"></option>
+                    </select>
+                    <select id="fontSize6" class="inputStyle" onclick="changeSize6()" title="Mudar Tamanho da Fonte">
+                        <option style="font-size: 11px;" value="1">11px</option>
+                        <option style="font-size: 13px;" value="2">13px</option>
+                        <option style="font-size: 16px;" value="3" selected>*16px</option>
+                        <option style="font-size: 19px;" value="4">19px</option>
+                        <option style="font-size: 24px;" value="5">24px</option>
+                        <option style="font-size: 32px;" value="6">32px</option>
+                        <option style="font-size: 48px;" value="7">48px</option>
+                    </select>
+                    <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                    <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                    <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                    <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                    <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                    <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                </fieldset>
+                <div class="editableArea" id="editableArea2" contenteditable="true"></div>
+            </div>
+        </section>
+        <section id="section6">                 <!--Parte de Anotações de Campanha do Jogador-->
+            <h1>Anotações de Campanha</h1>
+            <fieldset class="editOpts">
+                <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
+                <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
+                <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
+                <select class="fontColor" id="myColor7" onchange="chooseColor7()" title="Mudar a Cor do Texto">
+                    <option value="#ffffff" style="background-color: #ffffff;" selected></option>
+                    <option value="#000000" style="background-color: #000000;"></option>
+                    <option value="#ff0000" style="background-color: #ff0000;"></option>
+                    <option value="#0000ff" style="background-color: #0000ff;"></option>
+                    <option value="#800080" style="background-color: #800080;"></option>
+                    <option value="#ffff00" style="background-color: #ffff00;"></option>
+                    <option value="#008000" style="background-color: #008000;"></option>
+                </select>
+                <select id="fontSize7" class="inputStyle" onclick="changeSize7()" title="Mudar Tamanho da Fonte">
+                    <option style="font-size: 11px;" value="1">11px</option>
+                    <option style="font-size: 13px;" value="2">13px</option>
+                    <option style="font-size: 16px;" value="3" selected>*16px</option>
+                    <option style="font-size: 19px;" value="4">19px</option>
+                    <option style="font-size: 24px;" value="5">24px</option>
+                    <option style="font-size: 32px;" value="6">32px</option>
+                    <option style="font-size: 48px;" value="7">48px</option>
+                </select>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+            </fieldset>
+            <div id="editableArea" contenteditable="true"></div>
+        </section>
     </main>
 </body>
 
-<script src="scripts/index/script.js"></script>
+<script src="scripts/script.js"></script>
 
 </html>
