@@ -55,6 +55,7 @@ body input:hover {
 }
 
 #header #navigationBar .headerImgDiv {
+  opacity: 50%;
   width: 100%;
   border: solid 1px gray;
   padding: 7px;
@@ -66,6 +67,7 @@ body input:hover {
 }
 
 #header #navigationBar .headerImgDiv:hover {
+  opacity: 100%;
   border-color: white;
 }
 
@@ -99,8 +101,16 @@ body input:hover {
   margin: 0 100px 20px 100px;
 }
 
+#main #mainTitle {
+  top: 25vh;
+  position: relative;
+  text-align: center;
+  font-family: "Krona One";
+  font-size: 80px;
+}
+
 #main #section1 {
-  display: block;
+  display: none;
 }
 
 #main #section1 #charInfos {
@@ -201,7 +211,7 @@ body input:hover {
 }
 
 #main #section2 {
-  display: block;
+  display: none;
   margin-top: 25px;
 }
 
@@ -298,6 +308,7 @@ body input:hover {
 
 #main #section4 #editContentBtn .editBtnDiv .xBtn {
   display: none;
+  border-color: white;
 }
 
 #main #section4 #editContentBtn .editBtnDiv .editBtn {
@@ -317,6 +328,7 @@ body input:hover {
 }
 
 #main #section4 #editContentBtn .editBtnDiv .editBtn:hover, #main #section4 #editContentBtn .editBtnDiv .xBtn:hover {
+  opacity: 100%;
   border-color: white;
 }
 

@@ -1,10 +1,10 @@
 let nameCheck = localStorage.getItem("nameCheck");
 
-nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
+nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
 if (nameCheck == "") {
     while (nameCheck == "") {
         alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
-        nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
+        nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
     }
     
 } else if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
@@ -51,37 +51,42 @@ window.onload = function getInputValues() {
 
 function setInputValues() {
 
-    // INDEX
-    localStorage.setItem("charName" + nameCheck, document.getElementById("title").innerText);
-    localStorage.setItem("charImg" + nameCheck, document.getElementById("charImg").src);
-    localStorage.setItem("charName" + nameCheck, document.getElementById("charName").value);
-    localStorage.setItem("charExp" + nameCheck, document.getElementById("charExp").value);
-    localStorage.setItem("charRaceSex" + nameCheck, document.getElementById("charRaceSex").value);
-    localStorage.setItem("charExpert" + nameCheck, document.getElementById("charExpert").value);
-    localStorage.setItem("charAge" + nameCheck, document.getElementById("charAge").value);
-    localStorage.setItem("charAlignment" + nameCheck, document.getElementById("charAlignment").value);
-    localStorage.setItem("charStature" + nameCheck, document.getElementById("charStature").value);
-    localStorage.setItem("charLangs" + nameCheck, document.getElementById("charLangs").value);
-    localStorage.setItem("backgroundArea" + nameCheck, document.getElementById("backgroundArea").value);
-    localStorage.setItem("textArea1" + nameCheck, document.getElementById("textArea1").value);
-    localStorage.setItem("textArea2" + nameCheck, document.getElementById("textArea2").value);
-    localStorage.setItem("textArea3" + nameCheck, document.getElementById("textArea3").value);
-    localStorage.setItem("textArea4" + nameCheck, document.getElementById("textArea4").value);
+    if (nameCheck == "null") {
+        alert("Não Há Ficha Selecionada! Selecione Uma Ficha Antes de Salvar.")
+    } else {
+        // INDEX
+        localStorage.setItem("charName" + nameCheck, document.getElementById("title").innerText);
+        localStorage.setItem("charImg" + nameCheck, document.getElementById("charImg").src);
+        localStorage.setItem("charName" + nameCheck, document.getElementById("charName").value);
+        localStorage.setItem("charExp" + nameCheck, document.getElementById("charExp").value);
+        localStorage.setItem("charRaceSex" + nameCheck, document.getElementById("charRaceSex").value);
+        localStorage.setItem("charExpert" + nameCheck, document.getElementById("charExpert").value);
+        localStorage.setItem("charAge" + nameCheck, document.getElementById("charAge").value);
+        localStorage.setItem("charAlignment" + nameCheck, document.getElementById("charAlignment").value);
+        localStorage.setItem("charStature" + nameCheck, document.getElementById("charStature").value);
+        localStorage.setItem("charLangs" + nameCheck, document.getElementById("charLangs").value);
+        localStorage.setItem("backgroundArea" + nameCheck, document.getElementById("backgroundArea").value);
+        localStorage.setItem("textArea1" + nameCheck, document.getElementById("textArea1").value);
+        localStorage.setItem("textArea2" + nameCheck, document.getElementById("textArea2").value);
+        localStorage.setItem("textArea3" + nameCheck, document.getElementById("textArea3").value);
+        localStorage.setItem("textArea4" + nameCheck, document.getElementById("textArea4").value);
 
-    // COMBAT
-    localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerHTML);
-    localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerHTML);
-    localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerHTML);
-    localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerHTML);
+        // COMBAT
+        localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerHTML);
+        localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerHTML);
+        localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerHTML);
+        localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerHTML);
 
-    // INVENTORY
-    localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
-    localStorage.setItem("coin2" + nameCheck, document.getElementById("coin2").value);
-    localStorage.setItem("editableArea1" + nameCheck, document.getElementById("editableArea1").innerHTML);
-    localStorage.setItem("editableArea2" + nameCheck, document.getElementById("editableArea2").innerHTML);
+        // INVENTORY
+        localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
+        localStorage.setItem("coin2" + nameCheck, document.getElementById("coin2").value);
+        localStorage.setItem("editableArea1" + nameCheck, document.getElementById("editableArea1").innerHTML);
+        localStorage.setItem("editableArea2" + nameCheck, document.getElementById("editableArea2").innerHTML);
 
-    // NOTES
-    localStorage.setItem("editableArea" + nameCheck, document.getElementById("editableArea").innerHTML);
+        // NOTES
+        localStorage.setItem("editableArea" + nameCheck, document.getElementById("editableArea").innerHTML);
+        window.alert("Ficha Salva: " + nameCheck.toUpperCase() + "\n\nLembre-se de Fazer Backup de Sua Ficha!");
+    }
 };
 
 function changeTitle(name) {
@@ -124,48 +129,111 @@ let section4 = document.getElementById("section4");
 let section5 = document.getElementById("section5");
 let section6 = document.getElementById("section6");
 
+let navBtnDiv1 = document.getElementById("navBtnDiv1");
+let navBtnDiv2 = document.getElementById("navBtnDiv2");
+let navBtnDiv3 = document.getElementById("navBtnDiv3");
+let navBtnDiv4 = document.getElementById("navBtnDiv4");
+let navBtnDiv5 = document.getElementById("navBtnDiv5");
+
+let mainTitle = document.getElementById("mainTitle");
+
 document.execCommand('styleWithCSS', false, true);
 
 function indexPage() {
+    navBtnDiv1.style.opacity = "100%";
+    navBtnDiv2.style.opacity = "";
+    navBtnDiv3.style.opacity = "";
+    navBtnDiv4.style.opacity = "";
+    navBtnDiv5.style.opacity = "";
+    navBtnDiv1.style.borderColor = "white";
+    navBtnDiv2.style.borderColor = "";
+    navBtnDiv3.style.borderColor = "";
+    navBtnDiv4.style.borderColor = "";
+    navBtnDiv5.style.borderColor = "";
     section1.style.display = "block";
     section2.style.display = "block";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "none";
+    mainTitle.style.display = "none";
 };
 
 function skillsPage() {
     alert("Área Ainda Não Disponível!");
-    /*section1.style.display = "none";
+    /*navBtnDiv1.style.opacity = "50%";
+    navBtnDiv2.style.opacity = "100%";
+    navBtnDiv3.style.opacity = "";
+    navBtnDiv4.style.opacity = "";
+    navBtnDiv5.style.opacity = "";
+    navBtnDiv1.style.borderColor = "gray";
+    navBtnDiv2.style.borderColor = "white";
+    navBtnDiv3.style.borderColor = "";
+    navBtnDiv4.style.borderColor = "";
+    navBtnDiv5.style.borderColor = "";
+    section1.style.display = "none";
     section2.style.display = "none";
     section3.style.display = "block";
     section4.style.display = "none";
     section5.style.display = "none";
-    section6.style.display = "none";*/
+    section6.style.display = "none";
+    mainTitle.style.display = "none";*/
 };
 
 function combatPage() {
+    navBtnDiv1.style.opacity = "50%";
+    navBtnDiv2.style.opacity = "";
+    navBtnDiv3.style.opacity = "100%";
+    navBtnDiv4.style.opacity = "";
+    navBtnDiv5.style.opacity = "";
+    navBtnDiv1.style.borderColor = "gray";
+    navBtnDiv2.style.borderColor = "";
+    navBtnDiv3.style.borderColor = "white";
+    navBtnDiv4.style.borderColor = "";
+    navBtnDiv5.style.borderColor = "";
     section1.style.display = "none";
     section2.style.display = "none";
     section4.style.display = "grid";
     section5.style.display = "none";
     section6.style.display = "none";
+    mainTitle.style.display = "none";
 };
 
 function inventoryPage() {
+    navBtnDiv1.style.opacity = "50%";
+    navBtnDiv2.style.opacity = "";
+    navBtnDiv3.style.opacity = "";
+    navBtnDiv4.style.opacity = "100%";
+    navBtnDiv5.style.opacity = "";
+    navBtnDiv1.style.borderColor = "gray";
+    navBtnDiv2.style.borderColor = "";
+    navBtnDiv3.style.borderColor = "";
+    navBtnDiv4.style.borderColor = "white";
+    navBtnDiv5.style.borderColor = "";
     section1.style.display = "none";
     section2.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "grid";
     section6.style.display = "none";
+    mainTitle.style.display = "none";
 };
 
 function notesPage() {
+    navBtnDiv1.style.opacity = "50%";
+    navBtnDiv2.style.opacity = "";
+    navBtnDiv3.style.opacity = "";
+    navBtnDiv4.style.opacity = "";
+    navBtnDiv5.style.opacity = "100%";
+    navBtnDiv1.style.borderColor = "gray";
+    navBtnDiv2.style.borderColor = "";
+    navBtnDiv3.style.borderColor = "";
+    navBtnDiv4.style.borderColor = "";
+    navBtnDiv5.style.borderColor = "white";
     section1.style.display = "none";
     section2.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "block";
+    mainTitle.style.display = "none";
 };
 
 perInfoBtn.addEventListener("click", ()=> {

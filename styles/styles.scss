@@ -53,6 +53,7 @@ body {
         background-color: black;
 
         .headerImgDiv {
+            opacity: 50%;
             width: 100%;
             border: solid 1px gray;
             padding: 7px;
@@ -64,6 +65,7 @@ body {
         }
     
         .headerImgDiv:hover {
+            opacity: 100%;
             border-color: white;
         }
     }
@@ -93,8 +95,16 @@ body {
 #main {
     margin: 0 100px 20px 100px;
 
+    #mainTitle {
+        top: 25vh;
+        position: relative;
+        text-align: center;
+        font-family: "Krona One";
+        font-size: 80px;
+    }
+
     #section1 {
-        display: block;
+        display: none;
 
         #charInfos {
             display: flex;
@@ -184,7 +194,7 @@ body {
     }
 
     #section2 {
-        display: block;
+        display: none;
         margin-top: 25px;
 
         h1 {
@@ -260,6 +270,7 @@ body {
 
                 .xBtn {
                     display: none;
+                    border-color: white;
                 }
 
                 .editBtn {
@@ -279,6 +290,7 @@ body {
                 }
 
                 .editBtn:hover, .xBtn:hover {
+                    opacity: 100%;
                     border-color: white;
                 }
             }
