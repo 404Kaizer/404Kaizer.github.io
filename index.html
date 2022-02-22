@@ -19,7 +19,7 @@
         </nav>
         <div id="saveLoadBtnsDiv">
             <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues(), window.alert('Ficha Salva: ' + nameCheck.toUpperCase() + '\n\nLembre-se de Fazer Backup de Sua Ficha!')">
-            <input type="button" class="saveLoadBtn" id="chooseSheet" value="Escolher Ficha" onclick="chooseSheet()">
+            <input type="button" class="saveLoadBtn" id="loadSheet" value="Escolher Ficha" onclick="location.reload()">
         </div>
     </header>
 
@@ -68,20 +68,20 @@
         <section id="section4">                 <!--Parte de Informações de Combate: Habilidades, Magias...-->
             <div id="editContentBtn">
                 <div class="editBtnDiv">
-                    <button class="xBtn" id="xBtn1" type="button">X</button>
-                    <button class="editBtn" id="editBtn1" type="button"><img title="Aba de Habilidades Ativas" class="imgBtn" id="imgBtn1" src="imgs/activeSkills.png" alt="Abrir Aba de Habilidades Ativas"></button>
+                    <button class="xBtn" id="xBtn1" type="button"><img title="Fechar Aba de Habilidades Ativas" class="imgBtn" src="imgs/activeSkills.png" alt="Fechar Aba de Habilidades Ativas"></button>
+                    <button class="editBtn" id="editBtn1" type="button"><img title="Abrir Aba de Habilidades Ativas" class="imgBtn" id="imgBtn1" src="imgs/activeSkills.png" alt="Abrir Aba de Habilidades Ativas"></button>
                 </div>
                 <div class="editBtnDiv">
-                    <button class="xBtn" id="xBtn2" type="button">X</button>
-                    <button class="editBtn" id="editBtn2" type="button"><img title="Aba de Habilidades Passivas" class="imgBtn" id="imgBtn2" src="imgs/passiveSkills.png" alt="Abrir Aba de Habilidades Passivas"></button>
+                    <button class="xBtn" id="xBtn2" type="button"><img title="Fechar Aba de Habilidades Passivas" class="imgBtn" src="imgs/passiveSkills.png" alt="Fechar Abrir Aba de Habilidades Passivas"></button>
+                    <button class="editBtn" id="editBtn2" type="button"><img title="Abrir Aba de Habilidades Passivas" class="imgBtn" id="imgBtn2" src="imgs/passiveSkills.png" alt="Abrir Abrir Aba de Habilidades Passivas"></button>
                 </div>
                 <div class="editBtnDiv">
-                    <button class="xBtn" id="xBtn3" type="button">X</button>
-                    <button class="editBtn" id="editBtn3" type="button"><img title="Aba de Armas" class="imgBtn" id="imgBtn3" src="imgs/guns.png" alt="Abrir Aba de Armas"></button>
+                    <button class="xBtn" id="xBtn3" type="button"><img title="Fechar Aba de Armas" class="imgBtn" src="imgs/guns.png" alt="Fechar Abrir Aba de Armas"></button>
+                    <button class="editBtn" id="editBtn3" type="button"><img title="Fechar Aba de Armas" class="imgBtn" id="imgBtn3" src="imgs/guns.png" alt="Abrir Aba de Armas"></button>
                 </div>
                 <div class="editBtnDiv">
-                    <button class="xBtn" id="xBtn4" type="button">X</button>
-                    <button class="editBtn" id="editBtn4" type="button"><img title="Aba de Magias" class="imgBtn" id="imgBtn4" src="imgs/spells.png" alt="Abrir Aba de Magias"></button>
+                    <button class="xBtn" id="xBtn4" type="button"><img title="Fechar Aba de Magias" class="imgBtn" src="imgs/spells.png" alt="Fechar Abrir Aba de Magias"></button>
+                    <button class="editBtn" id="editBtn4" type="button"><img title="Abrir Aba de Magias" class="imgBtn" id="imgBtn4" src="imgs/spells.png" alt="Abrir Aba de Magias"></button>
                 </div>
             </div>
             <div id="editContent">

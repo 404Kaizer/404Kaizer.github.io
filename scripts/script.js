@@ -1,25 +1,53 @@
-let = nameCheck = localStorage.getItem("nameCheck");
-function chooseSheet() {
-    nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
-    if (nameCheck == "") {
-        while (nameCheck == "") {
-            alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
-            nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
-        }
-    } else {
-        if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
-            alert("Esta Ficha Ainda Não Existe. Cuidado Ao Salvar.");
-        }
-        location.reload();
-    }
-    nameCheck = localStorage.setItem("nameCheck", nameCheck);
-}
+let nameCheck = localStorage.getItem("nameCheck");
 
-function changeTitle(name) {
-    var changeTitleNamePersonagem = name;  
-    var newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
-    localStorage.setItem('titlePersonagem', newTitlePersonagem);
+nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
+if (nameCheck == "") {
+    while (nameCheck == "") {
+        alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
+        nameCheck = prompt("Digite o Nome do Personagem Que Deseja Jogar: ");
+    }
+    
+} else if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
+    alert("Esta Ficha Ainda Não Existe. Salve Apenas se Tiver Certeza!");
 }
+nameCheck = localStorage.setItem("nameCheck", nameCheck);
+
+window.onload = function getInputValues() {
+
+    nameCheck = localStorage.getItem("nameCheck");
+
+    // INDEX
+    document.getElementById("title").innerText = localStorage.getItem("charName" + nameCheck);
+    document.getElementById("charImg").src = localStorage.getItem("charImg" + nameCheck);
+    document.getElementById("charName").value = localStorage.getItem("charName" + nameCheck);
+    document.getElementById("charExp").value = localStorage.getItem("charExp" + nameCheck);
+    document.getElementById("charRaceSex").value = localStorage.getItem("charRaceSex" + nameCheck);
+    document.getElementById("charExpert").value = localStorage.getItem("charExpert" + nameCheck);
+    document.getElementById("charAge").value = localStorage.getItem("charAge" + nameCheck);
+    document.getElementById("charAlignment").value = localStorage.getItem("charAlignment" + nameCheck);
+    document.getElementById("charStature").value = localStorage.getItem("charStature" + nameCheck);
+    document.getElementById("charLangs").value = localStorage.getItem("charLangs" + nameCheck);
+    document.getElementById("backgroundArea").value = localStorage.getItem("backgroundArea" + nameCheck);
+    document.getElementById("textArea1").value = localStorage.getItem("textArea1" + nameCheck);
+    document.getElementById("textArea2").value = localStorage.getItem("textArea2" + nameCheck);
+    document.getElementById("textArea3").value = localStorage.getItem("textArea3" + nameCheck);
+    document.getElementById("textArea4").value = localStorage.getItem("textArea4" + nameCheck);
+
+    // COMBAT
+    document.getElementById("editableArea3").innerHTML = localStorage.getItem("editableArea3" + nameCheck);
+    document.getElementById("editableArea4").innerHTML = localStorage.getItem("editableArea4" + nameCheck);
+    document.getElementById("editableArea5").innerHTML = localStorage.getItem("editableArea5" + nameCheck);
+    document.getElementById("editableArea6").innerHTML = localStorage.getItem("editableArea6" + nameCheck);
+
+    // INVENTORY
+    document.getElementById("coin1").value = localStorage.getItem("coin1" + nameCheck);
+    document.getElementById("coin2").value = localStorage.getItem("coin2" + nameCheck);
+    document.getElementById("editableArea1").innerHTML = localStorage.getItem("editableArea1" + nameCheck);
+    document.getElementById("editableArea2").innerHTML = localStorage.getItem("editableArea2" + nameCheck);
+
+    // NOTES
+    document.getElementById("editableArea").innerHTML = localStorage.getItem("editableArea" + nameCheck);
+};
 
 function setInputValues() {
 
@@ -56,40 +84,11 @@ function setInputValues() {
     localStorage.setItem("editableArea" + nameCheck, document.getElementById("editableArea").innerHTML);
 };
 
-window.onload = function getInputValues() {
-
-    // INDEX
-    document.getElementById("title").innerText = localStorage.getItem("charName" + nameCheck);
-    document.getElementById("charImg").src = localStorage.getItem("charImg" + nameCheck);
-    document.getElementById("charName").value = localStorage.getItem("charName" + nameCheck);
-    document.getElementById("charExp").value = localStorage.getItem("charExp" + nameCheck);
-    document.getElementById("charRaceSex").value = localStorage.getItem("charRaceSex" + nameCheck);
-    document.getElementById("charExpert").value = localStorage.getItem("charExpert" + nameCheck);
-    document.getElementById("charAge").value = localStorage.getItem("charAge" + nameCheck);
-    document.getElementById("charAlignment").value = localStorage.getItem("charAlignment" + nameCheck);
-    document.getElementById("charStature").value = localStorage.getItem("charStature" + nameCheck);
-    document.getElementById("charLangs").value = localStorage.getItem("charLangs" + nameCheck);
-    document.getElementById("backgroundArea").value = localStorage.getItem("backgroundArea" + nameCheck);
-    document.getElementById("textArea1").value = localStorage.getItem("textArea1" + nameCheck);
-    document.getElementById("textArea2").value = localStorage.getItem("textArea2" + nameCheck);
-    document.getElementById("textArea3").value = localStorage.getItem("textArea3" + nameCheck);
-    document.getElementById("textArea4").value = localStorage.getItem("textArea4" + nameCheck);
-
-    // COMBAT
-    document.getElementById("editableArea3").innerHTML = localStorage.getItem("editableArea3" + nameCheck);
-    document.getElementById("editableArea4").innerHTML = localStorage.getItem("editableArea4" + nameCheck);
-    document.getElementById("editableArea5").innerHTML = localStorage.getItem("editableArea5" + nameCheck);
-    document.getElementById("editableArea6").innerHTML = localStorage.getItem("editableArea6" + nameCheck);
-
-    // INVENTORY
-    document.getElementById("coin1").value = localStorage.getItem("coin1" + nameCheck);
-    document.getElementById("coin2").value = localStorage.getItem("coin2" + nameCheck);
-    document.getElementById("editableArea1").innerHTML = localStorage.getItem("editableArea1" + nameCheck);
-    document.getElementById("editableArea2").innerHTML = localStorage.getItem("editableArea2" + nameCheck);
-
-    // NOTES
-    document.getElementById("editableArea").innerHTML = localStorage.getItem("editableArea" + nameCheck);
-};
+function changeTitle(name) {
+    var changeTitleNamePersonagem = name;  
+    var newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
+    localStorage.setItem('titlePersonagem', newTitlePersonagem);
+}
 
 document.getElementById("imgSelectBtn").addEventListener("change", e => {
     let file = e.currentTarget.files[0];
@@ -183,56 +182,48 @@ perInfoBtnFake.addEventListener("click", ()=> {
 
 editBtn1.addEventListener('click', ()=> {
     document.getElementById("activeAb").style.display = "block";
-    imgBtn1.style.display = "none";
     editBtn1.style.display = "none";
     xBtn1.style.display = "block";
 });
 
 xBtn1.addEventListener('click', ()=> {
     document.getElementById("activeAb").style.display = "";
-    imgBtn1.style.display = "block";
     editBtn1.style.display = "block";
     xBtn1.style.display = "none";
 });
 
 editBtn2.addEventListener('click', ()=> {
     document.getElementById("passiveAb").style.display = "block";
-    imgBtn2.style.display = "none";
     editBtn2.style.display = "none";
     xBtn2.style.display = "block";
 });
 
 xBtn2.addEventListener('click', ()=> {
     document.getElementById("passiveAb").style.display = "";
-    imgBtn2.style.display = "block";
     editBtn2.style.display = "block";
     xBtn2.style.display = "none";
 });
 
 editBtn3.addEventListener('click', ()=> {
     document.getElementById("weaponsDiv").style.display = "block";
-    imgBtn3.style.display = "none";
     editBtn3.style.display = "none";
     xBtn3.style.display = "block";
 });
 
 xBtn3.addEventListener('click', ()=> {
     document.getElementById("weaponsDiv").style.display = "";
-    imgBtn3.style.display = "block";
     editBtn3.style.display = "block";
     xBtn3.style.display = "none";
 });
 
 editBtn4.addEventListener('click', ()=> {
     document.getElementById("spellsDiv").style.display = "block";
-    imgBtn4.style.display = "none";
     editBtn4.style.display = "none";
     xBtn4.style.display = "block";
 });
 
 xBtn4.addEventListener('click', ()=> {
     document.getElementById("spellsDiv").style.display = "";
-    imgBtn4.style.display = "block";
     editBtn4.style.display = "block";
     xBtn4.style.display = "none";
 });

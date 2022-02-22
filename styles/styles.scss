@@ -258,7 +258,15 @@ body {
                 display: flex;
                 align-items: center;
 
+                .xBtn {
+                    display: none;
+                }
+
                 .editBtn {
+                    opacity: 50%;
+                }
+
+                .editBtn, .xBtn {
                     background-color: black;
                     cursor: pointer;
                     width: 100px;
@@ -270,23 +278,8 @@ body {
                     }
                 }
 
-                .editBtn:hover {
+                .editBtn:hover, .xBtn:hover {
                     border-color: white;
-                }
-
-                .xBtn {
-                    display: none;
-                    background-color: black;
-                    width: 100px;
-                    font-size: 57px;
-                    cursor: pointer;
-                }
-        
-                .xBtn:hover {
-                    cursor: pointer;
-                    background-color: white;
-                    color: black;
-                    font-weight: bold;
                 }
             }
         }
@@ -690,7 +683,7 @@ body {
         }
 
         #section4 {
-            display: grid;
+            display: none;
             grid-template-columns: auto;
             gap: 15px;
 
@@ -846,18 +839,13 @@ body {
 
                 .editBtnDiv {
                     
-                    .editBtn {
+                    .editBtn, .xBtn {
                         width: 80px;
             
                         .imgBtn {
                             width: 50px;
                             padding: 5px;
                         }
-                    }
-            
-                    .xBtn {
-                        width: 80px;
-                        font-size: 47px;
                     }
                 }
             }
@@ -884,7 +872,7 @@ body {
         }
 
         #section5 {
-            display: grid;
+            display: none;
             grid-template-columns: auto;
             column-gap: 10px;
     
@@ -963,18 +951,13 @@ body {
     
                 .editBtnDiv {
                     
-                    .editBtn {
+                    .editBtn, .xBtn {
                         width: 65px;
             
                         .imgBtn {
                             width: 40px;
                             padding: 2px;
                         }
-                    }
-            
-                    .xBtn {
-                        width: 60px;
-                        font-size: 39px;
                     }
                 }
             }

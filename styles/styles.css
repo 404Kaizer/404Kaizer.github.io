@@ -296,35 +296,28 @@ body input:hover {
           align-items: center;
 }
 
+#main #section4 #editContentBtn .editBtnDiv .xBtn {
+  display: none;
+}
+
 #main #section4 #editContentBtn .editBtnDiv .editBtn {
+  opacity: 50%;
+}
+
+#main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
   background-color: black;
   cursor: pointer;
   width: 100px;
 }
 
-#main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn {
+#main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
   margin: auto;
   width: 60px;
   padding: 5px;
 }
 
-#main #section4 #editContentBtn .editBtnDiv .editBtn:hover {
+#main #section4 #editContentBtn .editBtnDiv .editBtn:hover, #main #section4 #editContentBtn .editBtnDiv .xBtn:hover {
   border-color: white;
-}
-
-#main #section4 #editContentBtn .editBtnDiv .xBtn {
-  display: none;
-  background-color: black;
-  width: 100px;
-  font-size: 57px;
-  cursor: pointer;
-}
-
-#main #section4 #editContentBtn .editBtnDiv .xBtn:hover {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  font-weight: bold;
 }
 
 #main #section4 #editContent {
@@ -691,8 +684,7 @@ body input:hover {
     display: block;
   }
   #main #section4 {
-    display: -ms-grid;
-    display: grid;
+    display: none;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     gap: 15px;
@@ -807,16 +799,12 @@ body input:hover {
   #main #section4 #editContentBtn {
     gap: 20px;
   }
-  #main #section4 #editContentBtn .editBtnDiv .editBtn {
+  #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
     width: 80px;
   }
-  #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn {
+  #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 50px;
     padding: 5px;
-  }
-  #main #section4 #editContentBtn .editBtnDiv .xBtn {
-    width: 80px;
-    font-size: 47px;
   }
   #main #section4 #editContent {
     gap: 30px;
@@ -837,8 +825,7 @@ body input:hover {
     height: auto;
   }
   #main #section5 {
-    display: -ms-grid;
-    display: grid;
+    display: none;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     -webkit-column-gap: 10px;
@@ -896,16 +883,12 @@ body input:hover {
 }
 
 @media only screen and (max-width: 400px) {
-  #main #section4 #editContentBtn .editBtnDiv .editBtn {
+  #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
     width: 65px;
   }
-  #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn {
+  #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 40px;
     padding: 2px;
-  }
-  #main #section4 #editContentBtn .editBtnDiv .xBtn {
-    width: 60px;
-    font-size: 39px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
