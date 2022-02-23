@@ -1,4 +1,5 @@
 let nameCheck = localStorage.getItem("nameCheck");
+let mainTitle = document.getElementById("mainTitle");
 
 nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
 if (nameCheck == "") {
@@ -15,6 +16,12 @@ nameCheck = localStorage.setItem("nameCheck", nameCheck);
 window.onload = function getInputValues() {
 
     nameCheck = localStorage.getItem("nameCheck");
+
+    if (nameCheck == "null") {
+        mainTitle.innerText = "Eroda";
+    } else {
+        mainTitle.innerText = nameCheck;
+    }
 
     // INDEX
     document.getElementById("title").innerText = localStorage.getItem("charName" + nameCheck);
@@ -85,13 +92,14 @@ function setInputValues() {
 
         // NOTES
         localStorage.setItem("editableArea" + nameCheck, document.getElementById("editableArea").innerHTML);
+
         window.alert("Ficha Salva: " + nameCheck.toUpperCase() + "\n\nLembre-se de Fazer Backup de Sua Ficha!");
     }
 };
 
 function changeTitle(name) {
-    var changeTitleNamePersonagem = name;  
-    var newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
+    let changeTitleNamePersonagem = name;  
+    let newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
     localStorage.setItem('titlePersonagem', newTitlePersonagem);
 }
 
@@ -134,8 +142,6 @@ let navBtnDiv2 = document.getElementById("navBtnDiv2");
 let navBtnDiv3 = document.getElementById("navBtnDiv3");
 let navBtnDiv4 = document.getElementById("navBtnDiv4");
 let navBtnDiv5 = document.getElementById("navBtnDiv5");
-
-let mainTitle = document.getElementById("mainTitle");
 
 document.execCommand('styleWithCSS', false, true);
 
