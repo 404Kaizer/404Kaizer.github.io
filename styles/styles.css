@@ -91,7 +91,6 @@ body input:hover {
 
 #header #hamburguerMenuDiv #headerTitle, #footer #hamburguerMenuDiv #headerTitle {
   display: none;
-  font-family: "Poppins";
 }
 
 #header #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu, #footer #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu {
@@ -909,9 +908,6 @@ body input:hover {
 }
 
 @media only screen and (max-width: 550px) {
-  #header #headerTitle {
-    display: block;
-  }
   #header #navigationBar {
     display: none;
   }
@@ -935,6 +931,10 @@ body input:hover {
     top: 0;
     width: 100%;
     border-bottom: 1px solid gray;
+  }
+  #header #hamburguerMenuDiv #headerTitle {
+    display: block;
+    font-family: "Poppins";
   }
   #header #hamburguerMenuDiv #saveLoadBtns {
     display: none;

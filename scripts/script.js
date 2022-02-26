@@ -168,7 +168,7 @@ function closeHamburguer() {
     hamburguerMenu.style.display = "";
     xHamburguerMenu.style.display = "none";
     saveLoadBtns.style.display = "none";
-    headerTitle.style.display = "";
+    headerTitle.style.display = "block";
 }
 
 function indexPage() {

@@ -87,7 +87,6 @@ body {
 
         #headerTitle {
             display: none;
-            font-family: "Poppins";
         }
 
         #hamburguerMenuBtns {
@@ -982,10 +981,6 @@ body {
 
     #header {
 
-        #headerTitle {
-            display: block;
-        }
-
         #navigationBar {
             display: none;
         }
@@ -1004,6 +999,11 @@ body {
             top: 0;
             width: 100%;
             border-bottom: 1px solid gray;
+
+            #headerTitle {
+                display: block;
+                font-family: "Poppins";
+            }
 
             #saveLoadBtns {
                 display: none;
