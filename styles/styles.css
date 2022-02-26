@@ -90,6 +90,7 @@ body input:hover {
 }
 
 #header #hamburguerMenuDiv #headerTitle, #footer #hamburguerMenuDiv #headerTitle {
+  display: none;
   font-family: "Poppins";
 }
 
@@ -908,6 +909,9 @@ body input:hover {
 }
 
 @media only screen and (max-width: 550px) {
+  #header #headerTitle {
+    display: block;
+  }
   #header #navigationBar {
     display: none;
   }

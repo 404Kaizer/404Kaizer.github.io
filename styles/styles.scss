@@ -86,6 +86,7 @@ body {
         margin: 60px 80px 0 0;
 
         #headerTitle {
+            display: none;
             font-family: "Poppins";
         }
 
@@ -980,6 +981,10 @@ body {
 @media only screen and (max-width: 550px) {
 
     #header {
+
+        #headerTitle {
+            display: block;
+        }
 
         #navigationBar {
             display: none;
