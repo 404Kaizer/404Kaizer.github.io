@@ -57,20 +57,23 @@ body {
         background-color: black;
 
         .headerImgDiv {
-            opacity: 50%;
             width: 100%;
-            border: solid 1px gray;
+            border: solid 1px white;
             padding: 7px;
             cursor: pointer;
     
             .headerImgs {
+                opacity: 50%;
                 width: 35px;
             }  
         }
     
         .headerImgDiv:hover {
-            opacity: 100%;
-            border-color: white;
+
+            .headerImgs {
+                opacity: 100%;
+                border-color: white;
+            }
         }
     }
 
@@ -1000,6 +1003,10 @@ body {
             gap: 25px;
             margin: 0;
             padding: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid gray;
 
             #saveLoadBtns {
                 display: none;
@@ -1027,6 +1034,7 @@ body {
     }
 
     #main {
+        margin-top: 100px;
 
         #mainTitle {
             top: 300px;
@@ -1043,10 +1051,10 @@ body {
                 .editBtnDiv {
                     
                     .editBtn, .xBtn {
-                        width: 65px;
+                        width: 75px;
             
                         .imgBtn {
-                            width: 40px;
+                            width: 45px;
                             padding: 2px;
                         }
                     }
@@ -1070,20 +1078,22 @@ body {
             background-color: black;
     
             .headerImgDiv {
-                opacity: 50%;
                 width: 100%;
-                border: solid 1px gray;
-                padding: 7px;
+                padding: 18px;
                 cursor: pointer;
+                border-top: 1px solid gray;
         
                 .headerImgs {
+                    opacity: 50%;
                     width: 35px;
                 }  
             }
-        
+
             .headerImgDiv:hover {
-                opacity: 100%;
-                border-color: white;
+        
+                .headerImgs {
+                    opacity: 100%;
+                }  
             }
         }
     }
