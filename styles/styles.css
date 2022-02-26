@@ -41,7 +41,11 @@ body input:hover {
   border-color: white;
 }
 
-#header #navigationBar {
+#footer {
+  display: none;
+}
+
+#header #navigationBar, #footer #navigationBar {
   width: 100%;
   position: fixed;
   top: 0;
@@ -54,7 +58,7 @@ body input:hover {
   background-color: black;
 }
 
-#header #navigationBar .headerImgDiv {
+#header #navigationBar .headerImgDiv, #footer #navigationBar .headerImgDiv {
   opacity: 50%;
   width: 100%;
   border: solid 1px gray;
@@ -62,16 +66,16 @@ body input:hover {
   cursor: pointer;
 }
 
-#header #navigationBar .headerImgDiv .headerImgs {
+#header #navigationBar .headerImgDiv .headerImgs, #footer #navigationBar .headerImgDiv .headerImgs {
   width: 35px;
 }
 
-#header #navigationBar .headerImgDiv:hover {
+#header #navigationBar .headerImgDiv:hover, #footer #navigationBar .headerImgDiv:hover {
   opacity: 100%;
   border-color: white;
 }
 
-#header #saveLoadBtnsDiv {
+#header #hamburguerMenuDiv, #footer #hamburguerMenuDiv {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
@@ -85,12 +89,27 @@ body input:hover {
   margin: 60px 80px 0 0;
 }
 
-#header #saveLoadBtnsDiv .saveLoadBtn {
+#header #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu, #footer #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu {
+  display: none;
+}
+
+#header #hamburguerMenuDiv #hamburguerMenuBtns #xHamburguerMenu, #footer #hamburguerMenuDiv #hamburguerMenuBtns #xHamburguerMenu {
+  display: none;
+}
+
+#header #hamburguerMenuDiv #saveLoadBtns, #footer #hamburguerMenuDiv #saveLoadBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+#header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn, #footer #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn {
   background-color: black;
   font-size: 23px;
 }
 
-#header #saveLoadBtnsDiv .saveLoadBtn:hover {
+#header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn:hover, #footer #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn:hover {
   cursor: pointer;
   background-color: white;
   color: black;
@@ -102,7 +121,7 @@ body input:hover {
 }
 
 #main #mainTitle {
-  top: 22vh;
+  top: 23vh;
   position: relative;
   text-align: center;
   font-family: "Krona One";
@@ -170,6 +189,7 @@ body input:hover {
 #main #section1 #charInfos #imgDiv #perInfoBtn:hover, #main #section1 #charInfos #imgDiv #perInfoBtnFake:hover {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 #main #section1 #charInfos input {
@@ -640,13 +660,13 @@ body input:hover {
   #header #navigationBar .headerImgDiv .headerImgs {
     width: 45px;
   }
-  #header #saveLoadBtnsDiv {
+  #header #hamburguerMenuDiv {
     margin: 85px 0 0 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #header #saveLoadBtnsDiv .saveLoadBtn {
+  #header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn {
     font-size: 30px;
   }
   #main {
@@ -713,12 +733,15 @@ body input:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  #header #saveLoadBtnsDiv {
+  #header #hamburguerMenuDiv {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #header #saveLoadBtnsDiv .saveLoadBtn {
+  #header #hamburguerMenuDiv #saveLoadBtns {
+    margin-bottom: 20px;
+  }
+  #header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn {
     font-size: 23px;
   }
   #main {
@@ -894,13 +917,87 @@ body input:hover {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
+  #header #navigationBar {
+    display: none;
+  }
+  #header #hamburguerMenuDiv {
+    height: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    background-color: black;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  #header #hamburguerMenuDiv #saveLoadBtns {
+    display: none;
+    margin: 0;
+  }
+  #header #hamburguerMenuDiv #hamburguerMenuBtns {
+    margin: 0 0 0 10px;
+  }
+  #header #hamburguerMenuDiv #hamburguerMenuBtns .hamburguer {
+    width: 30px;
+  }
+  #header #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu {
+    display: block;
+  }
+  #header #hamburguerMenuDiv #hamburguerMenuBtns #xHamburguerMenu {
+    width: 30px;
+    height: 27px;
+    display: none;
+  }
+  #main #mainTitle {
+    top: 300px;
+  }
+  #main #section3, #main #section4, #main #section5, #main #section6 {
+    margin-top: 25px;
+  }
   #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
     width: 65px;
   }
   #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 40px;
     padding: 2px;
+  }
+  #footer {
+    display: block;
+    margin-top: 80px;
+  }
+  #footer #bottomNavigationBar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+    background-color: black;
+  }
+  #footer #bottomNavigationBar .headerImgDiv {
+    opacity: 50%;
+    width: 100%;
+    border: solid 1px gray;
+    padding: 7px;
+    cursor: pointer;
+  }
+  #footer #bottomNavigationBar .headerImgDiv .headerImgs {
+    width: 35px;
+  }
+  #footer #bottomNavigationBar .headerImgDiv:hover {
+    opacity: 100%;
+    border-color: white;
   }
 }
 /*# sourceMappingURL=styles.css.map */

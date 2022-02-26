@@ -40,7 +40,11 @@ body {
     }
 }
 
-#header {
+#footer {
+    display: none;
+}
+
+#header, #footer {
 
     #navigationBar {
         width: 100%;
@@ -70,7 +74,7 @@ body {
         }
     }
 
-    #saveLoadBtnsDiv {
+    #hamburguerMenuDiv {
         display: grid;
         grid-template-columns: auto auto;
         column-gap: 15px;
@@ -78,16 +82,33 @@ body {
         padding: 20px;
         margin: 60px 80px 0 0;
 
-        .saveLoadBtn {
-            background-color: black;
-            font-size: 23px;
+
+        #hamburguerMenuBtns {
+        
+            #hamburguerMenu {
+                display: none;
+            }
+
+            #xHamburguerMenu {
+                display: none;
+            }
         }
 
-        .saveLoadBtn:hover {
-            cursor: pointer;
-            background-color: white;
-            color: black;
-            font-weight: bold;
+        #saveLoadBtns {
+            display: flex;
+            gap: 10px;
+
+            .saveLoadBtn {
+                background-color: black;
+                font-size: 23px;
+            }
+    
+            .saveLoadBtn:hover {
+                cursor: pointer;
+                background-color: white;
+                color: black;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -96,7 +117,7 @@ body {
     margin: 0 100px 20px 100px;
 
     #mainTitle {
-        top: 22vh;
+        top: 23vh;
         position: relative;
         text-align: center;
         font-family: "Krona One";
@@ -156,6 +177,7 @@ body {
                 #perInfoBtn:hover, #perInfoBtnFake:hover {
                     background-color: white;
                     color: black;
+                    cursor: pointer;
                 }
             }
     
@@ -601,12 +623,15 @@ body {
             }
         }
         
-        #saveLoadBtnsDiv {
+        #hamburguerMenuDiv {
             margin: 85px 0 0 0;
             justify-content: space-between;
 
-            .saveLoadBtn {
-                font-size: 30px;
+            #saveLoadBtns {
+
+                .saveLoadBtn {
+                    font-size: 30px;
+                }
             }
         }
     }
@@ -724,11 +749,15 @@ body {
 
     #header {
         
-        #saveLoadBtnsDiv {
+        #hamburguerMenuDiv {
             justify-content: center;
+            
+            #saveLoadBtns {
+                margin-bottom: 20px;
 
-            .saveLoadBtn {
-                font-size: 23px;
+                .saveLoadBtn {
+                    font-size: 23px;
+                }
             }
         }
     }
@@ -953,9 +982,59 @@ body {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
+
+    #header {
+
+        #navigationBar {
+            display: none;
+        }
+
+        #hamburguerMenuDiv {
+            height: 70px;
+            align-items: center;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: left;
+            background-color: black;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+
+            #saveLoadBtns {
+                display: none;
+                margin: 0;
+            }
+
+            #hamburguerMenuBtns {
+                margin: 0 0 0 10px;
+
+                .hamburguer {
+                    width: 30px;
+                }
+
+                #hamburguerMenu {
+                    display: block;
+                }
     
+                #xHamburguerMenu {
+                    width: 30px;
+                    height: 27px;
+                    display: none;
+                }
+            }
+        }
+    }
+
     #main {
+
+        #mainTitle {
+            top: 300px;
+        }
+
+        #section3, #section4, #section5, #section6 {
+            margin-top: 25px;
+        }
 
         #section4 {
             
@@ -972,6 +1051,39 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    #footer {
+        display: block;
+        margin-top: 80px;
+    
+        #bottomNavigationBar {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            text-align: center;
+            background-color: black;
+    
+            .headerImgDiv {
+                opacity: 50%;
+                width: 100%;
+                border: solid 1px gray;
+                padding: 7px;
+                cursor: pointer;
+        
+                .headerImgs {
+                    width: 35px;
+                }  
+            }
+        
+            .headerImgDiv:hover {
+                opacity: 100%;
+                border-color: white;
             }
         }
     }

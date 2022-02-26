@@ -17,9 +17,15 @@
             <div class="headerImgDiv" id="navBtnDiv4" title="Página de Inventário" onclick="inventoryPage()"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div>
             <div class="headerImgDiv" id="navBtnDiv5" title="Página de Anotações" onclick="notesPage()"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div>
         </nav>
-        <div id="saveLoadBtnsDiv">
-            <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues()">
-            <input type="button" class="saveLoadBtn" id="loadSheet" value="Escolher Ficha" onclick="location.reload()">
+        <div id="hamburguerMenuDiv">
+            <div id="hamburguerMenuBtns">
+                <img class="hamburguer" id="hamburguerMenu" src="imgs/hamburguerMenu.png" alt="Menu Hamburguer" onclick="openHamburguer()">
+                <img class="hamburguer" id="xHamburguerMenu" src="imgs/xHamburguerMenu.png" alt="" onclick="closeHamburguer()">
+            </div>
+            <div id="saveLoadBtns">
+                <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues()">
+                <input type="button" class="saveLoadBtn" id="loadSheet" value="Escolher Ficha" onclick="chooseSheet()">
+            </div>
         </div>
     </header>
 
@@ -331,6 +337,16 @@
             <div id="editableArea" contenteditable="true"></div>
         </section>
     </main>
+
+    <footer id="footer">
+        <nav id="bottomNavigationBar">
+            <div class="headerImgDiv" id="navBtnDiv1" title="Página Inicial" onclick="indexPage()"><img class="headerImgs" src="imgs/playerInfo.png" alt="Página Inicial"></div>
+            <div class="headerImgDiv" id="navBtnDiv2" title="Página de Atributos" onclick="skillsPage()"><img class="headerImgs" src="imgs/atributes.png" alt="Página de Atributos"></div>
+            <div class="headerImgDiv" id="navBtnDiv3" title="Página de Combate" onclick="combatPage()"><img class="headerImgs" src="imgs/combatBtn.png" alt="Página de Combate"></div>
+            <div class="headerImgDiv" id="navBtnDiv4" title="Página de Inventário" onclick="inventoryPage()"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div>
+            <div class="headerImgDiv" id="navBtnDiv5" title="Página de Anotações" onclick="notesPage()"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div>
+        </nav>
+    </footer>
 </body>
 
 <script src="scripts/script.js"></script>

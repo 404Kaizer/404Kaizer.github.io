@@ -1,20 +1,57 @@
 let nameCheck = localStorage.getItem("nameCheck");
 let mainTitle = document.getElementById("mainTitle");
 
-nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
-if (nameCheck == "") {
-    while (nameCheck == "") {
-        alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
-        nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
+let hamburguerMenu = document.getElementById("hamburguerMenu");
+let xHamburguerMenu = document.getElementById("xHamburguerMenu");
+let saveLoadBtns = document.getElementById("saveLoadBtns");
+
+let perInfoBtn = document.getElementById("perInfoBtn");
+let perInfoBtnFake = document.getElementById("perInfoBtnFake");
+let infoInput = document.getElementById("infoInput");
+
+let xBtn1 = document.getElementById("xBtn1");
+let imgBtn1 = document.getElementById("imgBtn1");
+let editBtn1 = document.getElementById("editBtn1");
+let xBtn2 = document.getElementById("xBtn2");
+let imgBtn2 = document.getElementById("imgBtn2");
+let editBtn2 = document.getElementById("editBtn2");
+let xBtn3 = document.getElementById("xBtn3");
+let imgBtn3 = document.getElementById("imgBtn3");
+let editBtn3 = document.getElementById("editBtn3");
+let xBtn4 = document.getElementById("xBtn4");
+let imgBtn4 = document.getElementById("imgBtn4");
+let editBtn4 = document.getElementById("editBtn4");
+
+let section1 = document.getElementById("section1");
+let section2 = document.getElementById("section2");
+/*let section3 = document.getElementById("section3");*/
+let section4 = document.getElementById("section4");
+let section5 = document.getElementById("section5");
+let section6 = document.getElementById("section6");
+
+let navBtnDiv1 = document.getElementById("navBtnDiv1");
+let navBtnDiv2 = document.getElementById("navBtnDiv2");
+let navBtnDiv3 = document.getElementById("navBtnDiv3");
+let navBtnDiv4 = document.getElementById("navBtnDiv4");
+let navBtnDiv5 = document.getElementById("navBtnDiv5");
+
+document.execCommand('styleWithCSS', false, true);
+
+function chooseSheet() {
+    nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
+    if (nameCheck == "") {
+        while (nameCheck == "") {
+            alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
+            nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
+        }
+    } else if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
+        alert("Este Personagem Ainda Não Existe. Salve Apenas se Quiser Criá-lo.");
     }
-    
-} else if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
-    alert("Esta Ficha Ainda Não Existe. Salve Apenas se Tiver Certeza!");
-}
-nameCheck = localStorage.setItem("nameCheck", nameCheck);
+    nameCheck = localStorage.setItem("nameCheck", nameCheck);
+    location.reload();
+};
 
 window.onload = function getInputValues() {
-
     nameCheck = localStorage.getItem("nameCheck");
 
     if (nameCheck == "null") {
@@ -113,37 +150,17 @@ document.getElementById("imgSelectBtn").addEventListener("change", e => {
     reader.readAsDataURL(file);
 });
 
-let perInfoBtn = document.getElementById("perInfoBtn");
-let perInfoBtnFake = document.getElementById("perInfoBtnFake");
-let infoInput = document.getElementById("infoInput");
+function openHamburguer() {
+    hamburguerMenu.style.display = "none";
+    xHamburguerMenu.style.display = "block";
+    saveLoadBtns.style.display = "block";
+}
 
-let xBtn1 = document.getElementById("xBtn1");
-let imgBtn1 = document.getElementById("imgBtn1");
-let editBtn1 = document.getElementById("editBtn1");
-let xBtn2 = document.getElementById("xBtn2");
-let imgBtn2 = document.getElementById("imgBtn2");
-let editBtn2 = document.getElementById("editBtn2");
-let xBtn3 = document.getElementById("xBtn3");
-let imgBtn3 = document.getElementById("imgBtn3");
-let editBtn3 = document.getElementById("editBtn3");
-let xBtn4 = document.getElementById("xBtn4");
-let imgBtn4 = document.getElementById("imgBtn4");
-let editBtn4 = document.getElementById("editBtn4");
-
-let section1 = document.getElementById("section1");
-let section2 = document.getElementById("section2");
-/*let section3 = document.getElementById("section3");*/
-let section4 = document.getElementById("section4");
-let section5 = document.getElementById("section5");
-let section6 = document.getElementById("section6");
-
-let navBtnDiv1 = document.getElementById("navBtnDiv1");
-let navBtnDiv2 = document.getElementById("navBtnDiv2");
-let navBtnDiv3 = document.getElementById("navBtnDiv3");
-let navBtnDiv4 = document.getElementById("navBtnDiv4");
-let navBtnDiv5 = document.getElementById("navBtnDiv5");
-
-document.execCommand('styleWithCSS', false, true);
+function closeHamburguer() {
+    hamburguerMenu.style.display = "";
+    xHamburguerMenu.style.display = "none";
+    saveLoadBtns.style.display = "none";
+}
 
 function indexPage() {
     navBtnDiv1.style.opacity = "100%";
