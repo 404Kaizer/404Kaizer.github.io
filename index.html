@@ -11,17 +11,18 @@
 <body>
     <header id="header">
         <nav id="navigationBar">
-            <div class="headerImgDiv" id="navBtnDiv1" title="Página Inicial" onclick="indexPage()"><img class="headerImgs" src="imgs/playerInfo.png" alt="Página Inicial"></div>
-            <div class="headerImgDiv" id="navBtnDiv2" title="Página de Atributos" onclick="skillsPage()"><img class="headerImgs" src="imgs/atributes.png" alt="Página de Atributos"></div>
-            <div class="headerImgDiv" id="navBtnDiv3" title="Página de Combate" onclick="combatPage()"><img class="headerImgs" src="imgs/combatBtn.png" alt="Página de Combate"></div>
-            <div class="headerImgDiv" id="navBtnDiv4" title="Página de Inventário" onclick="inventoryPage()"><img class="headerImgs" src="imgs/backPack.png" alt="Página de Inventário"></div>
-            <div class="headerImgDiv" id="navBtnDiv5" title="Página de Anotações" onclick="notesPage()"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div>
+            <div class="headerImgDiv" id="navBtnDiv1" title="Página Inicial" onclick="indexPage()"><img class="headerImgs" id="navImgBtn1" src="imgs/playerInfo.png" alt="Página Inicial"></div>
+            <div class="headerImgDiv" id="navBtnDiv2" title="Página de Atributos" onclick="skillsPage()"><img class="headerImgs" id="navImgBtn2" src="imgs/atributes.png" alt="Página de Atributos"></div>
+            <div class="headerImgDiv" id="navBtnDiv3" title="Página de Combate" onclick="combatPage()"><img class="headerImgs" id="navImgBtn3" src="imgs/combatBtn.png" alt="Página de Combate"></div>
+            <div class="headerImgDiv" id="navBtnDiv4" title="Página de Inventário" onclick="inventoryPage()"><img class="headerImgs" id="navImgBtn4" src="imgs/backPack.png" alt="Página de Inventário"></div>
+            <div class="headerImgDiv" id="navBtnDiv5" title="Página de Anotações" onclick="notesPage()"><img class="headerImgs" id="navImgBtn5" src="imgs/noteBlock.png" alt="Página de Anotações"></div>
         </nav>
         <div id="hamburguerMenuDiv">
             <div id="hamburguerMenuBtns">
                 <img class="hamburguer" id="hamburguerMenu" src="imgs/hamburguerMenu.png" alt="Menu Hamburguer" onclick="openHamburguer()">
                 <img class="hamburguer" id="xHamburguerMenu" src="imgs/xHamburguerMenu.png" alt="" onclick="closeHamburguer()">
             </div>
+            <h1 id="headerTitle"></h1>
             <div id="saveLoadBtns">
                 <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues()">
                 <input type="button" class="saveLoadBtn" id="loadSheet" value="Escolher Ficha" onclick="chooseSheet()">
@@ -30,7 +31,6 @@
     </header>
 
     <main id="main">
-        <h1 id="mainTitle"></h1>
         <section id="section1">                 <!--Informações Pessoais Primárias do Personagem-->
             <div id="charInfos">
                 <div id="imgDiv">

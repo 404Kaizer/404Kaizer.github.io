@@ -60,7 +60,7 @@ body input:hover {
 
 #header #navigationBar .headerImgDiv, #footer #navigationBar .headerImgDiv {
   width: 100%;
-  border: solid 1px white;
+  border: solid 1px gray;
   padding: 7px;
   cursor: pointer;
 }
@@ -87,6 +87,10 @@ body input:hover {
           justify-content: right;
   padding: 20px;
   margin: 60px 80px 0 0;
+}
+
+#header #hamburguerMenuDiv #headerTitle, #footer #hamburguerMenuDiv #headerTitle {
+  font-family: "Poppins";
 }
 
 #header #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu, #footer #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu {
@@ -120,18 +124,6 @@ body input:hover {
   margin: 0 100px 20px 100px;
 }
 
-#main #mainTitle {
-  top: 23vh;
-  position: relative;
-  text-align: center;
-  font-family: "Krona One";
-  font-size: 80px;
-}
-
-#main #section1 {
-  display: none;
-}
-
 #main #section1 #charInfos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,8 +140,7 @@ body input:hover {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  border-left: 2px solid gray;
-  border-top: 2px solid gray;
+  border: 2px solid gray;
 }
 
 #main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
@@ -231,7 +222,6 @@ body input:hover {
 }
 
 #main #section2 {
-  display: none;
   margin-top: 25px;
 }
 
@@ -752,7 +742,7 @@ body input:hover {
     display: grid;
   }
   #main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
-    font-size: 18px;
+    font-size: 20px;
   }
   #main #section1 #charInfos #imgDiv #imgLabel:hover {
     background-color: white;
@@ -773,7 +763,7 @@ body input:hover {
     display: block;
   }
   #main #section1 #charInfos #imgDiv #perInfoBtn, #main #section1 #charInfos #imgDiv #perInfoBtnFake {
-    font-size: 18px;
+    font-size: 20px;
   }
   #main #section1 #charInfos #infoInput {
     display: none;
@@ -829,7 +819,7 @@ body input:hover {
   #main #section2 #charInfos2 #textAreasDiv2 .infoTextarea {
     resize: none;
     min-height: 120px;
-    font-size: 15px;
+    font-size: 18px;
   }
   #main #section4 #editContentBtn {
     gap: 20px;
@@ -855,7 +845,7 @@ body input:hover {
   }
   #main #section4 #editContent .editableArea {
     resize: none;
-    font-size: 15px;
+    font-size: 18px;
     min-height: 250px;
     height: auto;
   }
@@ -897,7 +887,7 @@ body input:hover {
   }
   #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
     resize: none;
-    font-size: 15px;
+    font-size: 18px;
     min-height: 250px;
     height: 250px;
   }
@@ -961,13 +951,13 @@ body input:hover {
     display: none;
   }
   #main {
-    margin-top: 100px;
+    margin: 0 0 105px 0;
   }
-  #main #mainTitle {
-    top: 300px;
+  #main #section1 {
+    margin-top: 70px;
   }
   #main #section3, #main #section4, #main #section5, #main #section6 {
-    margin-top: 25px;
+    margin-top: 100px;
   }
   #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
     width: 75px;
@@ -1000,7 +990,7 @@ body input:hover {
   }
   #footer #bottomNavigationBar .headerImgDiv .headerImgs {
     opacity: 50%;
-    width: 35px;
+    width: 40px;
   }
   #footer #bottomNavigationBar .headerImgDiv:hover .headerImgs {
     opacity: 100%;

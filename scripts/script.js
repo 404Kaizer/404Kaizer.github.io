@@ -1,5 +1,5 @@
 let nameCheck = localStorage.getItem("nameCheck");
-let mainTitle = document.getElementById("mainTitle");
+let headerTitle = document.getElementById("headerTitle");
 
 let hamburguerMenu = document.getElementById("hamburguerMenu");
 let xHamburguerMenu = document.getElementById("xHamburguerMenu");
@@ -35,6 +35,13 @@ let navBtnDiv3 = document.getElementById("navBtnDiv3");
 let navBtnDiv4 = document.getElementById("navBtnDiv4");
 let navBtnDiv5 = document.getElementById("navBtnDiv5");
 
+let navImgBtn1 = document.getElementById("navImgBtn1");
+let navImgBtn2 = document.getElementById("navImgBtn2");
+let navImgBtn3 = document.getElementById("navImgBtn3");
+let navImgBtn4 = document.getElementById("navImgBtn4");
+let navImgBtn5 = document.getElementById("navImgBtn5");
+
+
 document.execCommand('styleWithCSS', false, true);
 
 function chooseSheet() {
@@ -55,9 +62,9 @@ window.onload = function getInputValues() {
     nameCheck = localStorage.getItem("nameCheck");
 
     if (nameCheck == "null") {
-        mainTitle.innerText = "Eroda";
+        headerTitle.innerText = "Eroda";
     } else {
-        mainTitle.innerText = nameCheck;
+        headerTitle.innerText = nameCheck;
     }
 
     // INDEX
@@ -154,12 +161,14 @@ function openHamburguer() {
     hamburguerMenu.style.display = "none";
     xHamburguerMenu.style.display = "block";
     saveLoadBtns.style.display = "block";
+    headerTitle.style.display = "none";
 }
 
 function closeHamburguer() {
     hamburguerMenu.style.display = "";
     xHamburguerMenu.style.display = "none";
     saveLoadBtns.style.display = "none";
+    headerTitle.style.display = "";
 }
 
 function indexPage() {
@@ -168,95 +177,115 @@ function indexPage() {
     navBtnDiv3.style.opacity = "";
     navBtnDiv4.style.opacity = "";
     navBtnDiv5.style.opacity = "";
-    navBtnDiv1.style.borderColor = "white";
-    navBtnDiv2.style.borderColor = "";
-    navBtnDiv3.style.borderColor = "";
-    navBtnDiv4.style.borderColor = "";
-    navBtnDiv5.style.borderColor = "";
+    navBtnDiv1.style.borderBlockColor = "white";
+    navBtnDiv2.style.borderBlockColor = "gray";
+    navBtnDiv3.style.borderBlockColor = "gray";
+    navBtnDiv4.style.borderBlockColor = "gray";
+    navBtnDiv5.style.borderBlockColor = "gray";
+    navImgBtn1.style.opacity = "100%";
+    navImgBtn2.style.opacity = "";
+    navImgBtn3.style.opacity = "";
+    navImgBtn4.style.opacity = "";
+    navImgBtn5.style.opacity = "";
     section1.style.display = "block";
     section2.style.display = "block";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "none";
-    mainTitle.style.display = "none";
 };
 
 function skillsPage() {
     alert("Área Ainda Não Disponível!");
-    /*navBtnDiv1.style.opacity = "50%";
+    /*navBtnDiv1.style.opacity = "";
     navBtnDiv2.style.opacity = "100%";
     navBtnDiv3.style.opacity = "";
     navBtnDiv4.style.opacity = "";
     navBtnDiv5.style.opacity = "";
-    navBtnDiv1.style.borderColor = "gray";
-    navBtnDiv2.style.borderColor = "white";
-    navBtnDiv3.style.borderColor = "";
-    navBtnDiv4.style.borderColor = "";
-    navBtnDiv5.style.borderColor = "";
+    navImgBtn1.style.opacity = "";
+    navImgBtn2.style.opacity = "100%";
+    navImgBtn3.style.opacity = "";
+    navImgBtn4.style.opacity = "";
+    navImgBtn5.style.opacity = "";
+    navBtnDiv1.style.borderBlockColor = "gray";
+    navBtnDiv2.style.borderBlockColor = "white";
+    navBtnDiv3.style.borderBlockColor = "gray";
+    navBtnDiv4.style.borderBlockColor = "gray";
+    navBtnDiv5.style.borderBlockColor = "gray";
     section1.style.display = "none";
     section2.style.display = "none";
     section3.style.display = "block";
     section4.style.display = "none";
     section5.style.display = "none";
-    section6.style.display = "none";
-    mainTitle.style.display = "none";*/
+    section6.style.display = "none"; */
 };
 
 function combatPage() {
-    navBtnDiv1.style.opacity = "50%";
+    navBtnDiv1.style.opacity = "";
     navBtnDiv2.style.opacity = "";
     navBtnDiv3.style.opacity = "100%";
     navBtnDiv4.style.opacity = "";
     navBtnDiv5.style.opacity = "";
-    navBtnDiv1.style.borderColor = "gray";
-    navBtnDiv2.style.borderColor = "";
-    navBtnDiv3.style.borderColor = "white";
-    navBtnDiv4.style.borderColor = "";
-    navBtnDiv5.style.borderColor = "";
+    navImgBtn1.style.opacity = "";
+    navImgBtn2.style.opacity = "";
+    navImgBtn3.style.opacity = "100%";
+    navImgBtn4.style.opacity = "";
+    navImgBtn5.style.opacity = "";
+    navBtnDiv1.style.borderBlockColor = "gray";
+    navBtnDiv2.style.borderBlockColor = "gray";
+    navBtnDiv3.style.borderBlockColor = "white";
+    navBtnDiv4.style.borderBlockColor = "gray";
+    navBtnDiv5.style.borderBlockColor = "gray";
     section1.style.display = "none";
     section2.style.display = "none";
     section4.style.display = "grid";
     section5.style.display = "none";
     section6.style.display = "none";
-    mainTitle.style.display = "none";
 };
 
 function inventoryPage() {
-    navBtnDiv1.style.opacity = "50%";
+    navBtnDiv1.style.opacity = "";
     navBtnDiv2.style.opacity = "";
     navBtnDiv3.style.opacity = "";
     navBtnDiv4.style.opacity = "100%";
     navBtnDiv5.style.opacity = "";
-    navBtnDiv1.style.borderColor = "gray";
-    navBtnDiv2.style.borderColor = "";
-    navBtnDiv3.style.borderColor = "";
-    navBtnDiv4.style.borderColor = "white";
-    navBtnDiv5.style.borderColor = "";
+    navImgBtn1.style.opacity = "";
+    navImgBtn2.style.opacity = "";
+    navImgBtn3.style.opacity = "";
+    navImgBtn4.style.opacity = "100%";
+    navImgBtn5.style.opacity = "";
+    navBtnDiv1.style.borderBlockColor = "gray";
+    navBtnDiv2.style.borderBlockColor = "gray";
+    navBtnDiv3.style.borderBlockColor = "gray";
+    navBtnDiv4.style.borderBlockColor = "white";
+    navBtnDiv5.style.borderBlockColor = "gray";
     section1.style.display = "none";
     section2.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "grid";
     section6.style.display = "none";
-    mainTitle.style.display = "none";
 };
 
 function notesPage() {
-    navBtnDiv1.style.opacity = "50%";
+    navBtnDiv1.style.opacity = "";
     navBtnDiv2.style.opacity = "";
     navBtnDiv3.style.opacity = "";
     navBtnDiv4.style.opacity = "";
     navBtnDiv5.style.opacity = "100%";
-    navBtnDiv1.style.borderColor = "gray";
-    navBtnDiv2.style.borderColor = "";
-    navBtnDiv3.style.borderColor = "";
-    navBtnDiv4.style.borderColor = "";
-    navBtnDiv5.style.borderColor = "white";
+    navImgBtn1.style.opacity = "";
+    navImgBtn2.style.opacity = "";
+    navImgBtn3.style.opacity = "";
+    navImgBtn4.style.opacity = "";
+    navImgBtn5.style.opacity = "100%";
+    navBtnDiv1.style.borderBlockColor = "gray";
+    navBtnDiv2.style.borderBlockColor = "gray";
+    navBtnDiv3.style.borderBlockColor = "gray";
+    navBtnDiv4.style.borderBlockColor = "gray";
+    navBtnDiv5.style.borderBlockColor = "white";
     section1.style.display = "none";
     section2.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "block";
-    mainTitle.style.display = "none";
 };
 
 perInfoBtn.addEventListener("click", ()=> {
