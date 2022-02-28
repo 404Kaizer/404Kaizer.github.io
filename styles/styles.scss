@@ -270,6 +270,41 @@ body {
         }
     }
 
+    #section3 {
+
+        #topInfosDiv {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            #statusDiv {
+
+            }
+
+            #atributesDiv {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 20px;
+    
+                .skillGrid {
+                    display: grid;
+                    
+                    .skillSpan {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+    
+                    .skillInput {
+                        font-size: 30px;
+                        text-align: center;
+                        background-color: black;
+                        color: white;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+
     #section4 {
         display: none;
         gap: 15px;

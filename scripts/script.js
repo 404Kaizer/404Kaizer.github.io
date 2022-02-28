@@ -195,8 +195,8 @@ function indexPage() {
 };
 
 function skillsPage() {
-    alert("Área Ainda Não Disponível!");
-    /*navBtnDiv1.style.opacity = "";
+    //alert("Área Ainda Não Disponível!");
+    navBtnDiv1.style.opacity = "";
     navBtnDiv2.style.opacity = "100%";
     navBtnDiv3.style.opacity = "";
     navBtnDiv4.style.opacity = "";
@@ -216,7 +216,7 @@ function skillsPage() {
     section3.style.display = "block";
     section4.style.display = "none";
     section5.style.display = "none";
-    section6.style.display = "none"; */
+    section6.style.display = "none";
 };
 
 function combatPage() {

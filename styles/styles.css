@@ -288,6 +288,39 @@ body input:hover {
   padding: 10px;
 }
 
+#main #section3 #topInfosDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+#main #section3 #topInfosDiv #atributesDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+#main #section3 #topInfosDiv #atributesDiv .skillGrid {
+  display: -ms-grid;
+  display: grid;
+}
+
+#main #section3 #topInfosDiv #atributesDiv .skillGrid .skillSpan {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#main #section3 #topInfosDiv #atributesDiv .skillGrid .skillInput {
+  font-size: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100px;
+}
+
 #main #section4 {
   display: none;
   gap: 15px;
