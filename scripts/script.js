@@ -24,7 +24,7 @@ let editBtn4 = document.getElementById("editBtn4");
 
 let section1 = document.getElementById("section1");
 let section2 = document.getElementById("section2");
-/*let section3 = document.getElementById("section3");*/
+let section3 = document.getElementById("section3");
 let section4 = document.getElementById("section4");
 let section5 = document.getElementById("section5");
 let section6 = document.getElementById("section6");
@@ -189,6 +189,7 @@ function indexPage() {
     navImgBtn5.style.opacity = "";
     section1.style.display = "block";
     section2.style.display = "block";
+    section3.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "none";
@@ -213,7 +214,7 @@ function skillsPage() {
     navBtnDiv5.style.borderBlockColor = "gray";
     section1.style.display = "none";
     section2.style.display = "none";
-    section3.style.display = "block";
+    section3.style.display = "grid";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "none";
@@ -237,6 +238,7 @@ function combatPage() {
     navBtnDiv5.style.borderBlockColor = "gray";
     section1.style.display = "none";
     section2.style.display = "none";
+    section3.style.display = "none";
     section4.style.display = "grid";
     section5.style.display = "none";
     section6.style.display = "none";
@@ -260,6 +262,7 @@ function inventoryPage() {
     navBtnDiv5.style.borderBlockColor = "gray";
     section1.style.display = "none";
     section2.style.display = "none";
+    section3.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "grid";
     section6.style.display = "none";
@@ -283,6 +286,7 @@ function notesPage() {
     navBtnDiv5.style.borderBlockColor = "white";
     section1.style.display = "none";
     section2.style.display = "none";
+    section3.style.display = "none";
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "block";

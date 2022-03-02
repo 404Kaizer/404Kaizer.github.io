@@ -73,41 +73,135 @@
         </section>
         
         <section id="section3">                 <!--Parte dos Atributos e Perícias-->
-            <div id="topInfosDiv">
-                <div id="statusDiv">
-                    <img src="" alt="Vida">
-                    <img src="" alt="Sanidade">
-                    <img src="" alt="Energia">
-                </div>
-                <div id="atributesDiv">
-                    <div class="skillGrid">
-                        <span class="skillSpan">FORÇA</span>
-                        <input class="skillInput" type="number" name="" id="">
+            <div id="attDiv">
+                <span id="attTitle">Atributos</span>
+                <div id="attGrid">
+                    <div class="attGridItems">
+                        <span class="attSpan">Força</span>
+                        <input class="attInput" type="number" name="" id="">
+                        <input class="attInput" type="number" name="" id="">
                     </div>
-                    <div class="skillGrid">
-                        <span class="skillSpan">AGILIDADE</span>
-                        <input class="skillInput" type="number" name="" id="">
+                    <div class="attGridItems">
+                        <span class="attSpan">Agilidade</span>
+                        <input class="attInput" type="number" name="" id="">
+                        <input class="attInput" type="number" name="" id="">
                     </div>
-                    <div class="skillGrid">
-                        <span class="skillSpan">CONSTITUIÇÃO</span>
-                        <input class="skillInput" type="number" name="" id="">
+                    <div class="attGridItems">
+                        <span class="attSpan">Constituição</span>
+                        <input class="attInput" type="number" name="" id="">
+                        <input class="attInput" type="number" name="" id="">
                     </div>
-                    <div class="skillGrid">
-                        <span class="skillSpan">INTELIGÊNCIA</span>
-                        <input class="skillInput" type="number" name="" id="">
+                    <div class="attGridItems">
+                        <span class="attSpan">Inteligência</span>
+                        <input class="attInput" type="number" name="" id="">
+                        <input class="attInput" type="number" name="" id="">
                     </div>
-                    <div class="skillGrid">
-                        <span class="skillSpan">SABEDORIA</span>
-                        <input class="skillInput" type="number" name="" id="">
+                    <div class="attGridItems">
+                        <span class="attSpan">Sabedoria</span>
+                        <input class="attInput" type="number" name="" id="">
+                        <input class="attInput" type="number" name="" id="">
                     </div>
-                    <div class="skillGrid">
-                        <span class="skillSpan">CARISMA</span>
-                        <input class="skillInput" type="number" name="" id="">
+                    <div class="attGridItems">
+                        <span class="attSpan">Carisma</span>
+                        <input class="attInput" type="number" name="" id="">
+                        <input class="attInput" type="number" name="" id="">
                     </div>
                 </div>
             </div>
-            <div id="skillsDiv">
 
+            <div id="statusDiv">
+                <div id="lifeStatus">
+                    <span class="statusSpan">Vida</span>
+                    <div class="bar">
+                        <span>5/5</span>
+                    </div>
+                    <div id="lifeChecks">
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Exausto</span>
+                        </div>
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Lesão Grave</span>
+                        </div>
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Morrendo</span>
+                        </div>
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Falhas</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="sanityStatus">
+                    <span class="statusSpan">Sanidade</span>
+                    <div class="bar">
+                        <span>5/5</span>
+                    </div>
+                    <div id="sanityChecks">
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Aterrorizado</span>
+                        </div>
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Traumatizado</span>
+                        </div>
+                        <div>
+                            <input class="statusChecks" type="checkbox" name="" id="">
+                            <span class="checkSpans">Insano</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="energyStatus">
+                    <span class="statusSpan">Energia</span>
+                    <div class="bar">
+                        <span>5/5</span>
+                    </div>
+                </div>
+                <div id="bodyStatus">
+                    <div id="defStatus">
+                        <div>
+                            <span class="statusSpan">Defesa</span>
+                            <div>
+                                <form action="#">
+                                    <input type="radio" name="defType" id="">
+                                    <label for="defType">Nenhuma</label>
+                                    <input type="radio" name="defType" id="">
+                                    <label for="defType">Leve</label>
+                                    <input type="radio" name="defType" id="">
+                                    <label for="defType">Média</label>
+                                    <input type="radio" name="defType" id="">
+                                    <label for="defType">Pesada</label>
+                                </form>
+                            </div>
+                            <div>
+                                <input class="statusInput" type="number" name="" id="">
+                                <input class="statusInput" type="number" name="" id="">
+                                <input class="statusInput" type="number" name="" id="">
+                            </div>
+                        </div>
+                        <div>
+                            <span class="statusSpan">Redutor de Dano</span>
+                            <div>
+                                <input class="statusInput" type="number" name="" id="">
+                                <input class="statusInput" type="number" name="" id="">
+                                <input class="statusInput" type="number" name="" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="speedStatus">
+                        <span class="statusSpan">Velocidade</span>
+                        <input class="statusInput" type="number" name="" id="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="skillsDiv">
+                
             </div>
         </section>
         

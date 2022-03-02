@@ -288,37 +288,67 @@ body input:hover {
   padding: 10px;
 }
 
-#main #section3 #topInfosDiv {
+#main #section3 {
+  margin-top: 25px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-#main #section3 #topInfosDiv #atributesDiv {
+#main #section3 #attDiv {
+  display: -ms-grid;
+  display: grid;
+}
+
+#main #section3 #attDiv .attGridItems {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+#main #section3 #statusDiv {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+}
+
+#main #section3 #statusDiv #lifeStatus {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+
+#main #section3 #statusDiv #lifeStatus #lifeChecks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+}
+
+#main #section3 #statusDiv #sanityStatus {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+
+#main #section3 #statusDiv #sanityStatus #sanityChecks {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
-  gap: 20px;
 }
 
-#main #section3 #topInfosDiv #atributesDiv .skillGrid {
+#main #section3 #statusDiv #energyStatus {
   display: -ms-grid;
   display: grid;
-}
-
-#main #section3 #topInfosDiv #atributesDiv .skillGrid .skillSpan {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#main #section3 #topInfosDiv #atributesDiv .skillGrid .skillInput {
-  font-size: 30px;
-  text-align: center;
-  background-color: black;
-  color: white;
-  width: 100px;
+  gap: 10px;
 }
 
 #main #section4 {

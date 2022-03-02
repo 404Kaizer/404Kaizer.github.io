@@ -271,37 +271,48 @@ body {
     }
 
     #section3 {
-        display: none;
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-around;
 
-        #topInfosDiv {
+        #attDiv {
             display: grid;
-            grid-template-columns: auto auto;
 
-            #statusDiv {
+            .attGridItems {
+                display: grid;
+                grid-template-columns: auto;
+            }
+        }
 
+        #statusDiv {
+            display: grid;
+            gap: 20px;
+
+            #lifeStatus {
+                display: grid;
+                gap: 10px;
+
+                #lifeChecks {
+                    display: grid;
+                    grid-template-columns: auto auto auto auto;
+                }
             }
 
-            #atributesDiv {
+            #sanityStatus {
                 display: grid;
-                grid-template-columns: auto auto auto;
-                gap: 20px;
-    
-                .skillGrid {
+                gap: 10px;
+
+                #sanityChecks {
                     display: grid;
-                    
-                    .skillSpan {
-                        font-size: 20px;
-                        font-weight: bold;
-                    }
-    
-                    .skillInput {
-                        font-size: 30px;
-                        text-align: center;
-                        background-color: black;
-                        color: white;
-                        width: 100px;
-                    }
+                    grid-template-columns: auto auto auto;
                 }
+            }
+
+            #energyStatus {
+                display: grid;
+                gap: 10px;
             }
         }
     }
