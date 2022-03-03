@@ -3,7 +3,11 @@
     color: white;
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Poppins;
+}
+
+h1 {
+    font-size: 20px
 }
 
 input::-webkit-outer-spin-button,
@@ -107,6 +111,7 @@ body {
             .saveLoadBtn {
                 background-color: black;
                 font-size: 23px;
+                padding: 2px 5px;
             }
     
             .saveLoadBtn:hover {
@@ -123,7 +128,7 @@ body {
     margin: 0 100px 20px 100px;
 
     #section1 {
-        
+
         #charInfos {
             display: flex;
 
@@ -138,7 +143,7 @@ body {
                     border: 2px solid gray;
         
                     #imgSelectBtnFake {
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
         
@@ -167,7 +172,7 @@ body {
                     background-color: black;
                     width: 100%;
                     font-weight: bold;
-                    font-size: 20px;
+                    font-size: 16px;
                 }
 
                 #perInfoBtn:hover, #perInfoBtnFake:hover {
@@ -196,7 +201,7 @@ body {
                     padding: 10px;
     
                     span {
-                        font-size: 20px;
+                        font-size: 17px;
                         font-weight: bold;
                     }
                     
@@ -204,7 +209,7 @@ body {
                         background-color: black;
                         height: 100%;
                         padding: 10px;
-                        font-size: 20px;
+                        font-size: 17px;
                     }
                 }
             }
@@ -234,7 +239,7 @@ body {
                     height: auto;
                     resize: vertical;
                     min-height: 300px;
-                    font-size: 20px;
+                    font-size: 18px;
                     padding: 10px;
                 }
 
@@ -248,7 +253,7 @@ body {
                         resize: vertical;
                         width: 100%;
                         min-height: 100px;
-                        font-size: 20px;
+                        font-size: 16px;
                         padding: 10px;
                     }
                 }
@@ -263,7 +268,7 @@ body {
                     background-color: black;
                     resize: vertical;
                     min-height: 100px;
-                    font-size: 20px;
+                    font-size: 16px;
                     padding: 10px;
                 }
             }
@@ -274,29 +279,115 @@ body {
         margin-top: 25px;
         display: grid;
         grid-template-columns: auto auto;
-        align-items: center;
-        justify-content: space-around;
+        align-items: baseline;
+        gap: 10px;
 
-        #attDiv {
+        #attSkillsDiv {
             display: grid;
+            gap: 10px;
 
-            .attGridItems {
+            #attDiv {
+                padding: 10px;
+                background-color: black;
+                border: 1px solid gray;
                 display: grid;
-                grid-template-columns: auto;
+                gap: 25px;
+    
+                #attTitle {
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+    
+                #attGrid {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 20px;
+    
+                    .attGridItems {
+                        display: grid;
+                        grid-template-columns: auto;
+    
+                        .attSpan {
+                            font-weight: bold;
+                            border: 1px solid gray;
+                            padding: 5px;
+                        }
+    
+                        .attInputDiv {
+                            display: flex;
+    
+                            .attInput {
+                                background-color: black;
+                                color: white;
+                                padding: 5px;
+                                font-size: 25px;
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .attGridItems:hover {
+
+                        .attSpan {
+                            border-color: white;
+                            background-color: white;
+                            color: black;
+                        }
+
+                        .attInputDiv {
+    
+                            .attInput {
+                                border-color: white;
+                            }
+                        }
+                    }
+                }
             }
         }
 
         #statusDiv {
             display: grid;
+            padding: 10px;
             gap: 20px;
+            background-color: black;
+            border: 1px solid gray;
+
+            .statusSpan {
+                font-weight: bold;
+                font-size: 17px;
+            }
+
+            .statusChecks {
+                width: 15px;
+                height: 15px;
+            }
 
             #lifeStatus {
                 display: grid;
                 gap: 10px;
 
-                #lifeChecks {
+                .barDiv {
+                    display: grid;
+                    text-align: center;
+
+                    .bar {
+                        transition: width .5s linear;
+                        width: 100%;
+                        background-color: red;
+                    }
+                }
+
+                #lifeCheckDiv {
                     display: grid;
                     grid-template-columns: auto auto auto auto;
+
+                    .lifeChecks {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
                 }
             }
 
@@ -304,15 +395,122 @@ body {
                 display: grid;
                 gap: 10px;
 
-                #sanityChecks {
+                .barDiv {
+                    display: grid;
+                    text-align: center;
+                    width: 100%;
+                    text-align: center;
+
+                    .bar {
+                        transition: width .5s linear;
+                        width: 100%;
+                        background-color: rgb(134, 25, 134);
+                    }
+                }
+
+                #sanityCheckDiv {
                     display: grid;
                     grid-template-columns: auto auto auto;
+
+                    .sanityChecks {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
                 }
             }
 
             #energyStatus {
                 display: grid;
                 gap: 10px;
+    
+                .barDiv {
+                    display: grid;
+                    text-align: center;
+
+                    .bar {
+                        transition: width .5s linear;
+                        width: 100%;
+                        background-color: rgb(0, 8, 126);
+                    }
+                }
+            }
+
+            #bodyStatus {
+                display: grid;
+                grid-template-columns: auto;
+                gap: 20px;
+
+                #defStatus {
+                    display: grid;
+                    gap: 20px;
+
+                    #defInputs {
+                        display: grid;
+                        gap: 10px;
+
+                        #defWeightDiv {
+                            display: flex;
+                            gap: 20px;
+                            
+                            form {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+
+                                .defRadio {
+                                    width: 15px;
+                                    height: 15px;
+                                    vertical-align: bottom;
+                                }
+                            }
+                        }
+                    }
+
+                    #dmgReduct {
+                        display: grid;
+                        gap: 10px;
+
+                        .statusSpan {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .statusInputDiv {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        gap: 10px;
+
+                        .statusInputGrid {
+
+                            .statusInput {
+                                background-color: black;
+                                color: white;
+                                width: 100%;
+                                text-align: center;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+
+                #speedStatus {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    .statusSpan {
+                        font-size: 16px;
+                    }
+
+                    .statusInput {
+                        background-color: black;
+                        color: white;
+                        width: 100%;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
@@ -471,7 +669,7 @@ body {
                         text-align: center;
                         font-size: 20px;
                         background-color: black;
-                        padding: 10px;
+                        padding: 5px;
                     }
                 }
             }
@@ -660,7 +858,7 @@ body {
             .headerImgDiv {
         
                 .headerImgs {
-                    width: 45px;
+                    width: 40px;
                 }  
             }
         }
@@ -672,35 +870,26 @@ body {
             #saveLoadBtns {
 
                 .saveLoadBtn {
-                    font-size: 30px;
+                    font-size: 22px;
                 }
             }
         }
     }
 
     #main {
-        margin: 0 30px 50px 30px;
-        font-size: 20px;
+        margin: 0 30px 30px 30px;
 
         #section1 {
 
             #charInfos {
-                display: grid;
                 
                 #imgDiv {
 
                     #imgLabel {
 
                         #imgSelectBtnFake {
-                            font-size: 25px;
+                            font-size: 16px;
                         }
-                    }
-
-                    #charImg {
-                        width: 100%;
-                        resize: vertical;
-                        overflow: auto;
-                        min-height: 22.5em;
                     }
                 }
     
@@ -719,7 +908,7 @@ body {
                     div {
     
                         .wealthInput {
-                            font-size: 35px;
+                            font-size: 25px;
                         }
                     }
                 }
@@ -744,19 +933,36 @@ body {
 
 @media only screen and (max-width: 1100px) {
 
+    #header {
+
+        #hamburguerMenuDiv {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    }
+
     #main {
 
-        #section2 {
-    
-            #charInfos2 {
-                display: block;
-    
-                #textAreasDiv1 {
-                    display: block;
+        #section1 {
 
-                    #textAreasDiv3 {
+            #charInfos {
+                display: grid;
+
+                #imgDiv {
+                    display: grid;
+                    margin: auto;
+    
+                    #perInfoBtn {
                         display: block;
                     }
+    
+                    #perInfoBtnFake {
+                        display: none;
+                    }
+                }
+
+                #infoInput {
+                    display: none;
                 }
             }
         }
@@ -771,260 +977,10 @@ body {
                 gap: 15px;
             }
         }
-
-        #section5 {
-            
-            #editContent1 {
-
-                #wealth {
-                        
-                    div {
-                        grid-template-columns: auto;
-                    }
-                }
-            }
-        }
     }
 }
 
-@media only screen and (max-width: 700px) {
-
-    #header {
-        
-        #hamburguerMenuDiv {
-            justify-content: center;
-            
-            #saveLoadBtns {
-                margin-bottom: 20px;
-
-                .saveLoadBtn {
-                    font-size: 23px;
-                }
-            }
-        }
-    }
-
-    #main {
-        margin: 0 0 20px 0;
-
-        #section1 {
-
-            #charInfos {
-    
-                #imgDiv {
-                    display: grid;
-    
-                    #imgLabel {
-            
-                        #imgSelectBtnFake {
-                            font-size: 20px;
-                        }
-                    }
-            
-                    #imgLabel:hover {
-                        background-color: white;
-            
-                        #imgSelectBtnFake {
-                            color: black;
-                        }
-                    }
-    
-                    #charImg {
-                        object-position: 20% 10%;
-                        width: 100%;
-                        height: 20em;
-                    }
-
-                    #perInfoBtnFake {
-                        display: none;
-                    }
-
-                    #perInfoBtn {
-                        display: block;
-                    }
-
-                    #perInfoBtn, #perInfoBtnFake {
-                        font-size: 20px;
-                    }
-                }
-
-                #infoInput {
-                    display: none;
-                    grid-template-columns: auto;
-                    column-gap: 30px;
-        
-                    .infoInputDiv {
-        
-                        span {
-                            font-size: 18px;
-                        }
-                        
-                        input {
-                            font-size: 18px;
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    
-        #section2 {
-            
-            h1 {
-                font-size: 20px;
-            }
-    
-            #charInfos2 {
-                display: grid;
-                grid-template-columns: auto;
-                row-gap: 30px;
-    
-                #textAreasDiv1 {
-                    display: grid;
-                    row-gap: 30px;
-    
-                    #backgroundArea {
-                        min-height: 250px;
-                        font-size: 18px;
-                        resize: none;
-                    }
-    
-                    #textAreasDiv3 {
-                        display: grid;
-                        grid-template-columns: auto;
-                        row-gap: 30px;
-    
-                        .infoTextarea {
-                            resize: none;
-                            min-height: 120px;
-                            font-size: 18px;
-                        }
-                    }
-                }
-    
-                #textAreasDiv2 {
-                    display: grid;
-                    row-gap: 30px;
-    
-                    .infoTextarea {
-                        resize: none;
-                        min-height: 120px;
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-
-        #section4 {
-
-            #editContentBtn {
-                gap: 20px;
-
-                .editBtnDiv {
-                    
-                    .editBtn, .xBtn {
-                        width: 80px;
-            
-                        .imgBtn {
-                            width: 50px;
-                            padding: 5px;
-                        }
-                    }
-                }
-            }
-            
-            #editContent {
-                gap: 30px;
-
-                h1 {
-                    font-size: 20px
-                }
-
-                .editOpts {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-                }
-                
-                .editableArea {
-                    resize: none;
-                    font-size: 18px;
-                    min-height: 250px;
-                    height: auto;
-                }
-            }
-        }
-
-        #section5 {
-            display: none;
-            grid-template-columns: auto;
-            column-gap: 10px;
-    
-            h1 {
-                font-size: 20px
-            }
-
-            #editContent1 {
-    
-                #wealth {
-                    margin-bottom: 15px;
-                        
-                    div {
-                        display: grid;
-                        grid-template-columns: auto;
-                        gap: 15px;
-    
-                        .wealthInput {
-                            text-align: center;
-                            font-size: 20px;
-                            background-color: black;
-                            padding: 10px;
-                        }
-                    }
-                }
-            }
-    
-            #editContent1, #editContent2 {
-
-                .editOpts {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-                }
-
-                #editableArea1 {
-                    min-height: 250px;
-                    height: 250px;
-                }
-                
-                .editableArea {
-                    resize: none;
-                    font-size: 18px;
-                    min-height: 250px;
-                    height: 250px;
-                }
-            }
-        }
-
-        #section6 {
-
-            h1 {
-                font-size: 20px;
-            }
-    
-            .editOpts {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-            }
-            
-            #editableArea {
-                resize: none;
-                font-size: 18px;
-                min-height: 1100px;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 730px) {
 
     #header {
 
@@ -1078,31 +1034,188 @@ body {
     }
 
     #main {
-        margin: 0 0 105px 0;
+        margin: 70px 0 105px 0;
 
         #section1 {
-            margin-top: 70px;
-        }
 
-        #section3, #section4, #section5, #section6 {
-            margin-top: 100px;
-        }
-
-        #section4 {
-            
-            #editContentBtn {
+            #charInfos {
     
-                .editBtnDiv {
-                    
-                    .editBtn, .xBtn {
-                        width: 75px;
-            
-                        .imgBtn {
-                            width: 45px;
-                            padding: 2px;
+                #imgDiv {
+                    display: grid;
+                    width: 100%;
+    
+                    #charImg {
+                        object-position: 50%;
+                        object-fit: cover;
+                        width: 100%;
+                        height: auto;
+                        max-height: 30em;
+                    }
+
+                    #perInfoBtnFake {
+                        display: none;
+                    }
+
+                    #perInfoBtn {
+                        display: block;
+                    }
+                }
+
+                #infoInput {
+                    display: none;
+                    grid-template-columns: auto;
+                    gap: 5px;
+        
+                    .infoInputDiv {
+        
+                        span {
+                            font-size: 18px;
+                        }
+                        
+                        input {
+                            font-size: 18px;
+                            width: 100%;
                         }
                     }
                 }
+            }
+        }
+    
+        #section2 {
+    
+            #charInfos2 {
+                display: grid;
+                grid-template-columns: auto;
+                row-gap: 10px;
+    
+                #textAreasDiv1 {
+                    display: grid;
+                    row-gap: 10px;
+    
+                    #backgroundArea {
+                        min-height: 250px;
+                        font-size: 18px;
+                        resize: none;
+                    }
+    
+                    #textAreasDiv3 {
+                        display: grid;
+                        grid-template-columns: auto;
+                        row-gap: 10px;
+    
+                        .infoTextarea {
+                            resize: none;
+                            min-height: 120px;
+                            font-size: 17px;
+                        }
+                    }
+                }
+    
+                #textAreasDiv2 {
+                    display: grid;
+                    row-gap: 10px;
+    
+                    .infoTextarea {
+                        resize: none;
+                        min-height: 120px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        #section4 {
+
+            #editContentBtn {
+                gap: 30px;
+
+                .editBtnDiv {
+                    
+                    .editBtn, .xBtn {
+                        width: 80px;
+            
+                        .imgBtn {
+                            width: 50px;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+            
+            #editContent {
+                gap: 20px;
+
+                .editOpts {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+                }
+                
+                .editableArea {
+                    resize: none;
+                    font-size: 17px;
+                    min-height: 250px;
+                    height: auto;
+                }
+            }
+        }
+
+        #section5 {
+            display: none;
+            grid-template-columns: auto;
+            column-gap: 10px;
+
+            #editContent1 {
+    
+                #wealth {
+                    margin-bottom: 15px;
+                        
+                    div {
+                        display: grid;
+                        grid-template-columns: auto;
+                        gap: 15px;
+    
+                        .wealthInput {
+                            text-align: center;
+                            font-size: 20px;
+                            background-color: black;
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+    
+            #editContent1, #editContent2 {
+
+                .editOpts {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+                }
+
+                #editableArea1 {
+                    min-height: 250px;
+                    height: 250px;
+                }
+                
+                .editableArea {
+                    resize: none;
+                    font-size: 17px;
+                    min-height: 250px;
+                    height: 250px;
+                }
+            }
+        }
+
+        #section6 {
+    
+            .editOpts {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+            }
+            
+            #editableArea {
+                resize: none;
+                font-size: 17px;
+                min-height: 1100px;
             }
         }
     }
@@ -1138,6 +1251,38 @@ body {
                 .headerImgs {
                     opacity: 100%;
                 }  
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    #main {
+
+        #section1 {
+            margin-top: 70px;
+        }
+
+        #section3, #section4, #section5, #section6 {
+            margin-top: 100px;
+        }
+
+        #section4 {
+            
+            #editContentBtn {
+    
+                .editBtnDiv {
+                    
+                    .editBtn, .xBtn {
+                        width: 75px;
+            
+                        .imgBtn {
+                            width: 45px;
+                            padding: 2px;
+                        }
+                    }
+                }
             }
         }
     }

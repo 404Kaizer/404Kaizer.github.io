@@ -73,62 +73,80 @@
         </section>
         
         <section id="section3">                 <!--Parte dos Atributos e Perícias-->
-            <div id="attDiv">
-                <span id="attTitle">Atributos</span>
-                <div id="attGrid">
-                    <div class="attGridItems">
-                        <span class="attSpan">Força</span>
-                        <input class="attInput" type="number" name="" id="">
-                        <input class="attInput" type="number" name="" id="">
-                    </div>
-                    <div class="attGridItems">
-                        <span class="attSpan">Agilidade</span>
-                        <input class="attInput" type="number" name="" id="">
-                        <input class="attInput" type="number" name="" id="">
-                    </div>
-                    <div class="attGridItems">
-                        <span class="attSpan">Constituição</span>
-                        <input class="attInput" type="number" name="" id="">
-                        <input class="attInput" type="number" name="" id="">
-                    </div>
-                    <div class="attGridItems">
-                        <span class="attSpan">Inteligência</span>
-                        <input class="attInput" type="number" name="" id="">
-                        <input class="attInput" type="number" name="" id="">
-                    </div>
-                    <div class="attGridItems">
-                        <span class="attSpan">Sabedoria</span>
-                        <input class="attInput" type="number" name="" id="">
-                        <input class="attInput" type="number" name="" id="">
-                    </div>
-                    <div class="attGridItems">
-                        <span class="attSpan">Carisma</span>
-                        <input class="attInput" type="number" name="" id="">
-                        <input class="attInput" type="number" name="" id="">
+            <div id="attSkillsDiv">
+                <div id="attDiv">
+                    <span id="attTitle"> - Atributos - </span>
+                    <div id="attGrid">
+                        <div class="attGridItems">
+                            <span class="attSpan">FORÇA</span>
+                            <div class="attInputDiv">
+                                <input class="attInput" type="number" name="" id="" placeholder="10">
+                                <input class="attInput" type="number" name="" id="" placeholder="+0">
+                            </div>
+                        </div>
+                        <div class="attGridItems">
+                            <span class="attSpan">AGILIDADE</span>
+                            <div class="attInputDiv">
+                                <input class="attInput" type="number" name="" id="" placeholder="10">
+                                <input class="attInput" type="number" name="" id="" placeholder="+0">
+                            </div>
+                        </div>
+                        <div class="attGridItems">
+                            <span class="attSpan">CONSTITUIÇÃO</span>
+                            <div class="attInputDiv">
+                                <input class="attInput" type="number" name="" id="" placeholder="10">
+                                <input class="attInput" type="number" name="" id="" placeholder="+0">
+                            </div>
+                        </div>
+                        <div class="attGridItems">
+                            <span class="attSpan">INTELIGÊNCIA</span>
+                            <div class="attInputDiv">
+                                <input class="attInput" type="number" name="" id="" placeholder="10">
+                                <input class="attInput" type="number" name="" id="" placeholder="+0">
+                            </div>
+                        </div>
+                        <div class="attGridItems">
+                            <span class="attSpan">SABEDORIA</span>
+                            <div class="attInputDiv">
+                                <input class="attInput" type="number" name="" id="" placeholder="10">
+                                <input class="attInput" type="number" name="" id="" placeholder="+0">
+                            </div>
+                        </div>
+                        <div class="attGridItems">
+                            <span class="attSpan">CARISMA</span>
+                            <div class="attInputDiv">
+                                <input class="attInput" type="number" name="" id="" placeholder="10">
+                                <input class="attInput" type="number" name="" id="" placeholder="+0">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <div id="skillsDiv">
+                
+                </div>
+            </div>
+            
             <div id="statusDiv">
                 <div id="lifeStatus">
                     <span class="statusSpan">Vida</span>
-                    <div class="bar">
-                        <span>5/5</span>
+                    <div class="barDiv">
+                        <span class="bar">0/0</span>
                     </div>
-                    <div id="lifeChecks">
-                        <div>
+                    <div id="lifeCheckDiv">
+                        <div class="lifeChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <span class="checkSpans">Exausto</span>
                         </div>
-                        <div>
+                        <div class="lifeChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <span class="checkSpans">Lesão Grave</span>
                         </div>
-                        <div>
+                        <div class="lifeChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <span class="checkSpans">Morrendo</span>
                         </div>
-                        <div>
+                        <div class="lifeChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <input class="statusChecks" type="checkbox" name="" id="">
@@ -138,19 +156,19 @@
                 </div>
                 <div id="sanityStatus">
                     <span class="statusSpan">Sanidade</span>
-                    <div class="bar">
-                        <span>5/5</span>
+                    <div class="barDiv">
+                        <span class="bar">0/0</span>
                     </div>
-                    <div id="sanityChecks">
-                        <div>
+                    <div id="sanityCheckDiv">
+                        <div class="sanityChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <span class="checkSpans">Aterrorizado</span>
                         </div>
-                        <div>
+                        <div class="sanityChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <span class="checkSpans">Traumatizado</span>
                         </div>
-                        <div>
+                        <div class="sanityChecks">
                             <input class="statusChecks" type="checkbox" name="" id="">
                             <span class="checkSpans">Insano</span>
                         </div>
@@ -158,50 +176,64 @@
                 </div>
                 <div id="energyStatus">
                     <span class="statusSpan">Energia</span>
-                    <div class="bar">
-                        <span>5/5</span>
+                    <div class="barDiv">
+                        <span class="bar">0/0</span>
                     </div>
                 </div>
                 <div id="bodyStatus">
                     <div id="defStatus">
-                        <div>
-                            <span class="statusSpan">Defesa</span>
-                            <div>
+                        <div id="defInputs">
+                            <div id="defWeightDiv">
+                                <span class="statusSpan">Defesa</span>
                                 <form action="#">
-                                    <input type="radio" name="defType" id="">
+                                    <input class="defRadio" type="radio" name="defType" id="defType1">
                                     <label for="defType">Nenhuma</label>
-                                    <input type="radio" name="defType" id="">
+                                    <input class="defRadio" type="radio" name="defType" id="defType2">
                                     <label for="defType">Leve</label>
-                                    <input type="radio" name="defType" id="">
+                                    <input class="defRadio" type="radio" name="defType" id="defType3">
                                     <label for="defType">Média</label>
-                                    <input type="radio" name="defType" id="">
+                                    <input class="defRadio" type="radio" name="defType" id="defType4">
                                     <label for="defType">Pesada</label>
                                 </form>
                             </div>
-                            <div>
-                                <input class="statusInput" type="number" name="" id="">
-                                <input class="statusInput" type="number" name="" id="">
-                                <input class="statusInput" type="number" name="" id="">
+                            <div id="defMethodDiv" class="statusInputDiv">
+                                <div class="statusInputGrid">
+                                    <span>Esquiva</span>
+                                    <input class="statusInput" type="text" name="" id="charDodge" placeholder="+0">
+                                </div>
+                                <div class="statusInputGrid">
+                                    <span>Defesa</span>
+                                    <input class="statusInput" type="number" name="" id="charDef" min="0" placeholder="10">
+                                </div>
+                                <div class="statusInputGrid">
+                                    <span>Bloqueio</span>
+                                    <input class="statusInput" type="text" name="" id="charBlock" placeholder="+0">
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <span class="statusSpan">Redutor de Dano</span>
-                            <div>
-                                <input class="statusInput" type="number" name="" id="">
-                                <input class="statusInput" type="number" name="" id="">
-                                <input class="statusInput" type="number" name="" id="">
+                        <div id="dmgReduct">
+                            <span class="statusSpan">Redutores de Dano</span>
+                            <div id="dmgReductInputs" class="statusInputDiv">
+                                <div class="statusInputGrid">
+                                    <span>D. Balístico</span>
+                                    <input class="statusInput" type="text" name="" id="dmgBal" placeholder="+0">
+                                </div>
+                                <div class="statusInputGrid">
+                                    <span>D. Físico</span>
+                                    <input class="statusInput" type="text" name="" id="dmgPhy" placeholder="+0">
+                                </div>
+                                <div class="statusInputGrid">
+                                    <span>D. Mágico</span>
+                                    <input class="statusInput" type="text" name="" id="dmgMag" placeholder="+0">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div id="speedStatus">
                         <span class="statusSpan">Velocidade</span>
-                        <input class="statusInput" type="number" name="" id="">
+                        <input class="statusInput" type="text" name="" id="charSpeed" placeholder="9 metros ou 6 quadrados">
                     </div>
                 </div>
-            </div>
-
-            <div id="skillsDiv">
-                
             </div>
         </section>
         
