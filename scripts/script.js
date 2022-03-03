@@ -41,8 +41,92 @@ let navImgBtn3 = document.getElementById("navImgBtn3");
 let navImgBtn4 = document.getElementById("navImgBtn4");
 let navImgBtn5 = document.getElementById("navImgBtn5");
 
+let lifeBar = document.getElementById("lifeBar");
+let sanityBar = document.getElementById("sanityBar");
+let energyBar = document.getElementById("energyBar");
 
-document.execCommand('styleWithCSS', false, true);
+const charStatus = {
+    life: {
+      current: 0,
+      max: 0,
+    },
+
+    sanity: {
+      current: 0,
+      max: 0,
+    },
+
+    energy: {
+      current: 0,
+      max: 0,
+    }
+}   
+
+function calculateBar(current, max) {
+    if (current > max) {
+        return 100;
+    } else if (current < 0) {
+        return 0;
+    } else {
+        const value = (100 / max) * current;
+        const string = value.toString().split('.')[0];
+        const percentage = Number(string);
+        return percentage;
+    }
+}
+
+energyBar.addEventListener("click", ()=> {
+    let current = Number(prompt("ATUAL:"));
+    const max = Number(prompt("MÁXIMO:"));
+  
+    if (current > max) {
+        alert('A Energia Atual Não Pode Ser Maior Que a Maxima!');
+        current = max;
+    }
+  
+    charStatus.energy.current = current;
+    charStatus.energy.max = max;
+    energyBar.style.width = `${calculateBar(current, max)}%`;
+    energyBar.innerText = `${current}/${max}`;
+  
+    event.preventDefault();
+});
+
+lifeBar.addEventListener("click", ()=> {
+    let current = Number(prompt("ATUAL:"));
+    const max = Number(prompt("MÁXIMO:"));
+  
+    if (current > max) {
+        alert('A Vida Atual Não Pode Ser Maior Que a Maxima!');
+        current = max;
+    }
+  
+    charStatus.energy.current = current;
+    charStatus.energy.max = max;
+    lifeBar.style.width = `${calculateBar(current, max)}%`;
+    lifeBar.innerText = `${current}/${max}`;
+  
+    event.preventDefault();
+});
+
+sanityBar.addEventListener("click", ()=> {
+    let current = Number(prompt("ATUAL:"));
+    const max = Number(prompt("MÁXIMO:"));
+  
+    if (current > max) {
+        alert('A Sanidade Atual Não Pode Ser Maior Que a Maxima!');
+        current = max;
+    }
+  
+    charStatus.energy.current = current;
+    charStatus.energy.max = max;
+    sanityBar.style.width = `${calculateBar(current, max)}%`;
+    sanityBar.innerText = `${current}/${max}`;
+  
+    event.preventDefault();
+});
+
+document.execCommand("styleWithCSS", false, true);
 
 function chooseSheet() {
     nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");

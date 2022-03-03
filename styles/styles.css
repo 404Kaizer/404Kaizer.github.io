@@ -391,6 +391,17 @@ body input:hover {
   height: 15px;
 }
 
+#main #section3 #statusDiv .bar {
+  border: 2px solid black;
+  cursor: pointer;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+#main #section3 #statusDiv .bar:hover {
+  border-color: white;
+}
+
 #main #section3 #statusDiv #lifeStatus {
   display: -ms-grid;
   display: grid;
@@ -436,7 +447,6 @@ body input:hover {
   display: grid;
   text-align: center;
   width: 100%;
-  text-align: center;
 }
 
 #main #section3 #statusDiv #sanityStatus .barDiv .bar {

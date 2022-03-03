@@ -364,6 +364,16 @@ body {
                 height: 15px;
             }
 
+            .bar {
+                border: 2px solid black;
+                cursor: pointer;
+                transition: width 2s;
+            }
+
+            .bar:hover {
+                border-color: white;
+            }
+
             #lifeStatus {
                 display: grid;
                 gap: 10px;
@@ -373,7 +383,6 @@ body {
                     text-align: center;
 
                     .bar {
-                        transition: width .5s linear;
                         width: 100%;
                         background-color: red;
                     }
@@ -399,10 +408,8 @@ body {
                     display: grid;
                     text-align: center;
                     width: 100%;
-                    text-align: center;
 
                     .bar {
-                        transition: width .5s linear;
                         width: 100%;
                         background-color: rgb(134, 25, 134);
                     }
@@ -429,7 +436,6 @@ body {
                     text-align: center;
 
                     .bar {
-                        transition: width .5s linear;
                         width: 100%;
                         background-color: rgb(0, 8, 126);
                     }
