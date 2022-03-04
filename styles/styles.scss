@@ -128,7 +128,7 @@ body {
     margin: 0 100px 20px 100px;
 
     #section1 {
-
+        display: none;
         #charInfos {
             display: flex;
 
@@ -218,6 +218,7 @@ body {
 
     #section2 {
         margin-top: 25px;
+        display: none;
 
         h1 {
             margin-bottom: 10px;
@@ -276,70 +277,78 @@ body {
     }
 
     #section3 {
-        margin-top: 25px;
-        display: grid;
-        grid-template-columns: auto auto;
-        align-items: baseline;
-        gap: 10px;
+        
+        .statusSpan {
+            font-weight: bold;
+        }
 
-        #attSkillsDiv {
+        #statusDiv {
             display: grid;
-            gap: 10px;
+            gap: 15px;
 
-            #attDiv {
-                padding: 10px;
-                background-color: black;
-                border: 1px solid gray;
-                display: grid;
-                gap: 25px;
-    
-                #attTitle {
-                    font-size: 20px;
-                    font-weight: bold;
-                    text-align: center;
-                }
-    
-                #attGrid {
+            #lifeStatus, #sanityStatus, #energyStatus {
+
+                #lifeBarDiv, #sanityBarDiv, #energyBarDiv {
                     display: grid;
-                    grid-template-columns: auto auto auto;
-                    gap: 20px;
-    
-                    .attGridItems {
-                        display: grid;
-                        grid-template-columns: auto;
-    
-                        .attSpan {
-                            font-weight: bold;
-                            border: 1px solid gray;
-                            padding: 5px;
-                        }
-    
-                        .attInputDiv {
-                            display: flex;
-    
-                            .attInput {
-                                background-color: black;
-                                color: white;
-                                padding: 5px;
-                                font-size: 25px;
-                                width: 100%;
-                                text-align: center;
-                            }
-                        }
+                    width: 100%;
+                    background-color: gray;
+
+                    #lifeBar {
+                        background-color: red;
                     }
+                    
+                    #sanityBar {
+                        background-color: purple;
+                    }
+                    
+                    #energyBar {
+                        background-color: blue;
+                    }
+                }
 
-                    .attGridItems:hover {
+                #lifeCheckDiv, #sanityCheckDiv, #energyCheckDiv {
+                    display: flex;
+                    gap: 15px;
+                }
 
-                        .attSpan {
-                            border-color: white;
-                            background-color: white;
-                            color: black;
-                        }
+                .barDiv {
+                    border: 1px solid black;
 
-                        .attInputDiv {
+                    .bar {
+                        width: 100%;
+                        transition: width 2s;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+
+                .barDiv:hover {
+                    border-color: white;
+                }
+            }
+
+            #bodyStatus {
+
+                #defenseDiv {
     
-                            .attInput {
-                                border-color: white;
+                    #protectionDiv {
+                        
+                        #defType {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+    
+                        #protectionType {
+                            
+                        }
+    
+                        #dmgReductDiv {
+                            
+                            #dmgReductInputs {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
                             }
                         }
                     }
@@ -347,175 +356,12 @@ body {
             }
         }
 
-        #statusDiv {
-            display: grid;
-            padding: 10px;
-            gap: 20px;
-            background-color: black;
-            border: 1px solid gray;
+        #skillsDiv {
 
-            .statusSpan {
-                font-weight: bold;
-                font-size: 17px;
-            }
-
-            .statusChecks {
-                width: 15px;
-                height: 15px;
-            }
-
-            .bar {
-                border: 2px solid black;
-                cursor: pointer;
-                transition: width 2s;
-            }
-
-            .bar:hover {
-                border-color: white;
-            }
-
-            #lifeStatus {
-                display: grid;
-                gap: 10px;
-
-                .barDiv {
-                    display: grid;
-                    text-align: center;
-
-                    .bar {
-                        width: 100%;
-                        background-color: red;
-                    }
-                }
-
-                #lifeCheckDiv {
-                    display: grid;
-                    grid-template-columns: auto auto auto auto;
-
-                    .lifeChecks {
-                        display: flex;
-                        align-items: center;
-                        gap: 5px;
-                    }
-                }
-            }
-
-            #sanityStatus {
-                display: grid;
-                gap: 10px;
-
-                .barDiv {
-                    display: grid;
-                    text-align: center;
-                    width: 100%;
-
-                    .bar {
-                        width: 100%;
-                        background-color: rgb(134, 25, 134);
-                    }
-                }
-
-                #sanityCheckDiv {
-                    display: grid;
-                    grid-template-columns: auto auto auto;
-
-                    .sanityChecks {
-                        display: flex;
-                        align-items: center;
-                        gap: 5px;
-                    }
-                }
-            }
-
-            #energyStatus {
-                display: grid;
-                gap: 10px;
-    
-                .barDiv {
-                    display: grid;
-                    text-align: center;
-
-                    .bar {
-                        width: 100%;
-                        background-color: rgb(0, 8, 126);
-                    }
-                }
-            }
-
-            #bodyStatus {
-                display: grid;
-                grid-template-columns: auto;
-                gap: 20px;
-
-                #defStatus {
-                    display: grid;
-                    gap: 20px;
-
-                    #defInputs {
-                        display: grid;
-                        gap: 10px;
-
-                        #defWeightDiv {
-                            display: flex;
-                            gap: 20px;
-                            
-                            form {
-                                display: flex;
-                                align-items: center;
-                                gap: 10px;
-
-                                .defRadio {
-                                    width: 15px;
-                                    height: 15px;
-                                    vertical-align: bottom;
-                                }
-                            }
-                        }
-                    }
-
-                    #dmgReduct {
-                        display: grid;
-                        gap: 10px;
-
-                        .statusSpan {
-                            font-size: 16px;
-                        }
-                    }
-
-                    .statusInputDiv {
-                        display: grid;
-                        grid-template-columns: auto auto auto;
-                        gap: 10px;
-
-                        .statusInputGrid {
-
-                            .statusInput {
-                                background-color: black;
-                                color: white;
-                                width: 100%;
-                                text-align: center;
-                                font-size: 20px;
-                            }
-                        }
-                    }
-                }
-
-                #speedStatus {
+            #atributes {
+                
+                #atributesInputDiv {
                     display: flex;
-                    align-items: center;
-                    gap: 15px;
-
-                    .statusSpan {
-                        font-size: 16px;
-                    }
-
-                    .statusInput {
-                        background-color: black;
-                        color: white;
-                        width: 100%;
-                        text-align: center;
-                        font-size: 20px;
-                    }
                 }
             }
         }

@@ -72,84 +72,30 @@
             </div>
         </section>
         
-        <section id="section3">                 <!--Parte dos Atributos e Perícias-->
-            <div id="attSkillsDiv">
-                <div id="attDiv">
-                    <span id="attTitle"> - Atributos - </span>
-                    <div id="attGrid">
-                        <div class="attGridItems">
-                            <span class="attSpan">FORÇA</span>
-                            <div class="attInputDiv">
-                                <input class="attInput" type="number" name="" id="" placeholder="10">
-                                <input class="attInput" type="number" name="" id="" placeholder="+0">
-                            </div>
-                        </div>
-                        <div class="attGridItems">
-                            <span class="attSpan">AGILIDADE</span>
-                            <div class="attInputDiv">
-                                <input class="attInput" type="number" name="" id="" placeholder="10">
-                                <input class="attInput" type="number" name="" id="" placeholder="+0">
-                            </div>
-                        </div>
-                        <div class="attGridItems">
-                            <span class="attSpan">CONSTITUIÇÃO</span>
-                            <div class="attInputDiv">
-                                <input class="attInput" type="number" name="" id="" placeholder="10">
-                                <input class="attInput" type="number" name="" id="" placeholder="+0">
-                            </div>
-                        </div>
-                        <div class="attGridItems">
-                            <span class="attSpan">INTELIGÊNCIA</span>
-                            <div class="attInputDiv">
-                                <input class="attInput" type="number" name="" id="" placeholder="10">
-                                <input class="attInput" type="number" name="" id="" placeholder="+0">
-                            </div>
-                        </div>
-                        <div class="attGridItems">
-                            <span class="attSpan">SABEDORIA</span>
-                            <div class="attInputDiv">
-                                <input class="attInput" type="number" name="" id="" placeholder="10">
-                                <input class="attInput" type="number" name="" id="" placeholder="+0">
-                            </div>
-                        </div>
-                        <div class="attGridItems">
-                            <span class="attSpan">CARISMA</span>
-                            <div class="attInputDiv">
-                                <input class="attInput" type="number" name="" id="" placeholder="10">
-                                <input class="attInput" type="number" name="" id="" placeholder="+0">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="skillsDiv">
-                
-                </div>
-            </div>
-            
+        <section id="section3">                 <!--Parte dos Atributos e Perícias-->         
             <div id="statusDiv">
                 <div id="lifeStatus">
                     <span class="statusSpan">Vida</span>
                     <div class="barDiv" id="lifeBarDiv">
-                        <span class="bar" id="lifeBar">0/0</span>
+                        <span class="bar" id="lifeBar">0 / 0</span>
                     </div>
                     <div id="lifeCheckDiv">
-                        <div class="lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks lifeChecks">
+                            <input class="statusChecks" type="checkbox" name="exhaust" id="exhaustCheck">
                             <span class="checkSpans">Exausto</span>
                         </div>
-                        <div class="lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks lifeChecks">
+                            <input class="statusChecks" type="checkbox" name="wounded" id="woundedCheck">
                             <span class="checkSpans">Lesão Grave</span>
                         </div>
-                        <div class="lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks lifeChecks">
+                            <input class="statusChecks" type="checkbox" name="dyeing" id="dyeingCheck">
                             <span class="checkSpans">Morrendo</span>
                         </div>
-                        <div class="lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
-                            <input class="statusChecks" type="checkbox" name="" id="">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks lifeChecks">
+                            <input class="statusChecks" type="checkbox" name="fail1" id="fail1">
+                            <input class="statusChecks" type="checkbox" name="fail2" id="fail2">
+                            <input class="statusChecks" type="checkbox" name="fail3" id="fail3">
                             <span class="checkSpans">Falhas</span>
                         </div>
                     </div>
@@ -157,19 +103,19 @@
                 <div id="sanityStatus">
                     <span class="statusSpan">Sanidade</span>
                     <div class="barDiv" id="sanityBarDiv">
-                        <span class="bar" id="sanityBar">0/0</span>
+                        <span class="bar" id="sanityBar">0 / 0</span>
                     </div>
                     <div id="sanityCheckDiv">
-                        <div class="sanityChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks sanityChecks">
+                            <input class="statusChecks" type="checkbox" name="terrorized" id="terrorizedCheck">
                             <span class="checkSpans">Aterrorizado</span>
                         </div>
-                        <div class="sanityChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks sanityChecks">
+                            <input class="statusChecks" type="checkbox" name="traumatized" id="traumatizedCheck">
                             <span class="checkSpans">Traumatizado</span>
                         </div>
-                        <div class="sanityChecks">
-                            <input class="statusChecks" type="checkbox" name="" id="">
+                        <div class="statusChecks sanityChecks">
+                            <input class="statusChecks" type="checkbox" name="insane" id="insaneCheck">
                             <span class="checkSpans">Insano</span>
                         </div>
                     </div>
@@ -177,61 +123,285 @@
                 <div id="energyStatus">
                     <span class="statusSpan">Energia</span>
                     <div class="barDiv" id="energyBarDiv">
-                        <span class="bar" id="energyBar">0/0</span>
+                        <span class="bar" id="energyBar">0 / 0</span>
                     </div>
                 </div>
                 <div id="bodyStatus">
-                    <div id="defStatus">
-                        <div id="defInputs">
-                            <div id="defWeightDiv">
-                                <span class="statusSpan">Defesa</span>
-                                <form action="#">
-                                    <input class="defRadio" type="radio" name="defType" id="defType1">
-                                    <label for="defType">Nenhuma</label>
-                                    <input class="defRadio" type="radio" name="defType" id="defType2">
-                                    <label for="defType">Leve</label>
-                                    <input class="defRadio" type="radio" name="defType" id="defType3">
-                                    <label for="defType">Média</label>
-                                    <input class="defRadio" type="radio" name="defType" id="defType4">
-                                    <label for="defType">Pesada</label>
-                                </form>
-                            </div>
-                            <div id="defMethodDiv" class="statusInputDiv">
-                                <div class="statusInputGrid">
-                                    <span>Esquiva</span>
-                                    <input class="statusInput" type="text" name="" id="charDodge" placeholder="+0">
-                                </div>
-                                <div class="statusInputGrid">
-                                    <span>Defesa</span>
-                                    <input class="statusInput" type="number" name="" id="charDef" min="0" placeholder="10">
-                                </div>
-                                <div class="statusInputGrid">
-                                    <span>Bloqueio</span>
-                                    <input class="statusInput" type="text" name="" id="charBlock" placeholder="+0">
-                                </div>
-                            </div>
+                    <span class="statusSpan">Corpo</span>
+                    <div id="defenseDiv">
+                        <div id="velocityDiv">
+                            <span>Velocidade</span>
+                            <div><input type="text" name="velocity" id="velocity"></div>
                         </div>
-                        <div id="dmgReduct">
-                            <span class="statusSpan">Redutores de Dano</span>
-                            <div id="dmgReductInputs" class="statusInputDiv">
-                                <div class="statusInputGrid">
-                                    <span>D. Balístico</span>
-                                    <input class="statusInput" type="text" name="" id="dmgBal" placeholder="+0">
+                        <div id="protectionDiv">
+                            <div id="defType">
+                                <div>
+                                    <span>Defesa</span>
+                                    <div><input type="number" name="defense" id="defense"></div>
                                 </div>
-                                <div class="statusInputGrid">
-                                    <span>D. Físico</span>
-                                    <input class="statusInput" type="text" name="" id="dmgPhy" placeholder="+0">
+                                <div>
+                                    <span>Bloqueio</span>
+                                    <div><input type="text" name="block" id="block"></div>
                                 </div>
-                                <div class="statusInputGrid">
-                                    <span>D. Mágico</span>
-                                    <input class="statusInput" type="text" name="" id="dmgMag" placeholder="+0">
+                                <div>
+                                    <span>Esquiva</span>
+                                    <div><input type="text" name="dodge" id="dodge"></div>
+                                </div>
+                            </div>
+                            <div id="protectionType">
+                                <span>Tipo de Proteção</span>
+                                <div>
+                                    <div>
+                                        <input type="radio" name="armorWeight" id="noArmor">
+                                        <span>Nenhuma</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="armorWeight" id="lightArmor">
+                                        <span>Leve</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="armorWeight" id="mediumArmor">
+                                        <span>Média</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="armorWeight" id="heavyArmor">
+                                        <span>Pesada</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dmgReductDiv">
+                                <span>Redutores de Dano</span>
+                                <div id="dmgReductInputs">
+                                    <div>
+                                        <span>Físico</span>
+                                        <div><input type="text" name="physical" id="physicalRDMG"></div>
+                                    </div>
+                                    <div>
+                                        <span>Balístico</span>
+                                        <div><input type="text" name="balistical" id="balisticalRDMG"></div>
+                                    </div>
+                                    <div>
+                                        <span>Mágico</span>
+                                        <div><input type="text" name="magial" id="magialRDMG"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="speedStatus">
-                        <span class="statusSpan">Velocidade</span>
-                        <input class="statusInput" type="text" name="" id="charSpeed" placeholder="9 metros ou 6 quadrados">
+                </div>
+            </div>
+            <div id="skillsDiv">
+                <div id="atributes">
+                    <span>Atributos</span>
+                    <div id="atributesInputDiv">
+                        <div>
+                            <div>
+                                <span>Força</span>
+                                <div><input type="text" name="str" id="strInput"></div>
+                            </div>
+                            <div>
+                                <span>Agilidade</span>
+                                <div><input type="text" name="agi" id="agiInput"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Constituição</span>
+                                <div><input type="text" name="con" id="conInput"></div>
+                            </div>
+                            <div>
+                                <span>Inteligência</span>
+                                <div><input type="text" name="int" id="intInput"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Sabedoria</span>
+                                <div><input type="text" name="wis" id="wisInput"></div>
+                            </div>
+                            <div>
+                                <span>Carisma</span>
+                                <div><input type="text" name="char" id="charInput"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <div>
+                        <span>Perícias</span>
+                        <div>
+                            <div>
+                                <span>Treinadas</span>
+                                <div><input type="text" name="trained" id="trainedSkillBonus"></div>
+                            </div>
+                            <div>
+                                <span>Não Treinadas</span>
+                                <div><input type="text" name="nonTrained" id="nTrainedSkillBonus"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Poder</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Luta</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Pontaria</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Fortitude</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Reflexos</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Vontade</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Atletismo</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Acrobacia</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Furtividade</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Prestidigitação</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Investigação</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Conhecimento</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Ocultismo</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Religião</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Medicina</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Percepção</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Intuição</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Prim. Socorros</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Sobrevivência</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Atuação</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Lábia</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Enganação</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div>
+                            <div>
+                                <input type="checkbox" name="" id="">
+                                <span>Intimidação</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
                     </div>
                 </div>
             </div>

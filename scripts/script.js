@@ -87,7 +87,7 @@ energyBar.addEventListener("click", ()=> {
     charStatus.energy.current = current;
     charStatus.energy.max = max;
     energyBar.style.width = `${calculateBar(current, max)}%`;
-    energyBar.innerText = `${current}/${max}`;
+    energyBar.innerText = `${current} / ${max}`;
   
     event.preventDefault();
 });
@@ -104,7 +104,7 @@ lifeBar.addEventListener("click", ()=> {
     charStatus.energy.current = current;
     charStatus.energy.max = max;
     lifeBar.style.width = `${calculateBar(current, max)}%`;
-    lifeBar.innerText = `${current}/${max}`;
+    lifeBar.innerText = `${current} / ${max}`;
   
     event.preventDefault();
 });
@@ -121,7 +121,7 @@ sanityBar.addEventListener("click", ()=> {
     charStatus.energy.current = current;
     charStatus.energy.max = max;
     sanityBar.style.width = `${calculateBar(current, max)}%`;
-    sanityBar.innerText = `${current}/${max}`;
+    sanityBar.innerText = `${current} / ${max}`;
   
     event.preventDefault();
 });
