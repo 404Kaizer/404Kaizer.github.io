@@ -1546,6 +1546,17 @@ body {
                                 font-size: 18px;
                             }
                         }
+
+                        .statusCheckDiv {
+
+                            #checkSpans2 {
+                                display: none;
+                            }
+
+                            #checkSpans3 {
+                                display: block;
+                            }
+                        }
                     }
                 }
 
@@ -1642,38 +1653,6 @@ body {
                         .imgBtn {
                             width: 45px;
                             padding: 2px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 430px) {
-
-    #main {
-
-        #section3 {
-
-            #statusDiv {
-
-                #barsDiv {
-
-                    #lifeStatus {
-
-                        #lifeCheckDiv {
-
-                            .statusCheckDiv {
-
-                                #checkSpans2 {
-                                    display: none;
-                                }
-
-                                #checkSpans3 {
-                                    display: block;
-                                }
-                            }
                         }
                     }
                 }
