@@ -284,6 +284,10 @@ body {
             font-weight: bold;
         }
 
+        .statusSpan2 {
+            text-align: center;
+        }
+
         #statusDiv {
             display: flex;
             gap: 15px;
@@ -440,6 +444,7 @@ body {
             }
 
             .attSkillMainSpan {
+                text-align: center;
                 font-size: 17px;
                 font-weight: bold;
             }
@@ -450,10 +455,6 @@ body {
                 background-color: black;
                 border: solid 1px gray;
                 padding: 10px;
-
-                .attSkillMainSpan {
-                    text-align: center;
-                }
 
                 #atributesInputDiv {
                     display: grid;
@@ -1500,6 +1501,7 @@ body {
             #skillsDiv {
 
                 #atributes {
+                    gap: 20px;
 
                     #atributesInputDiv {
                         grid-template-columns: auto auto auto;
@@ -1550,9 +1552,15 @@ body {
                     }
 
                     #profBonusDiv {
+                        margin-top: 10px;
                         display: grid;
                         grid-template-columns: auto;
-                        gap: 0;
+                        gap: 5px;
+
+                        #profBonusDiv {
+                            display: flex;
+                            gap: 5px;
+                        }
 
                         #passiveBonus {
                             display: none;
@@ -1564,16 +1572,134 @@ body {
     }
 }
 
+@media only screen and (max-width: 615px) {
+    
+    #main {
+
+        #section3 {
+
+            #statusDiv {
+
+                #barsDiv {
+
+                    .statusCheckDiv, .lifeChecks {
+
+                        .checkSpans {
+                            font-size: 17px;
+                        }
+                    }
+
+                    #lifeStatus {
+
+                        #lifeCheckDiv {
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            gap: 12px;
+
+                            .lifeChecks {
+
+                                #exhaustSelect {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 550px) {
 
     #main {
+        margin: auto;
 
         #section1 {
             margin-top: 70px;
         }
 
         #section3, #section4, #section5, #section6 {
-            margin-top: 100px;
+            margin-top: 90px;
+        }
+
+        #section3 {
+
+            #statusDiv {
+            
+                #bodyStatus {
+                    margin-top: 15px;
+
+                    input {
+                        font-size: 20px;
+                    }
+    
+                    #protectionDiv {
+                        
+                        #protectionType {
+    
+                            #armorWeight {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #skillsDiv {
+
+                #atributes {
+
+                    #atributesInputDiv {
+                        grid-template-columns: auto auto auto;
+
+                        .attModGrid {
+                            display: grid;
+                            gap: 0;
+                            
+                            .attInput {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+    
+                #skills {
+                    gap: 20px;
+
+                    #skillsGridDiv {
+                        display: grid;
+                        gap: 10px;
+                        grid-template-columns: auto auto auto;
+    
+                        .skillsGrid {
+                            
+                            .profModalGrid {
+                                display: grid;
+                                
+                                .profModalDiv {
+                                    display: none;
+                                    gap: 10px;
+                                    position: absolute;
+                                    background-color: white;
+                                    z-index: 10;
+                                    border: solid 1px gray;
+                                    padding: 5px;
+    
+                                    .profModalSpan {
+                                        color: black;
+                                    }
+    
+                                    input {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         #section4 {

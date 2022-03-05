@@ -303,6 +303,10 @@ body input:hover {
   font-weight: bold;
 }
 
+#main #section3 .statusSpan2 {
+  text-align: center;
+}
+
 #main #section3 #statusDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,6 +484,7 @@ body input:hover {
 }
 
 #main #section3 #skillsDiv .attSkillMainSpan {
+  text-align: center;
   font-size: 17px;
   font-weight: bold;
 }
@@ -491,10 +496,6 @@ body input:hover {
   background-color: black;
   border: solid 1px gray;
   padding: 10px;
-}
-
-#main #section3 #skillsDiv #atributes .attSkillMainSpan {
-  text-align: center;
 }
 
 #main #section3 #skillsDiv #atributes #atributesInputDiv {
@@ -1350,6 +1351,9 @@ body input:hover {
   #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
     font-size: 16px;
   }
+  #main #section3 #skillsDiv #atributes {
+    gap: 20px;
+  }
   #main #section3 #skillsDiv #atributes #atributesInputDiv {
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
@@ -1390,23 +1394,100 @@ body input:hover {
     height: 15px;
   }
   #main #section3 #skillsDiv #skills #profBonusDiv {
+    margin-top: 10px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
-    gap: 0;
+    gap: 5px;
+  }
+  #main #section3 #skillsDiv #skills #profBonusDiv #profBonusDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
   }
   #main #section3 #skillsDiv #skills #profBonusDiv #passiveBonus {
     display: none;
   }
 }
 
+@media only screen and (max-width: 615px) {
+  #main #section3 #statusDiv #barsDiv .statusCheckDiv .checkSpans, #main #section3 #statusDiv #barsDiv .lifeChecks .checkSpans {
+    font-size: 17px;
+  }
+  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    gap: 12px;
+  }
+  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .lifeChecks #exhaustSelect {
+    font-size: 16px;
+  }
+}
+
 @media only screen and (max-width: 550px) {
+  #main {
+    margin: auto;
+  }
   #main #section1 {
     margin-top: 70px;
   }
   #main #section3, #main #section4, #main #section5, #main #section6 {
-    margin-top: 100px;
+    margin-top: 90px;
+  }
+  #main #section3 #statusDiv #bodyStatus {
+    margin-top: 15px;
+  }
+  #main #section3 #statusDiv #bodyStatus input {
+    font-size: 20px;
+  }
+  #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
+    font-size: 18px;
+  }
+  #main #section3 #skillsDiv #atributes #atributesInputDiv {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
+    display: -ms-grid;
+    display: grid;
+    gap: 0;
+  }
+  #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
+    width: 100%;
+  }
+  #main #section3 #skillsDiv #skills {
+    gap: 20px;
+  }
+  #main #section3 #skillsDiv #skills #skillsGridDiv {
+    display: -ms-grid;
+    display: grid;
+    gap: 10px;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
+    display: -ms-grid;
+    display: grid;
+  }
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
+    display: none;
+    gap: 10px;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    border: solid 1px gray;
+    padding: 5px;
+  }
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv .profModalSpan {
+    color: black;
+  }
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv input {
+    width: 15px;
+    height: 15px;
   }
   #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
     width: 75px;
