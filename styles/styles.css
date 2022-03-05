@@ -337,7 +337,7 @@ body input:hover {
   gap: 5px;
 }
 
-#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv .checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv .checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv .checkSpans3 {
+#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv #checkSpans3 {
   display: none;
 }
 
@@ -1481,10 +1481,10 @@ body input:hover {
 }
 
 @media only screen and (max-width: 430px) {
-  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .statusCheckDiv .checkSpans2 {
+  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .statusCheckDiv #checkSpans2 {
     display: none;
   }
-  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .statusCheckDiv .checkSpans3 {
+  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .statusCheckDiv #checkSpans3 {
     display: block;
   }
 }

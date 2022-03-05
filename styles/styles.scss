@@ -308,7 +308,7 @@ body {
                         align-items: center;
                         gap: 5px;
                         
-                        .checkSpans3 {
+                        #checkSpans3 {
                             display: none;
                         }
 
@@ -1666,11 +1666,11 @@ body {
 
                             .statusCheckDiv {
 
-                                .checkSpans2 {
+                                #checkSpans2 {
                                     display: none;
                                 }
 
-                                .checkSpans3 {
+                                #checkSpans3 {
                                     display: block;
                                 }
                             }
