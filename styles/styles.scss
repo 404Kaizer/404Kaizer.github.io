@@ -511,7 +511,7 @@ body {
                                 background-color: white;
                                 z-index: 10;
                                 border: solid 1px gray;
-                                padding: 5px;                               
+                                padding: 5px;
 
                                 .profModalSpan {
                                     color: black;
@@ -1001,6 +1001,61 @@ body {
             }
         }
 
+        #section3 {
+    
+            #statusDiv {     
+                
+                #barsDiv {
+                    width: 70%;
+                }
+    
+                #bodyStatus {
+                    width: 40%;
+    
+                    input {
+                        font-size: 17px;
+                    }
+    
+                    #protectionDiv {
+    
+                        #protectionType {
+    
+                            #armorWeight {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #skillsDiv {
+    
+                #atributes {
+    
+                    #atributesInputDiv {
+    
+                        .attModGrid {
+    
+                            .attInput {
+                                font-size: 21px;
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+    
+                #skills {
+    
+                    #profBonusDiv {
+    
+                        .attSkillInput {
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+        }
+
         #section4 {
             display: none;
             grid-template-columns: auto;
@@ -1009,6 +1064,73 @@ body {
             #editContent {
                 grid-template-columns: auto;
                 gap: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    
+    #main {
+
+        #section3 {
+    
+            #statusDiv {     
+                display: block;
+
+                #barsDiv {
+                    width: 100%;
+                }
+    
+                #bodyStatus {
+                    width: 100%;
+    
+                    input {
+                        font-size: 17px;
+                    }
+    
+                    #protectionDiv {
+    
+                        #protectionType {
+    
+                            #armorWeight {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #skillsDiv {
+                display: block;
+
+                #atributes {
+
+                    #atributesInputDiv {
+                        grid-template-columns: auto auto auto;
+                        justify-content: space-between;
+                        row-gap: 15px;
+
+                        .attModGrid {
+                            gap: 10px;
+                            
+                            .attInput {
+                                font-size: 21px;
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+    
+                #skills {
+    
+                    #profBonusDiv {
+    
+                        .attSkillInput {
+                            font-size: 21px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1040,6 +1162,7 @@ body {
             #headerTitle {
                 display: block;
                 font-family: "Poppins";
+                font-size: 34px;
             }
 
             #saveLoadBtns {
@@ -1068,7 +1191,8 @@ body {
     }
 
     #main {
-        margin: 70px 0 105px 0;
+        margin-top: 95px;
+        margin-bottom: 105px;
 
         #section1 {
 
@@ -1084,6 +1208,7 @@ body {
                         width: 100%;
                         height: auto;
                         max-height: 30em;
+                        border: solid 1px gray;
                     }
 
                     #perInfoBtnFake {
@@ -1153,6 +1278,56 @@ body {
                         resize: none;
                         min-height: 120px;
                         font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        #section3 {
+    
+            #statusDiv {     
+    
+                #bodyStatus {
+    
+                    input {
+                        font-size: 23px;
+                    }
+    
+                    #protectionDiv {
+    
+                        #protectionType {
+    
+                            #armorWeight {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #skillsDiv {
+
+                #atributes {
+
+                    #atributesInputDiv {
+
+                        .attModGrid {
+    
+                            .attInput {
+                                font-size: 23px;
+                                width: 85px;
+                            }
+                        }
+                    }
+                }
+    
+                #skills {
+    
+                    #profBonusDiv {
+
+                        .attSkillInput {
+                            font-size: 23px;
+                        }
                     }
                 }
             }
@@ -1249,7 +1424,7 @@ body {
             #editableArea {
                 resize: none;
                 font-size: 17px;
-                min-height: 1100px;
+                min-height: 587px;
             }
         }
     }
@@ -1285,6 +1460,105 @@ body {
                 .headerImgs {
                     opacity: 100%;
                 }  
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    
+    #main {
+        
+        #section3 {
+    
+            #statusDiv {     
+                display: block;
+
+                #barsDiv {
+                    width: 100%;
+                }
+    
+                #bodyStatus {
+                    width: 100%;
+    
+                    input {
+                        font-size: 17px;
+                    }
+    
+                    #protectionDiv {
+    
+                        #protectionType {
+    
+                            #armorWeight {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #skillsDiv {
+
+                #atributes {
+
+                    #atributesInputDiv {
+                        grid-template-columns: auto auto auto;
+
+                        .attModGrid {
+                            display: grid;
+                            gap: 0;
+                            
+                            .attInput {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+    
+                #skills {
+    
+                    #skillsGridDiv {
+                        display: grid;
+                        gap: 10px;
+                        grid-template-columns: auto auto auto;
+    
+                        .skillsGrid {
+                            
+                            .profModalGrid {
+                                display: grid;
+                                
+                                .profModalDiv {
+                                    display: none;
+                                    gap: 10px;
+                                    position: absolute;
+                                    background-color: white;
+                                    z-index: 10;
+                                    border: solid 1px gray;
+                                    padding: 5px;
+    
+                                    .profModalSpan {
+                                        color: black;
+                                    }
+    
+                                    input {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #profBonusDiv {
+                        display: grid;
+                        grid-template-columns: auto;
+                        gap: 0;
+
+                        #passiveBonus {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }

@@ -40,7 +40,7 @@
                     </label>
                     <img id="charImg" src="" alt="Imagem do Personagem">
                     <button id="perInfoBtn">Exibir Informações Pessoais</button>
-                    <button id="perInfoBtnFake">Fechar Informações Pessoais</button>
+                    <button id="perInfoBtnFake">Ocultar Informações Pessoais</button>
                 </div>
                 <div id="infoInput">
                     <div class="infoInputDiv"><span>Nome:</span><input id="charName" type="text" name="name" placeholder="..." onchange="changeTitle(this)"></div>
@@ -237,7 +237,7 @@
                             <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="+0"></div>
                         </div>
                         <div>
-                            <span class="attSkillMainSpan">Bônus Passivo</span>
+                            <span class="attSkillMainSpan" id="passiveBonus">Bônus Passivo</span>
                             <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="+0"></div>
                         </div>
                     </div>
