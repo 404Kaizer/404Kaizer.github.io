@@ -431,12 +431,17 @@ body {
             display: flex;
             gap: 15px;
 
+            .attSkillInput {
+                color: purple !important;
+            }
+
             .attSkillInput, .attInput {
                 background-color: black;
-                color: white;
+                color: yellow;
                 text-align: center;
                 font-size: 23px;
                 width: 100%;
+                font-weight: bold;
             }
 
             .attSkillInput:hover, .attInput:hover {
@@ -1559,7 +1564,14 @@ body {
                 #atributes {
 
                     #atributesInputDiv {
-                        grid-template-columns: auto auto auto;
+                        grid-template-columns: auto auto;
+
+                        div {
+                            
+                            .attSkillSpan {
+                                font-size: 17px;
+                            }
+                        }
 
                         .attModGrid {
                             display: grid;
@@ -1578,10 +1590,14 @@ body {
                     #skillsGridDiv {
                         display: grid;
                         gap: 10px;
-                        grid-template-columns: auto auto auto;
+                        grid-template-columns: auto auto;
     
                         .skillsGrid {
-                            
+                           
+                            .spanCheckGrid {
+                                font-size: 17px;
+                            }
+
                             .profModalGrid {
                                 display: grid;
                                 

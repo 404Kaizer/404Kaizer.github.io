@@ -471,12 +471,17 @@ body input:hover {
   gap: 15px;
 }
 
+#main #section3 #skillsDiv .attSkillInput {
+  color: purple !important;
+}
+
 #main #section3 #skillsDiv .attSkillInput, #main #section3 #skillsDiv .attInput {
   background-color: black;
-  color: white;
+  color: yellow;
   text-align: center;
   font-size: 23px;
   width: 100%;
+  font-weight: bold;
 }
 
 #main #section3 #skillsDiv .attSkillInput:hover, #main #section3 #skillsDiv .attInput:hover {
@@ -1415,8 +1420,11 @@ body input:hover {
     font-size: 18px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv {
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  #main #section3 #skillsDiv #atributes #atributesInputDiv div .attSkillSpan {
+    font-size: 17px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
     display: -ms-grid;
@@ -1433,8 +1441,11 @@ body input:hover {
     display: -ms-grid;
     display: grid;
     gap: 10px;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
+    font-size: 17px;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
     display: -ms-grid;
