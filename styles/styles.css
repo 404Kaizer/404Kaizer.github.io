@@ -327,7 +327,7 @@ body input:hover {
           align-items: center;
 }
 
-#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv {
+#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,11 +337,15 @@ body input:hover {
   gap: 5px;
 }
 
-#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv #checkSpans3 {
+#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv #checkSpans2, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks #checkSpans2, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv #checkSpans2, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks #checkSpans2, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv #checkSpans2, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks #checkSpans2 {
+  display: block;
+}
+
+#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks #checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks #checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks #checkSpans3 {
   display: none;
 }
 
-#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv .statusChecks {
+#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks .statusChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks .statusChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks .statusChecks {
   width: 15px;
   height: 15px;
 }
@@ -1393,6 +1397,9 @@ body input:hover {
 
 @media only screen and (max-width: 615px) {
   #main #section3 #statusDiv #barsDiv .statusCheckDiv .checkSpans, #main #section3 #statusDiv #barsDiv .lifeChecks .checkSpans {
+    font-size: 17px;
+  }
+  #main #section3 #statusDiv #barsDiv .statusCheckDiv #checkSpan2, #main #section3 #statusDiv #barsDiv .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv .lifeChecks #checkSpan2, #main #section3 #statusDiv #barsDiv .lifeChecks #checkSpans3 {
     font-size: 17px;
   }
   #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv {

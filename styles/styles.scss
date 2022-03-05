@@ -303,11 +303,15 @@ body {
 
                 #lifeStatus, #sanityStatus, #energyStatus {
 
-                    .statusCheckDiv {
+                    .statusCheckDiv, .lifeChecks {
                         display: flex;
                         align-items: center;
                         gap: 5px;
                         
+                        #checkSpans2 {
+                            display: block;
+                        }
+
                         #checkSpans3 {
                             display: none;
                         }
@@ -1494,6 +1498,10 @@ body {
                     .statusCheckDiv, .lifeChecks {
 
                         .checkSpans {
+                            font-size: 17px;
+                        }
+
+                        #checkSpan2, #checkSpans3 {
                             font-size: 17px;
                         }
                     }
