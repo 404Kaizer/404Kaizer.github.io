@@ -337,6 +337,10 @@ body input:hover {
   gap: 5px;
 }
 
+#main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv .checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv .checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv .checkSpans3 {
+  display: none;
+}
+
 #main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv .statusChecks {
   width: 15px;
   height: 15px;
@@ -1473,6 +1477,15 @@ body input:hover {
   #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 45px;
     padding: 2px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .statusCheckDiv .checkSpans2 {
+    display: none;
+  }
+  #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .statusCheckDiv .checkSpans3 {
+    display: block;
   }
 }
 /*# sourceMappingURL=styles.css.map */

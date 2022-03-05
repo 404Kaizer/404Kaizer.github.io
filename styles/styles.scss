@@ -308,6 +308,10 @@ body {
                         align-items: center;
                         gap: 5px;
                         
+                        .checkSpans3 {
+                            display: none;
+                        }
+
                         .statusChecks {
                             width: 15px;
                             height: 15px;
@@ -1638,6 +1642,38 @@ body {
                         .imgBtn {
                             width: 45px;
                             padding: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+    #main {
+
+        #section3 {
+
+            #statusDiv {
+
+                #barsDiv {
+
+                    #lifeStatus {
+
+                        #lifeCheckDiv {
+
+                            .statusCheckDiv {
+
+                                .checkSpans2 {
+                                    display: none;
+                                }
+
+                                .checkSpans3 {
+                                    display: block;
+                                }
+                            }
                         }
                     }
                 }
