@@ -422,6 +422,7 @@ function changeTitle(name) {
     let changeTitleNamePersonagem = name;  
     let newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
     localStorage.setItem('titlePersonagem', newTitlePersonagem);
+    event.preventDefault();
 }
 
 document.getElementById("imgSelectBtn").addEventListener("change", e => {
@@ -494,6 +495,7 @@ function indexPage() {
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "none";
+    event.preventDefault();
 };
 
 function skillsPage() {
@@ -518,6 +520,7 @@ function skillsPage() {
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "none";
+    event.preventDefault();
 };
 
 function combatPage() {
@@ -542,6 +545,7 @@ function combatPage() {
     section4.style.display = "grid";
     section5.style.display = "none";
     section6.style.display = "none";
+    event.preventDefault();
 };
 
 function inventoryPage() {
@@ -566,6 +570,7 @@ function inventoryPage() {
     section4.style.display = "none";
     section5.style.display = "grid";
     section6.style.display = "none";
+    event.preventDefault();
 };
 
 function notesPage() {
@@ -590,6 +595,7 @@ function notesPage() {
     section4.style.display = "none";
     section5.style.display = "none";
     section6.style.display = "block";
+    event.preventDefault();
 };
 
 perInfoBtn.addEventListener("click", ()=> {
