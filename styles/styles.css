@@ -411,7 +411,7 @@ body input:hover {
   background-color: black;
   color: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
   width: 100%;
 }
 
@@ -442,7 +442,7 @@ body input:hover {
 }
 
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
-  font-size: 16px;
+  font-size: 18px;
   background-color: black;
   color: white;
   text-align: center;
@@ -475,7 +475,7 @@ body input:hover {
   background-color: black;
   color: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
   width: 100%;
 }
 
@@ -512,7 +512,7 @@ body input:hover {
 
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
   text-align: center;
-  font-size: 22px;
+  font-size: 23px;
   width: 70px;
 }
 
@@ -534,13 +534,21 @@ body input:hover {
 #main #section3 #skillsDiv #skills #profBonusDiv {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  gap: 20px;
+}
+
+#main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
   gap: 10px;
 }
 
-#main #section3 #skillsDiv #skills #profBonusDiv .attSkillInput {
-  font-size: 20px;
+#main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid .attSkillInput {
+  font-size: 23px;
 }
 
 #main #section3 #skillsDiv #skills #skillsGridDiv {
@@ -1026,18 +1034,8 @@ body input:hover {
   #main #section3 #statusDiv #bodyStatus {
     width: 40%;
   }
-  #main #section3 #statusDiv #bodyStatus input {
-    font-size: 17px;
-  }
-  #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
-    font-size: 16px;
-  }
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
-    font-size: 21px;
     width: 70px;
-  }
-  #main #section3 #skillsDiv #skills #profBonusDiv .attSkillInput {
-    font-size: 21px;
   }
   #main #section4 {
     display: none;
@@ -1062,12 +1060,6 @@ body input:hover {
   #main #section3 #statusDiv #bodyStatus {
     width: 100%;
   }
-  #main #section3 #statusDiv #bodyStatus input {
-    font-size: 17px;
-  }
-  #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
-    font-size: 16px;
-  }
   #main #section3 #skillsDiv {
     display: block;
   }
@@ -1083,11 +1075,7 @@ body input:hover {
     gap: 10px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
-    font-size: 21px;
     width: 70px;
-  }
-  #main #section3 #skillsDiv #skills #profBonusDiv .attSkillInput {
-    font-size: 21px;
   }
 }
 
@@ -1216,19 +1204,6 @@ body input:hover {
     min-height: 120px;
     font-size: 17px;
   }
-  #main #section3 #statusDiv #bodyStatus input {
-    font-size: 23px;
-  }
-  #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
-    font-size: 20px;
-  }
-  #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
-    font-size: 23px;
-    width: 85px;
-  }
-  #main #section3 #skillsDiv #skills #profBonusDiv .attSkillInput {
-    font-size: 23px;
-  }
   #main #section4 #editContentBtn {
     gap: 30px;
   }
@@ -1345,9 +1320,6 @@ body input:hover {
   #main #section3 #statusDiv #bodyStatus {
     width: 100%;
   }
-  #main #section3 #statusDiv #bodyStatus input {
-    font-size: 17px;
-  }
   #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
     font-size: 16px;
   }
@@ -1401,7 +1373,7 @@ body input:hover {
         grid-template-columns: auto;
     gap: 5px;
   }
-  #main #section3 #skillsDiv #skills #profBonusDiv #profBonusDiv {
+  #main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1438,11 +1410,11 @@ body input:hover {
   #main #section3, #main #section4, #main #section5, #main #section6 {
     margin-top: 90px;
   }
+  #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv .bar {
+    font-size: 18px;
+  }
   #main #section3 #statusDiv #bodyStatus {
     margin-top: 15px;
-  }
-  #main #section3 #statusDiv #bodyStatus input {
-    font-size: 20px;
   }
   #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
     font-size: 18px;

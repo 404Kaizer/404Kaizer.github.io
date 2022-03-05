@@ -379,7 +379,7 @@ body {
                     background-color: black;
                     color: white;
                     text-align: center;
-                    font-size: 20px;
+                    font-size: 23px;
                     width: 100%;
                 }
 
@@ -405,7 +405,7 @@ body {
                         gap: 10px;
 
                         #armorWeight {
-                            font-size: 16px;
+                            font-size: 18px;
                             background-color: black;
                             color: white;
                             text-align: center;
@@ -435,7 +435,7 @@ body {
                 background-color: black;
                 color: white;
                 text-align: center;
-                font-size: 20px;
+                font-size: 23px;
                 width: 100%;
             }
 
@@ -465,7 +465,7 @@ body {
 
                         .attInput {
                             text-align: center;
-                            font-size: 22px;
+                            font-size: 23px;
                             width: 70px;
                         }
                     }
@@ -487,11 +487,17 @@ body {
 
                 #profBonusDiv {
                     display: grid;
-                    grid-template-columns: auto auto;
-                    gap: 10px;
+                    grid-template-columns: auto;
+                    gap: 20px;
 
-                    .attSkillInput {
-                        font-size: 20px;
+                    #profBonusGrid {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        gap: 10px;
+
+                        .attSkillInput {
+                            font-size: 23px;
+                        }
                     }
                 }
 
@@ -1012,20 +1018,6 @@ body {
     
                 #bodyStatus {
                     width: 40%;
-    
-                    input {
-                        font-size: 17px;
-                    }
-    
-                    #protectionDiv {
-    
-                        #protectionType {
-    
-                            #armorWeight {
-                                font-size: 16px;
-                            }
-                        }
-                    }
                 }
             }
     
@@ -1038,19 +1030,8 @@ body {
                         .attModGrid {
     
                             .attInput {
-                                font-size: 21px;
                                 width: 70px;
                             }
-                        }
-                    }
-                }
-    
-                #skills {
-    
-                    #profBonusDiv {
-    
-                        .attSkillInput {
-                            font-size: 21px;
                         }
                     }
                 }
@@ -1085,20 +1066,6 @@ body {
     
                 #bodyStatus {
                     width: 100%;
-    
-                    input {
-                        font-size: 17px;
-                    }
-    
-                    #protectionDiv {
-    
-                        #protectionType {
-    
-                            #armorWeight {
-                                font-size: 16px;
-                            }
-                        }
-                    }
                 }
             }
     
@@ -1116,19 +1083,8 @@ body {
                             gap: 10px;
                             
                             .attInput {
-                                font-size: 21px;
                                 width: 70px;
                             }
-                        }
-                    }
-                }
-    
-                #skills {
-    
-                    #profBonusDiv {
-    
-                        .attSkillInput {
-                            font-size: 21px;
                         }
                     }
                 }
@@ -1284,56 +1240,6 @@ body {
             }
         }
 
-        #section3 {
-    
-            #statusDiv {     
-    
-                #bodyStatus {
-    
-                    input {
-                        font-size: 23px;
-                    }
-    
-                    #protectionDiv {
-    
-                        #protectionType {
-    
-                            #armorWeight {
-                                font-size: 20px;
-                            }
-                        }
-                    }
-                }
-            }
-    
-            #skillsDiv {
-
-                #atributes {
-
-                    #atributesInputDiv {
-
-                        .attModGrid {
-    
-                            .attInput {
-                                font-size: 23px;
-                                width: 85px;
-                            }
-                        }
-                    }
-                }
-    
-                #skills {
-    
-                    #profBonusDiv {
-
-                        .attSkillInput {
-                            font-size: 23px;
-                        }
-                    }
-                }
-            }
-        }
-
         #section4 {
 
             #editContentBtn {
@@ -1482,10 +1388,6 @@ body {
                 #bodyStatus {
                     width: 100%;
     
-                    input {
-                        font-size: 17px;
-                    }
-    
                     #protectionDiv {
     
                         #protectionType {
@@ -1557,7 +1459,7 @@ body {
                         grid-template-columns: auto;
                         gap: 5px;
 
-                        #profBonusDiv {
+                        #profBonusGrid {
                             display: flex;
                             gap: 5px;
                         }
@@ -1627,12 +1529,21 @@ body {
 
             #statusDiv {
             
+                #barsDiv {
+    
+                    #lifeStatus, #sanityStatus, #energyStatus {
+        
+                        .barDiv {
+        
+                            .bar {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
                 #bodyStatus {
                     margin-top: 15px;
-
-                    input {
-                        font-size: 20px;
-                    }
     
                     #protectionDiv {
                         
