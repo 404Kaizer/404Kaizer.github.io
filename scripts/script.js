@@ -45,6 +45,13 @@ let lifeBar = document.getElementById("lifeBar");
 let sanityBar = document.getElementById("sanityBar");
 let energyBar = document.getElementById("energyBar");
 
+let openProfModalDiv2 = document.getElementById("openProfModalDiv2");
+let openProfModalDiv1 = document.getElementById("openProfModalDiv1");
+let closeProfModalDiv2 = document.getElementById("closeProfModalDiv2");
+let closeProfModalDiv1 = document.getElementById("closeProfModalDiv1");
+let profModalDiv1 = document.getElementById("profModalDiv1");
+let profModalDiv2 = document.getElementById("profModalDiv2");
+
 const charStatus = {
     life: {
       current: 0,
@@ -122,7 +129,7 @@ sanityBar.addEventListener("click", ()=> {
     charStatus.energy.max = max;
     sanityBar.style.width = `${calculateBar(current, max)}%`;
     sanityBar.innerText = `${current} / ${max}`;
-  
+
     event.preventDefault();
 });
 
@@ -168,6 +175,99 @@ window.onload = function getInputValues() {
     document.getElementById("textArea3").value = localStorage.getItem("textArea3" + nameCheck);
     document.getElementById("textArea4").value = localStorage.getItem("textArea4" + nameCheck);
 
+    // ATRIBUTES & PLAYER STATUS
+    document.getElementById("lifeBar").innerText = localStorage.getItem("lifeBar" + nameCheck);
+    document.getElementById("sanityBar").innerText = localStorage.getItem("sanityBar" + nameCheck);
+    document.getElementById("energyBar").innerText = localStorage.getItem("energyBar" + nameCheck);
+    document.getElementById("exhaustSelect").value = localStorage.getItem("exhaustSelect" + nameCheck);
+    document.getElementById("woundedCheck").checked = JSON.parse(localStorage.getItem("woundedCheck" + nameCheck));
+    document.getElementById("dyeingCheck").checked = JSON.parse(localStorage.getItem("dyeingCheck" + nameCheck));
+    document.getElementById("fail1").checked = JSON.parse(localStorage.getItem("fail1" + nameCheck));
+    document.getElementById("fail2").checked = JSON.parse(localStorage.getItem("fail2" + nameCheck));
+    document.getElementById("fail3").checked = JSON.parse(localStorage.getItem("fail3" + nameCheck));
+    document.getElementById("terrorizedCheck").checked = JSON.parse(localStorage.getItem("terrorizedCheck" + nameCheck));
+    document.getElementById("traumatizedCheck").checked = JSON.parse(localStorage.getItem("traumatizedCheck" + nameCheck));
+    document.getElementById("insaneCheck").checked = JSON.parse(localStorage.getItem("insaneCheck" + nameCheck));
+
+    document.getElementById("trainedSkillBonus").value = localStorage.getItem("trainedSkillBonus" + nameCheck);
+    document.getElementById("nTrainedSkillBonus").value = localStorage.getItem("nTrainedSkillBonus" + nameCheck);
+    document.getElementById("defense").value = localStorage.getItem("defense" + nameCheck);
+    document.getElementById("block").value = localStorage.getItem("block" + nameCheck);
+    document.getElementById("dodge").value = localStorage.getItem("dodge" + nameCheck);
+    document.getElementById("armorWeight").value = localStorage.getItem("armorWeight" + nameCheck);
+    document.getElementById("physicalRDMG").value = localStorage.getItem("physicalRDMG" + nameCheck);
+    document.getElementById("balisticalRDMG").value = localStorage.getItem("balisticalRDMG" + nameCheck);
+    document.getElementById("magialRDMG").value = localStorage.getItem("magialRDMG" + nameCheck);
+    document.getElementById("velocity").value = localStorage.getItem("velocity" + nameCheck);
+
+    document.getElementById("strInput").value = localStorage.getItem("strInput" + nameCheck);
+    document.getElementById("strModInput").value = localStorage.getItem("strModInput" + nameCheck);
+    document.getElementById("agiInput").value = localStorage.getItem("agiInput" + nameCheck);
+    document.getElementById("agiModInput").value = localStorage.getItem("agiModInput" + nameCheck);
+    document.getElementById("conInput").value = localStorage.getItem("conInput" + nameCheck);
+    document.getElementById("conModInput").value = localStorage.getItem("conModInput" + nameCheck);
+    document.getElementById("intInput").value = localStorage.getItem("intInput" + nameCheck);
+    document.getElementById("intModInput").value = localStorage.getItem("intModInput" + nameCheck);
+    document.getElementById("wisInput").value = localStorage.getItem("wisInput" + nameCheck);
+    document.getElementById("wisModInput").value = localStorage.getItem("wisModInput" + nameCheck);
+    document.getElementById("chaInput").value = localStorage.getItem("chaInput" + nameCheck);
+    document.getElementById("chaModInput").value = localStorage.getItem("chaModInput" + nameCheck);
+
+    document.getElementById("skillCheck1").checked = JSON.parse(localStorage.getItem("skillCheck1" + nameCheck));
+    document.getElementById("skillCheck2").checked = JSON.parse(localStorage.getItem("skillCheck2" + nameCheck));
+    document.getElementById("skillCheck3").checked = JSON.parse(localStorage.getItem("skillCheck3" + nameCheck));
+    document.getElementById("skillCheck4").checked = JSON.parse(localStorage.getItem("skillCheck4" + nameCheck));
+    document.getElementById("skillCheck5").checked = JSON.parse(localStorage.getItem("skillCheck5" + nameCheck));
+    document.getElementById("skillCheck6").checked = JSON.parse(localStorage.getItem("skillCheck6" + nameCheck));
+    document.getElementById("skillCheck7").checked = JSON.parse(localStorage.getItem("skillCheck7" + nameCheck));
+    document.getElementById("skillCheck8").checked = JSON.parse(localStorage.getItem("skillCheck8" + nameCheck));
+    document.getElementById("skillCheck9").checked = JSON.parse(localStorage.getItem("skillCheck9" + nameCheck));
+    document.getElementById("skillCheck10").checked = JSON.parse(localStorage.getItem("skillCheck10" + nameCheck));
+    document.getElementById("skillCheck11").checked = JSON.parse(localStorage.getItem("skillCheck11" + nameCheck));
+    document.getElementById("skillCheck12").checked = JSON.parse(localStorage.getItem("skillCheck12" + nameCheck));
+    document.getElementById("skillCheck13").checked = JSON.parse(localStorage.getItem("skillCheck13" + nameCheck));
+    document.getElementById("skillCheck14").checked = JSON.parse(localStorage.getItem("skillCheck14" + nameCheck));
+    document.getElementById("skillCheck15").checked = JSON.parse(localStorage.getItem("skillCheck15" + nameCheck));
+    document.getElementById("skillCheck16").checked = JSON.parse(localStorage.getItem("skillCheck16" + nameCheck));
+    document.getElementById("skillCheck17").checked = JSON.parse(localStorage.getItem("skillCheck17" + nameCheck));
+    document.getElementById("skillCheck18").checked = JSON.parse(localStorage.getItem("skillCheck18" + nameCheck));
+    document.getElementById("skillCheck19").checked = JSON.parse(localStorage.getItem("skillCheck19" + nameCheck));
+    document.getElementById("skillCheck20").checked = JSON.parse(localStorage.getItem("skillCheck20" + nameCheck));
+    document.getElementById("skillCheck21").checked = JSON.parse(localStorage.getItem("skillCheck21" + nameCheck));
+    document.getElementById("skillCheck22").checked = JSON.parse(localStorage.getItem("skillCheck22" + nameCheck));
+    document.getElementById("skillCheck23").checked = JSON.parse(localStorage.getItem("skillCheck23" + nameCheck));
+
+    document.getElementById("skill1").value = localStorage.getItem("skill1" + nameCheck);
+    document.getElementById("skill2").value = localStorage.getItem("skill2" + nameCheck);
+    document.getElementById("skill3").value = localStorage.getItem("skill3" + nameCheck);
+    document.getElementById("skill4").value = localStorage.getItem("skill4" + nameCheck);
+    document.getElementById("skill5").value = localStorage.getItem("skill5" + nameCheck);
+    document.getElementById("skill6").value = localStorage.getItem("skill6" + nameCheck);
+    document.getElementById("skill7").value = localStorage.getItem("skill7" + nameCheck);
+    document.getElementById("skill8").value = localStorage.getItem("skill8" + nameCheck);
+    document.getElementById("skill9").value = localStorage.getItem("skill9" + nameCheck);
+    document.getElementById("skill10").value = localStorage.getItem("skill10" + nameCheck);
+    document.getElementById("skill11").value = localStorage.getItem("skill11" + nameCheck);
+    document.getElementById("skill12").value = localStorage.getItem("skill12" + nameCheck);
+    document.getElementById("skill13").value = localStorage.getItem("skill13" + nameCheck);
+    document.getElementById("skill14").value = localStorage.getItem("skill14" + nameCheck);
+    document.getElementById("skill15").value = localStorage.getItem("skill15" + nameCheck);
+    document.getElementById("skill16").value = localStorage.getItem("skill16" + nameCheck);
+    document.getElementById("skill17").value = localStorage.getItem("skill17" + nameCheck);
+    document.getElementById("skill18").value = localStorage.getItem("skill18" + nameCheck);
+    document.getElementById("skill19").value = localStorage.getItem("skill19" + nameCheck);
+    document.getElementById("skill20").value = localStorage.getItem("skill20" + nameCheck);
+    document.getElementById("skill21").value = localStorage.getItem("skill21" + nameCheck);
+    document.getElementById("skill22").value = localStorage.getItem("skill22" + nameCheck);
+    document.getElementById("skill23").value = localStorage.getItem("skill23" + nameCheck);
+
+    document.getElementById("meleeType1").checked = JSON.parse(localStorage.getItem("meleeType1" + nameCheck));
+    document.getElementById("meleeType2").checked = JSON.parse(localStorage.getItem("meleeType2" + nameCheck));
+    document.getElementById("meleeType3").checked = JSON.parse(localStorage.getItem("meleeType3" + nameCheck));
+    document.getElementById("rangedType1").checked = JSON.parse(localStorage.getItem("rangedType1" + nameCheck));
+    document.getElementById("rangedType2").checked = JSON.parse(localStorage.getItem("rangedType2" + nameCheck));
+    document.getElementById("rangedType3").checked = JSON.parse(localStorage.getItem("rangedType3" + nameCheck));
+
     // COMBAT
     document.getElementById("editableArea3").innerHTML = localStorage.getItem("editableArea3" + nameCheck);
     document.getElementById("editableArea4").innerHTML = localStorage.getItem("editableArea4" + nameCheck);
@@ -206,6 +306,99 @@ function setInputValues() {
         localStorage.setItem("textArea3" + nameCheck, document.getElementById("textArea3").value);
         localStorage.setItem("textArea4" + nameCheck, document.getElementById("textArea4").value);
 
+        // ATRIBUTES & PLAYER STATUS
+        localStorage.setItem("lifeBar" + nameCheck, document.getElementById("lifeBar").innerText);
+        localStorage.setItem("sanityBar" + nameCheck, document.getElementById("sanityBar").innerText);
+        localStorage.setItem("energyBar" + nameCheck, document.getElementById("energyBar").innerText);
+        localStorage.setItem("exhaustSelect" + nameCheck, document.getElementById("exhaustSelect").value);
+        localStorage.setItem("woundedCheck" + nameCheck, document.getElementById("woundedCheck").checked);
+        localStorage.setItem("dyeingCheck" + nameCheck, document.getElementById("dyeingCheck").checked);
+        localStorage.setItem("fail1" + nameCheck, document.getElementById("fail1").checked);
+        localStorage.setItem("fail2" + nameCheck, document.getElementById("fail2").checked);
+        localStorage.setItem("fail3" + nameCheck, document.getElementById("fail3").checked);
+        localStorage.setItem("terrorizedCheck" + nameCheck, document.getElementById("terrorizedCheck").checked);
+        localStorage.setItem("traumatizedCheck" + nameCheck, document.getElementById("traumatizedCheck").checked);
+        localStorage.setItem("insaneCheck" + nameCheck, document.getElementById("insaneCheck").checked);
+
+        localStorage.setItem("trainedSkillBonus" + nameCheck, document.getElementById("trainedSkillBonus").value);
+        localStorage.setItem("nTrainedSkillBonus" + nameCheck, document.getElementById("nTrainedSkillBonus").value);
+        localStorage.setItem("defense" + nameCheck, document.getElementById("defense").value);
+        localStorage.setItem("block" + nameCheck, document.getElementById("block").value);
+        localStorage.setItem("dodge" + nameCheck, document.getElementById("dodge").value);
+        localStorage.setItem("armorWeight" + nameCheck, document.getElementById("armorWeight").value);
+        localStorage.setItem("physicalRDMG" + nameCheck, document.getElementById("physicalRDMG").value);
+        localStorage.setItem("balisticalRDMG" + nameCheck, document.getElementById("balisticalRDMG").value);
+        localStorage.setItem("magialRDMG" + nameCheck, document.getElementById("magialRDMG").value);
+        localStorage.setItem("velocity" + nameCheck, document.getElementById("velocity").value);
+
+        localStorage.setItem("strInput" + nameCheck, document.getElementById("strInput").value);
+        localStorage.setItem("strModInput" + nameCheck, document.getElementById("strModInput").value);
+        localStorage.setItem("agiInput" + nameCheck, document.getElementById("agiInput").value);
+        localStorage.setItem("agiModInput" + nameCheck, document.getElementById("agiModInput").value);
+        localStorage.setItem("conInput" + nameCheck, document.getElementById("conInput").value);
+        localStorage.setItem("conModInput" + nameCheck, document.getElementById("conModInput").value);
+        localStorage.setItem("intInput" + nameCheck, document.getElementById("intInput").value);
+        localStorage.setItem("intModInput" + nameCheck, document.getElementById("intModInput").value);
+        localStorage.setItem("wisInput" + nameCheck, document.getElementById("wisInput").value);
+        localStorage.setItem("wisModInput" + nameCheck, document.getElementById("wisModInput").value);
+        localStorage.setItem("chaInput" + nameCheck, document.getElementById("chaInput").value);
+        localStorage.setItem("chaModInput" + nameCheck, document.getElementById("chaModInput").value);
+
+        localStorage.setItem("skillCheck1" + nameCheck, document.getElementById("skillCheck1").checked);
+        localStorage.setItem("skillCheck2" + nameCheck, document.getElementById("skillCheck2").checked);
+        localStorage.setItem("skillCheck3" + nameCheck, document.getElementById("skillCheck3").checked);
+        localStorage.setItem("skillCheck4" + nameCheck, document.getElementById("skillCheck4").checked);
+        localStorage.setItem("skillCheck5" + nameCheck, document.getElementById("skillCheck5").checked);
+        localStorage.setItem("skillCheck6" + nameCheck, document.getElementById("skillCheck6").checked);
+        localStorage.setItem("skillCheck7" + nameCheck, document.getElementById("skillCheck7").checked);
+        localStorage.setItem("skillCheck8" + nameCheck, document.getElementById("skillCheck8").checked);
+        localStorage.setItem("skillCheck9" + nameCheck, document.getElementById("skillCheck9").checked);
+        localStorage.setItem("skillCheck10" + nameCheck, document.getElementById("skillCheck10").checked);
+        localStorage.setItem("skillCheck11" + nameCheck, document.getElementById("skillCheck11").checked);
+        localStorage.setItem("skillCheck12" + nameCheck, document.getElementById("skillCheck12").checked);
+        localStorage.setItem("skillCheck13" + nameCheck, document.getElementById("skillCheck13").checked);
+        localStorage.setItem("skillCheck14" + nameCheck, document.getElementById("skillCheck14").checked);
+        localStorage.setItem("skillCheck15" + nameCheck, document.getElementById("skillCheck15").checked);
+        localStorage.setItem("skillCheck16" + nameCheck, document.getElementById("skillCheck16").checked);
+        localStorage.setItem("skillCheck17" + nameCheck, document.getElementById("skillCheck17").checked);
+        localStorage.setItem("skillCheck18" + nameCheck, document.getElementById("skillCheck18").checked);
+        localStorage.setItem("skillCheck19" + nameCheck, document.getElementById("skillCheck19").checked);
+        localStorage.setItem("skillCheck20" + nameCheck, document.getElementById("skillCheck20").checked);
+        localStorage.setItem("skillCheck21" + nameCheck, document.getElementById("skillCheck21").checked);
+        localStorage.setItem("skillCheck22" + nameCheck, document.getElementById("skillCheck22").checked);
+        localStorage.setItem("skillCheck23" + nameCheck, document.getElementById("skillCheck23").checked);
+
+        localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
+        localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
+        localStorage.setItem("skill3" + nameCheck, document.getElementById("skill3").value);
+        localStorage.setItem("skill4" + nameCheck, document.getElementById("skill4").value);
+        localStorage.setItem("skill5" + nameCheck, document.getElementById("skill5").value);
+        localStorage.setItem("skill6" + nameCheck, document.getElementById("skill6").value);
+        localStorage.setItem("skill7" + nameCheck, document.getElementById("skill7").value);
+        localStorage.setItem("skill8" + nameCheck, document.getElementById("skill8").value);
+        localStorage.setItem("skill9" + nameCheck, document.getElementById("skill9").value);
+        localStorage.setItem("skill10" + nameCheck, document.getElementById("skill10").value);
+        localStorage.setItem("skill11" + nameCheck, document.getElementById("skill11").value);
+        localStorage.setItem("skill12" + nameCheck, document.getElementById("skill12").value);
+        localStorage.setItem("skill13" + nameCheck, document.getElementById("skill13").value);
+        localStorage.setItem("skill14" + nameCheck, document.getElementById("skill14").value);
+        localStorage.setItem("skill15" + nameCheck, document.getElementById("skill15").value);
+        localStorage.setItem("skill16" + nameCheck, document.getElementById("skill16").value);
+        localStorage.setItem("skill17" + nameCheck, document.getElementById("skill17").value);
+        localStorage.setItem("skill18" + nameCheck, document.getElementById("skill18").value);
+        localStorage.setItem("skill19" + nameCheck, document.getElementById("skill19").value);
+        localStorage.setItem("skill20" + nameCheck, document.getElementById("skill20").value);
+        localStorage.setItem("skill21" + nameCheck, document.getElementById("skill21").value);
+        localStorage.setItem("skill22" + nameCheck, document.getElementById("skill22").value);
+        localStorage.setItem("skill23" + nameCheck, document.getElementById("skill23").value);
+
+        localStorage.setItem("meleeType1" + nameCheck, document.getElementById("meleeType1").checked);
+        localStorage.setItem("meleeType2" + nameCheck, document.getElementById("meleeType2").checked);
+        localStorage.setItem("meleeType3" + nameCheck, document.getElementById("meleeType3").checked);
+        localStorage.setItem("rangedType1" + nameCheck, document.getElementById("rangedType1").checked);
+        localStorage.setItem("rangedType2" + nameCheck, document.getElementById("rangedType2").checked);
+        localStorage.setItem("rangedType3" + nameCheck, document.getElementById("rangedType3").checked);
+
         // COMBAT
         localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerHTML);
         localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerHTML);
@@ -240,6 +433,30 @@ document.getElementById("imgSelectBtn").addEventListener("change", e => {
     }
     reader.readAsDataURL(file);
 });
+
+openProfModalDiv2.addEventListener("click", ()=> {
+    profModalDiv2.style.display = "grid"
+    openProfModalDiv2.style.display = "none";
+    closeProfModalDiv2.style.display = "block";
+})
+
+openProfModalDiv1.addEventListener("click", ()=> {
+    profModalDiv1.style.display = "grid"
+    openProfModalDiv1.style.display = "none";
+    closeProfModalDiv1.style.display = "block";
+})
+
+closeProfModalDiv2.addEventListener("click", ()=> {
+    profModalDiv2.style.display = "none"
+    openProfModalDiv2.style.display = "block";
+    closeProfModalDiv2.style.display = "none";
+})
+
+closeProfModalDiv1.addEventListener("click", ()=> {
+    profModalDiv1.style.display = "none"
+    openProfModalDiv1.style.display = "block";
+    closeProfModalDiv1.style.display = "none";
+})
 
 function openHamburguer() {
     hamburguerMenu.style.display = "none";
@@ -280,7 +497,6 @@ function indexPage() {
 };
 
 function skillsPage() {
-    //alert("Área Ainda Não Disponível!");
     navBtnDiv1.style.opacity = "";
     navBtnDiv2.style.opacity = "100%";
     navBtnDiv3.style.opacity = "";

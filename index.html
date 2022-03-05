@@ -74,333 +74,370 @@
         
         <section id="section3">                 <!--Parte dos Atributos e Perícias-->         
             <div id="statusDiv">
-                <div id="lifeStatus">
-                    <span class="statusSpan">Vida</span>
-                    <div class="barDiv" id="lifeBarDiv">
-                        <span class="bar" id="lifeBar">0 / 0</span>
-                    </div>
-                    <div id="lifeCheckDiv">
-                        <div class="statusChecks lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="exhaust" id="exhaustCheck">
-                            <span class="checkSpans">Exausto</span>
+                <div id="barsDiv">
+                    <div id="lifeStatus">
+                        <span class="statusSpan">Vida</span>
+                        <div class="barDiv" id="lifeBarDiv">
+                            <span class="bar" id="lifeBar">1 / 1</span>
                         </div>
-                        <div class="statusChecks lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="wounded" id="woundedCheck">
-                            <span class="checkSpans">Lesão Grave</span>
-                        </div>
-                        <div class="statusChecks lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="dyeing" id="dyeingCheck">
-                            <span class="checkSpans">Morrendo</span>
-                        </div>
-                        <div class="statusChecks lifeChecks">
-                            <input class="statusChecks" type="checkbox" name="fail1" id="fail1">
-                            <input class="statusChecks" type="checkbox" name="fail2" id="fail2">
-                            <input class="statusChecks" type="checkbox" name="fail3" id="fail3">
-                            <span class="checkSpans">Falhas</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="sanityStatus">
-                    <span class="statusSpan">Sanidade</span>
-                    <div class="barDiv" id="sanityBarDiv">
-                        <span class="bar" id="sanityBar">0 / 0</span>
-                    </div>
-                    <div id="sanityCheckDiv">
-                        <div class="statusChecks sanityChecks">
-                            <input class="statusChecks" type="checkbox" name="terrorized" id="terrorizedCheck">
-                            <span class="checkSpans">Aterrorizado</span>
-                        </div>
-                        <div class="statusChecks sanityChecks">
-                            <input class="statusChecks" type="checkbox" name="traumatized" id="traumatizedCheck">
-                            <span class="checkSpans">Traumatizado</span>
-                        </div>
-                        <div class="statusChecks sanityChecks">
-                            <input class="statusChecks" type="checkbox" name="insane" id="insaneCheck">
-                            <span class="checkSpans">Insano</span>
+                        <div id="lifeCheckDiv">
+                            <div class="lifeChecks">
+                                <select name="exhaust" id="exhaustSelect">
+                                    <option value="0" selected>Nv 0</option>
+                                    <option value="1">Nv 1</option>
+                                    <option value="2">Nv 2</option>
+                                    <option value="3">Nv 3</option>
+                                    <option value="4">Nv 4</option>
+                                    <option value="5">Nv 5</option>
+                                    <option value="6">Nv 6</option>
+                                </select>
+                                <span class="checkSpans">Exaustão</span>
+                            </div>
+                            <div class="statusCheckDiv lifeChecks">
+                                <input class="statusChecks" type="checkbox" name="wounded" id="woundedCheck">
+                                <span class="checkSpans">Lesão Grave</span>
+                            </div>
+                            <div class="statusCheckDiv lifeChecks">
+                                <input class="statusChecks" type="checkbox" name="dyeing" id="dyeingCheck">
+                                <span class="checkSpans">Morrendo</span>
+                            </div>
+                            <div class="statusCheckDiv lifeChecks">
+                                <input class="statusChecks" type="checkbox" name="fail1" id="fail1">
+                                <input class="statusChecks" type="checkbox" name="fail2" id="fail2">
+                                <input class="statusChecks" type="checkbox" name="fail3" id="fail3">
+                                <span class="checkSpans">Falhas</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="energyStatus">
-                    <span class="statusSpan">Energia</span>
-                    <div class="barDiv" id="energyBarDiv">
-                        <span class="bar" id="energyBar">0 / 0</span>
+                    <div id="sanityStatus">
+                        <span class="statusSpan">Sanidade</span>
+                        <div class="barDiv" id="sanityBarDiv">
+                            <span class="bar" id="sanityBar">1 / 1</span>
+                        </div>
+                        <div id="sanityCheckDiv">
+                            <div class="statusCheckDiv sanityChecks">
+                                <input class="statusChecks" type="checkbox" name="terrorized" id="terrorizedCheck">
+                                <span class="checkSpans">Aterrorizado</span>
+                            </div>
+                            <div class="statusCheckDiv sanityChecks">
+                                <input class="statusChecks" type="checkbox" name="traumatized" id="traumatizedCheck">
+                                <span class="checkSpans">Traumatizado</span>
+                            </div>
+                            <div class="statusCheckDiv sanityChecks">
+                                <input class="statusChecks" type="checkbox" name="insane" id="insaneCheck">
+                                <span class="checkSpans">Insano</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="energyStatus">
+                        <span class="statusSpan">Energia</span>
+                        <div class="barDiv" id="energyBarDiv">
+                            <span class="bar" id="energyBar">1 / 1</span>
+                        </div>
                     </div>
                 </div>
                 <div id="bodyStatus">
-                    <span class="statusSpan">Corpo</span>
-                    <div id="defenseDiv">
-                        <div id="velocityDiv">
-                            <span>Velocidade</span>
-                            <div><input type="text" name="velocity" id="velocity"></div>
+                    <span class="statusSpan">Proteção e Redutores de Dano (RD)</span>
+                    <div id="protectionDiv">
+                        <div id="protectionType">
+                            <select name="armorWeight" id="armorWeight">
+                                <option value="Nenhuma" selected>Nenhuma</option>
+                                <option value="Leve">Leve</option>
+                                <option value="Média">Média</option>
+                                <option value="Pesada">Pesada</option>
+                            </select>
                         </div>
-                        <div id="protectionDiv">
-                            <div id="defType">
-                                <div>
-                                    <span>Defesa</span>
-                                    <div><input type="number" name="defense" id="defense"></div>
-                                </div>
-                                <div>
-                                    <span>Bloqueio</span>
-                                    <div><input type="text" name="block" id="block"></div>
-                                </div>
-                                <div>
-                                    <span>Esquiva</span>
-                                    <div><input type="text" name="dodge" id="dodge"></div>
-                                </div>
+                        <div id="defType">
+                            <div class="statusSubDiv">
+                                <span class="statusSubSpan">Defesa</span>
+                                <div><input type="number" name="defense" id="defense" placeholder="10"></div>
                             </div>
-                            <div id="protectionType">
-                                <span>Tipo de Proteção</span>
-                                <div>
-                                    <div>
-                                        <input type="radio" name="armorWeight" id="noArmor">
-                                        <span>Nenhuma</span>
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="armorWeight" id="lightArmor">
-                                        <span>Leve</span>
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="armorWeight" id="mediumArmor">
-                                        <span>Média</span>
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="armorWeight" id="heavyArmor">
-                                        <span>Pesada</span>
-                                    </div>
-                                </div>
+                            <div class="statusSubDiv">
+                                <span class="statusSubSpan">Bloqueio</span>
+                                <div><input type="text" name="block" id="block" placeholder="+0"></div>
                             </div>
-                            <div id="dmgReductDiv">
-                                <span>Redutores de Dano</span>
-                                <div id="dmgReductInputs">
-                                    <div>
-                                        <span>Físico</span>
-                                        <div><input type="text" name="physical" id="physicalRDMG"></div>
-                                    </div>
-                                    <div>
-                                        <span>Balístico</span>
-                                        <div><input type="text" name="balistical" id="balisticalRDMG"></div>
-                                    </div>
-                                    <div>
-                                        <span>Mágico</span>
-                                        <div><input type="text" name="magial" id="magialRDMG"></div>
-                                    </div>
-                                </div>
+                            <div class="statusSubDiv">
+                                <span class="statusSubSpan">Esquiva</span>
+                                <div><input type="text" name="dodge" id="dodge" placeholder="+0"></div>
                             </div>
+                        </div>
+                        <div id="dmgReductDiv">
+                            <div class="statusSubDiv">
+                                <span class="statusSubSpan">RD Físico</span>
+                                <div><input type="text" name="physical" id="physicalRDMG" placeholder="-0"></div>
+                            </div>
+                            <div class="statusSubDiv">
+                                <span class="statusSubSpan">RD Balístico</span>
+                                <div><input type="text" name="balistical" id="balisticalRDMG" placeholder="-0"></div>
+                            </div>
+                            <div class="statusSubDiv">
+                                <span class="statusSubSpan">RD Mágico</span>
+                                <div><input type="text" name="magial" id="magialRDMG" placeholder="-0"></div>
+                            </div>
+                        </div>
+                        <div id="velDiv">
+                            <span>Velocidade</span>
+                            <div><input type="text" name="velocity" id="velocity" placeholder="metros ou quadrados"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="skillsDiv">
                 <div id="atributes">
-                    <span>Atributos</span>
+                    <span class="attSkillMainSpan">Atributos</span>
                     <div id="atributesInputDiv">
                         <div>
-                            <div>
-                                <span>Força</span>
-                                <div><input type="text" name="str" id="strInput"></div>
-                            </div>
-                            <div>
-                                <span>Agilidade</span>
-                                <div><input type="text" name="agi" id="agiInput"></div>
+                            <span class="attSkillSpan">Força</span>
+                            <div class="attModGrid">
+                                <div><input class="attInput" type="text" name="str" id="strInput" placeholder="10"></div>
+                                <div><input class="attInput" type="text" name="strMod" id="strModInput" placeholder="+0"></div>
                             </div>
                         </div>
                         <div>
-                            <div>
-                                <span>Constituição</span>
-                                <div><input type="text" name="con" id="conInput"></div>
-                            </div>
-                            <div>
-                                <span>Inteligência</span>
-                                <div><input type="text" name="int" id="intInput"></div>
+                            <span class="attSkillSpan">Agilidade</span>
+                            <div class="attModGrid">
+                                <div><input class="attInput" type="text" name="agi" id="agiInput" placeholder="10"></div>
+                                <div><input class="attInput" type="text" name="agiMod" id="agiModInput" placeholder="+0"></div>
                             </div>
                         </div>
                         <div>
-                            <div>
-                                <span>Sabedoria</span>
-                                <div><input type="text" name="wis" id="wisInput"></div>
+                            <span class="attSkillSpan">Constituição</span>
+                            <div class="attModGrid">
+                                <div><input class="attInput" type="text" name="con" id="conInput" placeholder="10"></div>
+                                <div><input class="attInput" type="text" name="conMod" id="conModInput" placeholder="+0"></div>
                             </div>
-                            <div>
-                                <span>Carisma</span>
-                                <div><input type="text" name="char" id="charInput"></div>
+                        </div>
+                        <div>
+                            <span class="attSkillSpan">Inteligência</span>
+                            <div class="attModGrid">
+                                <div><input class="attInput" type="text" name="int" id="intInput" placeholder="10"></div>
+                                <div><input class="attInput" type="text" name="intMod" id="intModInput" placeholder="+0"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="attSkillSpan">Sabedoria</span>
+                            <div class="attModGrid">
+                                <div><input class="attInput" type="text" name="wis" id="wisInput" placeholder="10"></div>
+                                <div><input class="attInput" type="text" name="wisMod" id="wisModInput" placeholder="+0"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="attSkillSpan">Carisma</span>
+                            <div class="attModGrid">
+                                <div><input class="attInput" type="text" name="char" id="chaInput" placeholder="10"></div>
+                                <div><input class="attInput" type="text" name="chaMod" id="chaModInput" placeholder="+0"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="skills">
-                    <div>
-                        <span>Perícias</span>
+                    <div id="profBonusDiv">
                         <div>
-                            <div>
-                                <span>Treinadas</span>
-                                <div><input type="text" name="trained" id="trainedSkillBonus"></div>
-                            </div>
-                            <div>
-                                <span>Não Treinadas</span>
-                                <div><input type="text" name="nonTrained" id="nTrainedSkillBonus"></div>
-                            </div>
+                            <span class="attSkillMainSpan">Bônus de Treinamento</span>
+                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="+0"></div>
+                        </div>
+                        <div>
+                            <span class="attSkillMainSpan">Bônus Passivo</span>
+                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="+0"></div>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                    <div id="skillsGridDiv">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck1">
                                 <span>Poder</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill1" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck2">
                                 <span>Luta</span>
+                                <span class="profModalCheck" id="openProfModalDiv1">▼</span>
+                                <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv1">X</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <div class="profModalGrid">
+                                <div class="profModalDiv" id="profModalDiv1">
+                                    <div>
+                                        <input type="checkbox" name="" id="meleeType1">
+                                        <span class="profModalSpan">Armas Simples</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="meleeType2">
+                                        <span class="profModalSpan">Armas Marciais*</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="meleeType3">
+                                        <span class="profModalSpan">Armas Exóticas*</span>
+                                    </div>
+                                </div>
+                                <input class="attSkillInput" type="text" name="" id="skill2" placeholder="+0">
+                            </div>
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck3">
                                 <span>Pontaria</span>
+                                <span class="profModalCheck" id="openProfModalDiv2">▼</span>
+                                <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv2">X</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <div class="profModalGrid">
+                                <div class="profModalDiv" id="profModalDiv2">
+                                    <div>
+                                        <input type="checkbox" name="" id="rangedType1">
+                                        <span class="profModalSpan">Armas Simples</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="rangedType2">
+                                        <span class="profModalSpan">Armas Marciais*</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="" id="rangedType3">
+                                        <span class="profModalSpan">Armas Exóticas*</span>
+                                    </div>
+                                </div>
+                                <input class="attSkillInput" type="text" name="" id="skill3" placeholder="+0">
+                            </div>
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck4">
                                 <span>Fortitude</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill4" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck5">
                                 <span>Reflexos</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill5" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck6">
                                 <span>Vontade</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill6" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck7">
                                 <span>Atletismo</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill7" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck8">
                                 <span>Acrobacia</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill8" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck9">
                                 <span>Furtividade</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill9" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck10">
                                 <span>Prestidigitação</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill10" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck11">
                                 <span>Investigação</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill11" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck12">
                                 <span>Conhecimento</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill12" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck13">
                                 <span>Ocultismo</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill13" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck14">
                                 <span>Religião</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill14" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck15">
                                 <span>Medicina</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill15" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck16">
                                 <span>Percepção</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill16" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck17">
                                 <span>Intuição</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill17" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck18">
                                 <span>Prim. Socorros</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill18" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck19">
                                 <span>Sobrevivência</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill19" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck20">
                                 <span>Atuação</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill20" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck21">
                                 <span>Lábia</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill21" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck22">
                                 <span>Enganação</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill22" placeholder="+0">
                         </div>
-                        <div>
-                            <div>
-                                <input type="checkbox" name="" id="">
+                        <div class="skillsGrid">
+                            <div class="spanCheckGrid">
+                                <input type="checkbox" name="" id="skillCheck23">
                                 <span>Intimidação</span>
                             </div>
-                            <input type="text" name="" id="">
+                            <input class="attSkillInput" type="text" name="" id="skill23" placeholder="+0">
                         </div>
                     </div>
                 </div>

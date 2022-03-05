@@ -128,7 +128,7 @@ body {
     margin: 0 100px 20px 100px;
 
     #section1 {
-        display: none;
+
         #charInfos {
             display: flex;
 
@@ -218,7 +218,6 @@ body {
 
     #section2 {
         margin-top: 25px;
-        display: none;
 
         h1 {
             margin-bottom: 10px;
@@ -277,91 +276,274 @@ body {
     }
 
     #section3 {
-        
+        display: none;
+        gap: 15px;
+
         .statusSpan {
+            font-size: 17px;
             font-weight: bold;
         }
 
         #statusDiv {
-            display: grid;
+            display: flex;
             gap: 15px;
 
-            #lifeStatus, #sanityStatus, #energyStatus {
+            #barsDiv {
+                display: grid;
+                gap: 35px;
+                width: 50%;
+                background-color: black;
+                border: solid 1px gray;
+                padding: 10px;
+                align-items: center;
 
-                #lifeBarDiv, #sanityBarDiv, #energyBarDiv {
-                    display: grid;
-                    width: 100%;
-                    background-color: gray;
+                #lifeStatus, #sanityStatus, #energyStatus {
 
-                    #lifeBar {
-                        background-color: red;
+                    .statusCheckDiv {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        
+                        .statusChecks {
+                            width: 15px;
+                            height: 15px;
+                        }
                     }
-                    
-                    #sanityBar {
-                        background-color: purple;
-                    }
-                    
-                    #energyBar {
-                        background-color: blue;
-                    }
-                }
 
-                #lifeCheckDiv, #sanityCheckDiv, #energyCheckDiv {
-                    display: flex;
-                    gap: 15px;
-                }
-
-                .barDiv {
-                    border: 1px solid black;
-
-                    .bar {
-                        width: 100%;
-                        transition: width 2s;
+                    #exhaustSelect {
+                        background-color: black;
+                        color: white;
                         text-align: center;
                         cursor: pointer;
+                        font-size: 14px;
                     }
-                }
 
-                .barDiv:hover {
-                    border-color: white;
+                    #exhaustSelect:hover {
+                        border-color: white;
+                    }    
+
+                    #lifeBarDiv, #sanityBarDiv, #energyBarDiv {
+                        display: grid;
+                        width: 100%;
+                        background-color: gray;
+    
+                        #lifeBar {
+                            background-color: red;
+                        }
+                        
+                        #sanityBar {
+                            background-color: purple;
+                        }
+                        
+                        #energyBar {
+                            background-color: blue;
+                        }
+                    }
+    
+                    #lifeCheckDiv, #sanityCheckDiv, #energyCheckDiv {
+                        display: flex;
+                        gap: 15px;
+                    }
+    
+                    .barDiv {
+                        border: 1px solid black;
+    
+                        .bar {
+                            padding: 3px;
+                            width: 100%;
+                            transition: width 2s;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                    }
+    
+                    .barDiv:hover {
+                        border-color: white;
+                    }
                 }
             }
 
             #bodyStatus {
+                display: grid;
+                gap: 5px;
+                background-color: black;
+                border: solid 1px gray;
+                padding: 10px;
+                width: 50%;
 
-                #defenseDiv {
-    
-                    #protectionDiv {
+                input {
+                    background-color: black;
+                    color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    width: 100%;
+                }
+
+                #protectionDiv {
+                    display: grid;
+                    gap: 20px;
+                    
+                    #velDiv {
                         
-                        #defType {
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
+                        #velocity {
+                            width: 100%;
                         }
-    
-                        #protectionType {
-                            
+                    }
+
+                    #defType {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    #protectionType {
+                        display: grid;
+                        gap: 10px;
+
+                        #armorWeight {
+                            font-size: 16px;
+                            background-color: black;
+                            color: white;
+                            text-align: center;
+                            cursor: pointer;
+                            width: 100%;
                         }
-    
-                        #dmgReductDiv {
-                            
-                            #dmgReductInputs {
-                                display: flex;
-                                align-items: center;
-                                gap: 10px;
-                            }
+
+                        #armorWeight:hover {
+                            border-color: white;
                         }
+                    }
+
+                    #dmgReductDiv {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
                     }
                 }
             }
         }
 
         #skillsDiv {
+            display: flex;
+            gap: 15px;
+
+            .attSkillInput, .attInput {
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                width: 100%;
+            }
+
+            .attSkillInput:hover, .attInput:hover {
+                border-color: white;
+            }
+
+            .attSkillMainSpan {
+                font-size: 17px;
+                font-weight: bold;
+            }
 
             #atributes {
-                
+                display: grid;
+                gap: 10px;
+                background-color: black;
+                border: solid 1px gray;
+                padding: 10px;
+
+                .attSkillMainSpan {
+                    text-align: center;
+                }
+
                 #atributesInputDiv {
-                    display: flex;
+                    display: grid;
+                    gap: 10px;
+
+                    .attModGrid {
+                        display: flex;
+
+                        .attInput {
+                            text-align: center;
+                            font-size: 22px;
+                            width: 70px;
+                        }
+                    }
+
+                    .attSkillInput {
+                        text-align: center;
+                        width: 150px;
+                    }
+                }
+            }
+
+            #skills {
+                display: grid;
+                gap: 10px;
+                width: 100%;
+                background-color: black;
+                border: solid 1px gray;
+                padding: 10px;
+
+                #profBonusDiv {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 10px;
+
+                    .attSkillInput {
+                        font-size: 20px;
+                    }
+                }
+
+                #skillsGridDiv {
+                    display: grid;
+                    gap: 10px;
+                    grid-template-columns: auto auto auto auto;
+
+                    .skillsGrid {
+                        
+                        .profModalGrid {
+                            display: grid;
+                            
+                            .profModalDiv {
+                                display: none;
+                                gap: 10px;
+                                position: absolute;
+                                background-color: white;
+                                z-index: 10;
+                                border: solid 1px gray;
+                                padding: 5px;                               
+
+                                .profModalSpan {
+                                    color: black;
+                                }
+
+                                input {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+
+                        .spanCheckGrid {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+
+                            input {
+                                width: 15px;
+                                height: 15px;
+                            }
+
+                            .profModalCheck {
+                                font-size: 14px;
+                                cursor: pointer;
+                            }
+
+                            .profModalCheck:hover {
+                                color: red;
+                            }
+                        }
+                    }
                 }
             }
         }
