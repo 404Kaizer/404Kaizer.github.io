@@ -3,7 +3,7 @@ let headerTitle = document.getElementById("headerTitle");
 
 let hamburguerMenu = document.getElementById("hamburguerMenu");
 let xHamburguerMenu = document.getElementById("xHamburguerMenu");
-let saveLoadBtns = document.getElementById("saveLoadBtns");
+let saveLoadDelBtns = document.getElementById("saveLoadDelBtns");
 
 let perInfoBtn = document.getElementById("perInfoBtn");
 let perInfoBtnFake = document.getElementById("perInfoBtnFake");
@@ -136,11 +136,11 @@ sanityBar.addEventListener("click", ()=> {
 document.execCommand("styleWithCSS", false, true);
 
 function chooseSheet() {
-    nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
+    nameCheck = prompt("Digite o Nome do Personagem Que Deseja Carregar: ");
     if (nameCheck == "") {
         while (nameCheck == "") {
-            alert("Nenhuma Ficha Selecionada. Digite o Nome da Sua Ficha Para Continuar ou Clique em Cancelar.");
-            nameCheck = prompt("Digite a Ficha Que Deseja Carregar: ");
+            alert("Nenhum Personagem Selecionado. Digite o Nome do Personagem Para Continuar ou Clique em Cancelar.");
+            nameCheck = prompt("Digite ao Nome do Personagem Que Deseja Carregar: ");
         }
     } else if (nameCheck != localStorage.getItem("charName" + nameCheck)) {
         alert("Este Personagem Ainda Não Existe. Salve Apenas se Quiser Criá-lo.");
@@ -148,6 +148,144 @@ function chooseSheet() {
     nameCheck = localStorage.setItem("nameCheck", nameCheck);
     location.reload();
 };
+
+function deleteSheet() {
+    nameCheck = prompt("Digite o Nome do Personagem Que Deseja Deletar: ");
+
+    if (nameCheck == "" || nameCheck != localStorage.getItem("charName" + nameCheck)) {
+        while (nameCheck == "" || nameCheck != localStorage.getItem("charName" + nameCheck)) {
+            alert("Nenhum Personagem Selecionado ou Não Existe. Digite o Nome do Personagem Para Continuar ou Clique em Cancelar.");
+            nameCheck = prompt("Digite o Nome do Personagem Que Deseja Deletar: ");
+        }
+    }
+
+    if (nameCheck == localStorage.getItem("charName" + nameCheck)) {
+        // INDEX
+        localStorage.removeItem("nameCheck");
+        localStorage.removeItem("titlePersonagem");
+        localStorage.removeItem("charImg" + nameCheck);
+        localStorage.removeItem("charName" + nameCheck);
+        localStorage.removeItem("charExp" + nameCheck);
+        localStorage.removeItem("charRaceSex" + nameCheck);
+        localStorage.removeItem("charExpert" + nameCheck);
+        localStorage.removeItem("charAge" + nameCheck);
+        localStorage.removeItem("charAlignment" + nameCheck);
+        localStorage.removeItem("charStature" + nameCheck);
+        localStorage.removeItem("charLangs" + nameCheck);
+        localStorage.removeItem("backgroundArea" + nameCheck);
+        localStorage.removeItem("textArea1" + nameCheck);
+        localStorage.removeItem("textArea2" + nameCheck);
+        localStorage.removeItem("textArea3" + nameCheck);
+        localStorage.removeItem("textArea4" + nameCheck);
+
+        // ATRIBUTES & PLAYER STATUS
+        localStorage.removeItem("lifeBar" + nameCheck);
+        localStorage.removeItem("sanityBar" + nameCheck);
+        localStorage.removeItem("energyBar" + nameCheck);
+        localStorage.removeItem("exhaustSelect" + nameCheck);
+        localStorage.removeItem("woundedCheck" + nameCheck);
+        localStorage.removeItem("dyeingCheck" + nameCheck);
+        localStorage.removeItem("fail1" + nameCheck);
+        localStorage.removeItem("fail2" + nameCheck);
+        localStorage.removeItem("fail3" + nameCheck);
+        localStorage.removeItem("terrorizedCheck" + nameCheck);
+        localStorage.removeItem("traumatizedCheck" + nameCheck);
+        localStorage.removeItem("insaneCheck" + nameCheck);
+        localStorage.removeItem("trainedSkillBonus" + nameCheck);
+        localStorage.removeItem("nTrainedSkillBonus" + nameCheck);
+        localStorage.removeItem("defense" + nameCheck);
+        localStorage.removeItem("block" + nameCheck);
+        localStorage.removeItem("dodge" + nameCheck);
+        localStorage.removeItem("armorWeight" + nameCheck);
+        localStorage.removeItem("physicalRDMG" + nameCheck);
+        localStorage.removeItem("balisticalRDMG" + nameCheck);
+        localStorage.removeItem("magialRDMG" + nameCheck);
+        localStorage.removeItem("velocity" + nameCheck);
+        localStorage.removeItem("strInput" + nameCheck);
+        localStorage.removeItem("strModInput" + nameCheck);
+        localStorage.removeItem("agiInput" + nameCheck);
+        localStorage.removeItem("agiModInput" + nameCheck);
+        localStorage.removeItem("conInput" + nameCheck);
+        localStorage.removeItem("conModInput" + nameCheck);
+        localStorage.removeItem("intInput" + nameCheck);
+        localStorage.removeItem("intModInput" + nameCheck);
+        localStorage.removeItem("wisInput" + nameCheck);
+        localStorage.removeItem("wisModInput" + nameCheck);
+        localStorage.removeItem("chaInput" + nameCheck);
+        localStorage.removeItem("chaModInput" + nameCheck);
+        localStorage.removeItem("skillCheck1" + nameCheck);
+        localStorage.removeItem("skillCheck2" + nameCheck);
+        localStorage.removeItem("skillCheck3" + nameCheck);
+        localStorage.removeItem("skillCheck4" + nameCheck);
+        localStorage.removeItem("skillCheck5" + nameCheck);
+        localStorage.removeItem("skillCheck6" + nameCheck);
+        localStorage.removeItem("skillCheck7" + nameCheck);
+        localStorage.removeItem("skillCheck8" + nameCheck);
+        localStorage.removeItem("skillCheck9" + nameCheck);
+        localStorage.removeItem("skillCheck10" + nameCheck);
+        localStorage.removeItem("skillCheck11" + nameCheck);
+        localStorage.removeItem("skillCheck12" + nameCheck);
+        localStorage.removeItem("skillCheck13" + nameCheck);
+        localStorage.removeItem("skillCheck14" + nameCheck);
+        localStorage.removeItem("skillCheck15" + nameCheck);
+        localStorage.removeItem("skillCheck16" + nameCheck);
+        localStorage.removeItem("skillCheck17" + nameCheck);
+        localStorage.removeItem("skillCheck18" + nameCheck);
+        localStorage.removeItem("skillCheck19" + nameCheck);
+        localStorage.removeItem("skillCheck20" + nameCheck);
+        localStorage.removeItem("skillCheck21" + nameCheck);
+        localStorage.removeItem("skillCheck22" + nameCheck);
+        localStorage.removeItem("skillCheck23" + nameCheck);
+        localStorage.removeItem("skill1" + nameCheck);
+        localStorage.removeItem("skill2" + nameCheck);
+        localStorage.removeItem("skill3" + nameCheck);
+        localStorage.removeItem("skill4" + nameCheck);
+        localStorage.removeItem("skill5" + nameCheck);
+        localStorage.removeItem("skill6" + nameCheck);
+        localStorage.removeItem("skill7" + nameCheck);
+        localStorage.removeItem("skill8" + nameCheck);
+        localStorage.removeItem("skill9" + nameCheck);
+        localStorage.removeItem("skill10" + nameCheck);
+        localStorage.removeItem("skill11" + nameCheck);
+        localStorage.removeItem("skill12" + nameCheck);
+        localStorage.removeItem("skill13" + nameCheck);
+        localStorage.removeItem("skill14" + nameCheck);
+        localStorage.removeItem("skill15" + nameCheck);
+        localStorage.removeItem("skill16" + nameCheck);
+        localStorage.removeItem("skill17" + nameCheck);
+        localStorage.removeItem("skill18" + nameCheck);
+        localStorage.removeItem("skill19" + nameCheck);
+        localStorage.removeItem("skill20" + nameCheck);
+        localStorage.removeItem("skill21" + nameCheck);
+        localStorage.removeItem("skill22" + nameCheck);
+        localStorage.removeItem("skill23" + nameCheck);
+        localStorage.removeItem("meleeType1" + nameCheck);
+        localStorage.removeItem("meleeType2" + nameCheck);
+        localStorage.removeItem("meleeType3" + nameCheck);
+        localStorage.removeItem("rangedType1" + nameCheck);
+        localStorage.removeItem("rangedType2" + nameCheck);
+        localStorage.removeItem("rangedType3" + nameCheck);
+
+        // COMBAT
+        localStorage.removeItem("editableArea3" + nameCheck);
+        localStorage.removeItem("editableArea4" + nameCheck);
+        localStorage.removeItem("editableArea5" + nameCheck);
+        localStorage.removeItem("editableArea6" + nameCheck);
+
+        // INVENTORY
+        localStorage.removeItem("coin1" + nameCheck);
+        localStorage.removeItem("coin2" + nameCheck);
+        localStorage.removeItem("editableArea1" + nameCheck);
+        localStorage.removeItem("editableArea2" + nameCheck);
+
+        // NOTES
+        localStorage.removeItem("editableArea" + nameCheck);
+
+        window.alert("Ficha DELETADA com Sucesso: " + nameCheck.toUpperCase());
+
+        location.reload();
+    }
+}
 
 window.onload = function getInputValues() {
     nameCheck = localStorage.getItem("nameCheck");
@@ -188,7 +326,6 @@ window.onload = function getInputValues() {
     document.getElementById("terrorizedCheck").checked = JSON.parse(localStorage.getItem("terrorizedCheck" + nameCheck));
     document.getElementById("traumatizedCheck").checked = JSON.parse(localStorage.getItem("traumatizedCheck" + nameCheck));
     document.getElementById("insaneCheck").checked = JSON.parse(localStorage.getItem("insaneCheck" + nameCheck));
-
     document.getElementById("trainedSkillBonus").value = localStorage.getItem("trainedSkillBonus" + nameCheck);
     document.getElementById("nTrainedSkillBonus").value = localStorage.getItem("nTrainedSkillBonus" + nameCheck);
     document.getElementById("defense").value = localStorage.getItem("defense" + nameCheck);
@@ -199,7 +336,6 @@ window.onload = function getInputValues() {
     document.getElementById("balisticalRDMG").value = localStorage.getItem("balisticalRDMG" + nameCheck);
     document.getElementById("magialRDMG").value = localStorage.getItem("magialRDMG" + nameCheck);
     document.getElementById("velocity").value = localStorage.getItem("velocity" + nameCheck);
-
     document.getElementById("strInput").value = localStorage.getItem("strInput" + nameCheck);
     document.getElementById("strModInput").value = localStorage.getItem("strModInput" + nameCheck);
     document.getElementById("agiInput").value = localStorage.getItem("agiInput" + nameCheck);
@@ -212,7 +348,6 @@ window.onload = function getInputValues() {
     document.getElementById("wisModInput").value = localStorage.getItem("wisModInput" + nameCheck);
     document.getElementById("chaInput").value = localStorage.getItem("chaInput" + nameCheck);
     document.getElementById("chaModInput").value = localStorage.getItem("chaModInput" + nameCheck);
-
     document.getElementById("skillCheck1").checked = JSON.parse(localStorage.getItem("skillCheck1" + nameCheck));
     document.getElementById("skillCheck2").checked = JSON.parse(localStorage.getItem("skillCheck2" + nameCheck));
     document.getElementById("skillCheck3").checked = JSON.parse(localStorage.getItem("skillCheck3" + nameCheck));
@@ -236,7 +371,6 @@ window.onload = function getInputValues() {
     document.getElementById("skillCheck21").checked = JSON.parse(localStorage.getItem("skillCheck21" + nameCheck));
     document.getElementById("skillCheck22").checked = JSON.parse(localStorage.getItem("skillCheck22" + nameCheck));
     document.getElementById("skillCheck23").checked = JSON.parse(localStorage.getItem("skillCheck23" + nameCheck));
-
     document.getElementById("skill1").value = localStorage.getItem("skill1" + nameCheck);
     document.getElementById("skill2").value = localStorage.getItem("skill2" + nameCheck);
     document.getElementById("skill3").value = localStorage.getItem("skill3" + nameCheck);
@@ -260,7 +394,6 @@ window.onload = function getInputValues() {
     document.getElementById("skill21").value = localStorage.getItem("skill21" + nameCheck);
     document.getElementById("skill22").value = localStorage.getItem("skill22" + nameCheck);
     document.getElementById("skill23").value = localStorage.getItem("skill23" + nameCheck);
-
     document.getElementById("meleeType1").checked = JSON.parse(localStorage.getItem("meleeType1" + nameCheck));
     document.getElementById("meleeType2").checked = JSON.parse(localStorage.getItem("meleeType2" + nameCheck));
     document.getElementById("meleeType3").checked = JSON.parse(localStorage.getItem("meleeType3" + nameCheck));
@@ -414,14 +547,14 @@ function setInputValues() {
         // NOTES
         localStorage.setItem("editableArea" + nameCheck, document.getElementById("editableArea").innerHTML);
 
-        window.alert("Ficha Salva: " + nameCheck.toUpperCase() + "\n\nLembre-se de Fazer Backup de Sua Ficha!");
+        window.alert("Ficha SALVA com Sucesso: " + nameCheck.toUpperCase() + "\n\nLembre-se de Fazer Backup de Sua Ficha!");
     }
 };
 
 function changeTitle(name) {
     let changeTitleNamePersonagem = name;  
     let newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
-    localStorage.setItem('titlePersonagem', newTitlePersonagem);
+    localStorage.setItem("titlePersonagem", newTitlePersonagem);
 }
 
 document.getElementById("imgSelectBtn").addEventListener("change", e => {
@@ -461,14 +594,14 @@ closeProfModalDiv1.addEventListener("click", ()=> {
 function openHamburguer() {
     hamburguerMenu.style.display = "none";
     xHamburguerMenu.style.display = "block";
-    saveLoadBtns.style.display = "block";
+    saveLoadDelBtns.style.display = "flex";
     headerTitle.style.display = "none";
 }
 
 function closeHamburguer() {
     hamburguerMenu.style.display = "";
     xHamburguerMenu.style.display = "none";
-    saveLoadBtns.style.display = "none";
+    saveLoadDelBtns.style.display = "none";
     headerTitle.style.display = "block";
 }
 

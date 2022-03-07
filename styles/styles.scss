@@ -83,7 +83,7 @@ body {
 
     #hamburguerMenuDiv {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
         column-gap: 15px;
         justify-content: right;
         padding: 20px;
@@ -104,21 +104,26 @@ body {
             }
         }
 
-        #saveLoadBtns {
+        #saveLoadDelBtns {
             display: flex;
             gap: 10px;
 
-            .saveLoadBtn {
+            .saveLoadDelImg {
+                width: 40px;
+                margin: auto;
+            }
+
+            .saveLoadDelBtn {
+                display: flex;
                 background-color: black;
-                font-size: 23px;
-                padding: 2px 5px;
+                padding: 5px 5px;
+                align-items: center;
+                cursor: pointer;
+                width: 60px;
             }
     
-            .saveLoadBtn:hover {
-                cursor: pointer;
-                background-color: white;
-                color: black;
-                font-weight: bold;
+            .saveLoadDelBtn:hover {
+                border-color: white;
             }
         }
     }
@@ -920,13 +925,6 @@ body {
         #hamburguerMenuDiv {
             margin: 85px 0 0 0;
             justify-content: space-between;
-
-            #saveLoadBtns {
-
-                .saveLoadBtn {
-                    font-size: 22px;
-                }
-            }
         }
     }
 
@@ -1134,9 +1132,13 @@ body {
                 font-size: 30px;
             }
 
-            #saveLoadBtns {
+            #saveLoadDelBtns {
                 display: none;
                 margin: 0;
+
+                .saveLoadDelImg {
+                    width: 30px;
+                }
             }
 
             #hamburguerMenuBtns {

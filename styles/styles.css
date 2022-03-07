@@ -82,8 +82,8 @@ body input:hover {
 #header #hamburguerMenuDiv, #footer #hamburguerMenuDiv {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   -webkit-column-gap: 15px;
           column-gap: 15px;
   -webkit-box-pack: right;
@@ -105,24 +105,33 @@ body input:hover {
   display: none;
 }
 
-#header #hamburguerMenuDiv #saveLoadBtns, #footer #hamburguerMenuDiv #saveLoadBtns {
+#header #hamburguerMenuDiv #saveLoadDelBtns, #footer #hamburguerMenuDiv #saveLoadDelBtns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
 
-#header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn, #footer #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn {
-  background-color: black;
-  font-size: 23px;
-  padding: 2px 5px;
+#header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelImg, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelImg {
+  width: 40px;
+  margin: auto;
 }
 
-#header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn:hover, #footer #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn:hover {
+#header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  padding: 5px 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  background-color: white;
-  color: black;
-  font-weight: bold;
+  width: 60px;
+}
+
+#header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn:hover, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn:hover {
+  border-color: white;
 }
 
 #main {
@@ -988,9 +997,6 @@ body input:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #header #hamburguerMenuDiv #saveLoadBtns .saveLoadBtn {
-    font-size: 22px;
-  }
   #main {
     margin: 0 30px 30px 30px;
   }
@@ -1121,9 +1127,12 @@ body input:hover {
     display: block;
     font-size: 30px;
   }
-  #header #hamburguerMenuDiv #saveLoadBtns {
+  #header #hamburguerMenuDiv #saveLoadDelBtns {
     display: none;
     margin: 0;
+  }
+  #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelImg {
+    width: 30px;
   }
   #header #hamburguerMenuDiv #hamburguerMenuBtns {
     margin: 0 0 0 10px;

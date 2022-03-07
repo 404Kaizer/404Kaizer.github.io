@@ -26,9 +26,10 @@
                 <img class="hamburguer" id="xHamburguerMenu" src="imgs/xHamburguerMenu.png" alt="" onclick="closeHamburguer()">
             </div>
             <h1 id="headerTitle"></h1>
-            <div id="saveLoadBtns">
-                <input type="button" class="saveLoadBtn" id="saveSheet" value="Salvar" onclick="setInputValues()">
-                <input type="button" class="saveLoadBtn" id="loadSheet" value="Escolher Ficha" onclick="chooseSheet()">
+            <div id="saveLoadDelBtns">
+                <button class="saveLoadDelBtn" id="saveSheet" onclick="setInputValues()"><img class="saveLoadDelImg" src="imgs/save.png" alt="Salvar Ficha"></button>
+                <button class="saveLoadDelBtn" id="loadSheet" onclick="chooseSheet()"><img class="saveLoadDelImg" src="imgs/load.png" alt="Trocar Ficha"></button>
+                <button class="saveLoadDelBtn" id="deleteSheet" onclick="deleteSheet()"><img class="saveLoadDelImg" src="imgs/delete.png" alt="Deletar Ficha"></button>
             </div>
         </div>
     </header>
