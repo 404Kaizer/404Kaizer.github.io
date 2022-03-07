@@ -108,11 +108,6 @@ body {
             display: flex;
             gap: 10px;
 
-            .saveLoadDelImg {
-                width: 40px;
-                margin: auto;
-            }
-
             .saveLoadDelBtn {
                 display: flex;
                 background-color: black;
@@ -120,6 +115,11 @@ body {
                 align-items: center;
                 cursor: pointer;
                 width: 60px;
+
+                .saveLoadDelImg {
+                    width: 40px;
+                    margin: auto;
+                }
             }
     
             .saveLoadDelBtn:hover {
@@ -1136,9 +1136,12 @@ body {
                 display: none;
                 margin: 0;
 
-                .saveLoadDelImg {
-                    width: 30px;
-                }
+                .saveLoadDelBtn {
+
+                    .saveLoadDelImg {
+                        width: 30px;
+                    }
+                }   
             }
 
             #hamburguerMenuBtns {

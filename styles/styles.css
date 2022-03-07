@@ -112,11 +112,6 @@ body input:hover {
   gap: 10px;
 }
 
-#header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelImg, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelImg {
-  width: 40px;
-  margin: auto;
-}
-
 #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,6 +123,11 @@ body input:hover {
           align-items: center;
   cursor: pointer;
   width: 60px;
+}
+
+#header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg {
+  width: 40px;
+  margin: auto;
 }
 
 #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn:hover, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn:hover {
@@ -1131,7 +1131,7 @@ body input:hover {
     display: none;
     margin: 0;
   }
-  #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelImg {
+  #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg {
     width: 30px;
   }
   #header #hamburguerMenuDiv #hamburguerMenuBtns {
