@@ -1172,6 +1172,10 @@ body {
             display: none;
         }
 
+        .inputStyle {
+            display: none;
+        }
+
         #section1 {
 
             #charInfos {
@@ -1283,8 +1287,8 @@ body {
                 gap: 20px;
 
                 .editOpts {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+                    display: flex;
+                    justify-content: left;
                 }
                 
                 .editableArea {
@@ -1324,8 +1328,8 @@ body {
             #editContent1, #editContent2 {
 
                 .editOpts {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+                    display: flex;
+                    justify-content: left;
                 }
 
                 #editableArea1 {
@@ -1345,8 +1349,8 @@ body {
         #section6 {
     
             .editOpts {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+                display: flex;
+                justify-content: left;
             }
             
             #editableArea {
