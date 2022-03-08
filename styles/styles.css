@@ -1425,12 +1425,12 @@ body input:hover {
 
 @media only screen and (max-width: 550px) {
   #main {
-    margin: auto;
+    margin: 0;
   }
-  #main #section1 {
+  #main #section1, #main #section3 {
     margin-top: 70px;
   }
-  #main #section3, #main #section4, #main #section5, #main #section6 {
+  #main #section4, #main #section5, #main #section6 {
     margin-top: 90px;
   }
   #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv .bar {

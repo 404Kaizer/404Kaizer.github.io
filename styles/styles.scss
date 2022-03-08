@@ -1535,13 +1535,13 @@ body {
 @media only screen and (max-width: 550px) {
 
     #main {
-        margin: auto;
+        margin: 0;
 
-        #section1 {
+        #section1, #section3 {
             margin-top: 70px;
         }
 
-        #section3, #section4, #section5, #section6 {
+        #section4, #section5, #section6 {
             margin-top: 90px;
         }
 
