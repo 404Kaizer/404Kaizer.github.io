@@ -138,6 +138,11 @@ body input:hover {
   margin: 0 100px 20px 100px;
 }
 
+#main .editableArea:empty::before, #main #editableArea:empty::before {
+  content: attr(data-placeholder);
+  color: gray;
+}
+
 #main #section1 #charInfos {
   display: -webkit-box;
   display: -ms-flexbox;

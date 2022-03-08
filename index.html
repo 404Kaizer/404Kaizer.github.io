@@ -159,11 +159,11 @@
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Bloqueio</span>
-                                <div><input type="text" name="block" id="block" placeholder="+0"></div>
+                                <div><input type="text" name="block" id="block" placeholder="0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Esquiva</span>
-                                <div><input type="text" name="dodge" id="dodge" placeholder="+0"></div>
+                                <div><input type="text" name="dodge" id="dodge" placeholder="0"></div>
                             </div>
                         </div>
                         <div id="dmgReductDiv">
@@ -194,43 +194,43 @@
                         <div>
                             <span class="attSkillSpan">Força</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="str" id="strInput" placeholder="10"></div>
-                                <div><input class="attInput" type="text" name="strMod" id="strModInput" placeholder="+0"></div>
+                                <div><input class="attInput" type="text" name="str" id="strInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="strMod" id="strModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Agilidade</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="agi" id="agiInput" placeholder="10"></div>
-                                <div><input class="attInput" type="text" name="agiMod" id="agiModInput" placeholder="+0"></div>
+                                <div><input class="attInput" type="text" name="agi" id="agiInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="agiMod" id="agiModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Constituição</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="con" id="conInput" placeholder="10"></div>
-                                <div><input class="attInput" type="text" name="conMod" id="conModInput" placeholder="+0"></div>
+                                <div><input class="attInput" type="text" name="con" id="conInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="conMod" id="conModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Inteligência</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="int" id="intInput" placeholder="10"></div>
-                                <div><input class="attInput" type="text" name="intMod" id="intModInput" placeholder="+0"></div>
+                                <div><input class="attInput" type="text" name="int" id="intInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="intMod" id="intModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Sabedoria</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="wis" id="wisInput" placeholder="10"></div>
-                                <div><input class="attInput" type="text" name="wisMod" id="wisModInput" placeholder="+0"></div>
+                                <div><input class="attInput" type="text" name="wis" id="wisInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="wisMod" id="wisModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Carisma</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="char" id="chaInput" placeholder="10"></div>
-                                <div><input class="attInput" type="text" name="chaMod" id="chaModInput" placeholder="+0"></div>
+                                <div><input class="attInput" type="text" name="char" id="chaInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="chaMod" id="chaModInput" VALUE="+0"></div>
                             </div>
                         </div>
                     </div>
@@ -239,8 +239,8 @@
                     <div id="profBonusDiv">
                         <span class="attSkillMainSpan">- Perícias e Bônus -</span>
                         <div id="profBonusGrid">
-                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="+0"></div>
-                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="+0"></div>
+                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="B. Ativo" onchange="setSkills()"></div>
+                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="B. Passivo" onchange="setSkills()"></div>
                         </div>
                     </div>
                     <div id="skillsGridDiv">
@@ -249,11 +249,11 @@
                                 <input type="checkbox" name="" id="skillCheck1">
                                 <span>Poder</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill1" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill1" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck2">
+                                <input type="checkbox" name="" id="skillCheck2" onchange="setSkills()">
                                 <span>Luta</span>
                                 <span class="profModalCheck" id="openProfModalDiv1">▼</span>
                                 <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv1">X</span>
@@ -273,12 +273,12 @@
                                         <span class="profModalSpan">Armas Exóticas*</span>
                                     </div>
                                 </div>
-                                <input class="attSkillInput" type="text" name="" id="skill2" placeholder="+0">
+                                <input class="attSkillInput" type="text" name="" id="skill2" value="0">
                             </div>
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck3">
+                                <input type="checkbox" name="" id="skillCheck3" onchange="setSkills()">
                                 <span>Pontaria</span>
                                 <span class="profModalCheck" id="openProfModalDiv2">▼</span>
                                 <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv2">X</span>
@@ -298,148 +298,148 @@
                                         <span class="profModalSpan">Armas Exóticas*</span>
                                     </div>
                                 </div>
-                                <input class="attSkillInput" type="text" name="" id="skill3" placeholder="+0">
+                                <input class="attSkillInput" type="text" name="" id="skill3" value="0">
                             </div>
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck4">
+                                <input type="checkbox" name="" id="skillCheck4" onchange="setSkills()">
                                 <span>Fortitude</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill4" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill4" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck5">
+                                <input type="checkbox" name="" id="skillCheck5" onchange="setSkills()">
                                 <span>Reflexos</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill5" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill5" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck6">
+                                <input type="checkbox" name="" id="skillCheck6" onchange="setSkills()">
                                 <span>Vontade</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill6" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill6" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck7">
+                                <input type="checkbox" name="" id="skillCheck7" onchange="setSkills()">
                                 <span>Atletismo</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill7" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill7" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck8">
+                                <input type="checkbox" name="" id="skillCheck8" onchange="setSkills()">
                                 <span>Acrobacia</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill8" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill8" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck9">
+                                <input type="checkbox" name="" id="skillCheck9" onchange="setSkills()">
                                 <span>Furtividade</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill9" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill9" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck10">
+                                <input type="checkbox" name="" id="skillCheck10" onchange="setSkills()">
                                 <span>Prestidigitação</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill10" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill10" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck11">
+                                <input type="checkbox" name="" id="skillCheck11" onchange="setSkills()">
                                 <span>Investigação</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill11" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill11" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck12">
+                                <input type="checkbox" name="" id="skillCheck12" onchange="setSkills()">
                                 <span>Conhecimento</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill12" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill12" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck13">
+                                <input type="checkbox" name="" id="skillCheck13" onchange="setSkills()">
                                 <span>Ocultismo</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill13" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill13" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck14">
+                                <input type="checkbox" name="" id="skillCheck14" onchange="setSkills()">
                                 <span>Religião</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill14" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill14" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck15">
+                                <input type="checkbox" name="" id="skillCheck15" onchange="setSkills()">
                                 <span>Medicina</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill15" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill15" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck16">
+                                <input type="checkbox" name="" id="skillCheck16" onchange="setSkills()">
                                 <span>Percepção</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill16" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill16" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck17">
+                                <input type="checkbox" name="" id="skillCheck17" onchange="setSkills()">
                                 <span>Intuição</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill17" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill17" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck18">
+                                <input type="checkbox" name="" id="skillCheck18" onchange="setSkills()">
                                 <span>Prim. Socorros</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill18" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill18" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck19">
+                                <input type="checkbox" name="" id="skillCheck19" onchange="setSkills()">
                                 <span>Sobrevivência</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill19" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill19" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck20">
+                                <input type="checkbox" name="" id="skillCheck20" onchange="setSkills()">
                                 <span>Atuação</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill20" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill20" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck21">
+                                <input type="checkbox" name="" id="skillCheck21" onchange="setSkills()">
                                 <span>Lábia</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill21" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill21" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck22">
+                                <input type="checkbox" name="" id="skillCheck22" onchange="setSkills()">
                                 <span>Enganação</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill22" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill22" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck23">
+                                <input type="checkbox" name="" id="skillCheck23" onchange="setSkills()">
                                 <span>Intimidação</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill23" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill23" value="0">
                         </div>
                     </div>
                 </div>
@@ -497,7 +497,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea3" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea3" contenteditable="true" data-placeholder="Habilidades Que Utilizam Energia..."></div>
                 </div>
                 <div id="passiveAb">
                     <h1>Habilidades Passivas</h1>
@@ -530,7 +530,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea4" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea4" contenteditable="true" data-placeholder="Habilidades Que Não Utilizam Energia..."></div>
                 </div>
                 <div id="spellsDiv">
                     <h1>Magias</h1>
@@ -563,7 +563,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea5" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea5" contenteditable="true" data-placeholder="Seus Truques e Magias..."></div>
                 </div>
                 <div id="weaponsDiv">
                     <h1>Armas</h1>
@@ -596,7 +596,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea6" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea6" contenteditable="true" data-placeholder="Suas Armas..."></div>
                 </div>
             </div>
         </section>
@@ -640,7 +640,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea1" contenteditable="true"></div>
+                    <div class="editableArea" id="editableArea1" contenteditable="true" data-placeholder="Itens Que Estão Com Você..."></div>
                 </div>
             </div>
             <div id="editContent2">
@@ -674,7 +674,7 @@
                     <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                     <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                 </fieldset>
-                <div class="editableArea" id="editableArea2" contenteditable="true"></div>
+                <div class="editableArea" id="editableArea2" contenteditable="true" data-placeholder="Itens Que Não Estão Com Você..."></div>
             </div>
         </section>
         <section id="section6">                 <!--Parte de Anotações de Campanha do Jogador-->
@@ -708,7 +708,7 @@
                 <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                 <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
             </fieldset>
-            <div id="editableArea" contenteditable="true"></div>
+            <div id="editableArea" contenteditable="true" data-placeholder="Suas Anotações Importantes de Campanha..."></div>
         </section>
     </main>
 

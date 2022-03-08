@@ -132,6 +132,11 @@ body {
 #main {
     margin: 0 100px 20px 100px;
 
+    .editableArea:empty::before, #editableArea:empty::before {
+        content: attr(data-placeholder);
+        color: gray;
+    }
+
     #section1 {
 
         #charInfos {
