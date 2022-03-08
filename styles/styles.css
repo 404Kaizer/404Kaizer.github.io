@@ -1242,9 +1242,10 @@ body input:hover {
     gap: 20px;
   }
   #main #section4 #editContent .editOpts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   }
   #main #section4 #editContent .editableArea {
     resize: none;
@@ -1276,9 +1277,10 @@ body input:hover {
     padding: 10px;
   }
   #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   }
   #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
     min-height: 250px;
@@ -1291,9 +1293,10 @@ body input:hover {
     height: 250px;
   }
   #main #section6 .editOpts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   }
   #main #section6 #editableArea {
     resize: none;

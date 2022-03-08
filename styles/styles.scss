@@ -1283,8 +1283,8 @@ body {
                 gap: 20px;
 
                 .editOpts {
-                    display: flex;
-                    
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
                 }
                 
                 .editableArea {
@@ -1324,7 +1324,8 @@ body {
             #editContent1, #editContent2 {
 
                 .editOpts {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
                 }
 
                 #editableArea1 {
@@ -1344,7 +1345,8 @@ body {
         #section6 {
     
             .editOpts {
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
             }
             
             #editableArea {
