@@ -1152,6 +1152,9 @@ body input:hover {
     margin-top: 95px;
     margin-bottom: 105px;
   }
+  #main .fontColor {
+    display: none;
+  }
   #main #section1 #charInfos #imgDiv {
     display: -ms-grid;
     display: grid;
@@ -1239,10 +1242,9 @@ body input:hover {
     gap: 20px;
   }
   #main #section4 #editContent .editOpts {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #main #section4 #editContent .editableArea {
     resize: none;
@@ -1274,10 +1276,9 @@ body input:hover {
     padding: 10px;
   }
   #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
     min-height: 250px;
@@ -1290,10 +1291,9 @@ body input:hover {
     height: 250px;
   }
   #main #section6 .editOpts {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #main #section6 #editableArea {
     resize: none;
