@@ -269,7 +269,7 @@ function deleteSheet() {
 window.onload = function getInputValues() {
     nameCheck = localStorage.getItem("nameCheck");
 
-    if (nameCheck == "null") {
+    if (nameCheck == "null" || nameCheck == "") {
         headerTitle.innerText = "Eroda";
     } else {
         headerTitle.innerText = nameCheck;
