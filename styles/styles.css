@@ -1277,6 +1277,7 @@ body input:hover {
   }
   #main #section5 #editContent1 #wealth div .wealthInput {
     text-align: center;
+    width: 100%;
     font-size: 20px;
     background-color: black;
     padding: 10px;
