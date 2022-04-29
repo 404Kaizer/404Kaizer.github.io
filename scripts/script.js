@@ -840,18 +840,14 @@ function updateAttMods() {
 };
 
 function updateDefenseMods() {
-    let fightSkill = parseInt(document.getElementById("skill2").value);
-    let blockInput = parseInt(document.getElementById("block").value);
-    blockInput += fightSkill;
-    if (blockInput > 0) {
-        blockInput = "+" + blockInput;
+    document.getElementById("block").value = parseInt(document.getElementById("skill2").value);
+    if (document.getElementById("block").value > 0) {
+        document.getElementById("block").value = "+" + document.getElementById("block").value;
     }
 
-    let reflexesSkill = parseInt(document.getElementById("skill5").value);
-    let dodgeInput = parseInt(document.getElementById("block").value);
-    dodgeInput += reflexesSkill;
-    if (dodgeInput > 0) {
-        dodgeInput = "+" + dodgeInput;
+    document.getElementById("dodge").value = parseInt(document.getElementById("skill5").value);
+    if (document.getElementById("dodge").value > 0) {
+        document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
     }
 };
 
