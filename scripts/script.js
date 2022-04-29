@@ -839,6 +839,22 @@ function updateAttMods() {
 
 };
 
+function updateDefenseMods() {
+    let fightSkill = parseInt(document.getElementById("skill2").value);
+    let blockInput = parseInt(document.getElementById("block").value);
+    blockInput += fightSkill;
+    if (blockInput > 0) {
+        blockInput = "+" + blockInput;
+    }
+
+    let reflexesSkill = parseInt(document.getElementById("skill5").value);
+    let dodgeInput = parseInt(document.getElementById("block").value);
+    dodgeInput += reflexesSkill;
+    if (dodgeInput > 0) {
+        dodgeInput = "+" + dodgeInput;
+    }
+};
+
 function changeTitle(name) {
     let changeTitleNamePersonagem = name;  
     let newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
