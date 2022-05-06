@@ -5,4 +5,4 @@ Surgindo como necessidade minha e de alguns amigos os quais jogo RPG de mesa, re
 
 Neste projeto utilizo as tecnologias: HTML, CSS (SASS), e JavaScript.
 
-Projeto ainda em desenvolvimento...
+Projeto em 98%.
