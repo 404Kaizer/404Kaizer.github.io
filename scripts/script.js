@@ -1044,7 +1044,7 @@ editBtn1.addEventListener('click', ()=> {
 });
 
 xBtn1.addEventListener('click', ()=> {
-    document.getElementById("activeAb").style.display = "";
+    document.getElementById("activeAb").style.display = "none";
     editBtn1.style.display = "block";
     xBtn1.style.display = "none";
 });
@@ -1056,7 +1056,7 @@ editBtn2.addEventListener('click', ()=> {
 });
 
 xBtn2.addEventListener('click', ()=> {
-    document.getElementById("passiveAb").style.display = "";
+    document.getElementById("passiveAb").style.display = "none";
     editBtn2.style.display = "block";
     xBtn2.style.display = "none";
 });
@@ -1068,7 +1068,7 @@ editBtn3.addEventListener('click', ()=> {
 });
 
 xBtn3.addEventListener('click', ()=> {
-    document.getElementById("weaponsDiv").style.display = "";
+    document.getElementById("weaponsDiv").style.display = "none";
     editBtn3.style.display = "block";
     xBtn3.style.display = "none";
 });
@@ -1080,7 +1080,7 @@ editBtn4.addEventListener('click', ()=> {
 });
 
 xBtn4.addEventListener('click', ()=> {
-    document.getElementById("spellsDiv").style.display = "";
+    document.getElementById("spellsDiv").style.display = "none";
     editBtn4.style.display = "block";
     xBtn4.style.display = "none";
 });
@@ -1167,4 +1167,8 @@ function chooseColor7() {
     document.execCommand('foreColor', false, myColor7);
     var bgColor = document.getElementById('myColor7');
     bgColor.style.backgroundColor = myColor7;
+}
+
+window.onbeforeunload = function () {
+    return ""
 }
