@@ -123,6 +123,7 @@ body input:hover {
           align-items: center;
   cursor: pointer;
   width: 60px;
+  border-color: gray;
 }
 
 #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg {
@@ -669,6 +670,7 @@ body input:hover {
 
 #main #section4 #editContentBtn .editBtnDiv .editBtn {
   opacity: 50%;
+  border-color: gray;
 }
 
 #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
@@ -775,7 +777,6 @@ body input:hover {
 }
 
 #main #section4 #editContent .editableArea {
-  resize: vertical;
   overflow: auto !important;
   word-break: break-all !important;
   border: solid 1px gray;
@@ -892,7 +893,6 @@ body input:hover {
 }
 
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
-  resize: vertical;
   overflow: auto;
   word-break: break-all;
   border: solid 1px gray;
@@ -1316,7 +1316,7 @@ body input:hover {
   #main #section6 #editableArea {
     resize: none;
     font-size: 17px;
-    min-height: 587px;
+    max-height: 587px;
   }
   #footer {
     display: block;

@@ -115,6 +115,7 @@ body {
                 align-items: center;
                 cursor: pointer;
                 width: 60px;
+                border-color: gray;
 
                 .saveLoadDelImg {
                     width: 40px;
@@ -601,6 +602,7 @@ body {
 
                 .editBtn {
                     opacity: 50%;
+                    border-color: gray;
                 }
 
                 .editBtn, .xBtn {
@@ -701,7 +703,6 @@ body {
             }
 
             .editableArea {
-                resize: vertical;
                 overflow: auto !important;
                 word-break: break-all !important;
                 border: solid 1px gray;
@@ -815,7 +816,6 @@ body {
             }
 
             .editableArea {
-                resize: vertical;
                 overflow: auto;
                 word-break: break-all;
                 border: solid 1px gray;
@@ -1362,7 +1362,7 @@ body {
             #editableArea {
                 resize: none;
                 font-size: 17px;
-                min-height: 587px;
+                max-height: 587px;
             }
         }
     }

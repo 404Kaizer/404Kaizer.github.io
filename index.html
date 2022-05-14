@@ -194,42 +194,42 @@
                         <div>
                             <span class="attSkillSpan">Força</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="str" id="strInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="str" id="strInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
                                 <div><input class="attInput" type="text" name="strMod" id="strModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Agilidade</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="agi" id="agiInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="agi" id="agiInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
                                 <div><input class="attInput" type="text" name="agiMod" id="agiModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Constituição</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="con" id="conInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="con" id="conInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
                                 <div><input class="attInput" type="text" name="conMod" id="conModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Inteligência</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="int" id="intInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="int" id="intInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
                                 <div><input class="attInput" type="text" name="intMod" id="intModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Sabedoria</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="wis" id="wisInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="wis" id="wisInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
                                 <div><input class="attInput" type="text" name="wisMod" id="wisModInput" VALUE="+0"></div>
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Carisma</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="char" id="chaInput" value="10" onchange="updateAttMods()"></div>
+                                <div><input class="attInput" type="text" name="char" id="chaInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
                                 <div><input class="attInput" type="text" name="chaMod" id="chaModInput" VALUE="+0"></div>
                             </div>
                         </div>
@@ -239,8 +239,8 @@
                     <div id="profBonusDiv">
                         <span class="attSkillMainSpan">Perícias e Bônus</span>
                         <div id="profBonusGrid">
-                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="B. Ativo" onchange="setSkills()"></div>
-                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="B. Passivo" onchange="setSkills()"></div>
+                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="B. Ativo" oninput="setSkills(), updateDefenseMods()"></div>
+                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="B. Passivo" oninput="setSkills(), updateDefenseMods()"></div>
                         </div>
                     </div>
                     <div id="skillsGridDiv">
@@ -253,7 +253,7 @@
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck2" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck2" oninput="setSkills(), updateDefenseMods()">
                                 <span>Luta</span><span style="font-size: 12px;">(For)</span>
                                 <span class="profModalCheck" id="openProfModalDiv1">▼</span>
                                 <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv1">X</span>
@@ -273,12 +273,12 @@
                                         <span class="profModalSpan">Armas Exóticas*</span>
                                     </div>
                                 </div>
-                                <input class="attSkillInput" type="text" name="" id="skill2" value="0" onchange="updateDefenseMods()">
+                                <input class="attSkillInput" type="text" name="" id="skill2" value="0" oninput="updateDefenseMods()">
                             </div>
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck3" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck3" oninput="setSkills()">
                                 <span>Pontaria</span><span style="font-size: 12px;">(Agi)</span>
                                 <span class="profModalCheck" id="openProfModalDiv2">▼</span>
                                 <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv2">X</span>
@@ -303,140 +303,140 @@
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck4" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck4" oninput="setSkills()">
                                 <span>Fortitude</span><span style="font-size: 12px;">(Con)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill4" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck5" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck5" oninput="setSkills(), updateDefenseMods()">
                                 <span>Reflexos</span><span style="font-size: 12px;">(Agi)</span>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill5" value="0" onchange="updateDefenseMods()">
+                            <input class="attSkillInput" type="text" name="" id="skill5" value="0" oninput="updateDefenseMods()">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck6" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck6" oninput="setSkills()">
                                 <span>Vontade</span><span style="font-size: 12px;">(Sab)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill6" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck7" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck7" oninput="setSkills()">
                                 <span>Atletismo</span><span style="font-size: 12px;">(For)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill7" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck8" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck8" oninput="setSkills()">
                                 <span>Acrobacia</span><span style="font-size: 12px;">(Agi)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill8" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck9" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck9" oninput="setSkills()">
                                 <span>Furtividade</span><span style="font-size: 12px;">(Agi)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill9" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck10" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck10" oninput="setSkills()">
                                 <span>Ladinagem</span><span style="font-size: 12px;">(Agi)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill10" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck11" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck11" oninput="setSkills()">
                                 <span>Investigação</span><span style="font-size: 12px;">(Int)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill11" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck12" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck12" oninput="setSkills()">
                                 <span>Conhecimento</span><span style="font-size: 12px;">(Int)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill12" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck13" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck13" oninput="setSkills()">
                                 <span>Ocultismo</span><span style="font-size: 12px;">(Int)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill13" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck14" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck14" oninput="setSkills()">
                                 <span>Religião</span><span style="font-size: 12px;">(Int)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill14" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck15" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck15" oninput="setSkills()">
                                 <span>Medicina</span><span style="font-size: 12px;">(Int)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill15" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck16" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck16" oninput="setSkills()">
                                 <span>Percepção</span><span style="font-size: 12px;">(Sab)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill16" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck17" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck17" oninput="setSkills()">
                                 <span>Intuição</span><span style="font-size: 12px;">(Sab)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill17" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck18" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck18" oninput="setSkills()">
                                 <span>Prim. Socorros</span><span style="font-size: 12px;">(Sab)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill18" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck19" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck19" oninput="setSkills()">
                                 <span>Sobrevivência</span><span style="font-size: 12px;">(Sab)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill19" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck20" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck20" oninput="setSkills()">
                                 <span>Atuação</span><span style="font-size: 12px;">(Car)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill20" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck21" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck21" oninput="setSkills()">
                                 <span>Lábia</span><span style="font-size: 12px;">(Car)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill21" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck22" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck22" oninput="setSkills()">
                                 <span>Enganação</span><span style="font-size: 12px;">(Car)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill22" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck23" onchange="setSkills()">
+                                <input type="checkbox" name="" id="skillCheck23" oninput="setSkills()">
                                 <span>Intimidação</span><span style="font-size: 12px;">(Car)</span>
                             </div>
                             <input class="attSkillInput" type="text" name="" id="skill23" value="0">

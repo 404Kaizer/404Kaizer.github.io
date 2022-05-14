@@ -798,7 +798,7 @@ function setSkills() {
             document.getElementById("skill23").value = "+" + document.getElementById("skill23").value;
         }
     }
-}
+}; setSkills()
 
 function updateAttMods() {
     let strInput = document.getElementById("strInput").value;
@@ -837,7 +837,7 @@ function updateAttMods() {
         document.getElementById("chaModInput").value = "+" + document.getElementById("chaModInput").value;
     }
 
-};
+}; updateAttMods()
 
 function updateDefenseMods() {
     document.getElementById("block").value = parseInt(document.getElementById("skill2").value);
@@ -849,7 +849,7 @@ function updateDefenseMods() {
     if (document.getElementById("dodge").value > 0) {
         document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
     }
-};
+}; updateDefenseMods()
 
 function changeTitle(name) {
     let changeTitleNamePersonagem = name;  
