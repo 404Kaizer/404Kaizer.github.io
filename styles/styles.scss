@@ -707,8 +707,7 @@ body {
                 word-break: break-all !important;
                 border: solid 1px gray;
                 background-color: black;
-                min-height: 500px;
-                height: 500px;
+                height: 587px;
                 width: 100%;
                 padding: 10px;
             }
@@ -811,8 +810,7 @@ body {
             }
 
             #editableArea1 {
-                min-height: 410px;
-                height: 410px;
+                height: 497px;
             }
 
             .editableArea {
@@ -820,8 +818,7 @@ body {
                 word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
-                min-height: 500px;
-                height: 500px;
+                height: 587px;
                 width: 100%;
                 padding: 10px;
             }
@@ -901,14 +898,12 @@ body {
         }
 
         #editableArea {
-            resize: vertical;
             overflow: auto;
             border: solid 1px gray;
             background-color: black;
             padding: 10px;
             width: 100%;
-            height: 550px;
-            min-height: 550px;
+            height: 587px;
         }
     }
 }
@@ -1299,8 +1294,7 @@ body {
                 .editableArea {
                     resize: none;
                     font-size: 17px;
-                    min-height: 250px;
-                    height: auto;
+                    height: 587px;
                 }
             }
         }
@@ -1337,17 +1331,11 @@ body {
                     display: flex;
                     justify-content: left;
                 }
-
-                #editableArea1 {
-                    min-height: 250px;
-                    height: 250px;
-                }
                 
                 .editableArea {
                     resize: none;
                     font-size: 17px;
-                    min-height: 250px;
-                    height: 250px;
+                    height: 587px;
                 }
             }
         }
@@ -1362,7 +1350,7 @@ body {
             #editableArea {
                 resize: none;
                 font-size: 17px;
-                max-height: 587px;
+                height: 587px;
             }
         }
     }

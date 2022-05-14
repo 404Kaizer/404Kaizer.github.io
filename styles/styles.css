@@ -781,8 +781,7 @@ body input:hover {
   word-break: break-all !important;
   border: solid 1px gray;
   background-color: black;
-  min-height: 500px;
-  height: 500px;
+  height: 587px;
   width: 100%;
   padding: 10px;
 }
@@ -888,8 +887,7 @@ body input:hover {
 }
 
 #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
-  min-height: 410px;
-  height: 410px;
+  height: 497px;
 }
 
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
@@ -897,8 +895,7 @@ body input:hover {
   word-break: break-all;
   border: solid 1px gray;
   background-color: black;
-  min-height: 500px;
-  height: 500px;
+  height: 587px;
   width: 100%;
   padding: 10px;
 }
@@ -982,14 +979,12 @@ body input:hover {
 }
 
 #main #section6 #editableArea {
-  resize: vertical;
   overflow: auto;
   border: solid 1px gray;
   background-color: black;
   padding: 10px;
   width: 100%;
-  height: 550px;
-  min-height: 550px;
+  height: 587px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1260,8 +1255,7 @@ body input:hover {
   #main #section4 #editContent .editableArea {
     resize: none;
     font-size: 17px;
-    min-height: 250px;
-    height: auto;
+    height: 587px;
   }
   #main #section5 {
     display: none;
@@ -1295,15 +1289,10 @@ body input:hover {
         -ms-flex-pack: left;
             justify-content: left;
   }
-  #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
-    min-height: 250px;
-    height: 250px;
-  }
   #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
     resize: none;
     font-size: 17px;
-    min-height: 250px;
-    height: 250px;
+    height: 587px;
   }
   #main #section6 .editOpts {
     display: -webkit-box;
@@ -1316,7 +1305,7 @@ body input:hover {
   #main #section6 #editableArea {
     resize: none;
     font-size: 17px;
-    max-height: 587px;
+    height: 587px;
   }
   #footer {
     display: block;
