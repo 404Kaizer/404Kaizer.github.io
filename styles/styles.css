@@ -1098,6 +1098,15 @@ body input:hover {
   }
 }
 
+@media only screen and (max-width: 850px) {
+  #main #section4 #editContent .editableArea {
+    resize: none;
+    font-size: 17px;
+    height: 483px;
+    max-height: 483px;
+  }
+}
+
 @media only screen and (max-width: 730px) {
   #header #navigationBar {
     display: none;
