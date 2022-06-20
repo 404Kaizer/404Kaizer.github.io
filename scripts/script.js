@@ -317,6 +317,7 @@ window.onload = function getInputValues() {
     document.getElementById("balisticalRDMG").value = localStorage.getItem("balisticalRDMG" + nameCheck);
     document.getElementById("magialRDMG").value = localStorage.getItem("magialRDMG" + nameCheck);
     document.getElementById("velocity").value = localStorage.getItem("velocity" + nameCheck);
+    document.getElementById("textArea5").value = localStorage.getItem("textArea5" + nameCheck);
     document.getElementById("strInput").value = localStorage.getItem("strInput" + nameCheck);
     document.getElementById("strModInput").value = localStorage.getItem("strModInput" + nameCheck);
     document.getElementById("agiInput").value = localStorage.getItem("agiInput" + nameCheck);
@@ -445,6 +446,7 @@ function setInputValues() {
         localStorage.setItem("balisticalRDMG" + nameCheck, document.getElementById("balisticalRDMG").value);
         localStorage.setItem("magialRDMG" + nameCheck, document.getElementById("magialRDMG").value);
         localStorage.setItem("velocity" + nameCheck, document.getElementById("velocity").value);
+        localStorage.setItem("textArea5" + nameCheck, document.getElementById("textArea5").value);
         localStorage.setItem("strInput" + nameCheck, document.getElementById("strInput").value);
         localStorage.setItem("strModInput" + nameCheck, document.getElementById("strModInput").value);
         localStorage.setItem("agiInput" + nameCheck, document.getElementById("agiInput").value);
