@@ -493,7 +493,7 @@ body input:hover {
   width: 100%;
 }
 
-#main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 #proficienciesArea {
+#main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 .infoTextarea {
   background-color: black;
   resize: none;
   min-height: 100px;
