@@ -442,6 +442,19 @@ body {
                         align-items: center;
                         gap: 10px;
                     }
+
+                    #textAreasDiv4 {
+                        display: grid;
+                        width: 100%;
+
+                        #proficienciesArea {
+                            background-color: black;
+                            resize: none;
+                            min-height: 100px;
+                            font-size: 16px;
+                            padding: 10px;
+                        }
+                    }
                 }
             }
         }
