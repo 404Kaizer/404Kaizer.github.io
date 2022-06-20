@@ -182,6 +182,7 @@ function deleteSheet() {
         localStorage.removeItem("balisticalRDMG" + nameCheck);
         localStorage.removeItem("magialRDMG" + nameCheck);
         localStorage.removeItem("velocity" + nameCheck);
+        localStorage.removeItem("textArea5" + nameCheck);
         localStorage.removeItem("strInput" + nameCheck);
         localStorage.removeItem("strModInput" + nameCheck);
         localStorage.removeItem("agiInput" + nameCheck);
