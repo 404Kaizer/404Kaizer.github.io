@@ -265,7 +265,7 @@ function deleteSheet() {
 
         location.reload();
     } else {
-        while(nameCheck != localStorage.getItem("charName" + nameCheck)) {
+        while (nameCheck != localStorage.getItem("charName" + nameCheck)) {
             alert("Nenhum Personagem Selecionado ou Não Existe. Digite o Nome do Personagem Para Continuar ou Clique em Cancelar.");
             nameCheck = prompt("Digite o Nome do Personagem Que Deseja Deletar ou Digite *** Para Deletar TODAS as Fichas: ");
         }
