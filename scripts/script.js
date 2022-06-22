@@ -52,8 +52,10 @@ let closeProfModalDiv1 = document.getElementById("closeProfModalDiv1");
 let profModalDiv1 = document.getElementById("profModalDiv1");
 let profModalDiv2 = document.getElementById("profModalDiv2");
 
-if (nameCheck == "null" || nameCheck == " " || nameCheck == "undefined") {
+if (nameCheck == null || nameCheck == " " || nameCheck == undefined) {
     alert("Nenhum Personagem Selecionado. Abra o Menu no Canto Superior Esquerdo e Clique no Segundo Botão Para Selecionar ou Criar um Personagem. \n\n *** Lembre-se: O Nome Que Você Especificar Ao Selecionar a Ficha DEVE Ser o Mesmo Colocado no Campo *Nome do Personagem*.");
+    chooseSheet()
+    
 }
 
 const charStatus = {
@@ -120,8 +122,8 @@ document.execCommand("styleWithCSS", false, true);
 
 function chooseSheet() {
     nameCheck = prompt("Digite o Nome do Personagem Que Deseja Carregar ou Criar: ");
-    if (nameCheck == "") {
-        while (nameCheck == "") {
+    if (nameCheck == " ") {
+        while (nameCheck == " ") {
             alert("Nenhum Personagem Selecionado. Digite o Nome do Personagem Para Continuar ou Clique em Cancelar.");
             nameCheck = prompt("Digite ao Nome do Personagem Que Deseja Carregar: ");
         }
@@ -135,12 +137,12 @@ function chooseSheet() {
 function deleteSheet() {
     nameCheck = prompt("Digite o Nome do Personagem Que Deseja Deletar: ");
 
-    if (nameCheck == "" || nameCheck != localStorage.getItem("charName" + nameCheck)) {
+    if (nameCheck == " " || nameCheck != localStorage.getItem("charName" + nameCheck)) {
         alert("Nenhum Personagem Selecionado ou Não Existe. Digite o Nome do Personagem Para Continuar ou Clique em Cancelar.");
         nameCheck = prompt("Digite o Nome do Personagem Que Deseja Deletar: ");
     }
 
-    if (nameCheck == localStorage.getItem("charName" + nameCheck)) {
+    if (nameCheck == toString(localStorage.getItem("charName" + nameCheck)).trim) {
         // INDEX
         localStorage.removeItem("nameCheck");
         localStorage.removeItem("titlePersonagem");
@@ -272,7 +274,7 @@ function deleteSheet() {
 window.onload = function getInputValues() {
     nameCheck = localStorage.getItem("nameCheck");
 
-    if (nameCheck == "null" || nameCheck == "") {
+    if (nameCheck == null || nameCheck == " ") {
         headerTitle.innerText = "Eroda";
     } else {
         headerTitle.innerText = nameCheck;
@@ -402,10 +404,12 @@ window.onload = function getInputValues() {
 
 function setInputValues() {
 
-    if (nameCheck == "null") {
-        alert("Não Há Ficha Selecionada! Selecione Uma Ficha Antes de Salvar.")
-    } else if (document.getElementById("charName").value == "") {
-        alert("Digite o Nome do Personagem Antes de Salvar a Ficha.")
+    if (nameCheck == null) {
+        alert("Não Há Ficha Selecionada! Selecione Uma Ficha Antes de Salvar.");
+    } else if (document.getElementById("charName").value == " ") {
+        alert("Digite o Nome do Personagem Antes de Salvar a Ficha.");
+    } else if (document.getElementById("charName").value != localStorage.getItem("nameCheck")) {
+        alert("CUIDADO! O Nome do Personagem Foi Alterado.");
     } else {
         // INDEX
         localStorage.setItem("charName" + nameCheck, document.getElementById("title").innerText);
@@ -529,6 +533,8 @@ function setInputValues() {
         localStorage.setItem("editableArea" + nameCheck, document.getElementById("editableArea").innerHTML);
 
         window.alert("Ficha SALVA com Sucesso: " + nameCheck.toUpperCase() + "\n\nLembre-se de Fazer Backup de Sua Ficha!");
+
+        location.reload();
     }
 };
 
