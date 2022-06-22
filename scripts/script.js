@@ -212,7 +212,6 @@ function deleteSheet() {
         localStorage.removeItem("skillCheck15" + nameCheck);
         localStorage.removeItem("skillCheck16" + nameCheck);
         localStorage.removeItem("skillCheck17" + nameCheck);
-        localStorage.removeItem("skillCheck18" + nameCheck);
         localStorage.removeItem("skillCheck19" + nameCheck);
         localStorage.removeItem("skillCheck20" + nameCheck);
         localStorage.removeItem("skillCheck21" + nameCheck);
@@ -235,7 +234,6 @@ function deleteSheet() {
         localStorage.removeItem("skill15" + nameCheck);
         localStorage.removeItem("skill16" + nameCheck);
         localStorage.removeItem("skill17" + nameCheck);
-        localStorage.removeItem("skill18" + nameCheck);
         localStorage.removeItem("skill19" + nameCheck);
         localStorage.removeItem("skill20" + nameCheck);
         localStorage.removeItem("skill21" + nameCheck);
@@ -347,9 +345,7 @@ window.onload = function getInputValues() {
     document.getElementById("skillCheck14").checked = JSON.parse(localStorage.getItem("skillCheck14" + nameCheck));
     document.getElementById("skillCheck15").checked = JSON.parse(localStorage.getItem("skillCheck15" + nameCheck));
     document.getElementById("skillCheck16").checked = JSON.parse(localStorage.getItem("skillCheck16" + nameCheck));
-    document.getElementById("skillCheck17").checked = JSON.parse(localStorage.getItem("skillCheck17" + nameCheck));
-    document.getElementById("skillCheck18").checked = JSON.parse(localStorage.getItem("skillCheck18" + nameCheck));
-    document.getElementById("skillCheck19").checked = JSON.parse(localStorage.getItem("skillCheck19" + nameCheck));
+    document.getElementById("skillCheck17").checked = JSON.parse(localStorage.getItem("skillCheck17" + nameCheck));    document.getElementById("skillCheck19").checked = JSON.parse(localStorage.getItem("skillCheck19" + nameCheck));
     document.getElementById("skillCheck20").checked = JSON.parse(localStorage.getItem("skillCheck20" + nameCheck));
     document.getElementById("skillCheck21").checked = JSON.parse(localStorage.getItem("skillCheck21" + nameCheck));
     document.getElementById("skillCheck22").checked = JSON.parse(localStorage.getItem("skillCheck22" + nameCheck));
@@ -371,7 +367,6 @@ window.onload = function getInputValues() {
     document.getElementById("skill15").value = localStorage.getItem("skill15" + nameCheck);
     document.getElementById("skill16").value = localStorage.getItem("skill16" + nameCheck);
     document.getElementById("skill17").value = localStorage.getItem("skill17" + nameCheck);
-    document.getElementById("skill18").value = localStorage.getItem("skill18" + nameCheck);
     document.getElementById("skill19").value = localStorage.getItem("skill19" + nameCheck);
     document.getElementById("skill20").value = localStorage.getItem("skill20" + nameCheck);
     document.getElementById("skill21").value = localStorage.getItem("skill21" + nameCheck);
@@ -477,7 +472,6 @@ function setInputValues() {
         localStorage.setItem("skillCheck15" + nameCheck, document.getElementById("skillCheck15").checked);
         localStorage.setItem("skillCheck16" + nameCheck, document.getElementById("skillCheck16").checked);
         localStorage.setItem("skillCheck17" + nameCheck, document.getElementById("skillCheck17").checked);
-        localStorage.setItem("skillCheck18" + nameCheck, document.getElementById("skillCheck18").checked);
         localStorage.setItem("skillCheck19" + nameCheck, document.getElementById("skillCheck19").checked);
         localStorage.setItem("skillCheck20" + nameCheck, document.getElementById("skillCheck20").checked);
         localStorage.setItem("skillCheck21" + nameCheck, document.getElementById("skillCheck21").checked);
@@ -500,7 +494,6 @@ function setInputValues() {
         localStorage.setItem("skill15" + nameCheck, document.getElementById("skill15").value);
         localStorage.setItem("skill16" + nameCheck, document.getElementById("skill16").value);
         localStorage.setItem("skill17" + nameCheck, document.getElementById("skill17").value);
-        localStorage.setItem("skill18" + nameCheck, document.getElementById("skill18").value);
         localStorage.setItem("skill19" + nameCheck, document.getElementById("skill19").value);
         localStorage.setItem("skill20" + nameCheck, document.getElementById("skill20").value);
         localStorage.setItem("skill21" + nameCheck, document.getElementById("skill21").value);
@@ -731,18 +724,6 @@ function setSkills() {
         document.getElementById("skill17").value = nTrainedSkillBonus + wisModInput;
         if (document.getElementById("skill17").value > 0) {
             document.getElementById("skill17").value = "+" + document.getElementById("skill17").value;
-        }
-    }
-
-    if (document.getElementById("skillCheck18").checked == true) {
-        document.getElementById("skill18").value = trainedSkillBonus + wisModInput;
-        if (document.getElementById("skill18").value > 0) {
-            document.getElementById("skill18").value = "+" + document.getElementById("skill18").value;
-        }
-    } else {
-        document.getElementById("skill18").value = nTrainedSkillBonus + wisModInput;
-        if (document.getElementById("skill18").value > 0) {
-            document.getElementById("skill18").value = "+" + document.getElementById("skill18").value;
         }
     }
 
