@@ -710,6 +710,7 @@ body input:hover {
   -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 15px;
+  margin-bottom: 4.5em;
 }
 
 #main #section4 #editContent #passiveAb, #main #section4 #editContent #activeAb, #main #section4 #editContent #spellsDiv, #main #section4 #editContent #weaponsDiv {
@@ -791,11 +792,12 @@ body input:hover {
 }
 
 #main #section4 #editContent .editableArea {
-  overflow: auto !important;
+  overflow: hidden !important;
   word-break: break-all !important;
   border: solid 1px gray;
   background-color: black;
-  height: 587px;
+  min-height: 587px;
+  height: 100%;
   width: 100%;
   padding: 10px;
 }
@@ -815,8 +817,8 @@ body input:hover {
 #main #section5 #editContent1 #wealth div {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
   gap: 15px;
 }
 
@@ -901,15 +903,16 @@ body input:hover {
 }
 
 #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
-  height: 497px;
+  min-height: 497px;
 }
 
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
-  overflow: auto;
+  overflow: hidden;
   word-break: break-all;
   border: solid 1px gray;
   background-color: black;
-  height: 587px;
+  min-height: 587px;
+  height: auto;
   width: 100%;
   padding: 10px;
 }
@@ -993,12 +996,13 @@ body input:hover {
 }
 
 #main #section6 #editableArea {
-  overflow: auto;
+  overflow: hidden;
   border: solid 1px gray;
   background-color: black;
   padding: 10px;
   width: 100%;
-  height: 587px;
+  min-height: 587px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -1116,8 +1120,7 @@ body input:hover {
   #main #section4 #editContent .editableArea {
     resize: none;
     font-size: 17px;
-    height: 483px;
-    max-height: 477px;
+    min-height: 483px;
   }
 }
 
@@ -1278,7 +1281,7 @@ body input:hover {
   #main #section4 #editContent .editableArea {
     resize: none;
     font-size: 17px;
-    height: 587px;
+    min-height: 587px;
   }
   #main #section5 {
     display: none;

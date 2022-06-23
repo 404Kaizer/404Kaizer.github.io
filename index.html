@@ -63,15 +63,15 @@
             <h1>Sobre seu Personagem</h1>
             <div id="charInfos2">
                 <div id="textAreasDiv1">
-                    <textarea id="backgroundArea" name="background" placeholder="Escreva Sua Hitória e Seus Objetivos..."></textarea>
+                    <textarea id="backgroundArea" name="background" placeholder="Escreva sua história e seus objetivos..."></textarea>
                     <div id="textAreasDiv3">
-                        <textarea id="textArea1" class="infoTextarea" placeholder="Escreva o Que Você Gosta..."></textarea>
-                        <textarea id="textArea2" class="infoTextarea" placeholder="Escreva o Que Você Não Gosta..."></textarea>
+                        <textarea id="textArea1" class="infoTextarea" placeholder="Escreva o que você não gosta..."></textarea>
+                        <textarea id="textArea2" class="infoTextarea" placeholder="Escreva o que você gosta..."></textarea>
                     </div>
                 </div>
                 <div id="textAreasDiv2">
-                    <textarea id="textArea3" class="infoTextarea" placeholder="Escreva Suas Fobias e Manias..."></textarea>
-                    <textarea id="textArea4" class="infoTextarea" placeholder="Escreva Suas Qualidades e Defeitos..."></textarea>
+                    <textarea id="textArea3" class="infoTextarea" placeholder="Escreva sua personalidade..."></textarea>
+                    <textarea id="textArea4" class="infoTextarea" placeholder="Escreva seus medos e traumas..."></textarea>
                 </div>
             </div>
         </section>
@@ -182,7 +182,7 @@
                         </div>
                         <div id="velDiv">
                             <span>Velocidade</span>
-                            <div><input type="text" name="velocity" id="velocity" placeholder="metros ou quadrados"></div>
+                            <div><input type="text" name="velocity" id="velocity" placeholder="9 metros ou 6 quadrados"></div>
                         </div>
                         <div id="textAreasDiv4">
                             <span>Treinamento</span>
@@ -494,7 +494,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea3" contenteditable="true" data-placeholder="Habilidades Que Utilizam Energia..."></div>
+                    <div class="editableArea" id="editableArea3" contenteditable="true" data-placeholder="Habilidades que gastam alguma ação para serem executadas..."></div>
                 </div>
                 <div id="passiveAb">
                     <h1>Habilidades Passivas</h1>
@@ -527,7 +527,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea4" contenteditable="true" data-placeholder="Habilidades Que Não Utilizam Energia..."></div>
+                    <div class="editableArea" id="editableArea4" contenteditable="true" data-placeholder="Habilidades que não gastam uma ação para serem executadas..."></div>
                 </div>
                 <div id="spellsDiv">
                     <h1>Magias</h1>
@@ -560,7 +560,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea5" contenteditable="true" data-placeholder="Seus Truques e Magias..."></div>
+                    <div class="editableArea" id="editableArea5" contenteditable="true" data-placeholder="Seus truques e magias..."></div>
                 </div>
                 <div id="weaponsDiv">
                     <h1>Armas</h1>
@@ -593,7 +593,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea6" contenteditable="true" data-placeholder="Suas Armas..."></div>
+                    <div class="editableArea" id="editableArea6" contenteditable="true" data-placeholder="Suas armas..."></div>
                 </div>
             </div>
         </section>
@@ -602,8 +602,9 @@
                 <div id="wealth">
                     <h1>Dinheiro</h1>
                     <div>
-                        <input class="wealthInput" type="number" name="carteira" id="coin1" placeholder="$Carteira">
-                        <input class="wealthInput" type="number" name="guardado" id="coin2" placeholder="$Guardado">
+                        <input class="wealthInput" type="number" name="moeda1" id="coin1" placeholder="Moeda 1">
+                        <input class="wealthInput" type="number" name="moeda2" id="coin2" placeholder="Moeda 2">
+                        <input class="wealthInput" type="number" name="moeda3" id="coin3" placeholder="Moeda 3">
                     </div>
                 </div>
                 <div>
@@ -637,7 +638,7 @@
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                         <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                     </fieldset>
-                    <div class="editableArea" id="editableArea1" contenteditable="true" data-placeholder="Itens Que Estão Com Você..."></div>
+                    <div class="editableArea" id="editableArea1" contenteditable="true" data-placeholder="Itens na sua mochila..."></div>
                 </div>
             </div>
             <div id="editContent2">
@@ -671,7 +672,7 @@
                     <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                     <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
                 </fieldset>
-                <div class="editableArea" id="editableArea2" contenteditable="true" data-placeholder="Itens Que Não Estão Com Você..."></div>
+                <div class="editableArea" id="editableArea2" contenteditable="true" data-placeholder="Itens guardados em outro lugar..."></div>
             </div>
         </section>
         <section id="section6">                 <!--Parte de Anotações de Campanha do Jogador-->
@@ -705,7 +706,7 @@
                 <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
                 <button class="fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
             </fieldset>
-            <div id="editableArea" contenteditable="true" data-placeholder="Suas Anotações Importantes de Campanha..."></div>
+            <div id="editableArea" contenteditable="true" data-placeholder="Suas anotações feitas durante a campanha..."></div>
         </section>
     </main>
 

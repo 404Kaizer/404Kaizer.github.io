@@ -255,6 +255,7 @@ function deleteSheet() {
         // INVENTORY
         localStorage.removeItem("coin1" + nameCheck);
         localStorage.removeItem("coin2" + nameCheck);
+        localStorage.removeItem("coin3" + nameCheck);
         localStorage.removeItem("editableArea1" + nameCheck);
         localStorage.removeItem("editableArea2" + nameCheck);
 
@@ -394,6 +395,7 @@ window.onload = function getInputValues() {
     // INVENTORY
     document.getElementById("coin1").value = localStorage.getItem("coin1" + nameCheck);
     document.getElementById("coin2").value = localStorage.getItem("coin2" + nameCheck);
+    document.getElementById("coin3").value = localStorage.getItem("coin3" + nameCheck);
     document.getElementById("editableArea1").innerHTML = localStorage.getItem("editableArea1" + nameCheck);
     document.getElementById("editableArea2").innerHTML = localStorage.getItem("editableArea2" + nameCheck);
 
@@ -518,6 +520,7 @@ function sheetIdChange() {
     // DELETAR INVENTORY
     localStorage.removeItem("coin1" + nameCheck);
     localStorage.removeItem("coin2" + nameCheck);
+    localStorage.removeItem("coin3" + nameCheck);
     localStorage.removeItem("editableArea1" + nameCheck);
     localStorage.removeItem("editableArea2" + nameCheck);
 
@@ -641,6 +644,7 @@ function sheetIdChange() {
     // SALVAR INVENTORY
     localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
     localStorage.setItem("coin2" + nameCheck, document.getElementById("coin2").value);
+    localStorage.setItem("coin3" + nameCheck, document.getElementById("coin3").value);
     localStorage.setItem("editableArea1" + nameCheck, document.getElementById("editableArea1").innerHTML);
     localStorage.setItem("editableArea2" + nameCheck, document.getElementById("editableArea2").innerHTML);
 
@@ -775,6 +779,7 @@ function setInputValues() {
         // INVENTORY
         localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
         localStorage.setItem("coin2" + nameCheck, document.getElementById("coin2").value);
+        localStorage.setItem("coin3" + nameCheck, document.getElementById("coin3").value);
         localStorage.setItem("editableArea1" + nameCheck, document.getElementById("editableArea1").innerHTML);
         localStorage.setItem("editableArea2" + nameCheck, document.getElementById("editableArea2").innerHTML);
 
