@@ -608,6 +608,13 @@ body input:hover {
       grid-template-columns: auto auto;
   -webkit-column-gap: 5px;
           column-gap: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv .attSkillInput {
+  width: 100%;
 }
 
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {

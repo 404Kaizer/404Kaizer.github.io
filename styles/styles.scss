@@ -549,6 +549,11 @@ body {
                             display: grid;
                             grid-template-columns: auto auto;
                             column-gap: 5px;
+                            justify-content: space-between;
+
+                            .attSkillInput {
+                                width: 100%;
+                            }
                         }
 
                         .profModalGrid {
