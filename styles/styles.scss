@@ -450,7 +450,7 @@ body {
                         .infoTextarea {
                             background-color: black;
                             resize: none;
-                            min-height: 180px;
+                            min-height: 200px;
                             font-size: 16px;
                             padding: 10px;
                         }
@@ -545,6 +545,12 @@ body {
 
                     .skillsGrid {
                         
+                        #powerDiv {
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            column-gap: 5px;
+                        }
+
                         .profModalGrid {
                             display: grid;
                             

@@ -217,6 +217,7 @@ function deleteSheet() {
         localStorage.removeItem("skillCheck21" + nameCheck);
         localStorage.removeItem("skillCheck22" + nameCheck);
         localStorage.removeItem("skillCheck23" + nameCheck);
+        localStorage.removeItem("skill0" + nameCheck);
         localStorage.removeItem("skill1" + nameCheck);
         localStorage.removeItem("skill2" + nameCheck);
         localStorage.removeItem("skill3" + nameCheck);
@@ -357,6 +358,7 @@ window.onload = function getInputValues() {
     document.getElementById("skillCheck21").checked = JSON.parse(localStorage.getItem("skillCheck21" + nameCheck));
     document.getElementById("skillCheck22").checked = JSON.parse(localStorage.getItem("skillCheck22" + nameCheck));
     document.getElementById("skillCheck23").checked = JSON.parse(localStorage.getItem("skillCheck23" + nameCheck));
+    document.getElementById("skill0").value = localStorage.getItem("skill0" + nameCheck);
     document.getElementById("skill1").value = localStorage.getItem("skill1" + nameCheck);
     document.getElementById("skill2").value = localStorage.getItem("skill2" + nameCheck);
     document.getElementById("skill3").value = localStorage.getItem("skill3" + nameCheck);
@@ -482,6 +484,7 @@ function sheetIdChange() {
     localStorage.removeItem("skillCheck21" + nameCheck);
     localStorage.removeItem("skillCheck22" + nameCheck);
     localStorage.removeItem("skillCheck23" + nameCheck);
+    localStorage.removeItem("skill0" + nameCheck);
     localStorage.removeItem("skill1" + nameCheck);
     localStorage.removeItem("skill2" + nameCheck);
     localStorage.removeItem("skill3" + nameCheck);
@@ -606,6 +609,7 @@ function sheetIdChange() {
     localStorage.setItem("skillCheck21" + nameCheck, document.getElementById("skillCheck21").checked);
     localStorage.setItem("skillCheck22" + nameCheck, document.getElementById("skillCheck22").checked);
     localStorage.setItem("skillCheck23" + nameCheck, document.getElementById("skillCheck23").checked);
+    localStorage.setItem("skill0" + nameCheck, document.getElementById("skill0").value);
     localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
     localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
     localStorage.setItem("skill3" + nameCheck, document.getElementById("skill3").value);
@@ -741,6 +745,7 @@ function setInputValues() {
         localStorage.setItem("skillCheck21" + nameCheck, document.getElementById("skillCheck21").checked);
         localStorage.setItem("skillCheck22" + nameCheck, document.getElementById("skillCheck22").checked);
         localStorage.setItem("skillCheck23" + nameCheck, document.getElementById("skillCheck23").checked);
+        localStorage.setItem("skill0" + nameCheck, document.getElementById("skill0").value);
         localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
         localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
         localStorage.setItem("skill3" + nameCheck, document.getElementById("skill3").value);

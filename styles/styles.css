@@ -496,7 +496,7 @@ body input:hover {
 #main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 .infoTextarea {
   background-color: black;
   resize: none;
-  min-height: 180px;
+  min-height: 200px;
   font-size: 16px;
   padding: 10px;
 }
@@ -599,6 +599,15 @@ body input:hover {
   gap: 10px;
   -ms-grid-columns: auto auto auto auto;
       grid-template-columns: auto auto auto auto;
+}
+
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
 }
 
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
