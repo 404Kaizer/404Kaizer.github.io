@@ -840,12 +840,10 @@ body {
             }
 
             .editableArea {
-                overflow: hidden;
                 word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
                 min-height: 587px;
-                height: auto;
                 width: 100%;
                 padding: 10px;
             }
@@ -925,13 +923,11 @@ body {
         }
 
         #editableArea {
-            overflow: hidden;
             border: solid 1px gray;
             background-color: black;
             padding: 10px;
             width: 100%;
             min-height: 587px;
-            height: 100%;
         }
     }
 }
