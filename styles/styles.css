@@ -804,7 +804,8 @@ body input:hover {
 
 #main #section4 #editContent .editableArea {
   overflow: hidden !important;
-  word-break: break-all !important;
+  word-wrap: break-word;
+  word-break: break-all;
   border: solid 1px gray;
   background-color: black;
   min-height: 587px;
@@ -919,7 +920,7 @@ body input:hover {
 }
 
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
-  overflow: hidden;
+  word-wrap: break-word;
   word-break: break-all;
   border: solid 1px gray;
   background-color: black;
@@ -1008,6 +1009,8 @@ body input:hover {
 }
 
 #main #section6 #editableArea {
+  word-wrap: break-word;
+  word-break: break-all;
   overflow: hidden;
   border: solid 1px gray;
   background-color: black;
@@ -1330,7 +1333,6 @@ body input:hover {
   #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
     resize: none;
     font-size: 17px;
-    height: 587px;
   }
   #main #section6 .editOpts {
     display: -webkit-box;
@@ -1343,7 +1345,6 @@ body input:hover {
   #main #section6 #editableArea {
     resize: none;
     font-size: 17px;
-    height: 587px;
   }
   #footer {
     display: block;

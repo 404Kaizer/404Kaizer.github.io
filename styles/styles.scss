@@ -726,7 +726,8 @@ body {
 
             .editableArea {
                 overflow: hidden !important;
-                word-break: break-all !important;
+                word-wrap: break-word;
+                word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
                 min-height: 587px;
@@ -838,7 +839,7 @@ body {
             }
 
             .editableArea {
-                overflow: hidden;
+                word-wrap: break-word;
                 word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
@@ -923,6 +924,8 @@ body {
         }
 
         #editableArea {
+            word-wrap: break-word;
+            word-break: break-all;
             overflow: hidden;
             border: solid 1px gray;
             background-color: black;
@@ -1379,7 +1382,6 @@ body {
                 .editableArea {
                     resize: none;
                     font-size: 17px;
-                    height: 587px;
                 }
             }
         }
@@ -1394,7 +1396,6 @@ body {
             #editableArea {
                 resize: none;
                 font-size: 17px;
-                height: 587px;
             }
         }
     }
