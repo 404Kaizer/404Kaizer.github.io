@@ -649,10 +649,7 @@ body {
         }
 
         #editContent {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 15px;
-            margin-bottom: 4.5em;
+            display: block;
 
             #passiveAb, #activeAb, #spellsDiv, #weaponsDiv {
                 display: none;
