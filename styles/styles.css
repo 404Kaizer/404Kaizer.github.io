@@ -819,6 +819,7 @@ body input:hover {
       grid-template-columns: auto auto;
   -webkit-column-gap: 10px;
           column-gap: 10px;
+  width: 100%;
 }
 
 #main #section5 #editContent1 #wealth {
@@ -924,6 +925,7 @@ body input:hover {
   min-height: 587px;
   width: 100%;
   padding: 10px;
+  height: 100%;
 }
 
 #main #section6 {
@@ -1010,6 +1012,7 @@ body input:hover {
   padding: 10px;
   width: 100%;
   min-height: 587px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1450px) {

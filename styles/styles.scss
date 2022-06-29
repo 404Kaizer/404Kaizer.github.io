@@ -741,6 +741,7 @@ body {
         display: none;
         grid-template-columns: auto auto;
         column-gap: 10px;
+        width: 100%;
 
         #editContent1 {
 
@@ -843,6 +844,7 @@ body {
                 min-height: 587px;
                 width: 100%;
                 padding: 10px;
+                height: 100%;
             }
         }
     }
@@ -925,6 +927,7 @@ body {
             padding: 10px;
             width: 100%;
             min-height: 587px;
+            height: 100%;
         }
     }
 }
