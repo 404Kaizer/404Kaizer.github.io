@@ -919,6 +919,7 @@ body input:hover {
 }
 
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
+  overflow: hidden;
   word-break: break-all;
   border: solid 1px gray;
   background-color: black;
@@ -1007,6 +1008,7 @@ body input:hover {
 }
 
 #main #section6 #editableArea {
+  overflow: hidden;
   border: solid 1px gray;
   background-color: black;
   padding: 10px;
