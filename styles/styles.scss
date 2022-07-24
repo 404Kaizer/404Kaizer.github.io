@@ -649,10 +649,7 @@ body {
         }
 
         #editContent {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 15px;
-            margin-bottom: 4.5em;
+            display: block;
 
             #passiveAb, #activeAb, #spellsDiv, #weaponsDiv {
                 display: none;
@@ -729,7 +726,8 @@ body {
 
             .editableArea {
                 overflow: hidden !important;
-                word-break: break-all !important;
+                word-wrap: break-word;
+                word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
                 min-height: 587px;
@@ -744,6 +742,7 @@ body {
         display: none;
         grid-template-columns: auto auto;
         column-gap: 10px;
+        width: 100%;
 
         #editContent1 {
 
@@ -840,14 +839,14 @@ body {
             }
 
             .editableArea {
-                overflow: hidden;
+                word-wrap: break-word;
                 word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
                 min-height: 587px;
-                height: auto;
                 width: 100%;
                 padding: 10px;
+                height: 100%;
             }
         }
     }
@@ -925,6 +924,8 @@ body {
         }
 
         #editableArea {
+            word-wrap: break-word;
+            word-break: break-all;
             overflow: hidden;
             border: solid 1px gray;
             background-color: black;
@@ -1381,7 +1382,6 @@ body {
                 .editableArea {
                     resize: none;
                     font-size: 17px;
-                    height: 587px;
                 }
             }
         }
@@ -1396,7 +1396,6 @@ body {
             #editableArea {
                 resize: none;
                 font-size: 17px;
-                height: 587px;
             }
         }
     }
