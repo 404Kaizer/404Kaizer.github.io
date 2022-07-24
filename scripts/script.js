@@ -252,6 +252,12 @@ function deleteSheet() {
         localStorage.removeItem("editableArea4" + nameCheck);
         localStorage.removeItem("editableArea5" + nameCheck);
         localStorage.removeItem("editableArea6" + nameCheck);
+        localStorage.removeItem("editableArea7" + nameCheck);
+        localStorage.removeItem("editableArea8" + nameCheck);
+        localStorage.removeItem("editableArea9" + nameCheck);
+        localStorage.removeItem("editableArea10" + nameCheck);
+        localStorage.removeItem("editableArea11" + nameCheck);
+        localStorage.removeItem("editableArea12" + nameCheck);
 
         // INVENTORY
         localStorage.removeItem("coin1" + nameCheck);
@@ -393,6 +399,12 @@ window.onload = function getInputValues() {
     document.getElementById("editableArea4").innerHTML = localStorage.getItem("editableArea4" + nameCheck);
     document.getElementById("editableArea5").innerHTML = localStorage.getItem("editableArea5" + nameCheck);
     document.getElementById("editableArea6").innerHTML = localStorage.getItem("editableArea6" + nameCheck);
+    document.getElementById("editableArea7").innerHTML = localStorage.getItem("editableArea7" + nameCheck);
+    document.getElementById("editableArea8").innerHTML = localStorage.getItem("editableArea8" + nameCheck);
+    document.getElementById("editableArea9").innerHTML = localStorage.getItem("editableArea9" + nameCheck);
+    document.getElementById("editableArea10").innerHTML = localStorage.getItem("editableArea10" + nameCheck);
+    document.getElementById("editableArea11").innerHTML = localStorage.getItem("editableArea11" + nameCheck);
+    document.getElementById("editableArea12").innerHTML = localStorage.getItem("editableArea12" + nameCheck);
 
     // INVENTORY
     document.getElementById("coin1").value = localStorage.getItem("coin1" + nameCheck);
@@ -519,6 +531,12 @@ function sheetIdChange() {
     localStorage.removeItem("editableArea4" + nameCheck);
     localStorage.removeItem("editableArea5" + nameCheck);
     localStorage.removeItem("editableArea6" + nameCheck);
+    localStorage.removeItem("editableArea7" + nameCheck);
+    localStorage.removeItem("editableArea8" + nameCheck);
+    localStorage.removeItem("editableArea9" + nameCheck);
+    localStorage.removeItem("editableArea10" + nameCheck);
+    localStorage.removeItem("editableArea11" + nameCheck);
+    localStorage.removeItem("editableArea12" + nameCheck);
 
     // DELETAR INVENTORY
     localStorage.removeItem("coin1" + nameCheck);
@@ -644,6 +662,12 @@ function sheetIdChange() {
     localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerHTML);
     localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerHTML);
     localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerHTML);
+    localStorage.setItem("editableArea7" + nameCheck, document.getElementById("editableArea7").innerHTML);
+    localStorage.setItem("editableArea8" + nameCheck, document.getElementById("editableArea8").innerHTML);
+    localStorage.setItem("editableArea9" + nameCheck, document.getElementById("editableArea9").innerHTML);
+    localStorage.setItem("editableArea10" + nameCheck, document.getElementById("editableArea10").innerHTML);
+    localStorage.setItem("editableArea11" + nameCheck, document.getElementById("editableArea11").innerHTML);
+    localStorage.setItem("editableArea12" + nameCheck, document.getElementById("editableArea12").innerHTML);
 
     // SALVAR INVENTORY
     localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
@@ -780,6 +804,12 @@ function setInputValues() {
         localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerHTML);
         localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerHTML);
         localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerHTML);
+        localStorage.setItem("editableArea7" + nameCheck, document.getElementById("editableArea7").innerHTML);
+        localStorage.setItem("editableArea8" + nameCheck, document.getElementById("editableArea8").innerHTML);
+        localStorage.setItem("editableArea9" + nameCheck, document.getElementById("editableArea9").innerHTML);
+        localStorage.setItem("editableArea10" + nameCheck, document.getElementById("editableArea10").innerHTML);
+        localStorage.setItem("editableArea11" + nameCheck, document.getElementById("editableArea11").innerHTML);
+        localStorage.setItem("editableArea12" + nameCheck, document.getElementById("editableArea12").innerHTML);
 
         // INVENTORY
         localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
@@ -1362,7 +1392,8 @@ editBtn4.addEventListener('click', ()=> {
     editBtn3.style.display = "block";
     xBtn3.style.display = "none";
 
-    document.getElementById("spellsDiv").style.display = "block";
+    document.getElementById("spellsDiv").style.display = "grid";
+    document.getElementById("spellsDiv").style.rowGap = "6em"
     editBtn4.style.display = "none";
     xBtn4.style.display = "block";
 });
@@ -1400,6 +1431,36 @@ function changeSize6() {
 function changeSize7() {
     var mySize7 = document.getElementById("fontSize7").value;
     document.execCommand('fontSize', false, mySize7);
+}
+
+function changeSize8() {
+    var mySize8 = document.getElementById("fontSize8").value;
+    document.execCommand('fontSize', false, mySize8);
+}
+
+function changeSize9() {
+    var mySize9 = document.getElementById("fontSize9").value;
+    document.execCommand('fontSize', false, mySize9);
+}
+
+function changeSize10() {
+    var mySize10 = document.getElementById("fontSize10").value;
+    document.execCommand('fontSize', false, mySize10);
+}
+
+function changeSize11() {
+    var mySize11 = document.getElementById("fontSize11").value;
+    document.execCommand('fontSize', false, mySize11);
+}
+
+function changeSize12() {
+    var mySize12 = document.getElementById("fontSize12").value;
+    document.execCommand('fontSize', false, mySize12);
+}
+
+function changeSize13() {
+    var mySize13 = document.getElementById("fontSize13").value;
+    document.execCommand('fontSize', false, mySize13);
 }
 
 function chooseColor1() {
@@ -1449,6 +1510,48 @@ function chooseColor7() {
     document.execCommand('foreColor', false, myColor7);
     var bgColor = document.getElementById('myColor7');
     bgColor.style.backgroundColor = myColor7;
+}
+
+function chooseColor8() {
+    var myColor8 = document.getElementById("myColor8").value;
+    document.execCommand('foreColor', false, myColor8);
+    var bgColor = document.getElementById('myColor8');
+    bgColor.style.backgroundColor = myColor8;
+}
+
+function chooseColor9() {
+    var myColor9 = document.getElementById("myColor9").value;
+    document.execCommand('foreColor', false, myColor9);
+    var bgColor = document.getElementById('myColor9');
+    bgColor.style.backgroundColor = myColor9;
+}
+
+function chooseColor10() {
+    var myColor10 = document.getElementById("myColor10").value;
+    document.execCommand('foreColor', false, myColor10);
+    var bgColor = document.getElementById('myColor10');
+    bgColor.style.backgroundColor = myColor10;
+}
+
+function chooseColor11() {
+    var myColor11 = document.getElementById("myColor11").value;
+    document.execCommand('foreColor', false, myColor11);
+    var bgColor = document.getElementById('myColor11');
+    bgColor.style.backgroundColor = myColor11;
+}
+
+function chooseColor12() {
+    var myColor12 = document.getElementById("myColor12").value;
+    document.execCommand('foreColor', false, myColor12);
+    var bgColor = document.getElementById('myColor12');
+    bgColor.style.backgroundColor = myColor12;
+}
+
+function chooseColor13() {
+    var myColor13 = document.getElementById("myColor13").value;
+    document.execCommand('foreColor', false, myColor13);
+    var bgColor = document.getElementById('myColor13');
+    bgColor.style.backgroundColor = myColor13;
 }
 
 window.onbeforeunload = function () {
