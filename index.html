@@ -10,6 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="scripts/main-script.js" defer></script>
+    <script src="scripts/sheet-deleting.js" defer></script>
+    <script src="scripts/sheet-id-change.js" defer></script>
+    <script src="scripts/sheet-saving.js" defer></script>
+    <script src="scripts/sheet-selection.js" defer></script>
+    <script src="scripts/update-defense-and-skills-stats.js" defer></script>
+    <script src="scripts/set-skills.js" defer></script>
+    <script src="scripts/status-bars.js" defer></script>
+    <script src="scripts/combat-section.js" defer></script>
+    <script src="scripts/img-selector.js" defer></script>
+    <script src="scripts/change-title-mobile-only.js" defer></script>
+    <script src="scripts/char-secondary-infos.js" defer></script>
+    <script src="scripts/hamburguer-menu.js" defer></script>
+    <script src="scripts/html-open-and-close-pages.js" defer></script>
+    <script src="scripts/text-editor-scripts.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -27,9 +42,9 @@
             </div>
             <h1 id="headerTitle"></h1>
             <div id="saveLoadDelBtns">
-                <button class="saveLoadDelBtn" id="saveSheet" onclick="setInputValues()"><img class="saveLoadDelImg" src="imgs/save.png" alt="Salvar Ficha"></button>
-                <button class="saveLoadDelBtn" id="loadSheet" onclick="chooseSheet()"><img class="saveLoadDelImg" src="imgs/load.png" alt="Trocar Ficha"></button>
-                <button class="saveLoadDelBtn" id="deleteSheet" onclick="deleteSheet()"><img class="saveLoadDelImg" src="imgs/delete.png" alt="Deletar Ficha"></button>
+                <button class="saveLoadDelBtn" id="saveSheet" onclick="setInputValidation()"><img class="saveLoadDelImg" src="imgs/save.png" alt="Salvar Ficha"></button>
+                <button class="saveLoadDelBtn" id="loadSheet" onclick="chooseSheetValidation()"><img class="saveLoadDelImg" src="imgs/load.png" alt="Trocar Ficha"></button>
+                <button class="saveLoadDelBtn" id="deleteSheet" onclick="sheetDeletionValidation()"><img class="saveLoadDelImg" src="imgs/delete.png" alt="Deletar Ficha"></button>
             </div>
         </div>
     </header>
@@ -262,51 +277,15 @@
                             <div class="spanCheckGrid">
                                 <input type="checkbox" name="" id="skillCheck2" oninput="setSkills(), updateDefenseMods()">
                                 <span>Luta</span><span style="font-size: 12px;">(For)</span>
-                                <span class="profModalCheck" id="openProfModalDiv1">▼</span>
-                                <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv1">X</span>
                             </div>
-                            <div class="profModalGrid">
-                                <div class="profModalDiv" id="profModalDiv1">
-                                    <div>
-                                        <input type="checkbox" name="" id="meleeType1">
-                                        <span class="profModalSpan">Armas Simples</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="" id="meleeType2">
-                                        <span class="profModalSpan">Armas Marciais*</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="" id="meleeType3">
-                                        <span class="profModalSpan">Armas Exóticas*</span>
-                                    </div>
-                                </div>
-                                <input class="attSkillInput" type="text" name="" id="skill2" value="0" oninput="updateDefenseMods()">
-                            </div>
+                            <input class="attSkillInput" type="text" name="" id="skill2" value="0" oninput="updateDefenseMods()">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
                                 <input type="checkbox" name="" id="skillCheck3" oninput="setSkills()">
                                 <span>Pontaria</span><span style="font-size: 12px;">(Agi)</span>
-                                <span class="profModalCheck" id="openProfModalDiv2">▼</span>
-                                <span style="display: none; font-weight: bold;" class="profModalCheck" id="closeProfModalDiv2">X</span>
                             </div>
-                            <div class="profModalGrid">
-                                <div class="profModalDiv" id="profModalDiv2">
-                                    <div>
-                                        <input type="checkbox" name="" id="rangedType1">
-                                        <span class="profModalSpan">Armas Simples</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="" id="rangedType2">
-                                        <span class="profModalSpan">Armas Marciais*</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="" id="rangedType3">
-                                        <span class="profModalSpan">Armas Exóticas*</span>
-                                    </div>
-                                </div>
-                                <input class="attSkillInput" type="text" name="" id="skill3" value="0">
-                            </div>
+                            <input class="attSkillInput" type="text" name="" id="skill3" value="0">
                         </div>
                         <div class="skillsGrid">
                             <div class="spanCheckGrid">
@@ -923,7 +902,4 @@
         </nav>
     </footer>
 </body>
-
-<script src="scripts/script.js"></script>
-
 </html>

@@ -1,10 +1,9 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: white;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -30,7 +29,7 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3a;
+  background: rgb(58, 58, 58);
 }
 
 body {
@@ -40,7 +39,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-
 body input:hover {
   border-color: white;
 }
@@ -54,83 +52,60 @@ body input:hover {
   position: fixed;
   top: 0;
   z-index: 10;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   text-align: center;
   background-color: black;
 }
-
 #header #navigationBar .headerImgDiv, #footer #navigationBar .headerImgDiv {
   width: 100%;
   border: solid 1px gray;
   padding: 7px;
   cursor: pointer;
 }
-
 #header #navigationBar .headerImgDiv .headerImgs, #footer #navigationBar .headerImgDiv .headerImgs {
   opacity: 50%;
   width: 35px;
 }
-
 #header #navigationBar .headerImgDiv:hover .headerImgs, #footer #navigationBar .headerImgDiv:hover .headerImgs {
   opacity: 100%;
   border-color: white;
 }
-
 #header #hamburguerMenuDiv, #footer #hamburguerMenuDiv {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -webkit-column-gap: 15px;
-          column-gap: 15px;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  grid-template-columns: auto auto auto;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  justify-content: right;
   padding: 20px;
   margin: 60px 80px 0 0;
 }
-
 #header #hamburguerMenuDiv #headerTitle, #footer #hamburguerMenuDiv #headerTitle {
   display: none;
 }
-
 #header #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu, #footer #hamburguerMenuDiv #hamburguerMenuBtns #hamburguerMenu {
   display: none;
 }
-
 #header #hamburguerMenuDiv #hamburguerMenuBtns #xHamburguerMenu, #footer #hamburguerMenuDiv #hamburguerMenuBtns #xHamburguerMenu {
   display: none;
 }
-
 #header #hamburguerMenuDiv #saveLoadDelBtns, #footer #hamburguerMenuDiv #saveLoadDelBtns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-
 #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: black;
   padding: 5px 5px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: pointer;
   width: 60px;
   border-color: gray;
 }
-
 #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn .saveLoadDelImg {
   width: 40px;
   margin: auto;
 }
-
 #header #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn:hover, #footer #hamburguerMenuDiv #saveLoadDelBtns .saveLoadDelBtn:hover {
   border-color: white;
 }
@@ -138,23 +113,16 @@ body input:hover {
 #main {
   margin: 0 100px 20px 100px;
 }
-
 #main .editableArea:empty::before, #main #editableArea:empty::before {
   content: attr(data-placeholder);
   color: gray;
 }
-
 #main #section1 #charInfos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #main #section1 #charInfos #imgDiv {
-  display: -ms-grid;
   display: grid;
 }
-
 #main #section1 #charInfos #imgDiv #imgLabel {
   background-color: black;
   text-align: center;
@@ -162,19 +130,15 @@ body input:hover {
   cursor: pointer;
   border: 2px solid gray;
 }
-
 #main #section1 #charInfos #imgDiv #imgLabel #imgSelectBtnFake {
   font-size: 16px;
 }
-
 #main #section1 #charInfos #imgDiv #imgLabel:hover {
   background-color: white;
 }
-
 #main #section1 #charInfos #imgDiv #imgLabel:hover #imgSelectBtnFake {
   color: black;
 }
-
 #main #section1 #charInfos #imgDiv #charImg {
   background-color: black;
   width: 25em;
@@ -185,86 +149,65 @@ body input:hover {
   -o-object-position: 20% 10%;
      object-position: 20% 10%;
 }
-
 #main #section1 #charInfos #imgDiv #perInfoBtn {
   display: none;
 }
-
 #main #section1 #charInfos #imgDiv #perInfoBtn, #main #section1 #charInfos #imgDiv #perInfoBtnFake {
   background-color: black;
   width: 100%;
   font-weight: bold;
   font-size: 16px;
 }
-
 #main #section1 #charInfos #imgDiv #perInfoBtn:hover, #main #section1 #charInfos #imgDiv #perInfoBtnFake:hover {
   background-color: white;
   color: black;
   cursor: pointer;
 }
-
 #main #section1 #charInfos input {
   background-color: black;
 }
-
 #main #section1 #charInfos #infoInput {
   background-color: black;
   border: solid 1px gray;
   padding: 10px;
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
-
 #main #section1 #charInfos #infoInput .infoInputDiv {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 10px;
 }
-
 #main #section1 #charInfos #infoInput .infoInputDiv span {
   font-size: 17px;
   font-weight: bold;
 }
-
 #main #section1 #charInfos #infoInput .infoInputDiv input {
   background-color: black;
   height: 100%;
   padding: 10px;
   font-size: 17px;
 }
-
 #main #section2 {
   margin-top: 25px;
 }
-
 #main #section2 h1 {
   margin-bottom: 10px;
 }
-
 #main #section2 #charInfos2 {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   width: 100%;
 }
-
 #main #section2 #charInfos2 #textAreasDiv1 {
-  display: -ms-grid;
   display: grid;
   row-gap: 15px;
 }
-
 #main #section2 #charInfos2 #textAreasDiv1 #backgroundArea {
   background-color: black;
   width: 100%;
@@ -274,16 +217,12 @@ body input:hover {
   font-size: 18px;
   padding: 10px;
 }
-
 #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
-
 #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 .infoTextarea {
   background-color: black;
   resize: vertical;
@@ -292,14 +231,11 @@ body input:hover {
   font-size: 16px;
   padding: 10px;
 }
-
 #main #section2 #charInfos2 #textAreasDiv2 {
-  display: -ms-grid;
   display: grid;
   row-gap: 15px;
   width: 100%;
 }
-
 #main #section2 #charInfos2 #textAreasDiv2 .infoTextarea {
   background-color: black;
   resize: vertical;
@@ -307,64 +243,45 @@ body input:hover {
   font-size: 16px;
   padding: 10px;
 }
-
 #main #section3 {
   display: none;
   gap: 15px;
 }
-
 #main #section3 .statusSpan {
   font-size: 17px;
   font-weight: bold;
 }
-
 #main #section3 .statusSpan2 {
   text-align: center;
 }
-
 #main #section3 #statusDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
-
 #main #section3 #statusDiv #barsDiv {
-  display: -ms-grid;
   display: grid;
   gap: 35px;
   width: 50%;
   background-color: black;
   border: solid 1px gray;
   padding: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 5px;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv #checkSpans2, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks #checkSpans2, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv #checkSpans2, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks #checkSpans2, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv #checkSpans2, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks #checkSpans2 {
   display: block;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks #checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks #checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks #checkSpans3 {
   display: none;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks .statusChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks .statusChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv .statusChecks, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks .statusChecks {
   width: 15px;
   height: 15px;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #exhaustSelect, #main #section3 #statusDiv #barsDiv #sanityStatus #exhaustSelect, #main #section3 #statusDiv #barsDiv #energyStatus #exhaustSelect {
   background-color: black;
   color: white;
@@ -372,56 +289,41 @@ body input:hover {
   cursor: pointer;
   font-size: 14px;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #exhaustSelect:hover, #main #section3 #statusDiv #barsDiv #sanityStatus #exhaustSelect:hover, #main #section3 #statusDiv #barsDiv #energyStatus #exhaustSelect:hover {
   border-color: white;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #lifeBarDiv, #main #section3 #statusDiv #barsDiv #lifeStatus #sanityBarDiv, #main #section3 #statusDiv #barsDiv #lifeStatus #energyBarDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #lifeBarDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #sanityBarDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #energyBarDiv, #main #section3 #statusDiv #barsDiv #energyStatus #lifeBarDiv, #main #section3 #statusDiv #barsDiv #energyStatus #sanityBarDiv, #main #section3 #statusDiv #barsDiv #energyStatus #energyBarDiv {
-  display: -ms-grid;
   display: grid;
   width: 100%;
   background-color: gray;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #lifeBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #lifeStatus #sanityBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #lifeStatus #energyBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #sanityStatus #lifeBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #sanityStatus #sanityBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #sanityStatus #energyBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #energyStatus #lifeBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #energyStatus #sanityBarDiv #lifeBar, #main #section3 #statusDiv #barsDiv #energyStatus #energyBarDiv #lifeBar {
   background-color: red;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #lifeBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #lifeStatus #sanityBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #lifeStatus #energyBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #sanityStatus #lifeBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #sanityStatus #sanityBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #sanityStatus #energyBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #energyStatus #lifeBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #energyStatus #sanityBarDiv #sanityBar, #main #section3 #statusDiv #barsDiv #energyStatus #energyBarDiv #sanityBar {
   background-color: purple;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #lifeBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #lifeStatus #sanityBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #lifeStatus #energyBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #sanityStatus #lifeBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #sanityStatus #sanityBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #sanityStatus #energyBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #energyStatus #lifeBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #energyStatus #sanityBarDiv #energyBar, #main #section3 #statusDiv #barsDiv #energyStatus #energyBarDiv #energyBar {
   background-color: blue;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv, #main #section3 #statusDiv #barsDiv #lifeStatus #sanityCheckDiv, #main #section3 #statusDiv #barsDiv #lifeStatus #energyCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #lifeCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #sanityCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #energyCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus #lifeCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus #sanityCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus #energyCheckDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv {
   border: 1px solid black;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv .bar {
   padding: 3px;
   width: 100%;
-  -webkit-transition: width 2s;
   transition: width 2s;
   text-align: center;
   cursor: pointer;
 }
-
 #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv:hover, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv:hover, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv:hover {
   border-color: white;
 }
-
 #main #section3 #statusDiv #bodyStatus {
-  display: -ms-grid;
   display: grid;
   gap: 5px;
   background-color: black;
@@ -429,7 +331,6 @@ body input:hover {
   padding: 10px;
   width: 50%;
 }
-
 #main #section3 #statusDiv #bodyStatus input {
   background-color: black;
   color: white;
@@ -437,33 +338,22 @@ body input:hover {
   font-size: 23px;
   width: 100%;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #velDiv #velocity {
   width: 100%;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #defType {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
   font-size: 18px;
   background-color: black;
@@ -472,27 +362,18 @@ body input:hover {
   cursor: pointer;
   width: 100%;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight:hover {
   border-color: white;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #dmgReductDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 {
-  display: -ms-grid;
   display: grid;
   width: 100%;
 }
-
 #main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 .infoTextarea {
   background-color: black;
   resize: none;
@@ -500,18 +381,13 @@ body input:hover {
   font-size: 16px;
   padding: 10px;
 }
-
 #main #section3 #skillsDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
-
 #main #section3 #skillsDiv .attSkillInput {
   color: purple !important;
 }
-
 #main #section3 #skillsDiv .attSkillInput, #main #section3 #skillsDiv .attInput {
   background-color: black;
   color: yellow;
@@ -520,51 +396,38 @@ body input:hover {
   width: 100%;
   font-weight: bold;
 }
-
 #main #section3 #skillsDiv .attSkillInput:hover, #main #section3 #skillsDiv .attInput:hover {
   border-color: white;
 }
-
 #main #section3 #skillsDiv .attSkillMainSpan {
   text-align: center;
   font-size: 17px;
   font-weight: bold;
 }
-
 #main #section3 #skillsDiv #atributes {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
   background-color: black;
   border: solid 1px gray;
   padding: 10px;
 }
-
 #main #section3 #skillsDiv #atributes #atributesInputDiv {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
 }
-
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
   text-align: center;
   font-size: 23px;
   width: 70px;
 }
-
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attSkillInput {
   text-align: center;
   width: 150px;
 }
-
 #main #section3 #skillsDiv #skills {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
   width: 100%;
@@ -572,56 +435,37 @@ body input:hover {
   border: solid 1px gray;
   padding: 10px;
 }
-
 #main #section3 #skillsDiv #skills #profBonusDiv {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  grid-template-columns: auto;
   gap: 20px;
 }
-
 #main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   gap: 10px;
 }
-
 #main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid .attSkillInput {
   font-size: 23px;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  justify-content: space-between;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv .attSkillInput {
   width: 100%;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
-  display: -ms-grid;
   display: grid;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
   display: none;
   gap: 10px;
@@ -631,121 +475,78 @@ body input:hover {
   border: solid 1px gray;
   padding: 5px;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv .profModalSpan {
   color: black;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv input {
   width: 15px;
   height: 15px;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 5px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid input {
   width: 15px;
   height: 15px;
 }
-
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid .profModalCheck {
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid .profModalCheck:hover {
-  color: red;
-}
-
 #main #section4 {
   display: none;
   gap: 15px;
 }
-
 #main #section4 #editContentBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 35px;
 }
-
 #main #section4 #editContentBtn .editBtnDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #main #section4 #editContentBtn .editBtnDiv .xBtn {
   display: none;
   border-color: white;
 }
-
 #main #section4 #editContentBtn .editBtnDiv .editBtn {
   opacity: 50%;
   border-color: gray;
 }
-
 #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
   background-color: black;
   cursor: pointer;
   width: 100px;
 }
-
 #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
   margin: auto;
   width: 60px;
   padding: 5px;
 }
-
 #main #section4 #editContentBtn .editBtnDiv .editBtn:hover, #main #section4 #editContentBtn .editBtnDiv .xBtn:hover {
   opacity: 100%;
   border-color: white;
 }
-
 #main #section4 #editContent {
   display: block;
 }
-
 #main #section4 #editContent #passiveAb, #main #section4 #editContent #activeAb, #main #section4 #editContent #spellsDiv, #main #section4 #editContent #weaponsDiv {
   display: none;
   width: 100%;
 }
-
 #main #section4 #editContent .editOpts {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  justify-content: left;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   background-color: black;
   width: 100%;
   padding: 5px;
   border: 1px solid gray;
   border-bottom: 0;
 }
-
 #main #section4 #editContent .editOpts .fontStyle {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -754,54 +555,43 @@ body input:hover {
   cursor: pointer;
   outline: none;
 }
-
 #main #section4 #editContent .editOpts .fontStyle:hover {
   border-color: white;
 }
-
 #main #section4 #editContent .editOpts .inputStyle {
   background-color: rgba(0, 0, 0, 0);
   color: white;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #main #section4 #editContent .editOpts .inputStyle option {
   background-color: black;
 }
-
 #main #section4 #editContent .editOpts .inputStyle:hover {
   border-color: white;
 }
-
 #main #section4 #editContent .editOpts .inputStyle:hover option {
   background-color: black;
 }
-
 #main #section4 #editContent .editOpts .colorSfontColortyle {
   height: 21.5px;
   width: 20px;
 }
-
 #main #section4 #editContent .editOpts .fontColor:hover {
   border-color: white;
 }
-
 #main #section4 #editContent .editOpts .fontStyleEditor {
   padding: 0;
   width: 1.6em;
   height: 1.45em;
 }
-
 #main #section4 #editContent .editOpts .fontStyleEditor .editorImgs {
   width: 1.2em;
   padding: 0;
 }
-
 #main #section4 #editContent .editOpts .fontStyleEditor .editorList .editorAlign {
   height: 1.15em;
 }
-
 #main #section4 #editContent .editableArea {
   overflow: hidden !important;
   word-wrap: break-word;
@@ -813,52 +603,39 @@ body input:hover {
   width: 100%;
   padding: 10px;
 }
-
 #main #section5 {
   display: none;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   width: 100%;
 }
-
 #main #section5 #editContent1 #wealth {
   margin-bottom: 15px;
 }
-
 #main #section5 #editContent1 #wealth div {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
   gap: 15px;
 }
-
 #main #section5 #editContent1 #wealth div .wealthInput {
   text-align: center;
   font-size: 20px;
   background-color: black;
   padding: 5px;
 }
-
 #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  justify-content: left;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   background-color: black;
   width: 100%;
   padding: 5px;
   border: 1px solid gray;
   border-bottom: 0;
 }
-
 #main #section5 #editContent1 .editOpts .fontStyle, #main #section5 #editContent2 .editOpts .fontStyle {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -867,58 +644,46 @@ body input:hover {
   cursor: pointer;
   outline: none;
 }
-
 #main #section5 #editContent1 .editOpts .fontStyle:hover, #main #section5 #editContent2 .editOpts .fontStyle:hover {
   border-color: white;
 }
-
 #main #section5 #editContent1 .editOpts .inputStyle, #main #section5 #editContent2 .editOpts .inputStyle {
   background-color: rgba(0, 0, 0, 0);
   color: white;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #main #section5 #editContent1 .editOpts .inputStyle option, #main #section5 #editContent2 .editOpts .inputStyle option {
   background-color: black;
 }
-
 #main #section5 #editContent1 .editOpts .inputStyle:hover, #main #section5 #editContent2 .editOpts .inputStyle:hover {
   border-color: white;
 }
-
 #main #section5 #editContent1 .editOpts .inputStyle:hover option, #main #section5 #editContent2 .editOpts .inputStyle:hover option {
   background-color: black;
 }
-
 #main #section5 #editContent1 .editOpts .colorSfontColortyle, #main #section5 #editContent2 .editOpts .colorSfontColortyle {
   height: 21.5px;
   width: 20px;
 }
-
 #main #section5 #editContent1 .editOpts .fontColor:hover, #main #section5 #editContent2 .editOpts .fontColor:hover {
   border-color: white;
 }
-
 #main #section5 #editContent1 .editOpts .fontStyleEditor, #main #section5 #editContent2 .editOpts .fontStyleEditor {
   padding: 0;
   width: 1.6em;
   height: 1.45em;
 }
-
 #main #section5 #editContent1 .editOpts .fontStyleEditor .editorImgs, #main #section5 #editContent2 .editOpts .fontStyleEditor .editorImgs {
   width: 1.2em;
   padding: 0;
 }
-
 #main #section5 #editContent1 .editOpts .fontStyleEditor .editorList .editorAlign, #main #section5 #editContent2 .editOpts .fontStyleEditor .editorList .editorAlign {
   height: 1.15em;
 }
-
 #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
   min-height: 497px;
 }
-
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
   word-wrap: break-word;
   word-break: break-all;
@@ -929,29 +694,22 @@ body input:hover {
   padding: 10px;
   height: 100%;
 }
-
 #main #section6 {
   display: none;
   width: 100%;
 }
-
 #main #section6 .editOpts {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  justify-content: left;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   background-color: black;
   width: 100%;
   padding: 5px;
   border: 1px solid gray;
   border-bottom: 0;
 }
-
 #main #section6 .editOpts .fontStyle {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -960,54 +718,43 @@ body input:hover {
   cursor: pointer;
   outline: none;
 }
-
 #main #section6 .editOpts .fontStyle:hover {
   border-color: white;
 }
-
 #main #section6 .editOpts .inputStyle {
   background-color: rgba(0, 0, 0, 0);
   color: white;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #main #section6 .editOpts .inputStyle option {
   background-color: black;
 }
-
 #main #section6 .editOpts .inputStyle:hover {
   border-color: white;
 }
-
 #main #section6 .editOpts .inputStyle:hover option {
   background-color: black;
 }
-
 #main #section6 .editOpts .colorSfontColortyle {
   height: 21.5px;
   width: 20px;
 }
-
 #main #section6 .editOpts .fontColor:hover {
   border-color: white;
 }
-
 #main #section6 .editOpts .fontStyleEditor {
   padding: 0;
   width: 1.6em;
   height: 1.45em;
 }
-
 #main #section6 .editOpts .fontStyleEditor .editorImgs {
   width: 1.2em;
   padding: 0;
 }
-
 #main #section6 .editOpts .fontStyleEditor .editorList .editorAlign {
   height: 1.15em;
 }
-
 #main #section6 #editableArea {
   word-wrap: break-word;
   word-break: break-all;
@@ -1026,9 +773,7 @@ body input:hover {
   }
   #header #hamburguerMenuDiv {
     margin: 85px 0 0 0;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #main {
     margin: 0 30px 30px 30px;
@@ -1038,36 +783,28 @@ body input:hover {
   }
   #main #section5 {
     display: none;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     gap: 20px;
   }
   #main #section5 #editContent1 #wealth div .wealthInput {
     font-size: 25px;
   }
 }
-
 @media only screen and (max-width: 1340px) {
   #main #section4 #editContent {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
     gap: 15px;
   }
 }
-
 @media only screen and (max-width: 1100px) {
   #header #hamburguerMenuDiv {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin-bottom: 20px;
   }
   #main #section1 #charInfos {
-    display: -ms-grid;
     display: grid;
   }
   #main #section1 #charInfos #imgDiv {
-    display: -ms-grid;
     display: grid;
     margin: auto;
   }
@@ -1091,17 +828,14 @@ body input:hover {
   }
   #main #section4 {
     display: none;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     gap: 15px;
   }
   #main #section4 #editContent {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     gap: 15px;
   }
 }
-
 @media only screen and (max-width: 915px) {
   #main #section3 #statusDiv {
     display: block;
@@ -1116,11 +850,8 @@ body input:hover {
     display: block;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv {
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
     row-gap: 15px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
@@ -1130,7 +861,6 @@ body input:hover {
     width: 70px;
   }
 }
-
 @media only screen and (max-width: 850px) {
   #main #section4 #editContent .editableArea {
     resize: none;
@@ -1138,23 +868,16 @@ body input:hover {
     min-height: 483px;
   }
 }
-
 @media only screen and (max-width: 730px) {
   #header #navigationBar {
     display: none;
   }
   #header #hamburguerMenuDiv {
     height: 70px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -ms-grid;
+    align-items: center;
     display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    grid-template-columns: auto auto;
+    justify-content: left;
     background-color: black;
     gap: 25px;
     margin: 0;
@@ -1200,7 +923,6 @@ body input:hover {
     display: none;
   }
   #main #section1 #charInfos #imgDiv {
-    display: -ms-grid;
     display: grid;
     width: 100%;
   }
@@ -1222,8 +944,7 @@ body input:hover {
   }
   #main #section1 #charInfos #infoInput {
     display: none;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     gap: 5px;
   }
   #main #section1 #charInfos #infoInput .infoInputDiv span {
@@ -1234,14 +955,11 @@ body input:hover {
     width: 100%;
   }
   #main #section2 #charInfos2 {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     row-gap: 10px;
   }
   #main #section2 #charInfos2 #textAreasDiv1 {
-    display: -ms-grid;
     display: grid;
     row-gap: 10px;
   }
@@ -1251,10 +969,8 @@ body input:hover {
     resize: none;
   }
   #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     row-gap: 10px;
   }
   #main #section2 #charInfos2 #textAreasDiv1 #textAreasDiv3 .infoTextarea {
@@ -1263,7 +979,6 @@ body input:hover {
     font-size: 17px;
   }
   #main #section2 #charInfos2 #textAreasDiv2 {
-    display: -ms-grid;
     display: grid;
     row-gap: 10px;
   }
@@ -1286,12 +1001,8 @@ body input:hover {
     gap: 20px;
   }
   #main #section4 #editContent .editOpts {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
   #main #section4 #editContent .editableArea {
     resize: none;
@@ -1300,19 +1011,16 @@ body input:hover {
   }
   #main #section5 {
     display: none;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -webkit-column-gap: 10px;
-            column-gap: 10px;
+    grid-template-columns: auto;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
   #main #section5 #editContent1 #wealth {
     margin-bottom: 15px;
   }
   #main #section5 #editContent1 #wealth div {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     gap: 15px;
   }
   #main #section5 #editContent1 #wealth div .wealthInput {
@@ -1323,24 +1031,16 @@ body input:hover {
     padding: 10px;
   }
   #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
   #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
     resize: none;
     font-size: 17px;
   }
   #main #section6 .editOpts {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
   #main #section6 #editableArea {
     resize: none;
@@ -1355,10 +1055,8 @@ body input:hover {
     position: fixed;
     bottom: 0;
     z-index: 10;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto auto auto;
-        grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     text-align: center;
     background-color: black;
   }
@@ -1376,7 +1074,6 @@ body input:hover {
     opacity: 100%;
   }
 }
-
 @media only screen and (max-width: 670px) {
   #main #section3 #statusDiv {
     display: block;
@@ -1394,11 +1091,9 @@ body input:hover {
     gap: 20px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv {
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
-    display: -ms-grid;
     display: grid;
     gap: 0;
   }
@@ -1406,14 +1101,11 @@ body input:hover {
     width: 100%;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv {
-    display: -ms-grid;
     display: grid;
     gap: 10px;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
-    display: -ms-grid;
     display: grid;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
@@ -1433,15 +1125,11 @@ body input:hover {
     height: 15px;
   }
   #main #section3 #skillsDiv #skills #profBonusDiv {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     gap: 5px;
   }
   #main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 5px;
   }
@@ -1449,7 +1137,6 @@ body input:hover {
     display: none;
   }
 }
-
 @media only screen and (max-width: 615px) {
   #main #section3 #statusDiv #barsDiv .statusCheckDiv .checkSpans, #main #section3 #statusDiv #barsDiv .lifeChecks .checkSpans {
     font-size: 17px;
@@ -1458,17 +1145,14 @@ body input:hover {
     font-size: 17px;
   }
   #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
     gap: 12px;
   }
   #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv .lifeChecks #exhaustSelect {
     font-size: 16px;
   }
 }
-
 @media only screen and (max-width: 550px) {
   #main {
     margin: 0;
@@ -1492,14 +1176,12 @@ body input:hover {
     font-size: 18px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv div .attSkillSpan {
     font-size: 17px;
   }
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
-    display: -ms-grid;
     display: grid;
     gap: 0;
   }
@@ -1510,17 +1192,14 @@ body input:hover {
     gap: 20px;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv {
-    display: -ms-grid;
     display: grid;
     gap: 10px;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
     font-size: 17px;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
-    display: -ms-grid;
     display: grid;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
@@ -1546,5 +1225,4 @@ body input:hover {
     width: 45px;
     padding: 2px;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
