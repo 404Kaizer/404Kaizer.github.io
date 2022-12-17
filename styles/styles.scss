@@ -12,8 +12,8 @@ h1 {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 ::-webkit-scrollbar {
@@ -460,11 +460,16 @@ body {
         }
 
         #skillsDiv {
-            display: flex;
-            gap: 15px;
+            display: grid;
+            grid-auto-columns: auto auto;
+            gap: 10px;
 
             .attSkillInput {
                 color: purple !important;
+            }
+
+            .powerAttSkillInput {
+                width: 142.16px;
             }
 
             .attSkillInput, .attInput {
@@ -488,13 +493,15 @@ body {
 
             #atributes {
                 display: grid;
-                gap: 10px;
+                gap: 15px;
                 background-color: black;
                 border: solid 1px gray;
                 padding: 10px;
 
                 #atributesInputDiv {
-                    display: grid;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
                     gap: 10px;
 
                     .attModGrid {
@@ -503,7 +510,7 @@ body {
                         .attInput {
                             text-align: center;
                             font-size: 23px;
-                            width: 70px;
+                            width: 100%;
                         }
                     }
 
@@ -516,13 +523,13 @@ body {
 
             #skills {
                 display: grid;
-                gap: 10px;
+                row-gap: 15px;
                 width: 100%;
                 background-color: black;
                 border: solid 1px gray;
                 padding: 10px;
 
-                #profBonusDiv {
+                /*#profBonusDiv {
                     display: grid;
                     grid-template-columns: auto;
                     gap: 20px;
@@ -536,7 +543,7 @@ body {
                             font-size: 23px;
                         }
                     }
-                }
+                }*/
 
                 #skillsGridDiv {
                     display: grid;
@@ -546,17 +553,16 @@ body {
                     .skillsGrid {
                         
                         #powerDiv {
-                            display: grid;
-                            grid-template-columns: auto auto;
+                            display: flex;
+                            justify-content: center;
                             column-gap: 5px;
-                            justify-content: space-between;
 
                             .attSkillInput {
                                 width: 100%;
                             }
                         }
 
-                        .profModalGrid {
+                        /*.profModalGrid {
                             display: grid;
                             
                             .profModalDiv {
@@ -577,7 +583,7 @@ body {
                                     height: 15px;
                                 }
                             }
-                        }
+                        }*/
 
                         .spanCheckGrid {
                             display: flex;
@@ -1052,7 +1058,7 @@ body {
                 }
             }
     
-            #skillsDiv {
+            /*#skillsDiv {
     
                 #atributes {
     
@@ -1066,7 +1072,7 @@ body {
                         }
                     }
                 }
-            }
+            }*/
         }
 
         #section4 {
@@ -1110,13 +1116,13 @@ body {
                         justify-content: space-between;
                         row-gap: 15px;
 
-                        .attModGrid {
+                        /*.attModGrid {
                             gap: 10px;
                             
                             .attInput {
                                 width: 70px;
                             }
-                        }
+                        }*/
                     }
                 }
             }
@@ -1142,7 +1148,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 760px) {
 
     #header {
 
@@ -1298,6 +1304,21 @@ body {
                         resize: none;
                         min-height: 120px;
                         font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        #section3 {
+    
+            #skillsDiv {
+
+                #atributes {
+
+                    #atributesInputDiv {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+
                     }
                 }
             }
@@ -1481,7 +1502,7 @@ body {
                         gap: 10px;
                         grid-template-columns: auto auto auto;
     
-                        .skillsGrid {
+                        /*.skillsGrid {
                             
                             .profModalGrid {
                                 display: grid;
@@ -1505,10 +1526,10 @@ body {
                                     }
                                 }
                             }
-                        }
+                        }*/
                     }
 
-                    #profBonusDiv {
+                    /*#profBonusDiv {
                         display: grid;
                         grid-template-columns: auto;
                         gap: 5px;
@@ -1521,7 +1542,7 @@ body {
                         #passiveBonus {
                             display: none;
                         }
-                    }
+                    }*/
                 }
             }
         }
@@ -1664,7 +1685,7 @@ body {
                                 font-size: 17px;
                             }
 
-                            .profModalGrid {
+                            /*.profModalGrid {
                                 display: grid;
                                 
                                 .profModalDiv {
@@ -1685,7 +1706,7 @@ body {
                                         height: 15px;
                                     }
                                 }
-                            }
+                            }*/
                         }
                     }
                 }

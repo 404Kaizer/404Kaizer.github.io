@@ -382,11 +382,15 @@ body input:hover {
   padding: 10px;
 }
 #main #section3 #skillsDiv {
-  display: flex;
-  gap: 15px;
+  display: grid;
+  grid-auto-columns: auto auto;
+  gap: 10px;
 }
 #main #section3 #skillsDiv .attSkillInput {
   color: purple !important;
+}
+#main #section3 #skillsDiv .powerAttSkillInput {
+  width: 142.16px;
 }
 #main #section3 #skillsDiv .attSkillInput, #main #section3 #skillsDiv .attInput {
   background-color: black;
@@ -406,13 +410,15 @@ body input:hover {
 }
 #main #section3 #skillsDiv #atributes {
   display: grid;
-  gap: 10px;
+  gap: 15px;
   background-color: black;
   border: solid 1px gray;
   padding: 10px;
 }
 #main #section3 #skillsDiv #atributes #atributesInputDiv {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   gap: 10px;
 }
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
@@ -421,7 +427,7 @@ body input:hover {
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
   text-align: center;
   font-size: 23px;
-  width: 70px;
+  width: 100%;
 }
 #main #section3 #skillsDiv #atributes #atributesInputDiv .attSkillInput {
   text-align: center;
@@ -429,58 +435,64 @@ body input:hover {
 }
 #main #section3 #skillsDiv #skills {
   display: grid;
-  gap: 10px;
+  row-gap: 15px;
   width: 100%;
   background-color: black;
   border: solid 1px gray;
   padding: 10px;
-}
-#main #section3 #skillsDiv #skills #profBonusDiv {
-  display: grid;
-  grid-template-columns: auto;
-  gap: 20px;
-}
-#main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 10px;
-}
-#main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid .attSkillInput {
-  font-size: 23px;
+  /*#profBonusDiv {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 20px;
+
+      #profBonusGrid {
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 10px;
+
+          .attSkillInput {
+              font-size: 23px;
+          }
+      }
+  }*/
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv {
   display: grid;
   gap: 10px;
   grid-template-columns: auto auto auto auto;
 }
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid {
+  /*.profModalGrid {
+      display: grid;
+
+      .profModalDiv {
+          display: none;
+          gap: 10px;
+          position: absolute;
+          background-color: white;
+          z-index: 10;
+          border: solid 1px gray;
+          padding: 5px;
+
+          .profModalSpan {
+              color: black;
+          }
+
+          input {
+              width: 15px;
+              height: 15px;
+          }
+      }
+  }*/
+}
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
-  justify-content: space-between;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv .attSkillInput {
   width: 100%;
-}
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
-  display: grid;
-}
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
-  display: none;
-  gap: 10px;
-  position: absolute;
-  background-color: white;
-  z-index: 10;
-  border: solid 1px gray;
-  padding: 5px;
-}
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv .profModalSpan {
-  color: black;
-}
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv input {
-  width: 15px;
-  height: 15px;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
   display: flex;
@@ -817,14 +829,28 @@ body input:hover {
   #main #section1 #charInfos #infoInput {
     display: none;
   }
+  #main #section3 {
+    /*#skillsDiv {
+
+        #atributes {
+
+            #atributesInputDiv {
+
+                .attModGrid {
+
+                    .attInput {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }*/
+  }
   #main #section3 #statusDiv #barsDiv {
     width: 70%;
   }
   #main #section3 #statusDiv #bodyStatus {
     width: 40%;
-  }
-  #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
-    width: 70px;
   }
   #main #section4 {
     display: none;
@@ -853,12 +879,13 @@ body input:hover {
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     row-gap: 15px;
-  }
-  #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid {
-    gap: 10px;
-  }
-  #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
-    width: 70px;
+    /*.attModGrid {
+        gap: 10px;
+
+        .attInput {
+            width: 70px;
+        }
+    }*/
   }
 }
 @media only screen and (max-width: 850px) {
@@ -868,7 +895,7 @@ body input:hover {
     min-height: 483px;
   }
 }
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 760px) {
   #header #navigationBar {
     display: none;
   }
@@ -987,6 +1014,10 @@ body input:hover {
     min-height: 120px;
     font-size: 17px;
   }
+  #main #section3 #skillsDiv #atributes #atributesInputDiv {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
   #main #section4 #editContentBtn {
     gap: 30px;
   }
@@ -1100,41 +1131,51 @@ body input:hover {
   #main #section3 #skillsDiv #atributes #atributesInputDiv .attModGrid .attInput {
     width: 100%;
   }
+  #main #section3 #skillsDiv #skills {
+    /*#profBonusDiv {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+
+        #profBonusGrid {
+            display: flex;
+            gap: 5px;
+        }
+
+        #passiveBonus {
+            display: none;
+        }
+    }*/
+  }
   #main #section3 #skillsDiv #skills #skillsGridDiv {
     display: grid;
     gap: 10px;
     grid-template-columns: auto auto auto;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
-    display: grid;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
-    display: none;
-    gap: 10px;
-    position: absolute;
-    background-color: white;
-    z-index: 10;
-    border: solid 1px gray;
-    padding: 5px;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv .profModalSpan {
-    color: black;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv input {
-    width: 15px;
-    height: 15px;
-  }
-  #main #section3 #skillsDiv #skills #profBonusDiv {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 5px;
-  }
-  #main #section3 #skillsDiv #skills #profBonusDiv #profBonusGrid {
-    display: flex;
-    gap: 5px;
-  }
-  #main #section3 #skillsDiv #skills #profBonusDiv #passiveBonus {
-    display: none;
+    /*.skillsGrid {
+
+        .profModalGrid {
+            display: grid;
+
+            .profModalDiv {
+                display: none;
+                gap: 10px;
+                position: absolute;
+                background-color: white;
+                z-index: 10;
+                border: solid 1px gray;
+                padding: 5px;
+
+                .profModalSpan {
+                    color: black;
+                }
+
+                input {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }*/
   }
 }
 @media only screen and (max-width: 615px) {
@@ -1196,27 +1237,32 @@ body input:hover {
     gap: 10px;
     grid-template-columns: auto auto;
   }
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid {
+    /*.profModalGrid {
+        display: grid;
+
+        .profModalDiv {
+            display: none;
+            gap: 10px;
+            position: absolute;
+            background-color: white;
+            z-index: 10;
+            border: solid 1px gray;
+            padding: 5px;
+
+            .profModalSpan {
+                color: black;
+            }
+
+            input {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }*/
+  }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
     font-size: 17px;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid {
-    display: grid;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv {
-    display: none;
-    gap: 10px;
-    position: absolute;
-    background-color: white;
-    z-index: 10;
-    border: solid 1px gray;
-    padding: 5px;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv .profModalSpan {
-    color: black;
-  }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .profModalGrid .profModalDiv input {
-    width: 15px;
-    height: 15px;
   }
   #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {
     width: 75px;

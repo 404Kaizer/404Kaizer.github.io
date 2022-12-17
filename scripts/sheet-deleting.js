@@ -49,8 +49,8 @@ let deleteSheet = () => {
         localStorage.removeItem("terrorizedCheck" + nameCheck);
         localStorage.removeItem("traumatizedCheck" + nameCheck);
         localStorage.removeItem("insaneCheck" + nameCheck);
-        localStorage.removeItem("trainedSkillBonus" + nameCheck);
-        localStorage.removeItem("nTrainedSkillBonus" + nameCheck);
+        //localStorage.removeItem("trainedSkillBonus" + nameCheck);
+        //localStorage.removeItem("nTrainedSkillBonus" + nameCheck);
         localStorage.removeItem("defense" + nameCheck);
         localStorage.removeItem("block" + nameCheck);
         localStorage.removeItem("dodge" + nameCheck);
@@ -64,14 +64,14 @@ let deleteSheet = () => {
         localStorage.removeItem("strModInput" + nameCheck);
         localStorage.removeItem("agiInput" + nameCheck);
         localStorage.removeItem("agiModInput" + nameCheck);
-        localStorage.removeItem("conInput" + nameCheck);
-        localStorage.removeItem("conModInput" + nameCheck);
+        localStorage.removeItem("vigInput" + nameCheck);
+        localStorage.removeItem("vigModInput" + nameCheck);
         localStorage.removeItem("intInput" + nameCheck);
         localStorage.removeItem("intModInput" + nameCheck);
         localStorage.removeItem("wisInput" + nameCheck);
         localStorage.removeItem("wisModInput" + nameCheck);
         localStorage.removeItem("chaInput" + nameCheck);
-        localStorage.removeItem("chaModInput" + nameCheck);
+        //localStorage.removeItem("chaModInput" + nameCheck);
         localStorage.removeItem("skillCheck1" + nameCheck);
         localStorage.removeItem("skillCheck2" + nameCheck);
         localStorage.removeItem("skillCheck3" + nameCheck);

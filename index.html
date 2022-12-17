@@ -170,29 +170,29 @@
                         <div id="defType">
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Defesa</span>
-                                <div><input type="number" name="defense" id="defense" placeholder="10"></div>
+                                <div><input type="number" name="defense" id="defense" value="10"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Bloqueio</span>
-                                <div><input type="text" name="block" id="block" placeholder="0"></div>
+                                <div><input type="text" name="block" id="block" placeholder="+0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Esquiva</span>
-                                <div><input type="text" name="dodge" id="dodge" placeholder="0"></div>
+                                <div><input type="text" name="dodge" id="dodge" placeholder="+0"></div>
                             </div>
                         </div>
                         <div id="dmgReductDiv">
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">RD Físico</span>
-                                <div><input type="text" name="physical" id="physicalRDMG" placeholder="-0"></div>
+                                <div><input type="text" name="physical" id="physicalRDMG" value="0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">RD Balístico</span>
-                                <div><input type="text" name="balistical" id="balisticalRDMG" placeholder="-0"></div>
+                                <div><input type="text" name="balistical" id="balisticalRDMG" value="0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">RD Mágico</span>
-                                <div><input type="text" name="magial" id="magialRDMG" placeholder="-0"></div>
+                                <div><input type="text" name="magical" id="magicalDMG" value="0"></div>
                             </div>
                         </div>
                         <div id="velDiv">
@@ -201,7 +201,7 @@
                         </div>
                         <div id="textAreasDiv4">
                             <span>Treinamento</span>
-                            <textarea id="textArea5" class="infoTextarea" placeholder="Escreva sobre o que vocé é treinado..."></textarea>
+                            <textarea id="textArea5" class="infoTextarea" placeholder="Treinamentos do Personagem..."></textarea>
                         </div>
                     </div>
                 </div>
@@ -214,63 +214,63 @@
                             <span class="attSkillSpan">Força</span>
                             <div class="attModGrid">
                                 <div><input class="attInput" type="number" name="str" id="strInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <div><input class="attInput" type="text" name="strMod" id="strModInput" VALUE="+0"></div>
+                                <!--<div><input class="attInput" type="text" name="strMod" id="strModInput" value="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Agilidade</span>
                             <div class="attModGrid">
                                 <div><input class="attInput" type="number" name="agi" id="agiInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <div><input class="attInput" type="text" name="agiMod" id="agiModInput" VALUE="+0"></div>
+                                <!--<div><input class="attInput" type="text" name="agiMod" id="agiModInput" value="+0"></div>-->
                             </div>
                         </div>
                         <div>
-                            <span class="attSkillSpan">Constituição</span>
+                            <span class="attSkillSpan">Vigor</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="con" id="conInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <div><input class="attInput" type="text" name="conMod" id="conModInput" VALUE="+0"></div>
+                                <div><input class="attInput" type="number" name="vig" id="vigInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="vigMod" id="vigModInput" value="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Inteligência</span>
                             <div class="attModGrid">
                                 <div><input class="attInput" type="number" name="int" id="intInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <div><input class="attInput" type="text" name="intMod" id="intModInput" VALUE="+0"></div>
+                                <!--<div><input class="attInput" type="text" name="intMod" id="intModInput" value="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Sabedoria</span>
                             <div class="attModGrid">
                                 <div><input class="attInput" type="number" name="wis" id="wisInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <div><input class="attInput" type="text" name="wisMod" id="wisModInput" VALUE="+0"></div>
+                                <!--<div><input class="attInput" type="text" name="wisMod" id="wisModInput" value="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Carisma</span>
                             <div class="attModGrid">
                                 <div><input class="attInput" type="number" name="char" id="chaInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <div><input class="attInput" type="text" name="chaMod" id="chaModInput" VALUE="+0"></div>
+                                <!--<div><input class="attInput" type="text" name="chaMod" id="chaModInput" value="+0"></div>-->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="skills">
-                    <div id="profBonusDiv">
-                        <span class="attSkillMainSpan">Perícias e Bônus</span>
+                    <span class="attSkillMainSpan">Lista de Perícias</span>
+                    <!--<div id="profBonusDiv">
                         <div id="profBonusGrid">
                             <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="B. Ativo" oninput="setSkills(), updateDefenseMods()"></div>
                             <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="B. Passivo" oninput="setSkills(), updateDefenseMods()"></div>
                         </div>
-                    </div>
+                    </div>-->
                     <div id="skillsGridDiv">
-                        <div class="skillsGrid">
+                        <div class="skillsGrid powerGridDiv">
                             <div class="spanCheckGrid">
                                 <input type="checkbox" name="" id="skillCheck1">
-                                <span>Poder</span>
+                                <span>Poder</span><span style="font-size: 12px;">(DT e Mod)</span>
                             </div>
                             <div id="powerDiv">
-                                <input class="attSkillInput" type="text" name="" id="skill0" value="0" placeholder="CD">
-                                <input class="attSkillInput" type="text" name="" id="skill1" value="0" placeholder="Atq">
+                                <input class="attSkillInput powerAttSkillInput" type="text" name="" id="skill0" value="0" placeholder="DT">
+                                <input class="attSkillInput powerAttSkillInput" type="text" name="" id="skill1" value="+0" placeholder="+">
                             </div>
                         </div>
                         <div class="skillsGrid">
