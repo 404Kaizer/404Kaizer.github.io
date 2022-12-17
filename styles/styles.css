@@ -494,14 +494,34 @@ body input:hover {
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv .attSkillInput {
   width: 100%;
 }
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .openSkillStatus {
+  color: yellow;
+  font-size: 16px;
+  cursor: pointer !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: bold;
 }
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid input {
-  width: 15px;
-  height: 15px;
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan {
+  display: none;
+  background-color: white;
+  border: 2px solid gray;
+  color: black;
+  border-top: 0;
+  padding: 7px 7px 0 7px;
+  position: absolute;
+  z-index: 10;
+}
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: center;
+}
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv span {
+  color: black;
 }
 #main #section4 {
   display: none;
@@ -1261,7 +1281,7 @@ body input:hover {
         }
     }*/
   }
-  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanCheckGrid {
+  #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan {
     font-size: 17px;
   }
   #main #section4 #editContentBtn .editBtnDiv .editBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn {

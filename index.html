@@ -170,7 +170,7 @@
                         <div id="defType">
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Defesa</span>
-                                <div><input type="number" name="defense" id="defense" value="10"></div>
+                                <div><input type="text" name="defense" id="defense" placeholder="0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Bloqueio</span>
@@ -184,15 +184,15 @@
                         <div id="dmgReductDiv">
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">RD Físico</span>
-                                <div><input type="text" name="physical" id="physicalRDMG" value="0"></div>
+                                <div><input type="text" name="physical" id="physicalRDMG" placeholder="-0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">RD Balístico</span>
-                                <div><input type="text" name="balistical" id="balisticalRDMG" value="0"></div>
+                                <div><input type="text" name="balistical" id="balisticalRDMG" placeholder="-0"></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">RD Mágico</span>
-                                <div><input type="text" name="magical" id="magicalDMG" value="0"></div>
+                                <div><input type="text" name="magical" id="magicalRDMG" placeholder="-0"></div>
                             </div>
                         </div>
                         <div id="velDiv">
@@ -213,43 +213,43 @@
                         <div>
                             <span class="attSkillSpan">Força</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="str" id="strInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <!--<div><input class="attInput" type="text" name="strMod" id="strModInput" value="+0"></div>-->
+                                <div><input class="attInput" type="number" name="str" id="strInput" placeholder="0" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="strMod" id="strModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Agilidade</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="agi" id="agiInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <!--<div><input class="attInput" type="text" name="agiMod" id="agiModInput" value="+0"></div>-->
+                                <div><input class="attInput" type="number" name="agi" id="agiInput" placeholder="0" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="agiMod" id="agiModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Vigor</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="vig" id="vigInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <!--<div><input class="attInput" type="text" name="vigMod" id="vigModInput" value="+0"></div>-->
+                                <div><input class="attInput" type="number" name="vig" id="vigInput" placeholder="0" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="vigMod" id="vigModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Inteligência</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="int" id="intInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <!--<div><input class="attInput" type="text" name="intMod" id="intModInput" value="+0"></div>-->
+                                <div><input class="attInput" type="number" name="int" id="intInput" placeholder="0" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="intMod" id="intModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Sabedoria</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="wis" id="wisInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <!--<div><input class="attInput" type="text" name="wisMod" id="wisModInput" value="+0"></div>-->
+                                <div><input class="attInput" type="number" name="wis" id="wisInput" placeholder="0" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="wisMod" id="wisModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Carisma</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="number" name="char" id="chaInput" value="10" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
-                                <!--<div><input class="attInput" type="text" name="chaMod" id="chaModInput" value="+0"></div>-->
+                                <div><input class="attInput" type="number" name="char" id="chaInput" placeholder="0" oninput="updateAttMods(), setSkills(), updateDefenseMods()"></div>
+                                <!--<div><input class="attInput" type="text" name="chaMod" id="chaModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                     </div>
@@ -264,161 +264,477 @@
                     </div>-->
                     <div id="skillsGridDiv">
                         <div class="skillsGrid powerGridDiv">
-                            <div class="spanCheckGrid">
+                            <div class="spanRadioGrid">
                                 <input type="checkbox" name="" id="skillCheck1">
                                 <span>Poder</span><span style="font-size: 12px;">(DT e Mod)</span>
                             </div>
                             <div id="powerDiv">
-                                <input class="attSkillInput powerAttSkillInput" type="text" name="" id="skill0" value="0" placeholder="DT">
-                                <input class="attSkillInput powerAttSkillInput" type="text" name="" id="skill1" value="+0" placeholder="+">
+                                <input class="attSkillInput powerAttSkillInput" type="text" name="dt" id="skill0" placeholder="DT">
+                                <input class="attSkillInput powerAttSkillInput" type="text" name="mod" id="skill1" placeholder="+0">
                             </div>
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck2" oninput="setSkills(), updateDefenseMods()">
-                                <span>Luta</span><span style="font-size: 12px;">(For)</span>
+                            <span class="openSkillStatus" id="skillSpan1" onclick="setSkills(), openCloseSkillStatus1()">+</span>
+                            <span>Luta</span><span style="font-size: 12px;">(For)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv1">
+                                <!--<input type="checkbox" name="" id="skillCheck2" oninput="setSkills(), updateDefenseMods()">-->
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training1" class="radio" id="skillRadio1" onselect="setSkills()">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training1" class="radio" id="skillRadio2" onselect="setSkills()">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training1" class="radio" id="skillRadio3" onselect="setSkills()">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill2" value="0" oninput="updateDefenseMods()">
+                            <input class="attSkillInput" type="text" name="" id="skill2" placeholder="+0" oninput="updateDefenseMods()">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck3" oninput="setSkills()">
-                                <span>Pontaria</span><span style="font-size: 12px;">(Agi)</span>
+                            <span class="openSkillStatus" id="skillSpan2" onclick="openCloseSkillStatus2()">+</span>                        
+                            <span>Pontaria</span><span style="font-size: 12px;">(Agi)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv2">
+                                <!--<input type="checkbox" name="" id="skillCheck3" oninput="setSkills(), updateDefenseMods()">-->
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training2" class="radio" id="skillRadio4">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training2" class="radio" id="skillRadio5">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training2" class="radio" id="skillRadio6">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill3" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill3" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck4" oninput="setSkills()">
-                                <span>Fortitude</span><span style="font-size: 12px;">(Con)</span>
+                            <span class="openSkillStatus" id="skillSpan3" onclick="openCloseSkillStatus3()">+</span>
+                            <span>Fortitude</span><span style="font-size: 12px;">(Con)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv3">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training3" class="radio" id="skillRadio7">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training3" class="radio" id="skillRadio8">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training3" class="radio" id="skillRadio9">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill4" value="0">
+                            <!--<input type="checkbox" name="" id="skillCheck4" oninput="setSkills()">-->
+                            <input class="attSkillInput" type="text" name="" id="skill4" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck5" oninput="setSkills(), updateDefenseMods()">
-                                <span>Reflexos</span><span style="font-size: 12px;">(Agi)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck5" oninput="setSkills(), updateDefenseMods()">-->
+                            <span class="openSkillStatus" id="skillSpan4" onclick="openCloseSkillStatus4()">+</span>
+                            
+                            <span>Reflexos</span><span style="font-size: 12px;">(Agi)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv4">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training4" class="radio" id="skillRadio10">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training4" class="radio" id="skillRadio11">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training4" class="radio" id="skillRadio12">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill5" value="0" oninput="updateDefenseMods()">
+                            <input class="attSkillInput" type="text" name="" id="skill5" placeholder="+0" oninput="updateDefenseMods()">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck6" oninput="setSkills()">
-                                <span>Vontade</span><span style="font-size: 12px;">(Sab)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck6" oninput="setSkills()">-->
+                            <span class="openSkillStatus" id="skillSpan5" onclick="openCloseSkillStatus5()">+</span>
+                            <span>Vontade</span><span style="font-size: 12px;">(Sab)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv5">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training5" class="radio" id="skillRadio13">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training5" class="radio" id="skillRadio14">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training5" class="radio" id="skillRadio15">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill6" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill6" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck7" oninput="setSkills()">
-                                <span>Atletismo</span><span style="font-size: 12px;">(For)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck7" oninput="setSkills()">-->
+                            <span class="openSkillStatus" id="skillSpan6" onclick="openCloseSkillStatus6()">+</span>
+                            <span>Atletismo</span><span style="font-size: 12px;">(For)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv6">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training6" class="radio" id="skillRadio16">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training6" class="radio" id="skillRadio17">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training6" class="radio" id="skillRadio18">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill7" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill7" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck8" oninput="setSkills()">
-                                <span>Acrobacia</span><span style="font-size: 12px;">(Agi)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck8" oninput="setSkills()">-->
+                            <span class="openSkillStatus" id="skillSpan7" onclick="openCloseSkillStatus7()">+</span>
+                            <span>Acrobacia</span><span style="font-size: 12px;">(Agi)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv7">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training7" class="radio" id="skillRadio19">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training7" class="radio" id="skillRadio20">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training7" class="radio" id="skillRadio21">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill8" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill8" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck9" oninput="setSkills()">
-                                <span>Furtividade</span><span style="font-size: 12px;">(Agi)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck9" oninput="setSkills()">-->
+                            <span class="openSkillStatus" id="skillSpan8" onclick="openCloseSkillStatus8()">+</span>
+                            <span>Furtividade</span><span style="font-size: 12px;">(Agi)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv8">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training8" class="radio" id="skillRadio22">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training8" class="radio" id="skillRadio23">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training8" class="radio" id="skillRadio24">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill9" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill9" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck10" oninput="setSkills()">
-                                <span>Ladinagem</span><span style="font-size: 12px;">(Agi)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck10" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan9" onclick="openCloseSkillStatus9()">+</span>
+                            <span>Ladinagem</span><span style="font-size: 12px;">(Agi)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv9">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training9" class="radio" id="skillRadio25">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training9" class="radio" id="skillRadio26">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training9" class="radio" id="skillRadio27">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill10" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill10" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck11" oninput="setSkills()">
-                                <span>Investigação</span><span style="font-size: 12px;">(Int)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck11" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan10" onclick="openCloseSkillStatus10()">+</span>
+                            <span>Investigação</span><span style="font-size: 12px;">(Int)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv10">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training10" class="radio" id="skillRadio28">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training10" class="radio" id="skillRadio29">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training10" class="radio" id="skillRadio30">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill11" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill11" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck12" oninput="setSkills()">
-                                <span>Conhecimento</span><span style="font-size: 12px;">(Int)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck12" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan11" onclick="openCloseSkillStatus11()">+</span>
+                            <span>Conhecimento</span><span style="font-size: 12px;">(Int)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv11">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training11" class="radio" id="skillRadio31">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training11" class="radio" id="skillRadio32">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training11" class="radio" id="skillRadio33">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill12" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill12" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck13" oninput="setSkills()">
-                                <span>Ocultismo</span><span style="font-size: 12px;">(Int)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck13" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan12" onclick="openCloseSkillStatus12()">+</span>
+                            <span>Ocultismo</span><span style="font-size: 12px;">(Int)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv12">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training12" class="radio" id="skillRadio34">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training12" class="radio" id="skillRadio35">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training12" class="radio" id="skillRadio36">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill13" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill13" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck14" oninput="setSkills()">
-                                <span>Religião</span><span style="font-size: 12px;">(Int)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck14" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan13" onclick="openCloseSkillStatus13()">+</span>
+                            <span>Religião</span><span style="font-size: 12px;">(Int)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv13">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training13" class="radio" id="skillRadio37">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training13" class="radio" id="skillRadio38">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training13" class="radio" id="skillRadio39">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill14" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill14" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck15" oninput="setSkills()">
-                                <span>Medicina</span><span style="font-size: 12px;">(Int)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck15" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan14" onclick="openCloseSkillStatus14()">+</span>
+                            <span>Medicina</span><span style="font-size: 12px;">(Int)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv14">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training14" class="radio" id="skillRadio40">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training14" class="radio" id="skillRadio41">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training14" class="radio" id="skillRadio42">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill15" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill15" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck16" oninput="setSkills()">
-                                <span>Percepção</span><span style="font-size: 12px;">(Sab)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck16" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan15" onclick="openCloseSkillStatus15()">+</span>
+                            <span>Percepção</span><span style="font-size: 12px;">(Sab)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv15">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training15" class="radio" id="skillRadio43">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training15" class="radio" id="skillRadio44">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training15" class="radio" id="skillRadio45">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill16" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill16" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck17" oninput="setSkills()">
-                                <span>Intuição</span><span style="font-size: 12px;">(Sab)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck17" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan16" onclick="openCloseSkillStatus16()">+</span>
+                            <span>Intuição</span><span style="font-size: 12px;">(Sab)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv16">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training16" class="radio" id="skillRadio46">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training16" class="radio" id="skillRadio47">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training16" class="radio" id="skillRadio48">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill17" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill17" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck19" oninput="setSkills()">
-                                <span>Sobrevivência</span><span style="font-size: 12px;">(Sab)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck19" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan17" onclick="openCloseSkillStatus17()">+</span>
+                            <span>Sobrevivência</span><span style="font-size: 12px;">(Sab)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv17">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training17" class="radio" id="skillRadio49">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training17" class="radio" id="skillRadio50">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training17" class="radio" id="skillRadio51">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill19" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill19" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck20" oninput="setSkills()">
-                                <span>Atuação</span><span style="font-size: 12px;">(Car)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck20" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan18" onclick="openCloseSkillStatus18()">+</span>
+                            <span>Atuação</span><span style="font-size: 12px;">(Car)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv18">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training18" class="radio" id="skillRadio52">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training18" class="radio" id="skillRadio53">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training18" class="radio" id="skillRadio54">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill20" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill20" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck21" oninput="setSkills()">
-                                <span>Lábia</span><span style="font-size: 12px;">(Car)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck21" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan19" onclick="openCloseSkillStatus19()">+</span>
+                            <span>Lábia</span><span style="font-size: 12px;">(Car)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv19">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training19" class="radio" id="skillRadio55">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training19" class="radio" id="skillRadio56">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training19" class="radio" id="skillRadio57">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill21" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill21" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck22" oninput="setSkills()">
-                                <span>Enganação</span><span style="font-size: 12px;">(Car)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck22" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan20" onclick="openCloseSkillStatus20()">+</span>
+                            <span>Enganação</span><span style="font-size: 12px;">(Car)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv20">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training20" class="radio" id="skillRadio58">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training20" class="radio" id="skillRadio59">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training20" class="radio" id="skillRadio60">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill22" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill22" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <div class="spanCheckGrid">
-                                <input type="checkbox" name="" id="skillCheck23" oninput="setSkills()">
-                                <span>Intimidação</span><span style="font-size: 12px;">(Car)</span>
+                            <!--<input type="checkbox" name="" id="skillCheck23" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan21" onclick="openCloseSkillStatus21()">+</span>
+                            <span>Intimidação</span><span style="font-size: 12px;">(Car)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv21">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training21" class="radio" id="skillRadio61">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training21" class="radio" id="skillRadio62">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training21" class="radio" id="skillRadio63">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill23" value="0">
+                            <input class="attSkillInput" type="text" name="" id="skill23" placeholder="+0">
                         </div>
                     </div>
                 </div>

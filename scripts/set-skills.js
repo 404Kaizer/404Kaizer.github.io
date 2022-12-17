@@ -1,264 +1,43 @@
-//let setSkills = () => {
-//    let trainedSkillBonus = parseInt(document.getElementById("trainedSkillBonus").value);
-//    let nTrainedSkillBonus = parseInt(document.getElementById("nTrainedSkillBonus").value);
-//    let strInput = parseInt(document.getElementById("strInput").value);
-//    let agiInput = parseInt(document.getElementById("agiInput").value);
-//    let vigInput = parseInt(document.getElementById("vigInput").value);
-//    let intInput = parseInt(document.getElementById("intInput").value);
-//    let wisInput = parseInt(document.getElementById("wisInput").value);
-//    let chaInput = parseInt(document.getElementById("chaInput").value);
-//
-//    if (document.getElementById("skillCheck2").checked == true) {
-//        document.getElementById("skill2").value = trainedSkillBonus + strInput;
-//        if (document.getElementById("skill2").value > 0) {
-//            document.getElementById("skill2").value = "+" + document.getElementById("skill2").value;
-//        }
-//    } else {
-//        document.getElementById("skill2").value = nTrainedSkillBonus + strInput;
-//        if (document.getElementById("skill2").value > 0) {
-//            document.getElementById("skill2").value = "+" + document.getElementById("skill2").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck3").checked == true) {
-//        document.getElementById("skill3").value = trainedSkillBonus + agiInput;
-//        if (document.getElementById("skill3").value > 0) {
-//            document.getElementById("skill3").value = "+" + document.getElementById("skill3").value;
-//        }
-//    } else {
-//        document.getElementById("skill3").value = nTrainedSkillBonus + agiInput;
-//        if (document.getElementById("skill3").value > 0) {
-//            document.getElementById("skill3").value = "+" + document.getElementById("skill3").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck4").checked == true) {
-//        document.getElementById("skill4").value = trainedSkillBonus + vigInput;
-//        if (document.getElementById("skill4").value > 0) {
-//            document.getElementById("skill4").value = "+" + document.getElementById("skill4").value;
-//        }
-//    } else {
-//        document.getElementById("skill4").value = nTrainedSkillBonus + vigInput;
-//        if (document.getElementById("skill4").value > 0) {
-//            document.getElementById("skill4").value = "+" + document.getElementById("skill4").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck5").checked == true) {
-//        document.getElementById("skill5").value = trainedSkillBonus + agiInput;
-//        if (document.getElementById("skill5").value > 0) {
-//            document.getElementById("skill5").value = "+" + document.getElementById("skill5").value;
-//        }
-//    } else {
-//        document.getElementById("skill5").value = nTrainedSkillBonus + agiInput;
-//        if (document.getElementById("skill5").value > 0) {
-//            document.getElementById("skill5").value = "+" + document.getElementById("skill5").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck6").checked == true) {
-//        document.getElementById("skill6").value = trainedSkillBonus + wisInput;
-//        if (document.getElementById("skill6").value > 0) {
-//            document.getElementById("skill6").value = "+" + document.getElementById("skill6").value;
-//        }
-//    } else {
-//        document.getElementById("skill6").value = nTrainedSkillBonus + wisInput;
-//        if (document.getElementById("skill6").value > 0) {
-//            document.getElementById("skill6").value = "+" + document.getElementById("skill6").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck7").checked == true) {
-//        document.getElementById("skill7").value = trainedSkillBonus + strInput;
-//        if (document.getElementById("skill7").value > 0) {
-//            document.getElementById("skill7").value = "+" + document.getElementById("skill7").value;
-//        }
-//    } else {
-//        document.getElementById("skill7").value = nTrainedSkillBonus + strInput;
-//        if (document.getElementById("skill7").value > 0) {
-//            document.getElementById("skill7").value = "+" + document.getElementById("skill7").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck8").checked == true) {
-//        document.getElementById("skill8").value = trainedSkillBonus + agiInput;
-//        if (document.getElementById("skill8").value > 0) {
-//            document.getElementById("skill8").value = "+" + document.getElementById("skill8").value;
-//        }
-//    } else {
-//        document.getElementById("skill8").value = nTrainedSkillBonus + agiInput;
-//        if (document.getElementById("skill8").value > 0) {
-//            document.getElementById("skill8").value = "+" + document.getElementById("skill8").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck9").checked == true) {
-//        document.getElementById("skill9").value = trainedSkillBonus + agiInput;
-//        if (document.getElementById("skill9").value > 0) {
-//            document.getElementById("skill9").value = "+" + document.getElementById("skill9").value;
-//        }
-//    } else {
-//        document.getElementById("skill9").value = nTrainedSkillBonus + agiInput;
-//        if (document.getElementById("skill9").value > 0) {
-//            document.getElementById("skill9").value = "+" + document.getElementById("skill9").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck10").checked == true) {
-//        document.getElementById("skill10").value = trainedSkillBonus + agiInput;
-//        if (document.getElementById("skill10").value > 0) {
-//            document.getElementById("skill10").value = "+" + document.getElementById("skill10").value;
-//        }
-//    } else {
-//        document.getElementById("skill10").value = nTrainedSkillBonus + agiInput;
-//        if (document.getElementById("skill10").value > 0) {
-//            document.getElementById("skill10").value = "+" + document.getElementById("skill10").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck11").checked == true) {
-//        document.getElementById("skill11").value = trainedSkillBonus + intInput;
-//        if (document.getElementById("skill11").value > 0) {
-//            document.getElementById("skill11").value = "+" + document.getElementById("skill11").value;
-//        }
-//    } else {
-//        document.getElementById("skill11").value = nTrainedSkillBonus + intInput;
-//        if (document.getElementById("skill11").value > 0) {
-//            document.getElementById("skill11").value = "+" + document.getElementById("skill11").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck12").checked == true) {
-//        document.getElementById("skill12").value = trainedSkillBonus + intInput;
-//        if (document.getElementById("skill12").value > 0) {
-//            document.getElementById("skill12").value = "+" + document.getElementById("skill12").value;
-//        }
-//    } else {
-//        document.getElementById("skill12").value = nTrainedSkillBonus + intInput;
-//        if (document.getElementById("skill12").value > 0) {
-//            document.getElementById("skill12").value = "+" + document.getElementById("skill12").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck13").checked == true) {
-//        document.getElementById("skill13").value = trainedSkillBonus + intInput;
-//        if (document.getElementById("skill13").value > 0) {
-//            document.getElementById("skill13").value = "+" + document.getElementById("skill13").value;
-//        }
-//    } else {
-//        document.getElementById("skill13").value = nTrainedSkillBonus + intInput;
-//        if (document.getElementById("skill13").value > 0) {
-//            document.getElementById("skill13").value = "+" + document.getElementById("skill13").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck14").checked == true) {
-//        document.getElementById("skill14").value = trainedSkillBonus + intInput;
-//       if ( document.getElementById("skill14").value > 0) {
-//        document.getElementById("skill14").value = "+" + document.getElementById("skill14").value;
-//        }
-//    } else {
-//        document.getElementById("skill14").value = nTrainedSkillBonus + intInput;
-//        if (document.getElementById("skill14").value > 0) {
-//            document.getElementById("skill14").value = "+" + document.getElementById("skill14").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck15").checked == true) {
-//        document.getElementById("skill15").value = trainedSkillBonus + intInput;
-//        if (document.getElementById("skill15").value > 0) {
-//            document.getElementById("skill15").value = "+" + document.getElementById("skill15").value;
-//        }
-//    } else {
-//        document.getElementById("skill15").value = nTrainedSkillBonus + intInput;
-//        if (document.getElementById("skill15").value > 0) {
-//            document.getElementById("skill15").value = "+" + document.getElementById("skill15").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck16").checked == true) {
-//        document.getElementById("skill16").value = trainedSkillBonus + wisInput;
-//        if (document.getElementById("skill16").value > 0) {
-//            document.getElementById("skill16").value = "+" + document.getElementById("skill16").value;
-//        }
-//    } else {
-//        document.getElementById("skill16").value = nTrainedSkillBonus + wisInput;
-//        if (document.getElementById("skill16").value > 0) {
-//            document.getElementById("skill16").value = "+" + document.getElementById("skill16").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck17").checked == true) {
-//        document.getElementById("skill17").value = trainedSkillBonus + wisInput;
-//        if (document.getElementById("skill17").value > 0) {
-//            document.getElementById("skill17").value = "+" + document.getElementById("skill17").value;
-//        }
-//    } else {
-//        document.getElementById("skill17").value = nTrainedSkillBonus + wisInput;
-//        if (document.getElementById("skill17").value > 0) {
-//            document.getElementById("skill17").value = "+" + document.getElementById("skill17").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck19").checked == true) {
-//        document.getElementById("skill19").value = trainedSkillBonus + wisInput;
-//        if (document.getElementById("skill19").value > 0) {
-//            document.getElementById("skill19").value = "+" + document.getElementById("skill19").value;
-//        }
-//    } else {
-//        document.getElementById("skill19").value = nTrainedSkillBonus + wisInput;
-//        if (document.getElementById("skill19").value > 0) {
-//            document.getElementById("skill19").value = "+" + document.getElementById("skill19").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck20").checked == true) {
-//        document.getElementById("skill20").value = trainedSkillBonus + chaInput;
-//        if (document.getElementById("skill20").value > 0) {
-//            document.getElementById("skill20").value = "+" + document.getElementById("skill20").value;
-//        }
-//    } else {
-//        document.getElementById("skill20").value = nTrainedSkillBonus + chaInput;
-//        if (document.getElementById("skill20").value > 0) {
-//            document.getElementById("skill20").value = "+" + document.getElementById("skill20").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck21").checked == true) {
-//        document.getElementById("skill21").value = trainedSkillBonus + chaInput;
-//        if (document.getElementById("skill21").value > 0) {
-//            document.getElementById("skill21").value = "+" + document.getElementById("skill21").value;
-//        }
-//    } else {
-//        document.getElementById("skill21").value = nTrainedSkillBonus + chaInput;
-//        if (document.getElementById("skill21").value > 0) {
-//            document.getElementById("skill21").value = "+" + document.getElementById("skill21").value;
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck22").checked == true) {
-//        document.getElementById("skill22").value = trainedSkillBonus + chaInput;
-//        if (document.getElementById("skill22").value > 0) {
-//            document.getElementById("skill22").value = "+" + document.getElementById("skill22").value;
-//        }
-//    } else {
-//        document.getElementById("skill22").value = nTrainedSkillBonus + chaInput;
-//        if (document.getElementById("skill22").value > 0) {
-//    document.getElementById("skill22").value = "+" + document.getElementById("skill22").value;            
-//        }
-//    }
-//
-//    if (document.getElementById("skillCheck23").checked == true) {
-//        document.getElementById("skill23").value = trainedSkillBonus + chaInput;
-//        if (document.getElementById("skill23").value > 0) {
-//            document.getElementById("skill23").value = "+" + document.getElementById("skill23").value;
-//        }
-//    } else {
-//        document.getElementById("skill23").value = nTrainedSkillBonus + chaInput;
-//        if (document.getElementById("skill23").value > 0) {
-//            document.getElementById("skill23").value = "+" + document.getElementById("skill23").value;
-//        }
-//    }
-//};
-//
-//setSkills()
+let setSkills = () => {
+
+    let radio1 = document.querySelector('input[name="training1"]:checked').id;
+    let radio2 = document.querySelector('input[name="training2"]:checked').id;
+    let radio3 = document.querySelector('input[name="training3"]:checked').id;
+    let radio4 = document.querySelector('input[name="training4"]:checked').id;
+    let radio5 = document.querySelector('input[name="training5"]:checked').id;
+    let radio6 = document.querySelector('input[name="training6"]:checked').id;
+    let radio7 = document.querySelector('input[name="training7"]:checked').id;
+    let radio8 = document.querySelector('input[name="training8"]:checked').id;
+    let radio9 = document.querySelector('input[name="training9"]:checked').id;
+    let radio10 = document.querySelector('input[name="training10"]:checked').id;
+    let radio11 = document.querySelector('input[name="training11"]:checked').id;
+    let radio12 = document.querySelector('input[name="training12"]:checked').id;
+    let radio13 = document.querySelector('input[name="training13"]:checked').id;
+    let radio14 = document.querySelector('input[name="training14"]:checked').id;
+    let radio15 = document.querySelector('input[name="training15"]:checked').id;
+    let radio16 = document.querySelector('input[name="training16"]:checked').id;
+    let radio17 = document.querySelector('input[name="training17"]:checked').id;
+    let radio18 = document.querySelector('input[name="training18"]:checked').id;
+    let radio19 = document.querySelector('input[name="training19"]:checked').id;
+    let radio20 = document.querySelector('input[name="training20"]:checked').id;
+    let radio21 = document.querySelector('input[name="training21"]:checked').id;
+    
+
+    if (radio1 === "skillRadio1") {
+        document.getElementById("skill2").value = "+5";
+    } else if (radio1 === "skillRadio2") {
+        document.getElementById("skill2").value = "+10";
+    } else if (radio1 === "skillRadio3") {
+        document.getElementById("skill2").value = "+15";
+    }
+
+    if (radio2 === "skillRadio4") {
+        document.getElementById("skill3").value = "+5";
+    } else if (radio2 === "skillRadio5") {
+        document.getElementById("skill3").value = "+10";
+    } else if (radio2 === "skillRadio6") {
+        document.getElementById("skill3").value = "+15";
+    }
+};
+
+setSkills();
