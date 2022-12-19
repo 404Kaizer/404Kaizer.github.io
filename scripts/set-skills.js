@@ -1,193 +1,276 @@
-//let setSkills = () => {
-//
-//    let radio1 = document.querySelector('input[name="training1"]:checked').id;
-//    let radio2 = document.querySelector('input[name="training2"]:checked').id;
-//    let radio3 = document.querySelector('input[name="training3"]:checked').id;
-//    let radio4 = document.querySelector('input[name="training4"]:checked').id;
-//    let radio5 = document.querySelector('input[name="training5"]:checked').id;
-//    let radio6 = document.querySelector('input[name="training6"]:checked').id;
-//    let radio7 = document.querySelector('input[name="training7"]:checked').id;
-//    let radio8 = document.querySelector('input[name="training8"]:checked').id;
-//    let radio9 = document.querySelector('input[name="training9"]:checked').id;
-//    let radio10 = document.querySelector('input[name="training10"]:checked').id;
-//    let radio11 = document.querySelector('input[name="training11"]:checked').id;
-//    let radio12 = document.querySelector('input[name="training12"]:checked').id;
-//    let radio13 = document.querySelector('input[name="training13"]:checked').id;
-//    let radio14 = document.querySelector('input[name="training14"]:checked').id;
-//    let radio15 = document.querySelector('input[name="training15"]:checked').id;
-//    let radio16 = document.querySelector('input[name="training16"]:checked').id;
-//    let radio17 = document.querySelector('input[name="training17"]:checked').id;
-//    let radio18 = document.querySelector('input[name="training18"]:checked').id;
-//    let radio19 = document.querySelector('input[name="training19"]:checked').id;
-//    let radio20 = document.querySelector('input[name="training20"]:checked').id;
-//    let radio21 = document.querySelector('input[name="training21"]:checked').id;
-//    
-//
-//    if (radio1 === "skillRadio1") {
-//        document.getElementById("skill2").value = "+5";
-//    } else if (radio1 === "skillRadio2") {
-//        document.getElementById("skill2").value = "+10";
-//    } else if (radio1 === "skillRadio3") {
-//        document.getElementById("skill2").value = "+15";
-//    }
-//
-//    if (radio2 === "skillRadio4") {
-//        document.getElementById("skill3").value = "+5";
-//    } else if (radio2 === "skillRadio5") {
-//        document.getElementById("skill3").value = "+10";
-//    } else if (radio2 === "skillRadio6") {
-//        document.getElementById("skill3").value = "+15";
-//    }
-//
-//    if (radio3 === "skillRadio7") {
-//        document.getElementById("skill4").value = "+5";
-//    } else if (radio3 === "skillRadio8") {
-//        document.getElementById("skill4").value = "+10";
-//    } else if (radio3 === "skillRadio9") {
-//        document.getElementById("skill4").value = "+15";
-//    }
-//
-//    if (radio4 === "skillRadio10") {
-//        document.getElementById("skill5").value = "+5";
-//    } else if (radio4 === "skillRadio11") {
-//        document.getElementById("skill5").value = "+10";
-//    } else if (radio4 === "skillRadio12") {
-//        document.getElementById("skill5").value = "+15";
-//    }
-//
-//    if (radio5 === "skillRadio13") {
-//        document.getElementById("skill6").value = "+5";
-//    } else if (radio5 === "skillRadio14") {
-//        document.getElementById("skill6").value = "+10";
-//    } else if (radio5 === "skillRadio15") {
-//        document.getElementById("skill6").value = "+15";
-//    }
-//
-//    if (radio6 === "skillRadio16") {
-//        document.getElementById("skill7").value = "+5";
-//    } else if (radio6 === "skillRadio17") {
-//        document.getElementById("skill7").value = "+10";
-//    } else if (radio6 === "skillRadio18") {
-//        document.getElementById("skill7").value = "+15";
-//    }
-//
-//    if (radio7 === "skillRadio19") {
-//        document.getElementById("skill8").value = "+5";
-//    } else if (radio7 === "skillRadio20") {
-//        document.getElementById("skill8").value = "+10";
-//    } else if (radio7 === "skillRadio21") {
-//        document.getElementById("skill8").value = "+15";
-//    }
-//
-//    if (radio8 === "skillRadio22") {
-//        document.getElementById("skill9").value = "+5";
-//    } else if (radio8 === "skillRadio23") {
-//        document.getElementById("skill9").value = "+10";
-//    } else if (radio8 === "skillRadio24") {
-//        document.getElementById("skill9").value = "+15";
-//    }
-//
-//    if (radio9 === "skillRadio25") {
-//        document.getElementById("skill10").value = "+5";
-//    } else if (radio9 === "skillRadio26") {
-//        document.getElementById("skill10").value = "+10";
-//    } else if (radio9 === "skillRadio27") {
-//        document.getElementById("skill10").value = "+15";
-//    }
-//
-//    if (radio10 === "skillRadio28") {
-//        document.getElementById("skill11").value = "+5";
-//    } else if (radio10 === "skillRadio29") {
-//        document.getElementById("skill11").value = "+10";
-//    } else if (radio10 === "skillRadio30") {
-//        document.getElementById("skill11").value = "+15";
-//    }
-//
-//    if (radio11 === "skillRadio31") {
-//        document.getElementById("skill12").value = "+5";
-//    } else if (radio11 === "skillRadio32") {
-//        document.getElementById("skill12").value = "+10";
-//    } else if (radio11 === "skillRadio33") {
-//        document.getElementById("skill12").value = "+15";
-//    }
-//
-//    if (radio12 === "skillRadio34") {
-//        document.getElementById("skill13").value = "+5";
-//    } else if (radio12 === "skillRadio35") {
-//        document.getElementById("skill13").value = "+10";
-//    } else if (radio12 === "skillRadio36") {
-//        document.getElementById("skill13").value = "+15";
-//    }
-//
-//    if (radio13 === "skillRadio37") {
-//        document.getElementById("skill14").value = "+5";
-//    } else if (radio13 === "skillRadio38") {
-//        document.getElementById("skill14").value = "+10";
-//    } else if (radio13 === "skillRadio39") {
-//        document.getElementById("skill14").value = "+15";
-//    }
-//
-//    if (radio14 === "skillRadio40") {
-//        document.getElementById("skill15").value = "+5";
-//    } else if (radio14 === "skillRadio41") {
-//        document.getElementById("skill15").value = "+10";
-//    } else if (radio14 === "skillRadio42") {
-//        document.getElementById("skill15").value = "+15";
-//    }
-//
-//    if (radio15 === "skillRadio43") {
-//        document.getElementById("skill16").value = "+5";
-//    } else if (radio15 === "skillRadio44") {
-//        document.getElementById("skill16").value = "+10";
-//    } else if (radio15 === "skillRadio45") {
-//        document.getElementById("skill16").value = "+15";
-//    }
-//
-//    if (radio16 === "skillRadio46") {
-//        document.getElementById("skill17").value = "+5";
-//    } else if (radio16 === "skillRadio47") {
-//        document.getElementById("skill17").value = "+10";
-//    } else if (radio16 === "skillRadio48") {
-//        document.getElementById("skill17").value = "+15";
-//    }
-//
-//    if (radio17 === "skillRadio49") {
-//        document.getElementById("skill19").value = "+5";
-//    } else if (radio17 === "skillRadio50") {
-//        document.getElementById("skill19").value = "+10";
-//    } else if (radio17 === "skillRadio51") {
-//        document.getElementById("skill19").value = "+15";
-//    }
-//
-//    if (radio18 === "skillRadio52") {
-//        document.getElementById("skill20").value = "+5";
-//    } else if (radio18 === "skillRadio53") {
-//        document.getElementById("skill20").value = "+10";
-//    } else if (radio18 === "skillRadio54") {
-//        document.getElementById("skill120").value = "+15";
-//    }
-//
-//    if (radio19 === "skillRadio55") {
-//        document.getElementById("skill21").value = "+5";
-//    } else if (radio19 === "skillRadio56") {
-//        document.getElementById("skill21").value = "+10";
-//    } else if (radio19 === "skillRadio57") {
-//        document.getElementById("skill21").value = "+15";
-//    }
-//
-//    if (radio20 === "skillRadio58") {
-//        document.getElementById("skill22").value = "+5";
-//    } else if (radio20 === "skillRadio59") {
-//        document.getElementById("skill22").value = "+10";
-//    } else if (radio20 === "skillRadio60") {
-//        document.getElementById("skill22").value = "+15";
-//    }
-//
-//    if (radio21 === "skillRadio61") {
-//        document.getElementById("skill23").value = "+5";
-//    } else if (radio21 === "skillRadio62") {
-//        document.getElementById("skill23").value = "+10";
-//    } else if (radio21 === "skillRadio63") {
-//        document.getElementById("skill23").value = "+15";
-//    }
-//};
+let setSkills = () => {
+
+    let radio1 = document.getElementById("skillRadio1").checked;
+    let radio2 = document.getElementById("skillRadio2").checked;
+    let radio3 = document.getElementById("skillRadio3").checked;
+    let radio4 = document.getElementById("skillRadio4").checked;
+    let radio5 = document.getElementById("skillRadio5").checked;
+    let radio6 = document.getElementById("skillRadio6").checked;
+    let radio7 = document.getElementById("skillRadio7").checked;
+    let radio8 = document.getElementById("skillRadio8").checked;
+    let radio9 = document.getElementById("skillRadio9").checked;
+    let radio10 = document.getElementById("skillRadio10").checked;
+    let radio11 = document.getElementById("skillRadio11").checked;
+    let radio12 = document.getElementById("skillRadio12").checked;
+    let radio13 = document.getElementById("skillRadio13").checked;
+    let radio14 = document.getElementById("skillRadio14").checked;
+    let radio15 = document.getElementById("skillRadio15").checked;
+    let radio16 = document.getElementById("skillRadio16").checked;
+    let radio17 = document.getElementById("skillRadio17").checked;
+    let radio18 = document.getElementById("skillRadio18").checked;
+    let radio19 = document.getElementById("skillRadio19").checked;
+    let radio20 = document.getElementById("skillRadio20").checked;
+    let radio21 = document.getElementById("skillRadio21").checked;
+    let radio22 = document.getElementById("skillRadio22").checked;
+    let radio23 = document.getElementById("skillRadio23").checked;
+    let radio24 = document.getElementById("skillRadio24").checked;
+    let radio25 = document.getElementById("skillRadio25").checked;
+    let radio26 = document.getElementById("skillRadio26").checked;
+    let radio27 = document.getElementById("skillRadio27").checked;
+    let radio28 = document.getElementById("skillRadio28").checked;
+    let radio29 = document.getElementById("skillRadio29").checked;
+    let radio30 = document.getElementById("skillRadio30").checked;
+    let radio31 = document.getElementById("skillRadio31").checked;
+    let radio32 = document.getElementById("skillRadio32").checked;
+    let radio33 = document.getElementById("skillRadio33").checked;
+    let radio34 = document.getElementById("skillRadio34").checked;
+    let radio35 = document.getElementById("skillRadio35").checked;
+    let radio36 = document.getElementById("skillRadio36").checked;
+    let radio37 = document.getElementById("skillRadio37").checked;
+    let radio38 = document.getElementById("skillRadio38").checked;
+    let radio39 = document.getElementById("skillRadio39").checked;
+    let radio40 = document.getElementById("skillRadio40").checked;
+    let radio41 = document.getElementById("skillRadio41").checked;
+    let radio42 = document.getElementById("skillRadio42").checked;
+    let radio43 = document.getElementById("skillRadio43").checked;
+    let radio44 = document.getElementById("skillRadio44").checked;
+    let radio45 = document.getElementById("skillRadio45").checked;
+    let radio46 = document.getElementById("skillRadio46").checked;
+    let radio47 = document.getElementById("skillRadio47").checked;
+    let radio48 = document.getElementById("skillRadio48").checked;
+    let radio49 = document.getElementById("skillRadio49").checked;
+    let radio50 = document.getElementById("skillRadio50").checked;
+    let radio51 = document.getElementById("skillRadio51").checked;
+    let radio52 = document.getElementById("skillRadio52").checked;
+    let radio53 = document.getElementById("skillRadio53").checked;
+    let radio54 = document.getElementById("skillRadio54").checked;
+    let radio55 = document.getElementById("skillRadio55").checked;
+    let radio56 = document.getElementById("skillRadio56").checked;
+    let radio57 = document.getElementById("skillRadio57").checked;
+    let radio58 = document.getElementById("skillRadio58").checked;
+    let radio59 = document.getElementById("skillRadio59").checked;
+    let radio60 = document.getElementById("skillRadio60").checked;
+    let radio61 = document.getElementById("skillRadio61").checked;
+    let radio62 = document.getElementById("skillRadio62").checked;
+    let radio63 = document.getElementById("skillRadio63").checked;
+
+    if (radio1 === true) {
+        document.getElementById("skill2").value = "+5";
+    } else if (radio2 === true) {
+        document.getElementById("skill2").value = "+10";
+    } else if (radio3 === true) {
+        document.getElementById("skill2").value = "+15";
+    } else {
+        document.getElementById("skill2").value = "+0";
+    }
+
+    if (radio4 === true) {
+        document.getElementById("skill3").value = "+5";
+    } else if (radio5 === true) {
+        document.getElementById("skill3").value = "+10";
+    } else if (radio6 === true) {
+        document.getElementById("skill3").value = "+15";
+    } else {
+        document.getElementById("skill3").value = "+0";
+    }
+
+    if (radio7 === true) {
+        document.getElementById("skill4").value = "+5";
+    } else if (radio8 === true) {
+        document.getElementById("skill4").value = "+10";
+    } else if (radio9 === true) {
+        document.getElementById("skill4").value = "+15";
+    } else {
+        document.getElementById("skill4").value = "+0";
+    }
+
+    if (radio10 === true) {
+        document.getElementById("skill5").value = "+5";
+    } else if (radio11 === true) {
+        document.getElementById("skill5").value = "+10";
+    } else if (radio12 === true) {
+        document.getElementById("skill5").value = "+15";
+    } else {
+        document.getElementById("skill5").value = "+0";
+    }
+
+    if (radio13 === true) {
+        document.getElementById("skill6").value = "+5";
+    } else if (radio14 === true) {
+        document.getElementById("skill6").value = "+10";
+    } else if (radio15 === true) {
+        document.getElementById("skill6").value = "+15";
+    } else {
+        document.getElementById("skill6").value = "+0";
+    }
+
+    if (radio16 === true) {
+        document.getElementById("skill7").value = "+5";
+    } else if (radio17 === true) {
+        document.getElementById("skill7").value = "+10";
+    } else if (radio18 === true) {
+        document.getElementById("skill7").value = "+15";
+    } else {
+        document.getElementById("skill7").value = "+0";
+    }
+
+    if (radio19 === true) {
+        document.getElementById("skill8").value = "+5";
+    } else if (radio20 === true) {
+        document.getElementById("skill8").value = "+10";
+    } else if (radio21 === true) {
+        document.getElementById("skill8").value = "+15";
+    } else {
+        document.getElementById("skill8").value = "+0";
+    }
+
+    if (radio22 === true) {
+        document.getElementById("skill9").value = "+5";
+    } else if (radio23 === true) {
+        document.getElementById("skill9").value = "+10";
+    } else if (radio24 === true) {
+        document.getElementById("skill9").value = "+15";
+    } else {
+        document.getElementById("skill9").value = "+0";
+    }
+
+    if (radio25 === true) {
+        document.getElementById("skill10").value = "+5";
+    } else if (radio26 === true) {
+        document.getElementById("skill10").value = "+10";
+    } else if (radio27 === true) {
+        document.getElementById("skill10").value = "+15";
+    } else {
+        document.getElementById("skill10").value = "+0";
+    }
+
+    if (radio28 === true) {
+        document.getElementById("skill11").value = "+5";
+    } else if (radio29 === true) {
+        document.getElementById("skill11").value = "+10";
+    } else if (radio30 === true) {
+        document.getElementById("skill11").value = "+15";
+    } else {
+        document.getElementById("skill11").value = "+0";
+    }
+
+    if (radio31 === true) {
+        document.getElementById("skill12").value = "+5";
+    } else if (radio32 === true) {1
+        document.getElementById("skill12").value = "+10";
+    } else if (radio33 === true) {1
+        document.getElementById("skill12").value = "+15";
+    } else {1
+        document.getElementById("skill12").value = "+0";
+    }
+
+    if (radio34 === true) {
+        document.getElementById("skill13").value = "+5";
+    } else if (radio35 === true) {
+        document.getElementById("skill13").value = "+10";
+    } else if (radio36 === true) {
+        document.getElementById("skill13").value = "+15";
+    } else {
+        document.getElementById("skill13").value = "+0";
+    }
+
+    if (radio37 === true) {
+        document.getElementById("skill14").value = "+5";
+    } else if (radio38 === true) {
+        document.getElementById("skill14").value = "+10";
+    } else if (radio39 === true) {
+        document.getElementById("skill14").value = "+15";
+    } else {
+        document.getElementById("skill14").value = "+0";
+    }
+
+    if (radio40 === true) {
+        document.getElementById("skill15").value = "+5";
+    } else if (radio41 === true) {
+        document.getElementById("skill15").value = "+10";
+    } else if (radio42 === true) {
+        document.getElementById("skill15").value = "+15";
+    } else {
+        document.getElementById("skill15").value = "+0";
+    }
+
+    if (radio43 === true) {
+        document.getElementById("skill16").value = "+5";
+    } else if (radio44 === true) {
+        document.getElementById("skill16").value = "+10";
+    } else if (radio45 === true) {
+        document.getElementById("skill16").value = "+15";
+    } else {
+        document.getElementById("skill16").value = "+0";
+    }
+
+    if (radio46 === true) {
+        document.getElementById("skill17").value = "+5";
+    } else if (radio47 === true) {
+        document.getElementById("skill17").value = "+10";
+    } else if (radio48 === true) {
+        document.getElementById("skill17").value = "+15";
+    } else {
+        document.getElementById("skill17").value = "+0";
+    }
+
+    if (radio49 === true) {
+        document.getElementById("skill19").value = "+5";
+    } else if (radio50 === true) {
+        document.getElementById("skill19").value = "+10";
+    } else if (radio51 === true) {
+        document.getElementById("skill19").value = "+15";
+    } else {
+        document.getElementById("skill19").value = "+0";
+    }
+
+    if (radio52 === true) {
+        document.getElementById("skill20").value = "+5";
+    } else if (radio53 === true) {
+        document.getElementById("skill20").value = "+10";
+    } else if (radio54 === true) {
+        document.getElementById("skill20").value = "+15";
+    } else {
+        document.getElementById("skill20").value = "+0";
+    }
+
+    if (radio55 === true) {
+        document.getElementById("skill21").value = "+5";
+    } else if (radio56 === true) {
+        document.getElementById("skill21").value = "+10";
+    } else if (radio57 === true) {
+        document.getElementById("skill21").value = "+15";
+    } else {
+        document.getElementById("skill21").value = "+0";
+    }
+
+    if (radio58 === true) {
+        document.getElementById("skill22").value = "+5";
+    } else if (radio59 === true) {
+        document.getElementById("skill22").value = "+10";
+    } else if (radio60 === true) {
+        document.getElementById("skill22").value = "+15";
+    } else {
+        document.getElementById("skill22").value = "+0";
+    }
+
+    if (radio61 === true) {
+        document.getElementById("skill23").value = "+5";
+    } else if (radio62 === true) {
+        document.getElementById("skill23").value = "+10";
+    } else if (radio63 === true) {
+        document.getElementById("skill23").value = "+15";
+    } else {
+        document.getElementById("skill23").value = "+0";
+    }
+};

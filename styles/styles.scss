@@ -762,7 +762,7 @@ body {
 
         #editContent1 {
 
-            #wealth {
+            #wealth, #weight {
                 margin-bottom: 15px;
                     
                 div {
@@ -770,12 +770,22 @@ body {
                     grid-template-columns: auto auto auto;
                     gap: 15px;
 
-                    .wealthInput {
+                    .wealthInput, .weightInput {
                         text-align: center;
                         font-size: 20px;
                         background-color: black;
                         padding: 5px;
                     }
+                }
+            }
+
+            #weight {
+                margin-bottom: 15px;
+                    
+                div {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 15px;
                 }
             }
         }
@@ -854,15 +864,17 @@ body {
                 min-height: 497px;
             }
 
+            #editableArea2 {
+                min-height: 676px;
+            }
+
             .editableArea {
                 word-wrap: break-word;
                 word-break: break-all;
                 border: solid 1px gray;
                 background-color: black;
-                min-height: 587px;
                 width: 100%;
                 padding: 10px;
-                height: 100%;
             }
         }
     }

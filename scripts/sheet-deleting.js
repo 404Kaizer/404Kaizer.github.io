@@ -162,7 +162,6 @@ let deleteSheet = () => {
         // COMBAT
         localStorage.removeItem("editableArea3" + nameCheck);
         localStorage.removeItem("editableArea4" + nameCheck);
-        localStorage.removeItem("editableArea5" + nameCheck);
         localStorage.removeItem("editableArea6" + nameCheck);
         localStorage.removeItem("editableArea7" + nameCheck);
         localStorage.removeItem("editableArea8" + nameCheck);
@@ -175,6 +174,8 @@ let deleteSheet = () => {
         localStorage.removeItem("coin1" + nameCheck);
         localStorage.removeItem("coin2" + nameCheck);
         localStorage.removeItem("coin3" + nameCheck);
+        localStorage.removeItem("weight1" + nameCheck);
+        localStorage.removeItem("weight2" + nameCheck);
         localStorage.removeItem("editableArea1" + nameCheck);
         localStorage.removeItem("editableArea2" + nameCheck);
 

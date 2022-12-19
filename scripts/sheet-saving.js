@@ -157,7 +157,6 @@ let getInputValues = () => {
     // COMBAT
     document.getElementById("editableArea3").innerHTML = localStorage.getItem("editableArea3" + nameCheck);
     document.getElementById("editableArea4").innerHTML = localStorage.getItem("editableArea4" + nameCheck);
-    document.getElementById("editableArea5").innerHTML = localStorage.getItem("editableArea5" + nameCheck);
     document.getElementById("editableArea6").innerHTML = localStorage.getItem("editableArea6" + nameCheck);
     document.getElementById("editableArea7").innerHTML = localStorage.getItem("editableArea7" + nameCheck);
     document.getElementById("editableArea8").innerHTML = localStorage.getItem("editableArea8" + nameCheck);
@@ -170,6 +169,8 @@ let getInputValues = () => {
     document.getElementById("coin1").value = localStorage.getItem("coin1" + nameCheck);
     document.getElementById("coin2").value = localStorage.getItem("coin2" + nameCheck);
     document.getElementById("coin3").value = localStorage.getItem("coin3" + nameCheck);
+    document.getElementById("weight1").value = localStorage.getItem("weight1" + nameCheck);
+    document.getElementById("weight2").value = localStorage.getItem("weight2" + nameCheck);
     document.getElementById("editableArea1").innerHTML = localStorage.getItem("editableArea1" + nameCheck);
     document.getElementById("editableArea2").innerHTML = localStorage.getItem("editableArea2" + nameCheck);
 
@@ -343,7 +344,6 @@ let setInputValues = () => {
     // COMBAT
     localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerHTML);
     localStorage.setItem("editableArea4" + nameCheck, document.getElementById("editableArea4").innerHTML);
-    localStorage.setItem("editableArea5" + nameCheck, document.getElementById("editableArea5").innerHTML);
     localStorage.setItem("editableArea6" + nameCheck, document.getElementById("editableArea6").innerHTML);
     localStorage.setItem("editableArea7" + nameCheck, document.getElementById("editableArea7").innerHTML);
     localStorage.setItem("editableArea8" + nameCheck, document.getElementById("editableArea8").innerHTML);
@@ -356,6 +356,8 @@ let setInputValues = () => {
     localStorage.setItem("coin1" + nameCheck, document.getElementById("coin1").value);
     localStorage.setItem("coin2" + nameCheck, document.getElementById("coin2").value);
     localStorage.setItem("coin3" + nameCheck, document.getElementById("coin3").value);
+    localStorage.setItem("weight1" + nameCheck, document.getElementById("weight1").value);
+    localStorage.setItem("weight2" + nameCheck, document.getElementById("weight2").value);
     localStorage.setItem("editableArea1" + nameCheck, document.getElementById("editableArea1").innerHTML);
     localStorage.setItem("editableArea2" + nameCheck, document.getElementById("editableArea2").innerHTML);
 

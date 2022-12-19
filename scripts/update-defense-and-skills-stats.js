@@ -47,5 +47,3 @@ let updateDefenseMods = () => {
         document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
     }
 };
-
-updateDefenseMods()

@@ -642,19 +642,27 @@ body input:hover {
        column-gap: 10px;
   width: 100%;
 }
-#main #section5 #editContent1 #wealth {
+#main #section5 #editContent1 #wealth, #main #section5 #editContent1 #weight {
   margin-bottom: 15px;
 }
-#main #section5 #editContent1 #wealth div {
+#main #section5 #editContent1 #wealth div, #main #section5 #editContent1 #weight div {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 15px;
 }
-#main #section5 #editContent1 #wealth div .wealthInput {
+#main #section5 #editContent1 #wealth div .wealthInput, #main #section5 #editContent1 #wealth div .weightInput, #main #section5 #editContent1 #weight div .wealthInput, #main #section5 #editContent1 #weight div .weightInput {
   text-align: center;
   font-size: 20px;
   background-color: black;
   padding: 5px;
+}
+#main #section5 #editContent1 #weight {
+  margin-bottom: 15px;
+}
+#main #section5 #editContent1 #weight div {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
 }
 #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
   display: grid;
@@ -716,15 +724,16 @@ body input:hover {
 #main #section5 #editContent1 #editableArea1, #main #section5 #editContent2 #editableArea1 {
   min-height: 497px;
 }
+#main #section5 #editContent1 #editableArea2, #main #section5 #editContent2 #editableArea2 {
+  min-height: 676px;
+}
 #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
   word-wrap: break-word;
   word-break: break-all;
   border: solid 1px gray;
   background-color: black;
-  min-height: 587px;
   width: 100%;
   padding: 10px;
-  height: 100%;
 }
 #main #section6 {
   display: none;
