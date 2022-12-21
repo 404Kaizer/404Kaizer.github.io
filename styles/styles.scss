@@ -1363,6 +1363,11 @@ body {
                     }
                 }
             }
+
+            #attackAndTraining {
+                display: grid;
+                row-gap: 15px;
+            }
         }
 
         #section4 {
