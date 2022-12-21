@@ -43,7 +43,7 @@ let sheetIdChange = () => {
     localStorage.removeItem("magicalRDMG" + nameCheck);
     localStorage.removeItem("velocity" + nameCheck);
     localStorage.removeItem("textArea5" + nameCheck);
-    localStorage.removeItem("strInput" + nameCheck);
+    localStorage.removeItem("textArea6" + nameCheck);
     //localStorage.removeItem("strModInput" + nameCheck);
     localStorage.removeItem("agiInput" + nameCheck);
     //localStorage.removeItem("agiModInput" + nameCheck);
@@ -210,6 +210,7 @@ let sheetIdChange = () => {
     localStorage.setItem("magicalRDMG" + nameCheck, document.getElementById("magicalRDMG").value);
     localStorage.setItem("velocity" + nameCheck, document.getElementById("velocity").value);
     localStorage.setItem("textArea5" + nameCheck, document.getElementById("textArea5").value);
+    localStorage.setItem("textArea6" + nameCheck, document.getElementById("textArea6").value);
     localStorage.setItem("strInput" + nameCheck, document.getElementById("strInput").value);
     //localStorage.setItem("strModInput" + nameCheck, document.getElementById("strModInput").value);
     localStorage.setItem("agiInput" + nameCheck, document.getElementById("agiInput").value);

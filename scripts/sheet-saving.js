@@ -55,6 +55,7 @@ let getInputValues = () => {
     document.getElementById("magicalRDMG").value = localStorage.getItem("magicalRDMG" + nameCheck);
     document.getElementById("velocity").value = localStorage.getItem("velocity" + nameCheck);
     document.getElementById("textArea5").value = localStorage.getItem("textArea5" + nameCheck);
+    document.getElementById("textArea6").value = localStorage.getItem("textArea6" + nameCheck);
     document.getElementById("strInput").value = localStorage.getItem("strInput" + nameCheck);
     //document.getElementById("strModInput").value = localStorage.getItem("strModInput" + nameCheck);
     document.getElementById("agiInput").value = localStorage.getItem("agiInput" + nameCheck);
@@ -242,6 +243,7 @@ let setInputValues = () => {
     localStorage.setItem("magicalRDMG" + nameCheck, document.getElementById("magicalRDMG").value);
     localStorage.setItem("velocity" + nameCheck, document.getElementById("velocity").value);
     localStorage.setItem("textArea5" + nameCheck, document.getElementById("textArea5").value);
+    localStorage.setItem("textArea6" + nameCheck, document.getElementById("textArea6").value);
     localStorage.setItem("strInput" + nameCheck, document.getElementById("strInput").value);
     //localStorage.setItem("strModInput" + nameCheck, document.getElementById("strModInput").value);
     localStorage.setItem("agiInput" + nameCheck, document.getElementById("agiInput").value);

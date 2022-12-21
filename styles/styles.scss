@@ -442,19 +442,29 @@ body {
                         align-items: center;
                         gap: 10px;
                     }
+                }
+            }
+        }
 
-                    #textAreasDiv4 {
-                        display: grid;
-                        width: 100%;
+        #attackAndTraining {
+            display: flex;
+            column-gap: 15px;
 
-                        .infoTextarea {
-                            background-color: black;
-                            resize: none;
-                            min-height: 200px;
-                            font-size: 16px;
-                            padding: 10px;
-                        }
-                    }
+            span {
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+            #textAreasDiv4, #textAreasDiv5 {
+                display: grid;
+                width: 100%;
+
+                .infoTextarea {
+                    background-color: black;
+                    resize: none;
+                    min-height: 200px;
+                    font-size: 16px;
+                    padding: 10px;
                 }
             }
         }

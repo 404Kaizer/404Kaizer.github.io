@@ -370,11 +370,20 @@ body input:hover {
   align-items: center;
   gap: 10px;
 }
-#main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 {
+#main #section3 #attackAndTraining {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+#main #section3 #attackAndTraining span {
+  font-size: 17px;
+  font-weight: bold;
+}
+#main #section3 #attackAndTraining #textAreasDiv4, #main #section3 #attackAndTraining #textAreasDiv5 {
   display: grid;
   width: 100%;
 }
-#main #section3 #statusDiv #bodyStatus #protectionDiv #textAreasDiv4 .infoTextarea {
+#main #section3 #attackAndTraining #textAreasDiv4 .infoTextarea, #main #section3 #attackAndTraining #textAreasDiv5 .infoTextarea {
   background-color: black;
   resize: none;
   min-height: 200px;
