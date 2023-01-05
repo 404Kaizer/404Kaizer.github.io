@@ -561,7 +561,7 @@ body {
                     grid-template-columns: auto auto auto auto;
 
                     .skillsGrid {
-                                                    
+
                         #powerDiv {
                             display: flex;
                             justify-content: center;
@@ -1126,6 +1126,46 @@ body {
                 gap: 15px;
             }
         }
+
+        #section5 {
+            display: none;
+            grid-template-columns: auto;
+            column-gap: 10px;
+
+            #editContent1 {
+    
+                #wealth {
+                    margin-bottom: 15px;
+                        
+                    div {
+                        display: grid;
+                        grid-template-columns: auto;
+                        gap: 15px;
+    
+                        .wealthInput {
+                            text-align: center;
+                            width: 100%;
+                            font-size: 20px;
+                            background-color: black;
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+    
+            #editContent1, #editContent2 {
+
+                .editOpts {
+                    display: flex;
+                    justify-content: left;
+                }
+                
+                .editableArea {
+                    resize: none;
+                    font-size: 17px;
+                }
+            }
+        }
     }
 }
 
@@ -1404,46 +1444,6 @@ body {
             }
         }
 
-        #section5 {
-            display: none;
-            grid-template-columns: auto;
-            column-gap: 10px;
-
-            #editContent1 {
-    
-                #wealth {
-                    margin-bottom: 15px;
-                        
-                    div {
-                        display: grid;
-                        grid-template-columns: auto;
-                        gap: 15px;
-    
-                        .wealthInput {
-                            text-align: center;
-                            width: 100%;
-                            font-size: 20px;
-                            background-color: black;
-                            padding: 10px;
-                        }
-                    }
-                }
-            }
-    
-            #editContent1, #editContent2 {
-
-                .editOpts {
-                    display: flex;
-                    justify-content: left;
-                }
-                
-                .editableArea {
-                    resize: none;
-                    font-size: 17px;
-                }
-            }
-        }
-
         #section6 {
     
             .editOpts {
@@ -1637,7 +1637,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 590px) {
 
     #main {
         margin: 0;
@@ -1726,7 +1726,7 @@ body {
                         grid-template-columns: auto auto;
     
                         .skillsGrid {
-                           
+
                             .spanan {
                                 font-size: 17px;
                             }

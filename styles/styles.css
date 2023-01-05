@@ -899,6 +899,35 @@ body input:hover {
     grid-template-columns: auto;
     gap: 15px;
   }
+  #main #section5 {
+    display: none;
+    grid-template-columns: auto;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  #main #section5 #editContent1 #wealth {
+    margin-bottom: 15px;
+  }
+  #main #section5 #editContent1 #wealth div {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+  #main #section5 #editContent1 #wealth div .wealthInput {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    background-color: black;
+    padding: 10px;
+  }
+  #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
+    display: flex;
+    justify-content: left;
+  }
+  #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
+    resize: none;
+    font-size: 17px;
+  }
 }
 @media only screen and (max-width: 915px) {
   #main #section3 #statusDiv {
@@ -1082,35 +1111,6 @@ body input:hover {
     font-size: 17px;
     min-height: 587px;
   }
-  #main #section5 {
-    display: none;
-    grid-template-columns: auto;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
-  }
-  #main #section5 #editContent1 #wealth {
-    margin-bottom: 15px;
-  }
-  #main #section5 #editContent1 #wealth div {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 15px;
-  }
-  #main #section5 #editContent1 #wealth div .wealthInput {
-    text-align: center;
-    width: 100%;
-    font-size: 20px;
-    background-color: black;
-    padding: 10px;
-  }
-  #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
-    display: flex;
-    justify-content: left;
-  }
-  #main #section5 #editContent1 .editableArea, #main #section5 #editContent2 .editableArea {
-    resize: none;
-    font-size: 17px;
-  }
   #main #section6 .editOpts {
     display: flex;
     justify-content: left;
@@ -1236,7 +1236,7 @@ body input:hover {
     font-size: 16px;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 590px) {
   #main {
     margin: 0;
   }
