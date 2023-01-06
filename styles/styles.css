@@ -1313,4 +1313,9 @@ body input:hover {
     width: 45px;
     padding: 2px;
   }
+  #main #section5 #editContent1 #weight div {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=styles.css.map */
