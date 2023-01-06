@@ -131,6 +131,12 @@ let getInputValues = () => {
     document.getElementById("skillRadio61").checked = JSON.parse(localStorage.getItem("skillRadio61" + nameCheck));
     document.getElementById("skillRadio62").checked = JSON.parse(localStorage.getItem("skillRadio62" + nameCheck));
     document.getElementById("skillRadio63").checked = JSON.parse(localStorage.getItem("skillRadio63" + nameCheck));
+    document.getElementById("skillRadio64").checked = JSON.parse(localStorage.getItem("skillRadio64" + nameCheck));
+    document.getElementById("skillRadio65").checked = JSON.parse(localStorage.getItem("skillRadio65" + nameCheck));
+    document.getElementById("skillRadio66").checked = JSON.parse(localStorage.getItem("skillRadio66" + nameCheck));
+    document.getElementById("skillRadio67").checked = JSON.parse(localStorage.getItem("skillRadio67" + nameCheck));
+    document.getElementById("skillRadio68").checked = JSON.parse(localStorage.getItem("skillRadio68" + nameCheck));
+    document.getElementById("skillRadio69").checked = JSON.parse(localStorage.getItem("skillRadio69" + nameCheck));
     document.getElementById("unskillRadio1").checked = JSON.parse(localStorage.getItem("unskillRadio1" + nameCheck));
     document.getElementById("unskillRadio2").checked = JSON.parse(localStorage.getItem("unskillRadio2" + nameCheck));
     document.getElementById("unskillRadio3").checked = JSON.parse(localStorage.getItem("unskillRadio3" + nameCheck));
@@ -152,6 +158,8 @@ let getInputValues = () => {
     document.getElementById("unskillRadio19").checked = JSON.parse(localStorage.getItem("unskillRadio19" + nameCheck));
     document.getElementById("unskillRadio20").checked = JSON.parse(localStorage.getItem("unskillRadio20" + nameCheck));
     document.getElementById("unskillRadio21").checked = JSON.parse(localStorage.getItem("unskillRadio21" + nameCheck));
+    document.getElementById("unskillRadio22").checked = JSON.parse(localStorage.getItem("unskillRadio22" + nameCheck));
+    document.getElementById("unskillRadio23").checked = JSON.parse(localStorage.getItem("unskillRadio23" + nameCheck));
     document.getElementById("skill0").value = localStorage.getItem("skill0" + nameCheck);
     document.getElementById("skill1").value = localStorage.getItem("skill1" + nameCheck);
     document.getElementById("skill2").value = localStorage.getItem("skill2" + nameCheck);
@@ -175,6 +183,8 @@ let getInputValues = () => {
     document.getElementById("skill21").value = localStorage.getItem("skill21" + nameCheck);
     document.getElementById("skill22").value = localStorage.getItem("skill22" + nameCheck);
     document.getElementById("skill23").value = localStorage.getItem("skill23" + nameCheck);
+    document.getElementById("skill24").value = localStorage.getItem("skill24" + nameCheck);
+    document.getElementById("skill25").value = localStorage.getItem("skill25" + nameCheck);
 
     // COMBAT
     document.getElementById("editableArea3").innerHTML = localStorage.getItem("editableArea3" + nameCheck);
@@ -340,6 +350,12 @@ let setInputValues = () => {
     localStorage.setItem("skillRadio61" + nameCheck, document.getElementById("skillRadio61").checked);
     localStorage.setItem("skillRadio62" + nameCheck, document.getElementById("skillRadio62").checked);
     localStorage.setItem("skillRadio63" + nameCheck, document.getElementById("skillRadio63").checked);
+    localStorage.setItem("skillRadio64" + nameCheck, document.getElementById("skillRadio64").checked);
+    localStorage.setItem("skillRadio65" + nameCheck, document.getElementById("skillRadio65").checked);
+    localStorage.setItem("skillRadio66" + nameCheck, document.getElementById("skillRadio66").checked);
+    localStorage.setItem("skillRadio67" + nameCheck, document.getElementById("skillRadio67").checked);
+    localStorage.setItem("skillRadio68" + nameCheck, document.getElementById("skillRadio68").checked);
+    localStorage.setItem("skillRadio69" + nameCheck, document.getElementById("skillRadio69").checked);
     localStorage.setItem("unskillRadio1" + nameCheck, document.getElementById("unskillRadio1").checked);
     localStorage.setItem("unskillRadio2" + nameCheck, document.getElementById("unskillRadio2").checked);
     localStorage.setItem("unskillRadio3" + nameCheck, document.getElementById("unskillRadio3").checked);
@@ -361,6 +377,8 @@ let setInputValues = () => {
     localStorage.setItem("unskillRadio19" + nameCheck, document.getElementById("unskillRadio19").checked);
     localStorage.setItem("unskillRadio20" + nameCheck, document.getElementById("unskillRadio20").checked);
     localStorage.setItem("unskillRadio21" + nameCheck, document.getElementById("unskillRadio21").checked);
+    localStorage.setItem("unskillRadio22" + nameCheck, document.getElementById("unskillRadio22").checked);
+    localStorage.setItem("unskillRadio23" + nameCheck, document.getElementById("unskillRadio23").checked);
     localStorage.setItem("skill0" + nameCheck, document.getElementById("skill0").value);
     localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
     localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
@@ -384,6 +402,8 @@ let setInputValues = () => {
     localStorage.setItem("skill21" + nameCheck, document.getElementById("skill21").value);
     localStorage.setItem("skill22" + nameCheck, document.getElementById("skill22").value);
     localStorage.setItem("skill23" + nameCheck, document.getElementById("skill23").value);
+    localStorage.setItem("skill24" + nameCheck, document.getElementById("skill24").value);
+    localStorage.setItem("skill25" + nameCheck, document.getElementById("skill25").value);
 
     // COMBAT
     localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerHTML);

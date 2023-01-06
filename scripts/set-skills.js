@@ -63,6 +63,12 @@ let setSkills = () => {
     let radio61 = document.getElementById("skillRadio61").checked;
     let radio62 = document.getElementById("skillRadio62").checked;
     let radio63 = document.getElementById("skillRadio63").checked;
+    let radio64 = document.getElementById("skillRadio64").checked;
+    let radio65 = document.getElementById("skillRadio65").checked;
+    let radio66 = document.getElementById("skillRadio66").checked;
+    let radio67 = document.getElementById("skillRadio67").checked;
+    let radio68 = document.getElementById("skillRadio68").checked;
+    let radio69 = document.getElementById("skillRadio69").checked;
 
     let unradio1 = document.getElementById("unskillRadio1").checked;
     let unradio2 = document.getElementById("unskillRadio2").checked;
@@ -85,6 +91,8 @@ let setSkills = () => {
     let unradio19 = document.getElementById("unskillRadio19").checked;
     let unradio20 = document.getElementById("unskillRadio20").checked;
     let unradio21 = document.getElementById("unskillRadio21").checked;
+    let unradio22 = document.getElementById("unskillRadio22").checked;
+    let unradio23 = document.getElementById("unskillRadio23").checked;
 
     if (radio1 === true) {
         document.getElementById("skill2").value = "+5";
@@ -294,5 +302,25 @@ let setSkills = () => {
         document.getElementById("skill23").value = "+15";
     } else if (unradio21 === true) {
         document.getElementById("skill23").value = "+0";
+    }
+
+    if (radio64 === true) {
+        document.getElementById("skill24").value = "+5";
+    } else if (radio65 === true) {
+        document.getElementById("skill24").value = "+10";
+    } else if (radio66 === true) {
+        document.getElementById("skill24").value = "+15";
+    } else if (unradio22 === true) {
+        document.getElementById("skill24").value = "+0";
+    }
+
+    if (radio67 === true) {
+        document.getElementById("skill25").value = "+5";
+    } else if (radio68 === true) {
+        document.getElementById("skill25").value = "+10";
+    } else if (radio69 === true) {
+        document.getElementById("skill25").value = "+15";
+    } else if (unradio23 === true) {
+        document.getElementById("skill25").value = "+0";
     }
 };

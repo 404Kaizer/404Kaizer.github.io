@@ -118,6 +118,12 @@ let sheetIdChange = () => {
     localStorage.removeItem("skillRadio61" + nameCheck);
     localStorage.removeItem("skillRadio62" + nameCheck);
     localStorage.removeItem("skillRadio63" + nameCheck);
+    localStorage.removeItem("skillRadio64" + nameCheck);
+    localStorage.removeItem("skillRadio65" + nameCheck);
+    localStorage.removeItem("skillRadio66" + nameCheck);
+    localStorage.removeItem("skillRadio67" + nameCheck);
+    localStorage.removeItem("skillRadio68" + nameCheck);
+    localStorage.removeItem("skillRadio69" + nameCheck);
     localStorage.removeItem("unskillRadio1" + nameCheck);
     localStorage.removeItem("unskillRadio2" + nameCheck);
     localStorage.removeItem("unskillRadio3" + nameCheck);
@@ -139,6 +145,8 @@ let sheetIdChange = () => {
     localStorage.removeItem("unskillRadio19" + nameCheck);
     localStorage.removeItem("unskillRadio20" + nameCheck);
     localStorage.removeItem("unskillRadio21" + nameCheck);
+    localStorage.removeItem("unskillRadio22" + nameCheck);
+    localStorage.removeItem("unskillRadio23" + nameCheck);
     localStorage.removeItem("skill0" + nameCheck);
     localStorage.removeItem("skill1" + nameCheck);
     localStorage.removeItem("skill2" + nameCheck);
@@ -162,6 +170,8 @@ let sheetIdChange = () => {
     localStorage.removeItem("skill21" + nameCheck);
     localStorage.removeItem("skill22" + nameCheck);
     localStorage.removeItem("skill23" + nameCheck);
+    localStorage.removeItem("skill24" + nameCheck);
+    localStorage.removeItem("skill25" + nameCheck);
 
     // DELETAR COMBAT
     localStorage.removeItem("editableArea3" + nameCheck);
@@ -307,6 +317,12 @@ let sheetIdChange = () => {
     localStorage.setItem("skillRadio61" + nameCheck, document.getElementById("skillRadio61").checked);
     localStorage.setItem("skillRadio62" + nameCheck, document.getElementById("skillRadio62").checked);
     localStorage.setItem("skillRadio63" + nameCheck, document.getElementById("skillRadio63").checked);
+    localStorage.setItem("skillRadio64" + nameCheck, document.getElementById("skillRadio65").checked);
+    localStorage.setItem("skillRadio65" + nameCheck, document.getElementById("skillRadio64").checked);
+    localStorage.setItem("skillRadio66" + nameCheck, document.getElementById("skillRadio66").checked);
+    localStorage.setItem("skillRadio67" + nameCheck, document.getElementById("skillRadio67").checked);
+    localStorage.setItem("skillRadio68" + nameCheck, document.getElementById("skillRadio68").checked);
+    localStorage.setItem("skillRadio69" + nameCheck, document.getElementById("skillRadio69").checked);
     localStorage.setItem("unskillRadio1" + nameCheck, document.getElementById("unskillRadio1").checked);
     localStorage.setItem("unskillRadio2" + nameCheck, document.getElementById("unskillRadio2").checked);
     localStorage.setItem("unskillRadio3" + nameCheck, document.getElementById("unskillRadio3").checked);
@@ -328,6 +344,8 @@ let sheetIdChange = () => {
     localStorage.setItem("unskillRadio19" + nameCheck, document.getElementById("unskillRadio19").checked);
     localStorage.setItem("unskillRadio20" + nameCheck, document.getElementById("unskillRadio20").checked);
     localStorage.setItem("unskillRadio21" + nameCheck, document.getElementById("unskillRadio21").checked);
+    localStorage.setItem("unskillRadio22" + nameCheck, document.getElementById("unskillRadio22").checked);
+    localStorage.setItem("unskillRadio23" + nameCheck, document.getElementById("unskillRadio23").checked);
     localStorage.setItem("skill0" + nameCheck, document.getElementById("skill0").value);
     localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
     localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
@@ -351,6 +369,8 @@ let sheetIdChange = () => {
     localStorage.setItem("skill21" + nameCheck, document.getElementById("skill21").value);
     localStorage.setItem("skill22" + nameCheck, document.getElementById("skill22").value);
     localStorage.setItem("skill23" + nameCheck, document.getElementById("skill23").value);
+    localStorage.setItem("skill24" + nameCheck, document.getElementById("skill24").value);
+    localStorage.setItem("skill25" + nameCheck, document.getElementById("skill25").value);
 
     // SALVAR COMBAT
     localStorage.setItem("editableArea3" + nameCheck, document.getElementById("editableArea3").innerHTML);

@@ -349,3 +349,25 @@ let openCloseSkillStatus21 = () => {
         openCloseRadioDiv21.style.display = "none";
     }
 };
+
+let openCloseSkillStatus22 = () => {
+
+    if(document.getElementById("skillSpan22").innerHTML === "+") {
+        document.getElementById("skillSpan22").innerHTML = "X";
+        openCloseRadioDiv22.style.display = "flex";
+    } else {
+        document.getElementById("skillSpan22").innerHTML = "+";
+        openCloseRadioDiv22.style.display = "none";
+    }
+};
+
+let openCloseSkillStatus23 = () => {
+
+    if(document.getElementById("skillSpan23").innerHTML === "+") {
+        document.getElementById("skillSpan23").innerHTML = "X";
+        openCloseRadioDiv23.style.display = "flex";
+    } else {
+        document.getElementById("skillSpan23").innerHTML = "+";
+        openCloseRadioDiv23.style.display = "none";
+    }
+};
