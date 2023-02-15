@@ -101,7 +101,7 @@ let setSkills = () => {
     } else if (radio3 === true) {
         document.getElementById("skill2").value = "+15";
     } else if (unradio1 === true) {
-        document.getElementById("skill2").value = "+0";
+        document.getElementById("skill2").value = "";
     }
 
     if (radio4 === true) {
@@ -111,7 +111,7 @@ let setSkills = () => {
     } else if (radio6 === true) {
         document.getElementById("skill3").value = "+15";
     } else if (unradio2 === true) {
-        document.getElementById("skill3").value = "+0";
+        document.getElementById("skill3").value = "";
     }
 
     if (radio7 === true) {
@@ -121,7 +121,7 @@ let setSkills = () => {
     } else if (radio9 === true) {
         document.getElementById("skill4").value = "+15";
     } else if (unradio3 === true) {
-        document.getElementById("skill4").value = "+0";
+        document.getElementById("skill4").value = "";
     }
 
     if (radio10 === true) {
@@ -131,7 +131,7 @@ let setSkills = () => {
     } else if (radio12 === true) {
         document.getElementById("skill5").value = "+15";
     } else if (unradio4 === true) {
-        document.getElementById("skill5").value = "+0";
+        document.getElementById("skill5").value = "";
     }
 
     if (radio13 === true) {
@@ -141,7 +141,7 @@ let setSkills = () => {
     } else if (radio15 === true) {
         document.getElementById("skill6").value = "+15";
     } else if (unradio5 === true) {
-        document.getElementById("skill6").value = "+0";
+        document.getElementById("skill6").value = "";
     }
 
     if (radio16 === true) {
@@ -151,7 +151,7 @@ let setSkills = () => {
     } else if (radio18 === true) {
         document.getElementById("skill7").value = "+15";
     } else if (unradio6 === true) {
-        document.getElementById("skill7").value = "+0";
+        document.getElementById("skill7").value = "";
     }
 
     if (radio19 === true) {
@@ -161,7 +161,7 @@ let setSkills = () => {
     } else if (radio21 === true) {
         document.getElementById("skill8").value = "+15";
     } else if (unradio7 === true) {
-        document.getElementById("skill8").value = "+0";
+        document.getElementById("skill8").value = "";
     }
 
     if (radio22 === true) {
@@ -171,7 +171,7 @@ let setSkills = () => {
     } else if (radio24 === true) {
         document.getElementById("skill9").value = "+15";
     } else if (unradio8 === true) {
-        document.getElementById("skill9").value = "+0";
+        document.getElementById("skill9").value = "";
     }
 
     if (radio25 === true) {
@@ -181,7 +181,7 @@ let setSkills = () => {
     } else if (radio27 === true) {
         document.getElementById("skill10").value = "+15";
     } else if (unradio9 === true) {
-        document.getElementById("skill10").value = "+0";
+        document.getElementById("skill10").value = "";
     }
 
     if (radio28 === true) {
@@ -191,7 +191,7 @@ let setSkills = () => {
     } else if (radio30 === true) {
         document.getElementById("skill11").value = "+15";
     } else if (unradio10 === true) {
-        document.getElementById("skill11").value = "+0";
+        document.getElementById("skill11").value = "";
     }
 
     if (radio31 === true) {
@@ -201,7 +201,7 @@ let setSkills = () => {
     } else if (radio33 === true) {1
         document.getElementById("skill12").value = "+15";
     } else if (unradio11 === true) {1
-        document.getElementById("skill12").value = "+0";
+        document.getElementById("skill12").value = "";
     }
 
     if (radio34 === true) {
@@ -211,7 +211,7 @@ let setSkills = () => {
     } else if (radio36 === true) {
         document.getElementById("skill13").value = "+15";
     } else if (unradio12 === true) {
-        document.getElementById("skill13").value = "+0";
+        document.getElementById("skill13").value = "";
     }
 
     if (radio37 === true) {
@@ -221,7 +221,7 @@ let setSkills = () => {
     } else if (radio39 === true) {
         document.getElementById("skill14").value = "+15";
     } else if (unradio13 === true) {
-        document.getElementById("skill14").value = "+0";
+        document.getElementById("skill14").value = "";
     }
 
     if (radio40 === true) {
@@ -231,7 +231,7 @@ let setSkills = () => {
     } else if (radio42 === true) {
         document.getElementById("skill15").value = "+15";
     } else if (unradio14 === true) {
-        document.getElementById("skill15").value = "+0";
+        document.getElementById("skill15").value = "";
     }
 
     if (radio43 === true) {
@@ -241,7 +241,7 @@ let setSkills = () => {
     } else if (radio45 === true) {
         document.getElementById("skill16").value = "+15";
     } else if (unradio15 === true) {
-        document.getElementById("skill16").value = "+0";
+        document.getElementById("skill16").value = "";
     }
 
     if (radio46 === true) {
@@ -251,7 +251,7 @@ let setSkills = () => {
     } else if (radio48 === true) {
         document.getElementById("skill17").value = "+15";
     } else if (unradio16 === true) {
-        document.getElementById("skill17").value = "+0";
+        document.getElementById("skill17").value = "";
     }
 
     if (radio49 === true) {
@@ -261,7 +261,7 @@ let setSkills = () => {
     } else if (radio51 === true) {
         document.getElementById("skill19").value = "+15";
     } else if (unradio17 === true) {
-        document.getElementById("skill19").value = "+0";
+        document.getElementById("skill19").value = "";
     }
 
     if (radio52 === true) {
@@ -271,7 +271,7 @@ let setSkills = () => {
     } else if (radio54 === true) {
         document.getElementById("skill20").value = "+15";
     } else if (unradio18 === true) {
-        document.getElementById("skill20").value = "+0";
+        document.getElementById("skill20").value = "";
     }
 
     if (radio55 === true) {
@@ -281,7 +281,7 @@ let setSkills = () => {
     } else if (radio57 === true) {
         document.getElementById("skill21").value = "+15";
     } else if (unradio19 === true) {
-        document.getElementById("skill21").value = "+0";
+        document.getElementById("skill21").value = "";
     }
 
     if (radio58 === true) {
@@ -291,7 +291,7 @@ let setSkills = () => {
     } else if (radio60 === true) {
         document.getElementById("skill22").value = "+15";
     } else if (unradio20 === true) {
-        document.getElementById("skill22").value = "+0";
+        document.getElementById("skill22").value = "";
     }
 
     if (radio61 === true) {
@@ -301,7 +301,7 @@ let setSkills = () => {
     } else if (radio63 === true) {
         document.getElementById("skill23").value = "+15";
     } else if (unradio21 === true) {
-        document.getElementById("skill23").value = "+0";
+        document.getElementById("skill23").value = "";
     }
 
     if (radio64 === true) {
@@ -311,7 +311,7 @@ let setSkills = () => {
     } else if (radio66 === true) {
         document.getElementById("skill24").value = "+15";
     } else if (unradio22 === true) {
-        document.getElementById("skill24").value = "+0";
+        document.getElementById("skill24").value = "";
     }
 
     if (radio67 === true) {
@@ -321,6 +321,6 @@ let setSkills = () => {
     } else if (radio69 === true) {
         document.getElementById("skill25").value = "+15";
     } else if (unradio23 === true) {
-        document.getElementById("skill25").value = "+0";
+        document.getElementById("skill25").value = "";
     }
 };
