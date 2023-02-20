@@ -142,6 +142,9 @@ let deleteSheet = () => {
     localStorage.removeItem("skillRadio67" + nameCheck);
     localStorage.removeItem("skillRadio68" + nameCheck);
     localStorage.removeItem("skillRadio69" + nameCheck);
+    localStorage.removeItem("skillRadio70" + nameCheck);
+    localStorage.removeItem("skillRadio71" + nameCheck);
+    localStorage.removeItem("skillRadio72" + nameCheck);
     localStorage.removeItem("unskillRadio1" + nameCheck);
     localStorage.removeItem("unskillRadio2" + nameCheck);
     localStorage.removeItem("unskillRadio3" + nameCheck);
@@ -165,6 +168,7 @@ let deleteSheet = () => {
     localStorage.removeItem("unskillRadio21" + nameCheck);
     localStorage.removeItem("unskillRadio22" + nameCheck);
     localStorage.removeItem("unskillRadio23" + nameCheck);
+    localStorage.removeItem("unskillRadio24" + nameCheck);
     localStorage.removeItem("skill0" + nameCheck);
     localStorage.removeItem("skill1" + nameCheck);
     localStorage.removeItem("skill2" + nameCheck);
@@ -190,6 +194,7 @@ let deleteSheet = () => {
     localStorage.removeItem("skill23" + nameCheck);
     localStorage.removeItem("skill24" + nameCheck);
     localStorage.removeItem("skill25" + nameCheck);
+    localStorage.removeItem("skill26" + nameCheck);
 
     // COMBAT
     localStorage.removeItem("editableArea3" + nameCheck);

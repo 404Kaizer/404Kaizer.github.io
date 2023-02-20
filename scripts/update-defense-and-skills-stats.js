@@ -35,15 +35,3 @@
 //        document.getElementById("chaModInput").value = "+" + document.getElementById("chaModInput").value;
 //    }
 //}; updateAttMods()
-
-let updateDefenseMods = () => {
-    document.getElementById("block").value = parseInt(document.getElementById("skill5").value);
-    if (document.getElementById("block").value > 0) {
-        document.getElementById("block").value = "+" + document.getElementById("block").value;
-    }
-
-    document.getElementById("dodge").value = parseInt(document.getElementById("skill4").value);
-    if (document.getElementById("dodge").value > 0) {
-        document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
-    }
-};

@@ -469,7 +469,6 @@ body input:hover {
   display: grid;
   gap: 10px;
   grid-template-columns: auto auto auto auto;
-  margin-bottom: 70px;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid {
   /*.profModalGrid {
@@ -510,7 +509,6 @@ body input:hover {
   cursor: pointer !important;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   font-weight: bold;
 }
@@ -522,7 +520,6 @@ body input:hover {
   border-top: 0;
   padding: 7px 7px 0 7px;
   position: absolute;
-  z-index: 1;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv {
   display: grid;
@@ -1276,8 +1273,6 @@ body input:hover {
     gap: 20px;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv {
-    display: grid;
-    gap: 10px;
     grid-template-columns: auto auto;
   }
   #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid {

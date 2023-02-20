@@ -559,7 +559,6 @@ body {
                     display: grid;
                     gap: 10px;
                     grid-template-columns: auto auto auto auto;
-                    margin-bottom: 70px;
 
                     .skillsGrid {
 
@@ -613,7 +612,6 @@ body {
                             border-top: 0;
                             padding: 7px 7px 0 7px;
                             position: absolute;
-                            z-index: 1;
                             
                             .radioDiv {
                                 display: grid;
@@ -1722,8 +1720,6 @@ body {
                     gap: 20px;
 
                     #skillsGridDiv {
-                        display: grid;
-                        gap: 10px;
                         grid-template-columns: auto auto;
     
                         .skillsGrid {

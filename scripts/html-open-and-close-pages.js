@@ -344,9 +344,11 @@ let openCloseSkillStatus21 = () => {
     if(document.getElementById("skillSpan21").innerHTML === "+") {
         document.getElementById("skillSpan21").innerHTML = "X";
         openCloseRadioDiv21.style.display = "flex";
+        document.getElementById("skillsGridDiv").style.marginBottom = "70px";
     } else {
         document.getElementById("skillSpan21").innerHTML = "+";
         openCloseRadioDiv21.style.display = "none";
+        document.getElementById("skillsGridDiv").style.marginBottom = "0px";
     }
 };
 
@@ -369,5 +371,16 @@ let openCloseSkillStatus23 = () => {
     } else {
         document.getElementById("skillSpan23").innerHTML = "+";
         openCloseRadioDiv23.style.display = "none";
+    }
+};
+
+let openCloseSkillStatus24 = () => {
+
+    if(document.getElementById("skillSpan24").innerHTML === "+") {
+        document.getElementById("skillSpan24").innerHTML = "X";
+        openCloseRadioDiv24.style.display = "flex";
+    } else {
+        document.getElementById("skillSpan24").innerHTML = "+";
+        openCloseRadioDiv24.style.display = "none";
     }
 };

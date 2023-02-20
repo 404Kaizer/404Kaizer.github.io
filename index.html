@@ -264,8 +264,8 @@
                     <span class="attSkillMainSpan">Lista de Perícias</span>
                     <!--<div id="profBonusDiv">
                         <div id="profBonusGrid">
-                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="B. Ativo" oninput="setSkills(), updateDefenseMods()"></div>
-                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="B. Passivo" oninput="setSkills(), updateDefenseMods()"></div>
+                            <div><input class="attSkillInput" type="text" name="trained" id="trainedSkillBonus" placeholder="B. Ativo" oninput="setSkills()"></div>
+                            <div><input class="attSkillInput" type="text" name="nonTrained" id="nTrainedSkillBonus" placeholder="B. Passivo" oninput="setSkills()"></div>
                         </div>
                     </div>-->
                     <div id="skillsGridDiv">
@@ -280,22 +280,22 @@
                             <span class="openSkillStatus" id="skillSpan1" onclick="openCloseSkillStatus1()">+</span>
                             <span>Luta</span><span style="font-size: 12px;">(For)</span>
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv1">
-                                <!--<input type="checkbox" name="" id="skillCheck2" oninput="setSkills(), updateDefenseMods()">-->
+                                <!--<input type="checkbox" name="" id="skillCheck2" oninput="setSkills()">-->
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training1" class="radio" id="unskillRadio1" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training1" class="radio" id="unskillRadio1" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training1" class="radio" id="skillRadio1" onclick="setSkills(), updateDefenseMods()">
+                                        <input type="radio" name="training1" class="radio" id="skillRadio1" onclick="setSkills()">
                                         <span>Treinado +5</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training1" class="radio" id="skillRadio2" onclick="setSkills(), updateDefenseMods()">
+                                        <input type="radio" name="training1" class="radio" id="skillRadio2" onclick="setSkills()">
                                         <span>Veterano +10</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training1" class="radio" id="skillRadio3" onclick="setSkills(), updateDefenseMods()">
+                                        <input type="radio" name="training1" class="radio" id="skillRadio3" onclick="setSkills()">
                                         <span>Expert +15</span>
                                     </div>
                                 </div>
@@ -306,10 +306,10 @@
                             <span class="openSkillStatus" id="skillSpan2" onclick="openCloseSkillStatus2()">+</span>                        
                             <span>Pontaria</span><span style="font-size: 12px;">(Agi)</span>
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv2">
-                                <!--<input type="checkbox" name="" id="skillCheck3" oninput="setSkills(), updateDefenseMods()">-->
+                                <!--<input type="checkbox" name="" id="skillCheck3" oninput="setSkills()">-->
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training2" class="radio" id="unskillRadio2" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training2" class="radio" id="unskillRadio2" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -334,19 +334,19 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv3">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training3" class="radio" id="unskillRadio3" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training3" class="radio" id="unskillRadio3" onclick="setSkills(), updateDodge()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training3" class="radio" id="skillRadio7" onclick="setSkills()">
+                                        <input type="radio" name="training3" class="radio" id="skillRadio7" onclick="setSkills(), updateDodge()">
                                         <span>Treinado +5</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training3" class="radio" id="skillRadio8" onclick="setSkills()">
+                                        <input type="radio" name="training3" class="radio" id="skillRadio8" onclick="setSkills(), updateDodge()">
                                         <span>Veterano +10</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training3" class="radio" id="skillRadio9" onclick="setSkills()">
+                                        <input type="radio" name="training3" class="radio" id="skillRadio9" onclick="setSkills(), updateDodge()">
                                         <span>Expert +15</span>
                                     </div>
                                 </div>
@@ -360,7 +360,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv22">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training22" class="radio" id="unskillRadio22" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training22" class="radio" id="unskillRadio22" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -381,25 +381,25 @@
                             <input class="attSkillInput" type="text" name="" id="skill24" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
-                            <!--<input type="checkbox" name="" id="skillCheck5" oninput="setSkills(), updateDefenseMods()">-->
+                            <!--<input type="checkbox" name="" id="skillCheck5" oninput="setSkills()">-->
                             <span class="openSkillStatus" id="skillSpan4" onclick="openCloseSkillStatus4()">+</span>
                             <span>Fortitude</span><span style="font-size: 12px;">(Vig)</span>
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv4">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training4" class="radio" id="unskillRadio4" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training4" class="radio" id="unskillRadio4" onclick="setSkills(), updateBlock()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training4" class="radio" id="skillRadio10" onclick="setSkills(), updateDefenseMods()">
+                                        <input type="radio" name="training4" class="radio" id="skillRadio10" onclick="setSkills(), updateBlock()">
                                         <span>Treinado +5</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training4" class="radio" id="skillRadio11" onclick="setSkills(), updateDefenseMods()">
+                                        <input type="radio" name="training4" class="radio" id="skillRadio11" onclick="setSkills(), updateBlock()">
                                         <span>Veterano +10</span>
                                     </div>
                                     <div>
-                                        <input type="radio" name="training4" class="radio" id="skillRadio12" onclick="setSkills(), updateDefenseMods()">
+                                        <input type="radio" name="training4" class="radio" id="skillRadio12" onclick="setSkills(), updateBlock()">
                                         <span>Expert +15</span>
                                     </div>
                                 </div>
@@ -413,7 +413,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv5">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training5" class="radio" id="unskillRadio5" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training5" class="radio" id="unskillRadio5" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -439,7 +439,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv6">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training6" class="radio" id="unskillRadio6" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training6" class="radio" id="unskillRadio6" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -465,7 +465,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv7">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training7" class="radio" id="unskillRadio7" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training7" class="radio" id="unskillRadio7" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -491,7 +491,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv8">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training8" class="radio" id="unskillRadio8" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training8" class="radio" id="unskillRadio8" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -517,7 +517,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv9">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training9" class="radio" id="unskillRadio9" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training9" class="radio" id="unskillRadio9" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -543,7 +543,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv10">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training10" class="radio" id="unskillRadio10" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training10" class="radio" id="unskillRadio10" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -569,7 +569,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv11">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training11" class="radio" id="unskillRadio11" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training11" class="radio" id="unskillRadio11" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -589,13 +589,39 @@
                             <input class="attSkillInput" type="text" name="" id="skill12" placeholder="+0">
                         </div>
                         <div class="skillsGrid">
+                            <!--<input type="checkbox" name="" id="skillCheck12" oninput="setSkills()"-->
+                            <span class="openSkillStatus" id="skillSpan24" onclick="openCloseSkillStatus24()">+</span>
+                            <span>Tecnologia</span><span style="font-size: 12px;">(Int)</span>
+                            <div class="spanan spanRadioGrid" id="openCloseRadioDiv24">
+                                <div class="radioDiv">
+                                    <div>
+                                        <input type="radio" name="training24" class="radio" id="unskillRadio24" onclick="setSkills()" checked>
+                                        <span>Destreinado +0</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training24" class="radio" id="skillRadio70" onclick="setSkills()">
+                                        <span>Treinado +5</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training24" class="radio" id="skillRadio71" onclick="setSkills()">
+                                        <span>Veterano +10</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="training24" class="radio" id="skillRadio72" onclick="setSkills()">
+                                        <span>Expert +15</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="attSkillInput" type="text" name="" id="skill26" placeholder="+0">
+                        </div>
+                        <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck13" oninput="setSkills()"-->
                             <span class="openSkillStatus" id="skillSpan12" onclick="openCloseSkillStatus12()">+</span>
                             <span>Ocultismo</span><span style="font-size: 12px;">(Int)</span>
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv12">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training12" class="radio" id="unskillRadio12" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training12" class="radio" id="unskillRadio12" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -621,7 +647,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv13">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training13" class="radio" id="unskillRadio13" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training13" class="radio" id="unskillRadio13" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -647,7 +673,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv14">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training14" class="radio" id="unskillRadio14" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training14" class="radio" id="unskillRadio14" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -673,7 +699,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv15">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training15" class="radio" id="unskillRadio15" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training15" class="radio" id="unskillRadio15" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -699,7 +725,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv16">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training16" class="radio" id="unskillRadio16" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training16" class="radio" id="unskillRadio16" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -725,7 +751,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv17">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training17" class="radio" id="unskillRadio17" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training17" class="radio" id="unskillRadio17" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -751,7 +777,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv23">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training23" class="radio" id="unskillRadio23" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training23" class="radio" id="unskillRadio23" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -777,7 +803,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv18">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training18" class="radio" id="unskillRadio18" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training18" class="radio" id="unskillRadio18" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -803,7 +829,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv19">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training19" class="radio" id="unskillRadio19" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training19" class="radio" id="unskillRadio19" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -829,7 +855,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv20">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training20" class="radio" id="unskillRadio20" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training20" class="radio" id="unskillRadio20" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>
@@ -855,7 +881,7 @@
                             <div class="spanan spanRadioGrid" id="openCloseRadioDiv21">
                                 <div class="radioDiv">
                                     <div>
-                                        <input type="radio" name="training21" class="radio" id="unskillRadio21" onclick="setSkills(), updateDefenseMods()" checked>
+                                        <input type="radio" name="training21" class="radio" id="unskillRadio21" onclick="setSkills()" checked>
                                         <span>Destreinado +0</span>
                                     </div>
                                     <div>

@@ -69,6 +69,9 @@ let setSkills = () => {
     let radio67 = document.getElementById("skillRadio67").checked;
     let radio68 = document.getElementById("skillRadio68").checked;
     let radio69 = document.getElementById("skillRadio69").checked;
+    let radio70 = document.getElementById("skillRadio70").checked;
+    let radio71 = document.getElementById("skillRadio71").checked;
+    let radio72 = document.getElementById("skillRadio72").checked;
 
     let unradio1 = document.getElementById("unskillRadio1").checked;
     let unradio2 = document.getElementById("unskillRadio2").checked;
@@ -93,6 +96,7 @@ let setSkills = () => {
     let unradio21 = document.getElementById("unskillRadio21").checked;
     let unradio22 = document.getElementById("unskillRadio22").checked;
     let unradio23 = document.getElementById("unskillRadio23").checked;
+    let unradio24 = document.getElementById("unskillRadio24").checked;
 
     if (radio1 === true) {
         document.getElementById("skill2").value = "+5";
@@ -323,4 +327,34 @@ let setSkills = () => {
     } else if (unradio23 === true) {
         document.getElementById("skill25").value = "";
     }
+
+    if (radio70 === true) {
+        document.getElementById("skill26").value = "+5";
+    } else if (radio71 === true) {
+        document.getElementById("skill26").value = "+10";
+    } else if (radio72 === true) {
+        document.getElementById("skill26").value = "+15";
+    } else if (unradio24 === true) {
+        document.getElementById("skill26").value = "";
+    }
 };
+
+let updateBlock = () => {
+    document.getElementById("block").value = parseInt(document.getElementById("skill5").value);
+
+    if (document.getElementById("block").value > 0) {
+        document.getElementById("block").value = "+" + document.getElementById("block").value;
+    } else {
+        document.getElementById("block").value = "+0";
+    }
+};
+
+let updateDodge = () => {
+    document.getElementById("dodge").value = parseInt(document.getElementById("skill4").value);
+
+    if (document.getElementById("dodge").value > 0) {
+        document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
+    } else {
+        document.getElementById("dodge").value = "+0";
+    }
+}
