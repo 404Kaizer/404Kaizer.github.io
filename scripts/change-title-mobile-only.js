@@ -1,5 +1,5 @@
-let changeTitle = (name) => {
-    let changeTitleNamePersonagem = name;  
-    let newTitlePersonagem = document.getElementById("title").innerText = changeTitleNamePersonagem.value;
+let changeTitle = () => {
+    let newTitlePersonagem = document.getElementById("title").innerHTML;
+    newTitlePersonagem = localStorage.getItem("nameCheck")
     localStorage.setItem("titlePersonagem", newTitlePersonagem);
 };
