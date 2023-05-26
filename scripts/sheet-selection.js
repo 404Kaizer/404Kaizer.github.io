@@ -6,7 +6,8 @@ let chooseSheetValidation = () => {
     }
 
     if (nameCheck !== localStorage.getItem("charName" + nameCheck)) {
-        alert("Este Personagem Ainda Não Existe. Salve Apenas se Quiser Criá-lo.");
+        alert("Este Personagem Ainda Não Existe.");
+        alert("Para Criar um Novo Personagem, Digite o Mesmo Nome Que Escolheu no Campo '* Nome' e Salve. Faça Isso Antes de Preencher Quaisquer Outras Informações do Personagem.");
     }
 
     nameCheck = localStorage.setItem("nameCheck", nameCheck);
