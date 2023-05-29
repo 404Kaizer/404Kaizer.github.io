@@ -1,8 +1,9 @@
 let chooseSheetValidation = () => {
     nameCheck = prompt("Digite o Nome do Personagem Que Deseja Carregar ou Criar: ");
 
-    if ((nameCheck === null) || (nameCheck === " ") || (nameCheck === undefined)) {
+    if ((nameCheck == null) || (nameCheck === "") || (nameCheck === undefined)) {
         alert("Nenhum Personagem Selecionado. Digite o Nome do Personagem Para Continuar ou Clique em Cancelar.");
+        return;
     }
 
     if (nameCheck !== localStorage.getItem("charName" + nameCheck)) {
