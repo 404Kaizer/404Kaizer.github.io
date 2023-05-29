@@ -1,15 +1,38 @@
 // Onload local storage name check.
-window.onload = function getInputValidation() {
+window.onload = function getNameCheckValidation() {
     nameCheck = localStorage.getItem("nameCheck");
 
-    if (nameCheck === null || nameCheck === " ") {
+    if ((nameCheck == null) || (nameCheck === undefined) || (nameCheck === "")) {
+        alert("Não Há Nenhum Personagem Selecionado. Abra o Menu e Selecione o Segundo Botão Para Criar um Novo Personagem ou Selecionar um Existente.");
         headerTitle.innerText = "Eroda";
-    } else {
-        headerTitle.innerText = nameCheck;
+        return;
     }
 
     getInputValues();
 };
+
+let getNameInputValidation = () => {
+    nameInput = document.getElementById("charName").value;
+
+    if ((nameInput == null) || (nameInput === undefined) || (nameInput === "")) {
+        alert("O Campo 'Nome' do Personagem Não Está Preenchido. Preencha Com o Mesmo Nome Que Informou ao Criar a Ficha Antes de Salvar.");
+        return;
+    }
+
+    headerTitle.innerText = nameCheck;
+    sheetIdChangeValidation();
+}
+
+let sheetIdChangeValidation = () => {
+
+    if (document.getElementById("charName").value !== localStorage.getItem("nameCheck")) {
+        alert("CUIDADO! O Nome do Personagem Foi Alterado.");
+        sheetIdChange();
+        return;
+    }
+
+    setInputValues();
+}
 
 // Getting stored information from local storage on page load.
 let getInputValues = () => {
@@ -214,26 +237,6 @@ let getInputValues = () => {
     // NOTES
     document.getElementById("editableArea").innerHTML = localStorage.getItem("editableArea" + nameCheck);
 };
-
-let setInputValidation = () => {
-    if ((nameCheck === null) || (nameCheck === undefined)) {
-        alert("Não Há Ficha Selecionada! Selecione Uma Ficha Antes de Salvar.");
-        return;
-    }
-
-    if (document.getElementById("charName").value === " ") {
-        alert("Digite o Nome do Personagem Antes de Salvar a Ficha.");
-        return;
-    }
-
-    if (document.getElementById("charName").value !== localStorage.getItem("nameCheck")) {
-        alert("CUIDADO! O Nome do Personagem Foi Alterado.");
-        sheetIdChange();
-        return;
-    }
-
-    setInputValues();
-}
 
 // Saving information to local storage
 let setInputValues = () => {

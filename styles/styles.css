@@ -1008,12 +1008,6 @@ body input:hover {
     margin-top: 95px;
     margin-bottom: 105px;
   }
-  #main .fontColor {
-    display: none;
-  }
-  #main .inputStyle {
-    display: none;
-  }
   #main #section1 #charInfos #imgDiv {
     display: grid;
     width: 100%;
