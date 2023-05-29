@@ -1172,6 +1172,17 @@ body {
     
     #main {
 
+        .editOpts {
+
+            .fontColor {
+                display: none;
+            }
+
+            .unorderedList {
+                display: none;
+            }
+        }
+
         #section3 {
     
             #statusDiv {     

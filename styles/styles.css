@@ -928,6 +928,12 @@ body input:hover {
   }
 }
 @media only screen and (max-width: 915px) {
+  #main .editOpts .fontColor {
+    display: none;
+  }
+  #main .editOpts .unorderedList {
+    display: none;
+  }
   #main #section3 #statusDiv {
     display: block;
   }
