@@ -612,7 +612,7 @@ body input:hover {
 #main #section4 #editContent .editOpts .inputStyle:hover option {
   background-color: black;
 }
-#main #section4 #editContent .editOpts .colorSfontColortyle {
+#main #section4 #editContent .editOpts .colorSfontColorstyle {
   height: 21.5px;
   width: 20px;
 }
@@ -709,7 +709,7 @@ body input:hover {
 #main #section5 #editContent1 .editOpts .inputStyle:hover option, #main #section5 #editContent2 .editOpts .inputStyle:hover option {
   background-color: black;
 }
-#main #section5 #editContent1 .editOpts .colorSfontColortyle, #main #section5 #editContent2 .editOpts .colorSfontColortyle {
+#main #section5 #editContent1 .editOpts .colorSfontColorstyle, #main #section5 #editContent2 .editOpts .colorSfontColorstyle {
   height: 21.5px;
   width: 20px;
 }
@@ -784,7 +784,7 @@ body input:hover {
 #main #section6 .editOpts .inputStyle:hover option {
   background-color: black;
 }
-#main #section6 .editOpts .colorSfontColortyle {
+#main #section6 .editOpts .colorSfontColorstyle {
   height: 21.5px;
   width: 20px;
 }
