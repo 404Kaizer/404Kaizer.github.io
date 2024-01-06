@@ -439,15 +439,115 @@ let setSkills = () => {
     } else if (unradio24 === true) {
         document.getElementById("skill26").value = `${0 + int}`;
     }
+
+    updateSkillSign();
+    updateBlock();
+    updateDodge();
 };
+
+let updateSkillSign = () => {
+    if (document.getElementById("skill2").value > 0) {
+        document.getElementById("skill2").value = "+" + document.getElementById("skill2").value;
+    }
+    
+    if (document.getElementById("skill3").value > 0) {
+        document.getElementById("skill3").value = "+" + document.getElementById("skill3").value;
+    }
+
+    if (document.getElementById("skill4").value > 0) {
+        document.getElementById("skill4").value = "+" + document.getElementById("skill4").value;
+    }
+
+    if (document.getElementById("skill5").value > 0) {
+        document.getElementById("skill5").value = "+" + document.getElementById("skill5").value;
+    }
+
+    if (document.getElementById("skill6").value > 0) {
+        document.getElementById("skill6").value = "+" + document.getElementById("skill6").value;
+    }
+
+    if (document.getElementById("skill7").value > 0) {
+        document.getElementById("skill7").value = "+" + document.getElementById("skill7").value;
+    }
+
+    if (document.getElementById("skill8").value > 0) {
+        document.getElementById("skill8").value = "+" + document.getElementById("skill8").value;
+    }
+
+    if (document.getElementById("skill9").value > 0) {
+        document.getElementById("skill9").value = "+" + document.getElementById("skill9").value;
+    }
+
+    if (document.getElementById("skill10").value > 0) {
+        document.getElementById("skill10").value = "+" + document.getElementById("skill10").value;
+    }
+
+    if (document.getElementById("skill11").value > 0) {
+        document.getElementById("skill11").value = "+" + document.getElementById("skill11").value;
+    }
+
+    if (document.getElementById("skill12").value > 0) {
+        document.getElementById("skill12").value = "+" + document.getElementById("skill12").value;
+    }
+
+    if (document.getElementById("skill13").value > 0) {
+        document.getElementById("skill13").value = "+" + document.getElementById("skill13").value;
+    }
+
+    if (document.getElementById("skill14").value > 0) {
+        document.getElementById("skill14").value = "+" + document.getElementById("skill14").value;
+    }
+
+    if (document.getElementById("skill15").value > 0) {
+        document.getElementById("skill15").value = "+" + document.getElementById("skill15").value;
+    }
+
+    if (document.getElementById("skill16").value > 0) {
+        document.getElementById("skill16").value = "+" + document.getElementById("skill16").value;
+    }
+
+    if (document.getElementById("skill17").value > 0) {
+        document.getElementById("skill17").value = "+" + document.getElementById("skill17").value;
+    }
+
+    if (document.getElementById("skill19").value > 0) {
+        document.getElementById("skill19").value = "+" + document.getElementById("skill19").value;
+    }
+
+    if (document.getElementById("skill20").value > 0) {
+        document.getElementById("skill20").value = "+" + document.getElementById("skill20").value;
+    }
+
+    if (document.getElementById("skill21").value > 0) {
+        document.getElementById("skill21").value = "+" + document.getElementById("skill21").value;
+    }
+
+    if (document.getElementById("skill22").value > 0) {
+        document.getElementById("skill22").value = "+" + document.getElementById("skill22").value;
+    }
+
+    if (document.getElementById("skill23").value > 0) {
+        document.getElementById("skill23").value = "+" + document.getElementById("skill23").value;
+    }
+
+    if (document.getElementById("skill24").value > 0) {
+        document.getElementById("skill24").value = "+" + document.getElementById("skill24").value;
+    }
+
+    if (document.getElementById("skill25").value > 0) {
+        document.getElementById("skill25").value = "+" + document.getElementById("skill25").value;
+    }
+
+    if (document.getElementById("skill26").value > 0) {
+        document.getElementById("skill26").value = "+" + document.getElementById("skill26").value;
+    }
+}
 
 let updateBlock = () => {
     document.getElementById("block").value = parseInt(document.getElementById("skill5").value);
 
     if (document.getElementById("block").value > 0) {
         document.getElementById("block").value = "+" + document.getElementById("block").value;
-    } else {
-        document.getElementById("block").value = "+0";
     }
 };
 
@@ -456,7 +556,5 @@ let updateDodge = () => {
 
     if (document.getElementById("dodge").value > 0) {
         document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
-    } else {
-        document.getElementById("dodge").value = "+0";
     }
 }
