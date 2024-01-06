@@ -71,7 +71,30 @@ let setSkills = () => {
     let radio70 = document.getElementById("skillRadio70").checked;
     let radio71 = document.getElementById("skillRadio71").checked;
     let radio72 = document.getElementById("skillRadio72").checked;
-
+    let radio73 = document.getElementById("skillRadio73").checked;
+    let radio74 = document.getElementById("skillRadio74").checked;
+    let radio75 = document.getElementById("skillRadio75").checked;
+    let radio76 = document.getElementById("skillRadio76").checked;
+    let radio77 = document.getElementById("skillRadio77").checked;
+    let radio78 = document.getElementById("skillRadio78").checked;
+    let radio79 = document.getElementById("skillRadio79").checked;
+    let radio80 = document.getElementById("skillRadio80").checked;
+    let radio81 = document.getElementById("skillRadio81").checked;
+    let radio82 = document.getElementById("skillRadio82").checked;
+    let radio83 = document.getElementById("skillRadio83").checked;
+    let radio84 = document.getElementById("skillRadio84").checked;
+    let radio85 = document.getElementById("skillRadio85").checked;
+    let radio86 = document.getElementById("skillRadio86").checked;
+    let radio87 = document.getElementById("skillRadio87").checked;
+    let radio88 = document.getElementById("skillRadio88").checked;
+    let radio89 = document.getElementById("skillRadio89").checked;
+    let radio90 = document.getElementById("skillRadio90").checked;
+    let radio91 = document.getElementById("skillRadio91").checked;
+    let radio92 = document.getElementById("skillRadio92").checked;
+    let radio93 = document.getElementById("skillRadio93").checked;
+    let radio94 = document.getElementById("skillRadio94").checked;
+    let radio95 = document.getElementById("skillRadio95").checked;
+    let radio96 = document.getElementById("skillRadio96").checked;
     let unradio1 = document.getElementById("unskillRadio1").checked;
     let unradio2 = document.getElementById("unskillRadio2").checked;
     let unradio3 = document.getElementById("unskillRadio3").checked;
@@ -135,6 +158,8 @@ let setSkills = () => {
         document.getElementById("skill2").value = `+${6 + str}`;
     } else if (radio3 === true) {
         document.getElementById("skill2").value = `+${10 + str}`;
+    } else if (radio73 === true) {
+        document.getElementById("skill2").value = `+${14 + str}`;
     } else if (unradio1 === true) {
         document.getElementById("skill2").value = `+${0 + str}`;
     }
@@ -145,6 +170,8 @@ let setSkills = () => {
         document.getElementById("skill3").value = `+${6 + agi}`;
     } else if (radio6 === true) {
         document.getElementById("skill3").value = `+${10 + agi}`;
+    } else if (radio74 === true) {
+        document.getElementById("skill3").value = `+${14 + agi}`;
     } else if (unradio2 === true) {
         document.getElementById("skill3").value = `+${0 + agi}`;
     }
@@ -155,6 +182,8 @@ let setSkills = () => {
         document.getElementById("skill4").value = `+${6 + agi}`;
     } else if (radio9 === true) {
         document.getElementById("skill4").value = `+${10 + agi}`;
+    } else if (radio75 === true) {
+        document.getElementById("skill4").value = `+${14 + agi}`;
     } else if (unradio3 === true) {
         document.getElementById("skill4").value = `+${0 + agi}`;
     }
@@ -165,6 +194,8 @@ let setSkills = () => {
         document.getElementById("skill5").value = `+${6 + vig}`;
     } else if (radio12 === true) {
         document.getElementById("skill5").value = `+${10 + vig}`;
+    } else if (radio77 === true) {
+        document.getElementById("skill5").value = `+${14 + vig}`;
     } else if (unradio4 === true) {
         document.getElementById("skill5").value = `+${0 + vig}`;
     }
@@ -175,6 +206,8 @@ let setSkills = () => {
         document.getElementById("skill6").value = `+${6 + wis}`;
     } else if (radio15 === true) {
         document.getElementById("skill6").value = `+${10 + wis}`;
+    } else if (radio78 === true) {
+        document.getElementById("skill6").value = `+${14 + wis}`;
     } else if (unradio5 === true) {
         document.getElementById("skill6").value = `+${0 + wis}`;
     }
@@ -185,6 +218,8 @@ let setSkills = () => {
         document.getElementById("skill7").value = `+${6 + str}`;
     } else if (radio18 === true) {
         document.getElementById("skill7").value = `+${10 + str}`;
+    } else if (radio79 === true) {
+        document.getElementById("skill7").value = `+${14 + str}`;
     } else if (unradio6 === true) {
         document.getElementById("skill7").value = `+${0 + str}`;
     }
@@ -195,6 +230,8 @@ let setSkills = () => {
         document.getElementById("skill8").value = `+${6 + agi}`;
     } else if (radio21 === true) {
         document.getElementById("skill8").value = `+${10 + agi}`;
+    } else if (radio80 === true) {
+        document.getElementById("skill8").value = `+${14 + agi}`;
     } else if (unradio7 === true) {
         document.getElementById("skill8").value = `+${0 + agi}`;
     }
@@ -205,6 +242,8 @@ let setSkills = () => {
         document.getElementById("skill9").value = `+${6 + agi}`;
     } else if (radio24 === true) {
         document.getElementById("skill9").value = `+${10 + agi}`;
+    } else if (radio81 === true) {
+        document.getElementById("skill9").value = `+${14 + agi}`;
     } else if (unradio8 === true) {
         document.getElementById("skill9").value = `+${0 + agi}`;
     }
@@ -215,6 +254,8 @@ let setSkills = () => {
         document.getElementById("skill10").value = `+${6 + agi}`;
     } else if (radio27 === true) {
         document.getElementById("skill10").value = `+${10 + agi}`;
+    } else if (radio82 === true) {
+        document.getElementById("skill10").value = `+${14 + agi}`;
     } else if (unradio9 === true) {
         document.getElementById("skill10").value = `+${0 + agi}`;
     }
@@ -225,6 +266,8 @@ let setSkills = () => {
         document.getElementById("skill11").value = `+${6 + int}`;
     } else if (radio30 === true) {
         document.getElementById("skill11").value = `+${10 + int}`;
+    } else if (radio83 === true) {
+        document.getElementById("skill11").value = `+${14 + int}`;
     } else if (unradio10 === true) {
         document.getElementById("skill11").value = `+${0 + int}`;
     }
@@ -235,6 +278,8 @@ let setSkills = () => {
         document.getElementById("skill12").value = `+${6 + int}`;
     } else if (radio33 === true) {
         document.getElementById("skill12").value = `+${10 + int}`;
+    } else if (radio84 === true) {
+        document.getElementById("skill12").value = `+${14 + int}`;
     } else if (unradio11 === true) {
         document.getElementById("skill12").value = `+${0 + int}`;
     }
@@ -245,6 +290,8 @@ let setSkills = () => {
         document.getElementById("skill13").value = `+${6 + int}`;
     } else if (radio36 === true) {
         document.getElementById("skill13").value = `+${10 + int}`;
+    } else if (radio86 === true) {
+        document.getElementById("skill13").value = `+${14 + int}`;
     } else if (unradio12 === true) {
         document.getElementById("skill13").value = `+${0 + int}`;
     }
@@ -253,8 +300,10 @@ let setSkills = () => {
         document.getElementById("skill14").value = `+${2 + int}`;
     } else if (radio38 === true) {
         document.getElementById("skill14").value = `+${6 + int}`;
-    } else if (radio30 === true) {
+    } else if (radio39 === true) {
         document.getElementById("skill14").value = `+${10 + int}`;
+    } else if (radio87 === true) {
+        document.getElementById("skill14").value = `+${14 + int}`;
     } else if (unradio13 === true) {
         document.getElementById("skill14").value = `+${0 + int}`;
     }
@@ -265,6 +314,8 @@ let setSkills = () => {
         document.getElementById("skill15").value = `+${6 + int}`;
     } else if (radio42 === true) {
         document.getElementById("skill15").value = `+${10 + int}`;
+    } else if (radio88 === true) {
+        document.getElementById("skill15").value = `+${14 + int}`;
     } else if (unradio14 === true) {
         document.getElementById("skill15").value = `+${0 + int}`;
     }
@@ -275,6 +326,8 @@ let setSkills = () => {
         document.getElementById("skill16").value = `+${6 + wis}`;
     } else if (radio45 === true) {
         document.getElementById("skill16").value = `+${10 + wis}`;
+    } else if (radio89 === true) {
+        document.getElementById("skill16").value = `+${14 + wis}`;
     } else if (unradio15 === true) {
         document.getElementById("skill16").value = `+${0 + wis}`;
     }
@@ -285,6 +338,8 @@ let setSkills = () => {
         document.getElementById("skill17").value = `+${6 + wis}`;
     } else if (radio48 === true) {
         document.getElementById("skill17").value = `+${10 + wis}`;
+    } else if (radio90 === true) {
+        document.getElementById("skill17").value = `+${14 + wis}`;
     } else if (unradio16 === true) {
         document.getElementById("skill17").value = `+${0 + wis}`;
     }
@@ -295,6 +350,8 @@ let setSkills = () => {
         document.getElementById("skill19").value = `+${6 + wis}`;
     } else if (radio51 === true) {
         document.getElementById("skill19").value = `+${10 + wis}`;
+    } else if (radio91 === true) {
+        document.getElementById("skill19").value = `+${14 + wis}`;
     } else if (unradio17 === true) {
         document.getElementById("skill19").value = `+${0 + wis}`;
     }
@@ -305,6 +362,8 @@ let setSkills = () => {
         document.getElementById("skill20").value = `+${6 + cha}`;
     } else if (radio54 === true) {
         document.getElementById("skill20").value = `+${10 + cha}`;
+    } else if (radio93 === true) {
+        document.getElementById("skill20").value = `+${14 + cha}`;
     } else if (unradio18 === true) {
         document.getElementById("skill20").value = `+${0 + cha}`;
     }
@@ -315,6 +374,8 @@ let setSkills = () => {
         document.getElementById("skill21").value = `+${6 + cha}`;
     } else if (radio57 === true) {
         document.getElementById("skill21").value = `+${10 + cha}`;
+    } else if (radio94 === true) {
+        document.getElementById("skill21").value = `+${14 + cha}`;
     } else if (unradio19 === true) {
         document.getElementById("skill21").value = `+${0 + cha}`;
     }
@@ -325,6 +386,8 @@ let setSkills = () => {
         document.getElementById("skill22").value = `+${6 + cha}`;
     } else if (radio60 === true) {
         document.getElementById("skill22").value = `+${10 + cha}`;
+    } else if (radio95 === true) {
+        document.getElementById("skill22").value = `+${14 + cha}`;
     } else if (unradio20 === true) {
         document.getElementById("skill22").value = `+${0 + cha}`;
     }
@@ -335,6 +398,8 @@ let setSkills = () => {
         document.getElementById("skill23").value = `+${6 + cha}`;
     } else if (radio63 === true) {
         document.getElementById("skill23").value = `+${10 + cha}`;
+    } else if (radio96 === true) {
+        document.getElementById("skill23").value = `+${14 + cha}`;
     } else if (unradio21 === true) {
         document.getElementById("skill23").value = `+${0 + cha}`;
     }
@@ -345,6 +410,8 @@ let setSkills = () => {
         document.getElementById("skill24").value = `+${6 + agi}`;
     } else if (radio66 === true) {
         document.getElementById("skill24").value = `+${10 + agi}`;
+    } else if (radio76 === true) {
+        document.getElementById("skill24").value = `+${14 + agi}`;
     } else if (unradio22 === true) {
         document.getElementById("skill24").value = `+${0 + agi}`;
     }
@@ -355,6 +422,8 @@ let setSkills = () => {
         document.getElementById("skill25").value = `+${6 + wis}`;
     } else if (radio69 === true) {
         document.getElementById("skill25").value = `+${10 + wis}`;
+    } else if (radio92 === true) {
+        document.getElementById("skill25").value = `+${14 + wis}`;
     } else if (unradio23 === true) {
         document.getElementById("skill25").value = `+${0 + wis}`;
     }
@@ -365,6 +434,8 @@ let setSkills = () => {
         document.getElementById("skill26").value = `+${6 + int}`;
     } else if (radio72 === true) {
         document.getElementById("skill26").value = `+${10 + int}`;
+    } else if (radio85 === true) {
+        document.getElementById("skill26").value = `+${14 + int}`;
     } else if (unradio24 === true) {
         document.getElementById("skill26").value = `+${0 + int}`;
     }
