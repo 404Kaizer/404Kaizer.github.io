@@ -314,6 +314,15 @@ body {
 
                 #lifeStatus, #sanityStatus, #energyStatus {
 
+                    #energyPointsLimitInput {
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+                        font-size: 15px;
+                        width: 50px;
+                        font-weight: bold;
+                    }
+
                     .statusCheckDiv, .lifeChecks {
                         display: flex;
                         align-items: center;

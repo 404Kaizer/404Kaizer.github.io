@@ -91,6 +91,7 @@ let getInputValues = () => {
     //document.getElementById("wisModInput").value = localStorage.getItem("wisModInput" + nameCheck);
     document.getElementById("chaInput").value = localStorage.getItem("chaInput" + nameCheck);
     //document.getElementById("chaModInput").value = localStorage.getItem("chaModInput" + nameCheck);
+    document.getElementById("energyPointsLimitInput").value = localStorage.getItem("energyPointsLimitInput" + nameCheck);
     document.getElementById("skillRadio1").checked = JSON.parse(localStorage.getItem("skillRadio1" + nameCheck));
     document.getElementById("skillRadio2").checked = JSON.parse(localStorage.getItem("skillRadio2" + nameCheck));
     document.getElementById("skillRadio3").checked = JSON.parse(localStorage.getItem("skillRadio3" + nameCheck));
@@ -187,7 +188,6 @@ let getInputValues = () => {
     document.getElementById("skillRadio94").checked = JSON.parse(localStorage.getItem("skillRadio94" + nameCheck));
     document.getElementById("skillRadio95").checked = JSON.parse(localStorage.getItem("skillRadio95" + nameCheck));
     document.getElementById("skillRadio96").checked = JSON.parse(localStorage.getItem("skillRadio96" + nameCheck));
-
     document.getElementById("unskillRadio1").checked = JSON.parse(localStorage.getItem("unskillRadio1" + nameCheck));
     document.getElementById("unskillRadio2").checked = JSON.parse(localStorage.getItem("unskillRadio2" + nameCheck));
     document.getElementById("unskillRadio3").checked = JSON.parse(localStorage.getItem("unskillRadio3" + nameCheck));
@@ -320,6 +320,7 @@ let setInputValues = () => {
     //localStorage.setItem("wisModInput" + nameCheck, document.getElementById("wisModInput").value);
     localStorage.setItem("chaInput" + nameCheck, document.getElementById("chaInput").value);
     //localStorage.setItem("chaModInput" + nameCheck, document.getElementById("chaModInput").value);
+    localStorage.setItem("energyPointsLimitInput" + nameCheck, document.getElementById("energyPointsLimitInput").value);
     localStorage.setItem("skillRadio1" + nameCheck, document.getElementById("skillRadio1").checked);
     localStorage.setItem("skillRadio2" + nameCheck, document.getElementById("skillRadio2").checked);
     localStorage.setItem("skillRadio3" + nameCheck, document.getElementById("skillRadio3").checked);

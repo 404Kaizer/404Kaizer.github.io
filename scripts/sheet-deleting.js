@@ -73,6 +73,7 @@ let deleteSheet = () => {
     localStorage.removeItem("wisModInput" + nameCheck);
     //localStorage.removeItem("chaInput" + nameCheck);
     localStorage.removeItem("chaModInput" + nameCheck);
+    localStorage.removeItem("energyPointsLimitInput" + nameCheck);
     localStorage.removeItem("skillRadio1" + nameCheck);
     localStorage.removeItem("skillRadio2" + nameCheck);
     localStorage.removeItem("skillRadio3" + nameCheck);

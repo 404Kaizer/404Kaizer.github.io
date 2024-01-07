@@ -56,6 +56,7 @@ let sheetIdChange = () => {
     //localStorage.removeItem("wisModInput" + nameCheck);
     localStorage.removeItem("chaInput" + nameCheck);
     //localStorage.removeItem("chaModInput" + nameCheck);
+    localStorage.removeItem("energyPointsLimitInput" + nameCheck);
     localStorage.removeItem("skillRadio1" + nameCheck);
     localStorage.removeItem("skillRadio2" + nameCheck);
     localStorage.removeItem("skillRadio3" + nameCheck);
@@ -284,6 +285,7 @@ let sheetIdChange = () => {
     //localStorage.setItem("wisModInput" + nameCheck, document.getElementById("wisModInput").value);
     localStorage.setItem("chaInput" + nameCheck, document.getElementById("chaInput").value);
     //localStorage.setItem("chaModInput" + nameCheck, document.getElementById("chaModInput").value);
+    localStorage.setItem("energyPointsLimitInput" + nameCheck, document.getElementById("energyPointsLimitInput").value);
     localStorage.setItem("skillRadio1" + nameCheck, document.getElementById("skillRadio1").checked);
     localStorage.setItem("skillRadio2" + nameCheck, document.getElementById("skillRadio2").checked);
     localStorage.setItem("skillRadio3" + nameCheck, document.getElementById("skillRadio3").checked);
