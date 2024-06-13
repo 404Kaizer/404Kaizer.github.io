@@ -56,7 +56,6 @@ let deleteSheet = () => {
     localStorage.removeItem("dodge" + nameCheck);
     localStorage.removeItem("armorWeight" + nameCheck);
     localStorage.removeItem("physicalRDMG" + nameCheck);
-    localStorage.removeItem("balisticalRDMG" + nameCheck);
     localStorage.removeItem("magicalRDMG" + nameCheck);
     localStorage.removeItem("velocity" + nameCheck);
     localStorage.removeItem("textArea5" + nameCheck);
@@ -195,7 +194,6 @@ let deleteSheet = () => {
     localStorage.removeItem("unskillRadio23" + nameCheck);
     localStorage.removeItem("unskillRadio24" + nameCheck);
     localStorage.removeItem("skill0" + nameCheck);
-    localStorage.removeItem("skill1" + nameCheck);
     localStorage.removeItem("skill2" + nameCheck);
     localStorage.removeItem("skill3" + nameCheck);
     localStorage.removeItem("skill4" + nameCheck);

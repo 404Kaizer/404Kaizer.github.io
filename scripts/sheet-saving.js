@@ -74,7 +74,6 @@ let getInputValues = () => {
     document.getElementById("dodge").value = localStorage.getItem("dodge" + nameCheck);
     document.getElementById("armorWeight").value = localStorage.getItem("armorWeight" + nameCheck);
     document.getElementById("physicalRDMG").value = localStorage.getItem("physicalRDMG" + nameCheck);
-    document.getElementById("balisticalRDMG").value = localStorage.getItem("balisticalRDMG" + nameCheck);
     document.getElementById("magicalRDMG").value = localStorage.getItem("magicalRDMG" + nameCheck);
     document.getElementById("velocity").value = localStorage.getItem("velocity" + nameCheck);
     document.getElementById("textArea5").value = localStorage.getItem("textArea5" + nameCheck);
@@ -213,7 +212,6 @@ let getInputValues = () => {
     document.getElementById("unskillRadio23").checked = JSON.parse(localStorage.getItem("unskillRadio23" + nameCheck));
     document.getElementById("unskillRadio24").checked = JSON.parse(localStorage.getItem("unskillRadio24" + nameCheck));
     document.getElementById("skill0").value = localStorage.getItem("skill0" + nameCheck);
-    document.getElementById("skill1").value = localStorage.getItem("skill1" + nameCheck);
     document.getElementById("skill2").value = localStorage.getItem("skill2" + nameCheck);
     document.getElementById("skill3").value = localStorage.getItem("skill3" + nameCheck);
     document.getElementById("skill4").value = localStorage.getItem("skill4" + nameCheck);
@@ -303,7 +301,6 @@ let setInputValues = () => {
     localStorage.setItem("dodge" + nameCheck, document.getElementById("dodge").value);
     localStorage.setItem("armorWeight" + nameCheck, document.getElementById("armorWeight").value);
     localStorage.setItem("physicalRDMG" + nameCheck, document.getElementById("physicalRDMG").value);
-    localStorage.setItem("balisticalRDMG" + nameCheck, document.getElementById("balisticalRDMG").value);
     localStorage.setItem("magicalRDMG" + nameCheck, document.getElementById("magicalRDMG").value);
     localStorage.setItem("velocity" + nameCheck, document.getElementById("velocity").value);
     localStorage.setItem("textArea5" + nameCheck, document.getElementById("textArea5").value);
@@ -442,7 +439,6 @@ let setInputValues = () => {
     localStorage.setItem("unskillRadio23" + nameCheck, document.getElementById("unskillRadio23").checked);
     localStorage.setItem("unskillRadio24" + nameCheck, document.getElementById("unskillRadio24").checked);
     localStorage.setItem("skill0" + nameCheck, document.getElementById("skill0").value);
-    localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
     localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
     localStorage.setItem("skill3" + nameCheck, document.getElementById("skill3").value);
     localStorage.setItem("skill4" + nameCheck, document.getElementById("skill4").value);

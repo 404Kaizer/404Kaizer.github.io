@@ -155,291 +155,291 @@ let setSkills = () => {
     let energyPointsLimit = parseInt(document.getElementById("energyPointsLimitInput").value);
 
     if (radio1 === true) {
-        document.getElementById("skill2").value = `${2 + str + energyPointsLimit}`;
+        document.getElementById("skill2").value = `5`;
     } else if (radio2 === true) {
-        document.getElementById("skill2").value = `${4 + str + energyPointsLimit}`;
+        document.getElementById("skill2").value = `10`;
     } else if (radio3 === true) {
-        document.getElementById("skill2").value = `${6 + str + energyPointsLimit}`;
+        document.getElementById("skill2").value = `15`;
     } else if (radio73 === true) {
-        document.getElementById("skill2").value = `${8 + str + energyPointsLimit}`;
+        document.getElementById("skill2").value = `20`;
     } else if (unradio1 === true) {
-        document.getElementById("skill2").value = `${0 + str}`;
+        document.getElementById("skill2").value = `0`;
     }
 
     if (radio4 === true) {
-        document.getElementById("skill3").value = `${2 + agi + energyPointsLimit}`;
+        document.getElementById("skill3").value = `5`;
     } else if (radio5 === true) {
-        document.getElementById("skill3").value = `${4 + agi + energyPointsLimit}`;
+        document.getElementById("skill3").value = `10`;
     } else if (radio6 === true) {
-        document.getElementById("skill3").value = `${6 + agi + energyPointsLimit}`;
+        document.getElementById("skill3").value = `15`;
     } else if (radio74 === true) {
-        document.getElementById("skill3").value = `${8 + agi + energyPointsLimit}`;
+        document.getElementById("skill3").value = `20`;
     } else if (unradio2 === true) {
-        document.getElementById("skill3").value = `${0 + agi}`;
+        document.getElementById("skill3").value = `0`;
     }
 
     if (radio7 === true) {
-        document.getElementById("skill4").value = `${2 + agi + energyPointsLimit}`;
+        document.getElementById("skill4").value = `5`;
     } else if (radio8 === true) {
-        document.getElementById("skill4").value = `${4 + agi + energyPointsLimit}`;
+        document.getElementById("skill4").value = `10`;
     } else if (radio9 === true) {
-        document.getElementById("skill4").value = `${6 + agi + energyPointsLimit}`;
+        document.getElementById("skill4").value = `15`;
     } else if (radio75 === true) {
-        document.getElementById("skill4").value = `${8 + agi + energyPointsLimit}`;
+        document.getElementById("skill4").value = `20`;
     } else if (unradio3 === true) {
-        document.getElementById("skill4").value = `${0 + agi}`;
+        document.getElementById("skill4").value = `0`;
     }
 
     if (radio10 === true) {
-        document.getElementById("skill5").value = `${2 + vig + energyPointsLimit}`;
+        document.getElementById("skill5").value = `5`;
     } else if (radio11 === true) {
-        document.getElementById("skill5").value = `${4 + vig + energyPointsLimit}`;
+        document.getElementById("skill5").value = `10`;
     } else if (radio12 === true) {
-        document.getElementById("skill5").value = `${6 + vig + energyPointsLimit}`;
+        document.getElementById("skill5").value = `15`;
     } else if (radio77 === true) {
-        document.getElementById("skill5").value = `${8 + vig + energyPointsLimit}`;
+        document.getElementById("skill5").value = `20`;
     } else if (unradio4 === true) {
-        document.getElementById("skill5").value = `${0 + vig}`;
+        document.getElementById("skill5").value = `0`;
     }
 
     if (radio13 === true) {
-        document.getElementById("skill6").value = `${2 + wis + energyPointsLimit}`;
+        document.getElementById("skill6").value = `5`;
     } else if (radio14 === true) {
-        document.getElementById("skill6").value = `${4 + wis + energyPointsLimit}`;
+        document.getElementById("skill6").value = `10`;
     } else if (radio15 === true) {
-        document.getElementById("skill6").value = `${6 + wis + energyPointsLimit}`;
+        document.getElementById("skill6").value = `15`;
     } else if (radio78 === true) {
-        document.getElementById("skill6").value = `${8 + wis + energyPointsLimit}`;
+        document.getElementById("skill6").value = `20`;
     } else if (unradio5 === true) {
-        document.getElementById("skill6").value = `${0 + wis}`;
+        document.getElementById("skill6").value = `0`;
     }
 
     if (radio16 === true) {
-        document.getElementById("skill7").value = `${2 + str + energyPointsLimit}`;
+        document.getElementById("skill7").value = `5`;
     } else if (radio17 === true) {
-        document.getElementById("skill7").value = `${4 + str + energyPointsLimit}`;
+        document.getElementById("skill7").value = `10`;
     } else if (radio18 === true) {
-        document.getElementById("skill7").value = `${6 + str + energyPointsLimit}`;
+        document.getElementById("skill7").value = `15`;
     } else if (radio79 === true) {
-        document.getElementById("skill7").value = `${8 + str + energyPointsLimit}`;
+        document.getElementById("skill7").value = `20`;
     } else if (unradio6 === true) {
-        document.getElementById("skill7").value = `${0 + str}`;
+        document.getElementById("skill7").value = `0`;
     }
 
     if (radio19 === true) {
-        document.getElementById("skill8").value = `${2 + agi + energyPointsLimit}`;
+        document.getElementById("skill8").value = `5`;
     } else if (radio20 === true) {
-        document.getElementById("skill8").value = `${4 + agi + energyPointsLimit}`;
+        document.getElementById("skill8").value = `10`;
     } else if (radio21 === true) {
-        document.getElementById("skill8").value = `${6 + agi + energyPointsLimit}`;
+        document.getElementById("skill8").value = `15`;
     } else if (radio80 === true) {
-        document.getElementById("skill8").value = `${8 + agi + energyPointsLimit}`;
+        document.getElementById("skill8").value = `20`;
     } else if (unradio7 === true) {
-        document.getElementById("skill8").value = `${0 + agi}`;
+        document.getElementById("skill8").value = `0`;
     }
 
     if (radio22 === true) {
-        document.getElementById("skill9").value = `${2 + agi + energyPointsLimit}`;
+        document.getElementById("skill9").value = `5`;
     } else if (radio23 === true) {
-        document.getElementById("skill9").value = `${4 + agi + energyPointsLimit}`;
+        document.getElementById("skill9").value = `10`;
     } else if (radio24 === true) {
-        document.getElementById("skill9").value = `${6 + agi + energyPointsLimit}`;
+        document.getElementById("skill9").value = `15`;
     } else if (radio81 === true) {
-        document.getElementById("skill9").value = `${8 + agi + energyPointsLimit}`;
+        document.getElementById("skill9").value = `20`;
     } else if (unradio8 === true) {
-        document.getElementById("skill9").value = `${0 + agi}`;
+        document.getElementById("skill9").value = `0`;
     }
 
     if (radio25 === true) {
-        document.getElementById("skill10").value = `${2 + agi + energyPointsLimit}`;
+        document.getElementById("skill10").value = `5`;
     } else if (radio26 === true) {
-        document.getElementById("skill10").value = `${4 + agi + energyPointsLimit}`;
+        document.getElementById("skill10").value = `10`;
     } else if (radio27 === true) {
-        document.getElementById("skill10").value = `${6 + agi + energyPointsLimit}`;
+        document.getElementById("skill10").value = `15`;
     } else if (radio82 === true) {
-        document.getElementById("skill10").value = `${8 + agi + energyPointsLimit}`;
+        document.getElementById("skill10").value = `20`;
     } else if (unradio9 === true) {
-        document.getElementById("skill10").value = `${0 + agi}`;
+        document.getElementById("skill10").value = `0`;
     }
 
     if (radio28 === true) {
-        document.getElementById("skill11").value = `${2 + int + energyPointsLimit}`;
+        document.getElementById("skill11").value = `5`;
     } else if (radio29 === true) {
-        document.getElementById("skill11").value = `${4 + int + energyPointsLimit}`;
+        document.getElementById("skill11").value = `10`;
     } else if (radio30 === true) {
-        document.getElementById("skill11").value = `${6 + int + energyPointsLimit}`;
+        document.getElementById("skill11").value = `15`;
     } else if (radio83 === true) {
-        document.getElementById("skill11").value = `${8 + int + energyPointsLimit}`;
+        document.getElementById("skill11").value = `20`;
     } else if (unradio10 === true) {
-        document.getElementById("skill11").value = `${0 + int}`;
+        document.getElementById("skill11").value = `0`;
     }
 
     if (radio31 === true) {
-        document.getElementById("skill12").value = `${2 + int + energyPointsLimit}`;
+        document.getElementById("skill12").value = `5`;
     } else if (radio32 === true) {
-        document.getElementById("skill12").value = `${4 + int + energyPointsLimit}`;
+        document.getElementById("skill12").value = `10`;
     } else if (radio33 === true) {
-        document.getElementById("skill12").value = `${6 + int + energyPointsLimit}`;
+        document.getElementById("skill12").value = `15`;
     } else if (radio84 === true) {
-        document.getElementById("skill12").value = `${8 + int + energyPointsLimit}`;
+        document.getElementById("skill12").value = `20`;
     } else if (unradio11 === true) {
-        document.getElementById("skill12").value = `${0 + int}`;
+        document.getElementById("skill12").value = `0`;
     }
 
     if (radio34 === true) {
-        document.getElementById("skill13").value = `${2 + int + energyPointsLimit}`;
+        document.getElementById("skill13").value = `5`;
     } else if (radio35 === true) {
-        document.getElementById("skill13").value = `${4 + int + energyPointsLimit}`;
+        document.getElementById("skill13").value = `10`;
     } else if (radio36 === true) {
-        document.getElementById("skill13").value = `${6 + int + energyPointsLimit}`;
+        document.getElementById("skill13").value = `15`;
     } else if (radio86 === true) {
-        document.getElementById("skill13").value = `${8 + int + energyPointsLimit}`;
+        document.getElementById("skill13").value = `20`;
     } else if (unradio12 === true) {
-        document.getElementById("skill13").value = `${0 + int}`;
+        document.getElementById("skill13").value = `0`;
     }
 
     if (radio37 === true) {
-        document.getElementById("skill14").value = `${2 + int + energyPointsLimit}`;
+        document.getElementById("skill14").value = `5`;
     } else if (radio38 === true) {
-        document.getElementById("skill14").value = `${4 + int + energyPointsLimit}`;
+        document.getElementById("skill14").value = `10`;
     } else if (radio39 === true) {
-        document.getElementById("skill14").value = `${6 + int + energyPointsLimit}`;
+        document.getElementById("skill14").value = `15`;
     } else if (radio87 === true) {
-        document.getElementById("skill14").value = `${8 + int + energyPointsLimit}`;
+        document.getElementById("skill14").value = `20`;
     } else if (unradio13 === true) {
-        document.getElementById("skill14").value = `${0 + int}`;
+        document.getElementById("skill14").value = `0`;
     }
 
     if (radio40 === true) {
-        document.getElementById("skill15").value = `${2 + int + energyPointsLimit}`;
+        document.getElementById("skill15").value = `5`;
     } else if (radio41 === true) {
-        document.getElementById("skill15").value = `${4 + int + energyPointsLimit}`;
+        document.getElementById("skill15").value = `10`;
     } else if (radio42 === true) {
-        document.getElementById("skill15").value = `${6 + int + energyPointsLimit}`;
+        document.getElementById("skill15").value = `15`;
     } else if (radio88 === true) {
-        document.getElementById("skill15").value = `${8 + int + energyPointsLimit}`;
+        document.getElementById("skill15").value = `20`;
     } else if (unradio14 === true) {
-        document.getElementById("skill15").value = `${0 + int}`;
+        document.getElementById("skill15").value = `0`;
     }
 
     if (radio43 === true) {
-        document.getElementById("skill16").value = `${2 + wis + energyPointsLimit}`;
+        document.getElementById("skill16").value = `5`;
     } else if (radio44 === true) {
-        document.getElementById("skill16").value = `${4 + wis + energyPointsLimit}`;
+        document.getElementById("skill16").value = `10`;
     } else if (radio45 === true) {
-        document.getElementById("skill16").value = `${6 + wis + energyPointsLimit}`;
+        document.getElementById("skill16").value = `15`;
     } else if (radio89 === true) {
-        document.getElementById("skill16").value = `${8 + wis + energyPointsLimit}`;
+        document.getElementById("skill16").value = `20`;
     } else if (unradio15 === true) {
-        document.getElementById("skill16").value = `${0 + wis}`;
+        document.getElementById("skill16").value = `0`;
     }
 
     if (radio46 === true) {
-        document.getElementById("skill17").value = `${2 + wis + energyPointsLimit}`;
+        document.getElementById("skill17").value = `5`;
     } else if (radio47 === true) {
-        document.getElementById("skill17").value = `${4 + wis + energyPointsLimit}`;
+        document.getElementById("skill17").value = `10`;
     } else if (radio48 === true) {
-        document.getElementById("skill17").value = `${6 + wis + energyPointsLimit}`;
+        document.getElementById("skill17").value = `15`;
     } else if (radio90 === true) {
-        document.getElementById("skill17").value = `${8 + wis + energyPointsLimit}`;
+        document.getElementById("skill17").value = `20`;
     } else if (unradio16 === true) {
-        document.getElementById("skill17").value = `${0 + wis}`;
+        document.getElementById("skill17").value = `0`;
     }
 
     if (radio49 === true) {
-        document.getElementById("skill19").value = `${2 + wis + energyPointsLimit}`;
+        document.getElementById("skill19").value = `5`;
     } else if (radio50 === true) {
-        document.getElementById("skill19").value = `${4 + wis + energyPointsLimit}`;
+        document.getElementById("skill19").value = `10`;
     } else if (radio51 === true) {
-        document.getElementById("skill19").value = `${6 + wis + energyPointsLimit}`;
+        document.getElementById("skill19").value = `15`;
     } else if (radio91 === true) {
-        document.getElementById("skill19").value = `${8 + wis + energyPointsLimit}`;
+        document.getElementById("skill19").value = `20`;
     } else if (unradio17 === true) {
-        document.getElementById("skill19").value = `${0 + wis}`;
+        document.getElementById("skill19").value = `0`;
     }
 
     if (radio52 === true) {
-        document.getElementById("skill20").value = `${2 + cha + energyPointsLimit}`;
+        document.getElementById("skill20").value = `5`;
     } else if (radio53 === true) {
-        document.getElementById("skill20").value = `${4 + cha + energyPointsLimit}`;
+        document.getElementById("skill20").value = `10`;
     } else if (radio54 === true) {
-        document.getElementById("skill20").value = `${6 + cha + energyPointsLimit}`;
+        document.getElementById("skill20").value = `15`;
     } else if (radio93 === true) {
-        document.getElementById("skill20").value = `${8 + cha + energyPointsLimit}`;
+        document.getElementById("skill20").value = `20`;
     } else if (unradio18 === true) {
-        document.getElementById("skill20").value = `${0 + cha}`;
+        document.getElementById("skill20").value = `0`;
     }
 
     if (radio55 === true) {
-        document.getElementById("skill21").value = `${2 + cha + energyPointsLimit}`;
+        document.getElementById("skill21").value = `5`;
     } else if (radio56 === true) {
-        document.getElementById("skill21").value = `${4 + cha + energyPointsLimit}`;
+        document.getElementById("skill21").value = `10`;
     } else if (radio57 === true) {
-        document.getElementById("skill21").value = `${6 + cha + energyPointsLimit}`;
+        document.getElementById("skill21").value = `15`;
     } else if (radio94 === true) {
-        document.getElementById("skill21").value = `${8 + cha + energyPointsLimit}`;
+        document.getElementById("skill21").value = `20`;
     } else if (unradio19 === true) {
-        document.getElementById("skill21").value = `${0 + cha}`;
+        document.getElementById("skill21").value = `0`;
     }
 
     if (radio58 === true) {
-        document.getElementById("skill22").value = `${2 + cha + energyPointsLimit}`;
+        document.getElementById("skill22").value = `5`;
     } else if (radio59 === true) {
-        document.getElementById("skill22").value = `${4 + cha + energyPointsLimit}`;
+        document.getElementById("skill22").value = `10`;
     } else if (radio60 === true) {
-        document.getElementById("skill22").value = `${6 + cha + energyPointsLimit}`;
+        document.getElementById("skill22").value = `15`;
     } else if (radio95 === true) {
-        document.getElementById("skill22").value = `${8 + cha + energyPointsLimit}`;
+        document.getElementById("skill22").value = `20`;
     } else if (unradio20 === true) {
-        document.getElementById("skill22").value = `${0 + cha}`;
+        document.getElementById("skill22").value = `0`;
     }
 
     if (radio61 === true) {
-        document.getElementById("skill23").value = `${2 + cha + energyPointsLimit}`;
+        document.getElementById("skill23").value = `5`;
     } else if (radio62 === true) {
-        document.getElementById("skill23").value = `${4 + cha + energyPointsLimit}`;
+        document.getElementById("skill23").value = `10`;
     } else if (radio63 === true) {
-        document.getElementById("skill23").value = `${6 + cha + energyPointsLimit}`;
+        document.getElementById("skill23").value = `15`;
     } else if (radio96 === true) {
-        document.getElementById("skill23").value = `${8 + cha + energyPointsLimit}`;
+        document.getElementById("skill23").value = `20`;
     } else if (unradio21 === true) {
-        document.getElementById("skill23").value = `${0 + cha}`;
+        document.getElementById("skill23").value = `0`;
     }
 
     if (radio64 === true) {
-        document.getElementById("skill24").value = `${2 + agi + energyPointsLimit}`;
+        document.getElementById("skill24").value = `5`;
     } else if (radio65 === true) {
-        document.getElementById("skill24").value = `${4 + agi + energyPointsLimit}`;
+        document.getElementById("skill24").value = `10`;
     } else if (radio66 === true) {
-        document.getElementById("skill24").value = `${6 + agi + energyPointsLimit}`;
+        document.getElementById("skill24").value = `15`;
     } else if (radio76 === true) {
-        document.getElementById("skill24").value = `${8 + agi + energyPointsLimit}`;
+        document.getElementById("skill24").value = `20`;
     } else if (unradio22 === true) {
-        document.getElementById("skill24").value = `${0 + agi}`;
+        document.getElementById("skill24").value = `0`;
     }
 
     if (radio67 === true) {
-        document.getElementById("skill25").value = `${2 + wis + energyPointsLimit}`;
+        document.getElementById("skill25").value = `5`;
     } else if (radio68 === true) {
-        document.getElementById("skill25").value = `${4 + wis + energyPointsLimit}`;
+        document.getElementById("skill25").value = `10`;
     } else if (radio69 === true) {
-        document.getElementById("skill25").value = `${6 + wis + energyPointsLimit}`;
+        document.getElementById("skill25").value = `15`;
     } else if (radio92 === true) {
-        document.getElementById("skill25").value = `${8 + wis + energyPointsLimit}`;
+        document.getElementById("skill25").value = `20`;
     } else if (unradio23 === true) {
-        document.getElementById("skill25").value = `${0 + wis}`;
+        document.getElementById("skill25").value = `0`;
     }
 
     if (radio70 === true) {
-        document.getElementById("skill26").value = `${2 + int + energyPointsLimit}`;
+        document.getElementById("skill26").value = `5`;
     } else if (radio71 === true) {
-        document.getElementById("skill26").value = `${4 + int + energyPointsLimit}`;
+        document.getElementById("skill26").value = `10`;
     } else if (radio72 === true) {
-        document.getElementById("skill26").value = `${6 + int + energyPointsLimit}`;
+        document.getElementById("skill26").value = `15`;
     } else if (radio85 === true) {
-        document.getElementById("skill26").value = `${8 + int + energyPointsLimit}`;
+        document.getElementById("skill26").value = `20`;
     } else if (unradio24 === true) {
-        document.getElementById("skill26").value = `${0 + int}`;
+        document.getElementById("skill26").value = `0`;
     }
 
     updateSkillSign();
@@ -448,99 +448,99 @@ let setSkills = () => {
 };
 
 let updateSkillSign = () => {
-    if (document.getElementById("skill2").value > 0) {
+    if (document.getElementById("skill2").value >= 0) {
         document.getElementById("skill2").value = "+" + document.getElementById("skill2").value;
     }
     
-    if (document.getElementById("skill3").value > 0) {
+    if (document.getElementById("skill3").value >= 0) {
         document.getElementById("skill3").value = "+" + document.getElementById("skill3").value;
     }
 
-    if (document.getElementById("skill4").value > 0) {
+    if (document.getElementById("skill4").value >= 0) {
         document.getElementById("skill4").value = "+" + document.getElementById("skill4").value;
     }
 
-    if (document.getElementById("skill5").value > 0) {
+    if (document.getElementById("skill5").value >= 0) {
         document.getElementById("skill5").value = "+" + document.getElementById("skill5").value;
     }
 
-    if (document.getElementById("skill6").value > 0) {
+    if (document.getElementById("skill6").value >= 0) {
         document.getElementById("skill6").value = "+" + document.getElementById("skill6").value;
     }
 
-    if (document.getElementById("skill7").value > 0) {
+    if (document.getElementById("skill7").value >= 0) {
         document.getElementById("skill7").value = "+" + document.getElementById("skill7").value;
     }
 
-    if (document.getElementById("skill8").value > 0) {
+    if (document.getElementById("skill8").value >= 0) {
         document.getElementById("skill8").value = "+" + document.getElementById("skill8").value;
     }
 
-    if (document.getElementById("skill9").value > 0) {
+    if (document.getElementById("skill9").value >= 0) {
         document.getElementById("skill9").value = "+" + document.getElementById("skill9").value;
     }
 
-    if (document.getElementById("skill10").value > 0) {
+    if (document.getElementById("skill10").value >= 0) {
         document.getElementById("skill10").value = "+" + document.getElementById("skill10").value;
     }
 
-    if (document.getElementById("skill11").value > 0) {
+    if (document.getElementById("skill11").value >= 0) {
         document.getElementById("skill11").value = "+" + document.getElementById("skill11").value;
     }
 
-    if (document.getElementById("skill12").value > 0) {
+    if (document.getElementById("skill12").value >= 0) {
         document.getElementById("skill12").value = "+" + document.getElementById("skill12").value;
     }
 
-    if (document.getElementById("skill13").value > 0) {
+    if (document.getElementById("skill13").value >= 0) {
         document.getElementById("skill13").value = "+" + document.getElementById("skill13").value;
     }
 
-    if (document.getElementById("skill14").value > 0) {
+    if (document.getElementById("skill14").value >= 0) {
         document.getElementById("skill14").value = "+" + document.getElementById("skill14").value;
     }
 
-    if (document.getElementById("skill15").value > 0) {
+    if (document.getElementById("skill15").value >= 0) {
         document.getElementById("skill15").value = "+" + document.getElementById("skill15").value;
     }
 
-    if (document.getElementById("skill16").value > 0) {
+    if (document.getElementById("skill16").value >= 0) {
         document.getElementById("skill16").value = "+" + document.getElementById("skill16").value;
     }
 
-    if (document.getElementById("skill17").value > 0) {
+    if (document.getElementById("skill17").value >= 0) {
         document.getElementById("skill17").value = "+" + document.getElementById("skill17").value;
     }
 
-    if (document.getElementById("skill19").value > 0) {
+    if (document.getElementById("skill19").value >= 0) {
         document.getElementById("skill19").value = "+" + document.getElementById("skill19").value;
     }
 
-    if (document.getElementById("skill20").value > 0) {
+    if (document.getElementById("skill20").value >= 0) {
         document.getElementById("skill20").value = "+" + document.getElementById("skill20").value;
     }
 
-    if (document.getElementById("skill21").value > 0) {
+    if (document.getElementById("skill21").value >= 0) {
         document.getElementById("skill21").value = "+" + document.getElementById("skill21").value;
     }
 
-    if (document.getElementById("skill22").value > 0) {
+    if (document.getElementById("skill22").value >= 0) {
         document.getElementById("skill22").value = "+" + document.getElementById("skill22").value;
     }
 
-    if (document.getElementById("skill23").value > 0) {
+    if (document.getElementById("skill23").value >= 0) {
         document.getElementById("skill23").value = "+" + document.getElementById("skill23").value;
     }
 
-    if (document.getElementById("skill24").value > 0) {
+    if (document.getElementById("skill24").value >= 0) {
         document.getElementById("skill24").value = "+" + document.getElementById("skill24").value;
     }
 
-    if (document.getElementById("skill25").value > 0) {
+    if (document.getElementById("skill25").value >= 0) {
         document.getElementById("skill25").value = "+" + document.getElementById("skill25").value;
     }
 
-    if (document.getElementById("skill26").value > 0) {
+    if (document.getElementById("skill26").value >= 0) {
         document.getElementById("skill26").value = "+" + document.getElementById("skill26").value;
     }
 }
@@ -548,7 +548,7 @@ let updateSkillSign = () => {
 let updateBlock = () => {
     document.getElementById("block").value = parseInt(document.getElementById("skill5").value);
 
-    if (document.getElementById("block").value > 0) {
+    if (document.getElementById("block").value >= 0) {
         document.getElementById("block").value = "+" + document.getElementById("block").value;
     }
 };
@@ -556,7 +556,7 @@ let updateBlock = () => {
 let updateDodge = () => {
     document.getElementById("dodge").value = parseInt(document.getElementById("skill4").value);
 
-    if (document.getElementById("dodge").value > 0) {
+    if (document.getElementById("dodge").value >= 0) {
         document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
     }
 }

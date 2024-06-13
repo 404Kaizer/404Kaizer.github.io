@@ -40,7 +40,6 @@ let sheetIdChange = () => {
     localStorage.removeItem("dodge" + nameCheck);
     localStorage.removeItem("armorWeight" + nameCheck);
     localStorage.removeItem("physicalRDMG" + nameCheck);
-    localStorage.removeItem("balisticalRDMG" + nameCheck);
     localStorage.removeItem("magicalRDMG" + nameCheck);
     localStorage.removeItem("velocity" + nameCheck);
     localStorage.removeItem("textArea5" + nameCheck);
@@ -178,7 +177,6 @@ let sheetIdChange = () => {
     localStorage.removeItem("unskillRadio23" + nameCheck);
     localStorage.removeItem("unskillRadio24" + nameCheck);
     localStorage.removeItem("skill0" + nameCheck);
-    localStorage.removeItem("skill1" + nameCheck);
     localStorage.removeItem("skill2" + nameCheck);
     localStorage.removeItem("skill3" + nameCheck);
     localStorage.removeItem("skill4" + nameCheck);
@@ -268,7 +266,6 @@ let sheetIdChange = () => {
     localStorage.setItem("dodge" + nameCheck, document.getElementById("dodge").value);
     localStorage.setItem("armorWeight" + nameCheck, document.getElementById("armorWeight").value);
     localStorage.setItem("physicalRDMG" + nameCheck, document.getElementById("physicalRDMG").value);
-    localStorage.setItem("balisticalRDMG" + nameCheck, document.getElementById("balisticalRDMG").value);
     localStorage.setItem("magicalRDMG" + nameCheck, document.getElementById("magicalRDMG").value);
     localStorage.setItem("velocity" + nameCheck, document.getElementById("velocity").value);
     localStorage.setItem("textArea5" + nameCheck, document.getElementById("textArea5").value);
@@ -407,7 +404,6 @@ let sheetIdChange = () => {
     localStorage.setItem("unskillRadio23" + nameCheck, document.getElementById("unskillRadio23").checked);
     localStorage.setItem("unskillRadio24" + nameCheck, document.getElementById("unskillRadio24").checked);
     localStorage.setItem("skill0" + nameCheck, document.getElementById("skill0").value);
-    localStorage.setItem("skill1" + nameCheck, document.getElementById("skill1").value);
     localStorage.setItem("skill2" + nameCheck, document.getElementById("skill2").value);
     localStorage.setItem("skill3" + nameCheck, document.getElementById("skill3").value);
     localStorage.setItem("skill4" + nameCheck, document.getElementById("skill4").value);

@@ -376,7 +376,11 @@ body input:hover {
 #main #section3 #statusDiv #bodyStatus #protectionDiv #dmgReductDiv {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
+}
+#main #section3 #statusDiv #bodyStatus #protectionDiv #dmgReductDiv .statusSubDiv {
+  width: 100%;
 }
 #main #section3 #attackAndTraining {
   display: flex;
@@ -501,15 +505,6 @@ body input:hover {
           }
       }
   }*/
-}
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
-}
-#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid #powerDiv .attSkillInput {
-  width: 100%;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .openSkillStatus {
   color: yellow;

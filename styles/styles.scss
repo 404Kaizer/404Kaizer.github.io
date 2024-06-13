@@ -449,7 +449,12 @@ body {
                     #dmgReductDiv {
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
                         gap: 10px;
+
+                        .statusSubDiv {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -570,18 +575,7 @@ body {
                     grid-template-columns: auto auto auto auto;
 
                     .skillsGrid {
-
-                        #powerDiv {
-                            display: flex;
-                            justify-content: center;
-                            column-gap: 5px;
-
-                            .attSkillInput {
-                                width: 100%;
-                            }
-                        }
                         
-
                         /*.profModalGrid {
                             display: grid;
                             

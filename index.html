@@ -160,11 +160,11 @@
                     </div>
                 </div>
                 <div id="bodyStatus">
-                    <span class="statusSpan statusSpan2">Proteção e Redutores de Dano (RD)</span>
                     <div id="protectionDiv">
                         <div id="protectionType">
                             <select name="armorWeight" id="armorWeight">
-                                <option value="Nenhuma" selected>Nenhuma</option>
+                                <option value="Selecione" selected disabled>Selecione o tipo da sua proteção</option>
+                                <option value="Nenhuma">Nenhuma</option>
                                 <option value="Leve">Leve</option>
                                 <option value="Média">Média</option>
                                 <option value="Pesada">Pesada</option>
@@ -190,11 +190,7 @@
                                 <div><input type="text" name="physical" id="physicalRDMG" placeholder="-0"></div>
                             </div>
                             <div class="statusSubDiv">
-                                <span class="statusSubSpan">RD Balístico</span>
-                                <div><input type="text" name="balistical" id="balisticalRDMG" placeholder="-0"></div>
-                            </div>
-                            <div class="statusSubDiv">
-                                <span class="statusSubSpan">RD Mágico</span>
+                                <span class="statusSubSpan">RD Paranormal</span>
                                 <div><input type="text" name="magical" id="magicalRDMG" placeholder="-0"></div>
                             </div>
                         </div>
@@ -272,12 +268,9 @@
                         </div>
                     </div>-->
                     <div id="skillsGridDiv">
-                        <div class="skillsGrid powerGridDiv">
-                            <span>Rituais</span><span style="font-size: 12px;">(DT e Mod)</span>
-                            <div id="powerDiv">
-                                <input class="attSkillInput powerAttSkillInput" type="text" name="dt" id="skill0" placeholder="DT">
-                                <input class="attSkillInput powerAttSkillInput" type="text" name="mod" id="skill1" placeholder="+0">
-                            </div>
+                        <div class="skillsGrid">
+                            <span>Poder de Rituais</span><span style="font-size: 12px;">(DT)</span>
+                            <input class="attSkillInput powerAttSkillInput" type="text" name="dt" id="skill0" placeholder="DT">
                         </div>
                         <div class="skillsGrid">
                             <span class="openSkillStatus" id="skillSpan1" onclick="openCloseSkillStatus1()">+</span>
@@ -291,19 +284,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training1" class="radio" id="skillRadio1" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training1" class="radio" id="skillRadio2" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training1" class="radio" id="skillRadio3" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training1" class="radio" id="skillRadio73" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -321,19 +314,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training2" class="radio" id="skillRadio4" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training2" class="radio" id="skillRadio5" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training2" class="radio" id="skillRadio6" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training2" class="radio" id="skillRadio74" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -350,19 +343,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training3" class="radio" id="skillRadio7" onclick="setSkills(), updateDodge()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training3" class="radio" id="skillRadio8" onclick="setSkills(), updateDodge()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training3" class="radio" id="skillRadio9" onclick="setSkills(), updateDodge()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training3" class="radio" id="skillRadio75" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -380,19 +373,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training22" class="radio" id="skillRadio64" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training22" class="radio" id="skillRadio65" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training22" class="radio" id="skillRadio66" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training22" class="radio" id="skillRadio76" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -411,19 +404,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training4" class="radio" id="skillRadio10" onclick="setSkills(), updateBlock()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training4" class="radio" id="skillRadio11" onclick="setSkills(), updateBlock()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training4" class="radio" id="skillRadio12" onclick="setSkills(), updateBlock()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training4" class="radio" id="skillRadio77" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -441,19 +434,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training5" class="radio" id="skillRadio13" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training5" class="radio" id="skillRadio14" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training5" class="radio" id="skillRadio15" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training5" class="radio" id="skillRadio78" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -471,19 +464,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training6" class="radio" id="skillRadio16" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training6" class="radio" id="skillRadio17" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training6" class="radio" id="skillRadio18" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training6" class="radio" id="skillRadio79" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -501,19 +494,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training7" class="radio" id="skillRadio19" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training7" class="radio" id="skillRadio20" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training7" class="radio" id="skillRadio21" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training7" class="radio" id="skillRadio80" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -531,19 +524,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training8" class="radio" id="skillRadio22" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training8" class="radio" id="skillRadio23" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training8" class="radio" id="skillRadio24" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training8" class="radio" id="skillRadio81" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -561,19 +554,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training9" class="radio" id="skillRadio25" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training9" class="radio" id="skillRadio26" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training9" class="radio" id="skillRadio27" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training9" class="radio" id="skillRadio82" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -591,19 +584,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training10" class="radio" id="skillRadio28" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training10" class="radio" id="skillRadio29" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training10" class="radio" id="skillRadio30" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training10" class="radio" id="skillRadio83" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -621,19 +614,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training11" class="radio" id="skillRadio31" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training11" class="radio" id="skillRadio32" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training11" class="radio" id="skillRadio33" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training11" class="radio" id="skillRadio84" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -651,19 +644,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training24" class="radio" id="skillRadio70" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training24" class="radio" id="skillRadio71" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training24" class="radio" id="skillRadio72" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training24" class="radio" id="skillRadio85" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -681,19 +674,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training12" class="radio" id="skillRadio34" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training12" class="radio" id="skillRadio35" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training12" class="radio" id="skillRadio36" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training12" class="radio" id="skillRadio86" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -711,19 +704,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training13" class="radio" id="skillRadio37" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training13" class="radio" id="skillRadio38" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training13" class="radio" id="skillRadio39" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training13" class="radio" id="skillRadio87" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -741,19 +734,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training14" class="radio" id="skillRadio40" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training14" class="radio" id="skillRadio41" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training14" class="radio" id="skillRadio42" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training14" class="radio" id="skillRadio88" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -771,19 +764,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training15" class="radio" id="skillRadio43" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training15" class="radio" id="skillRadio44" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training15" class="radio" id="skillRadio45" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training15" class="radio" id="skillRadio89" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -801,19 +794,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training16" class="radio" id="skillRadio46" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training16" class="radio" id="skillRadio47" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training16" class="radio" id="skillRadio48" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training16" class="radio" id="skillRadio90" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -831,19 +824,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training17" class="radio" id="skillRadio49" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training17" class="radio" id="skillRadio50" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training17" class="radio" id="skillRadio51" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training17" class="radio" id="skillRadio91" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -861,19 +854,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training23" class="radio" id="skillRadio67" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training23" class="radio" id="skillRadio68" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training23" class="radio" id="skillRadio69" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training23" class="radio" id="skillRadio92" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -891,19 +884,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training18" class="radio" id="skillRadio52" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training18" class="radio" id="skillRadio53" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training18" class="radio" id="skillRadio54" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training18" class="radio" id="skillRadio93" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -921,19 +914,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training19" class="radio" id="skillRadio55" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training19" class="radio" id="skillRadio56" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training19" class="radio" id="skillRadio57" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training19" class="radio" id="skillRadio94" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -951,19 +944,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training20" class="radio" id="skillRadio58" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training20" class="radio" id="skillRadio59" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training20" class="radio" id="skillRadio60" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training20" class="radio" id="skillRadio95" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
@@ -981,19 +974,19 @@
                                     </div>
                                     <div>
                                         <input type="radio" name="training21" class="radio" id="skillRadio61" onclick="setSkills()">
-                                        <span>Treinado +2</span>
+                                        <span>Treinado +5</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training21" class="radio" id="skillRadio62" onclick="setSkills()">
-                                        <span>Veterano +4</span>
+                                        <span>Veterano +10</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training21" class="radio" id="skillRadio63" onclick="setSkills()">
-                                        <span>Especialista +6</span>
+                                        <span>Especialista +15</span>
                                     </div>
                                     <div>
                                         <input type="radio" name="training21" class="radio" id="skillRadio96" onclick="setSkills()">
-                                        <span>Mestre +8</span>
+                                        <span>Mestre +20</span>
                                     </div>
                                 </div>
                             </div>
