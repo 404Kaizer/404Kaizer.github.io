@@ -120,39 +120,30 @@ let setSkills = () => {
     let unradio23 = document.getElementById("unskillRadio23").checked;
     let unradio24 = document.getElementById("unskillRadio24").checked;
 
-    // let str = parseInt(document.getElementById("strInput").value);
-    // let agi = parseInt(document.getElementById("agiInput").value);
-    // let vig = parseInt(document.getElementById("vigInput").value);
-    // let int = parseInt(document.getElementById("intInput").value);
-    // let wis = parseInt(document.getElementById("wisInput").value);
-    // let cha = parseInt(document.getElementById("chaInput").value);
-
-    // document.getElementById("skill2").value = `${str}`;
-    // document.getElementById("skill3").value = `${agi}`;
-    // document.getElementById("skill4").value = `${agi}`;
-    // document.getElementById("skill5").value = `${vig}`;
-    // document.getElementById("skill6").value = `${wis}`;
-    // document.getElementById("skill7").value = `${str}`;
-    // document.getElementById("skill8").value = `${agi}`;
-    // document.getElementById("skill9").value = `${agi}`;
-    // document.getElementById("skill10").value = `${agi}`;
-    // document.getElementById("skill11").value = `${int}`;
-    // document.getElementById("skill12").value = `${int}`;
-    // document.getElementById("skill13").value = `${int}`;
-    // document.getElementById("skill14").value = `${int}`;
-    // document.getElementById("skill15").value = `${int}`;
-    // document.getElementById("skill16").value = `${wis}`;
-    // document.getElementById("skill17").value = `${wis}`;
-    // document.getElementById("skill19").value = `${wis}`;
-    // document.getElementById("skill20").value = `${cha}`;
-    // document.getElementById("skill21").value = `${cha}`;
-    // document.getElementById("skill22").value = `${cha}`;
-    // document.getElementById("skill23").value = `${cha}`;
-    // document.getElementById("skill24").value = `${agi}`;
-    // document.getElementById("skill25").value = `${wis}`;
-    // document.getElementById("skill26").value = `${int}`;
-
-    // let energyPointsLimit = parseInt(document.getElementById("energyPointsLimitInput").value);
+    document.getElementById("skill2").value = `0`;
+    document.getElementById("skill3").value = `0`;
+    document.getElementById("skill4").value = `0`;
+    document.getElementById("skill5").value = `0`;
+    document.getElementById("skill6").value = `0`;
+    document.getElementById("skill7").value = `0`;
+    document.getElementById("skill8").value = `0`;
+    document.getElementById("skill9").value = `0`;
+    document.getElementById("skill10").value = `0`;
+    document.getElementById("skill11").value = `0`;
+    document.getElementById("skill12").value = `0`;
+    document.getElementById("skill13").value = `0`;
+    document.getElementById("skill14").value = `0`;
+    document.getElementById("skill15").value = `0`;
+    document.getElementById("skill16").value = `0`;
+    document.getElementById("skill17").value = `0`;
+    document.getElementById("skill19").value = `0`;
+    document.getElementById("skill20").value = `0`;
+    document.getElementById("skill21").value = `0`;
+    document.getElementById("skill22").value = `0`;
+    document.getElementById("skill23").value = `0`;
+    document.getElementById("skill24").value = `0`;
+    document.getElementById("skill25").value = `0`;
+    document.getElementById("skill26").value = `0`;
 
     if (radio1 === true) {
         document.getElementById("skill2").value = `5`;
