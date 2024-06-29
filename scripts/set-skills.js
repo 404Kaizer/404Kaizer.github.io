@@ -120,12 +120,12 @@ let setSkills = () => {
     let unradio23 = document.getElementById("unskillRadio23").checked;
     let unradio24 = document.getElementById("unskillRadio24").checked;
 
-    let str = parseInt(document.getElementById("strInput").value);
-    let agi = parseInt(document.getElementById("agiInput").value);
-    let vig = parseInt(document.getElementById("vigInput").value);
-    let int = parseInt(document.getElementById("intInput").value);
-    let wis = parseInt(document.getElementById("wisInput").value);
-    let cha = parseInt(document.getElementById("chaInput").value);
+    // let str = parseInt(document.getElementById("strInput").value);
+    // let agi = parseInt(document.getElementById("agiInput").value);
+    // let vig = parseInt(document.getElementById("vigInput").value);
+    // let int = parseInt(document.getElementById("intInput").value);
+    // let wis = parseInt(document.getElementById("wisInput").value);
+    // let cha = parseInt(document.getElementById("chaInput").value);
 
     // document.getElementById("skill2").value = `${str}`;
     // document.getElementById("skill3").value = `${agi}`;
