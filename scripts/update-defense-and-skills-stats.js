@@ -1,3 +1,56 @@
+function calculateDefense() {
+    // Coletando os valores dos campos
+    const armorDef = parseFloat(document.getElementById('armorDef').value) || 0;
+    const agiInput = parseFloat(document.getElementById('agiInput').value) || 0;
+    const energyPointsLimitInput = parseFloat(document.getElementById('energyPointsLimitInput').value) || 0;
+    const extraDef = parseFloat(document.getElementById('extraDef').value) || 0;
+
+    // Somando 10 aos valores coletados
+    const totalDefense = 10 + armorDef + agiInput + energyPointsLimitInput + extraDef;
+
+    // Atribuindo o valor da somatória ao ID defense
+    document.getElementById('defense').value = totalDefense;
+}
+
+// Função para adicionar o evento de mudança aos campos
+function addEventListeners() {
+    const ids = ['armorDef', 'agiInput', 'energyPointsLimitInput', 'extraDef'];
+
+    ids.forEach(id => {
+        document.getElementById(id).addEventListener('input', calculateDefense);
+    });
+}
+
+function convertCharExpToNumber() {
+    // Obtém o valor do campo charExp
+    const charExpValue = document.getElementById('charExp').value;
+
+    // Remove o símbolo '%' e converte a string em número
+    const numericValue = parseFloat(charExpValue.replace('%', ''));
+
+    // Verifica se o valor é um número válido
+    if (!isNaN(numericValue)) {
+        // Armazena o valor convertido em uma variável
+        const energyPointsValue = numericValue/5;
+
+        // Atribui o valor ao campo energyPointsLimitInput
+        document.getElementById('energyPointsLimitInput').value = energyPointsValue;
+    } else {
+        return 0;
+    }
+}
+
+// Adiciona o evento de alteração no campo charExp
+function addCharExpListener() {
+    document.getElementById('charExp').addEventListener('input', convertCharExpToNumber);
+}
+
+// Executa o código assim que a página carrega
+window.onload = function() {
+    addEventListeners();
+    addCharExpListener();
+};
+
 //let updateAttMods = () => {
 //   let strInput = document.getElementById("strInput").value;
 //    document.getElementById("strModInput").value = Math.floor((strInput - 10) / 2);

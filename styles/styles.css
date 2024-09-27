@@ -359,7 +359,9 @@ body input:hover {
   gap: 10px;
 }
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType {
-  display: grid;
+  display: flex;
+  grid-auto-columns: auto auto auto;
+  align-items: center;
   gap: 10px;
 }
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight {
@@ -368,7 +370,6 @@ body input:hover {
   color: white;
   text-align: center;
   cursor: pointer;
-  width: 100%;
 }
 #main #section3 #statusDiv #bodyStatus #protectionDiv #protectionType #armorWeight:hover {
   border-color: white;

@@ -16,7 +16,7 @@ const ids = [
     "textArea4", "lifeBar", "sanityBar", "energyBar", "exhaustSelect", "woundedCheck", 
     "dyeingCheck", "fail1", "fail2", "fail3", "terrorizedCheck", "traumatizedCheck", 
     "insaneCheck", "trainedSkillBonus", "nTrainedSkillBonus", "defense", "block", "dodge", 
-    "armorWeight", "physicalRDMG", "magicalRDMG", "velocity", "textArea5", "textArea6", 
+    "armorDef", "extraDef", "physicalRDMG", "magicalRDMG", "velocity", "textArea5", "textArea6", 
     "strInput", "strModInput", "agiInput", "agiModInput", "vigInput", "vigModInput", 
     "intInput", "intModInput", "wisInput", "wisModInput", "chaInput", "chaModInput", 
     "energyPointsLimitInput", "skillRadio1", "skillRadio2", "skillRadio3", "skillRadio4", 

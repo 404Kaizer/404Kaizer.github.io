@@ -19,12 +19,6 @@ document.getElementById('fileInput').addEventListener('change', function() {
     }
 });
 
-// Função para calcular a largura da barra com base nos valores current e max
-function calculateBar(current, max) {
-    if (max === 0) return 0; // Para evitar divisão por zero
-    return (current / max) * 100; // Retorna a porcentagem
-}
-
 function importData(content) {
     const lines = content.split('\n\n'); // Divide o conteúdo em linhas
     lines.forEach(line => {
@@ -55,9 +49,9 @@ function importData(content) {
                 element.innerHTML = value.trim(); // Usar innerHTML para preservar a formatação
             } else if (key.trim() === 'lifeBar' || key.trim() === 'sanityBar' || key.trim() === 'energyBar') {
                 // Para lifeBar, sanityBar e energyBar, atribuir innerText
-                const [current, max] = value.trim().split('/').map(Number); // Assume que o valor está no formato "current/max"
-                element.innerText = `${current}/${max}`; // Exibe o texto atual
+                const [current, max] = value.trim().split(' / ').map(Number); // Assume que o valor está no formato "current/max"
                 element.style.width = `${calculateBar(current, max)}%`; // Define a largura da barra
+                element.innerText = `${current} / ${max}` // Exibe o texto atual
             } else {
                 // Para outros inputs, definir o valor
                 element.value = value.trim();

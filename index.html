@@ -11,12 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="scripts/main-script.js" defer></script>
-    <script src="scripts/sheet-deleting.js" defer></script>
+    <!--<<script src="scripts/sheet-deleting.js" defer></script>
     <script src="scripts/sheet-id-change.js" defer></script>
-    <script src="scripts/sheet-saving.js" defer></script>
-    <script src="scripts/sheet-selection.js" defer></script>
-    <script src="scripts/update-defense-and-skills-stats.js" defer></script>
+    script src="scripts/sheet-saving.js" defer></script>
+    <script src="scripts/sheet-selection.js" defer></script>-->
     <script src="scripts/set-skills.js" defer></script>
+    <script src="scripts/save-sheet.js" defer></script>
+    <script src="scripts/load-sheet.js" defer></script>
+    <script src="scripts/update-defense-and-skills-stats.js" defer></script>
     <script src="scripts/status-bars.js" defer></script>
     <script src="scripts/combat-section.js" defer></script>
     <script src="scripts/img-selector.js" defer></script>
@@ -42,8 +44,9 @@
             </div>
             <h1 id="headerTitle"></h1>
             <div id="saveLoadDelBtns">
-                <button class="saveLoadDelBtn" id="saveSheet" onclick="getNameInputValidation()"><img class="saveLoadDelImg" src="imgs/save.png" alt="Salvar Ficha"></button>
-                <button class="saveLoadDelBtn" id="loadSheet" onclick="chooseSheetValidation()"><img class="saveLoadDelImg" src="imgs/load.png" alt="Trocar Ficha"></button>
+                <button class="saveLoadDelBtn" id="saveSheet"><img class="saveLoadDelImg" src="imgs/save.png" alt="Salvar Ficha"></button>
+                <input type="file" id="fileInput" accept=".txt" style="display: none;">
+                <button class="saveLoadDelBtn" id="loadSheet"><img class="saveLoadDelImg" src="imgs/load.png" alt="Trocar Ficha"></button>
                 <button class="saveLoadDelBtn" id="deleteSheet" onclick="sheetDeletionValidation()"><img class="saveLoadDelImg" src="imgs/delete.png" alt="Deletar Ficha"></button>
             </div>
         </div>
@@ -162,13 +165,14 @@
                 <div id="bodyStatus">
                     <div id="protectionDiv">
                         <div id="protectionType">
-                            <select name="armorWeight" id="armorWeight">
-                                <option value="Selecione" selected disabled>Selecione o tipo da sua proteção</option>
-                                <option value="Nenhuma">Nenhuma</option>
-                                <option value="Leve">Leve</option>
-                                <option value="Média">Média</option>
-                                <option value="Pesada">Pesada</option>
-                            </select>
+                            <div>
+                                <span class="statusSubSpan">Bônus de Proteção</span>
+                                <input type="text" name="armorDef" id="armorDef" placeholder="+0">
+                            </div>
+                            <div>
+                                <span class="statusSubSpan">Extra</span>
+                                <input type="text" name="extraDef" id="extraDef" placeholder="+0">
+                            </div>
                         </div>
                         <div id="defType">
                             <div class="statusSubDiv">

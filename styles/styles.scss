@@ -429,7 +429,9 @@ body {
                     }
 
                     #protectionType {
-                        display: grid;
+                        display: flex;
+                        grid-auto-columns: auto auto auto;
+                        align-items: center;
                         gap: 10px;
 
                         #armorWeight {
@@ -438,7 +440,6 @@ body {
                             color: white;
                             text-align: center;
                             cursor: pointer;
-                            width: 100%;
                         }
 
                         #armorWeight:hover {
