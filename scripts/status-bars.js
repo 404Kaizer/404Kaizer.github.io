@@ -28,32 +28,49 @@ let calculateBar = (current, max) => {
     }
 }
 
-energyBar.addEventListener("click", ()=> {
-    let current = Number(prompt("ENERGIA ATUAL:"));
-    let max = Number(prompt("ENERGIA MÁXIMA:"));
-  
-    charStatus.energy.current = current;
-    charStatus.energy.max = max;
-    energyBar.style.width = `${calculateBar(current, max)}%`;
-    energyBar.innerText = `${current} / ${max}`;
-});
+// Função para atualizar a barra de progresso
+function updateBar(barId, current, max) {
+    const bar = document.getElementById(barId);
+    const percentage = calculateBar(current, max);
+    bar.style.width = `${percentage}%`;
+    bar.innerText = `${current} / ${max}`;
+}
 
-lifeBar.addEventListener("click", ()=> {
+// Eventos para editar Vida Atual e Máxima
+document.getElementById("currentLifeBtn").addEventListener("click", () => {
     let current = Number(prompt("VIDA ATUAL:"));
-    let max = Number(prompt("VIDA MÁXIMA:"));
-  
-    charStatus.energy.current = current;
-    charStatus.energy.max = max;
-    lifeBar.style.width = `${calculateBar(current, max)}%`;
-    lifeBar.innerText = `${current} / ${max}`;
+    charStatus.life.current = current;
+    updateBar('lifeBar', charStatus.life.current, charStatus.life.max);
 });
 
-sanityBar.addEventListener("click", ()=> {
-    let current = Number(prompt("SANIDADE ATUAL:"));
-    let max = Number(prompt("SANIDADE MÁXIMA:"));
-  
+document.getElementById("maxLifeBtn").addEventListener("click", () => {
+    let max = Number(prompt("VIDA MÁXIMA:"));
+    charStatus.life.max = max;
+    updateBar('lifeBar', charStatus.life.current, charStatus.life.max);
+});
+
+// Eventos para editar Energia Atual e Máxima
+document.getElementById("currentEnergyBtn").addEventListener("click", () => {
+    let current = Number(prompt("ENERGIA ATUAL:"));
     charStatus.energy.current = current;
+    updateBar('energyBar', charStatus.energy.current, charStatus.energy.max);
+});
+
+document.getElementById("maxEnergyBtn").addEventListener("click", () => {
+    let max = Number(prompt("ENERGIA MÁXIMA:"));
     charStatus.energy.max = max;
-    sanityBar.style.width = `${calculateBar(current, max)}%`;
-    sanityBar.innerText = `${current} / ${max}`;
+    updateBar('energyBar', charStatus.energy.current, charStatus.energy.max);
+});
+
+// Eventos para editar Sanidade Atual e Máxima
+document.getElementById("currentSanityBtn").addEventListener("click", () => {
+    let current = Number(prompt("SANIDADE ATUAL:"));
+    charStatus.sanity.current = current;
+    updateBar('sanityBar', charStatus.sanity.current, charStatus.sanity.max);
+});
+
+document.getElementById("maxSanityBtn").addEventListener("click", () => {
+    let max = Number(prompt("SANIDADE MÁXIMA:"));
+    charStatus.sanity.max = max;
+    updateBar('sanityBar', charStatus.sanity.current, charStatus.sanity.max);
 });

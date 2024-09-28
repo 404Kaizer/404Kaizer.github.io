@@ -267,6 +267,14 @@ body input:hover {
   padding: 10px;
   align-items: center;
 }
+#main #section3 #statusDiv #barsDiv #lifeStatus .changeStatusBtn, #main #section3 #statusDiv #barsDiv #sanityStatus .changeStatusBtn, #main #section3 #statusDiv #barsDiv #energyStatus .changeStatusBtn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  width: 22px;
+  font-weight: bold;
+}
 #main #section3 #statusDiv #barsDiv #lifeStatus #energyPointsLimitInput, #main #section3 #statusDiv #barsDiv #sanityStatus #energyPointsLimitInput, #main #section3 #statusDiv #barsDiv #energyStatus #energyPointsLimitInput {
   background-color: black;
   color: white;
@@ -326,7 +334,6 @@ body input:hover {
   width: 100%;
   transition: width 2s;
   text-align: center;
-  cursor: pointer;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv:hover, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv:hover, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv:hover {
   border-color: white;

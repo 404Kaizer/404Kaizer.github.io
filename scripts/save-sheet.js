@@ -14,7 +14,7 @@ const ids = [
     "charName", "charImg", "charExp", "charRaceSex", "charExpert", "charAge", "charAlignment", 
     "charStature", "charLangs", "backgroundArea", "textArea1", "textArea2", "textArea3", 
     "textArea4", "lifeBar", "sanityBar", "energyBar", "exhaustSelect", "woundedCheck", 
-    "dyeingCheck", "fail1", "fail2", "fail3", "terrorizedCheck", "traumatizedCheck", 
+    "dyeingCheck", "fail1", "fail2", "fail3", "fail4", "fail5", "fail6", "terrorizedCheck", "traumatizedCheck", 
     "insaneCheck", "trainedSkillBonus", "nTrainedSkillBonus", "defense", "block", "dodge", 
     "armorDef", "extraDef", "physicalRDMG", "magicalRDMG", "velocity", "textArea5", "textArea6", 
     "strInput", "strModInput", "agiInput", "agiModInput", "vigInput", "vigModInput", 

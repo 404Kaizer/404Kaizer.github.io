@@ -314,6 +314,15 @@ body {
 
                 #lifeStatus, #sanityStatus, #energyStatus {
 
+                    .changeStatusBtn {
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+                        font-size: 12px;
+                        width: 22px;
+                        font-weight: bold;
+                    }
+
                     #energyPointsLimitInput {
                         background-color: black;
                         color: white;
@@ -385,7 +394,6 @@ body {
                             width: 100%;
                             transition: width 2s;
                             text-align: center;
-                            cursor: pointer;
                         }
                     }
     

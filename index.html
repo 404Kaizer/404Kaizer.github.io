@@ -99,6 +99,8 @@
                 <div id="barsDiv">
                     <div id="lifeStatus">
                         <span class="statusSpan">Vida</span>
+                        <button id="currentLifeBtn" class="changeStatusBtn">A</button>
+                        <button id="maxLifeBtn" class="changeStatusBtn">M</button>
                         <div class="barDiv" id="lifeBarDiv">
                             <span class="bar" id="lifeBar">1 / 1</span>
                         </div>
@@ -118,7 +120,6 @@
                             <div class="statusCheckDiv lifeChecks">
                                 <input class="statusChecks" type="checkbox" name="wounded" id="woundedCheck">
                                 <span id="checkSpans2">Lesão Grave</span>
-                                <span id="checkSpans3">L. Grave</span>
                             </div>
                             <div class="statusCheckDiv lifeChecks">
                                 <input class="statusChecks" type="checkbox" name="dyeing" id="dyeingCheck">
@@ -134,6 +135,8 @@
                     </div>
                     <div id="sanityStatus">
                         <span class="statusSpan">Sanidade</span>
+                        <button id="currentSanityBtn" class="changeStatusBtn">A</button>
+                        <button id="maxSanityBtn" class="changeStatusBtn">M</button>
                         <div class="barDiv" id="sanityBarDiv">
                             <span class="bar" id="sanityBar">1 / 1</span>
                         </div>
@@ -148,13 +151,21 @@
                             </div>
                             <div class="statusCheckDiv sanityChecks">
                                 <input class="statusChecks" type="checkbox" name="insane" id="insaneCheck">
-                                <span class="checkSpans">Insano</span>
+                                <span class="checkSpans">Enlouquecendo</span>
+                            </div>
+                            <div class="statusCheckDiv sanityChecks">
+                                <span class="checkSpans">Falhas: </span>
+                                <input class="statusChecks" type="checkbox" name="fail4" id="fail4">
+                                <input class="statusChecks" type="checkbox" name="fail5" id="fail5">
+                                <input class="statusChecks" type="checkbox" name="fail6" id="fail6">
                             </div>
                         </div>
                     </div>
                     <div id="energyStatus">
                         <div>
                             <span class="statusSpan">Energia</span>
+                            <button id="currentEnergyBtn" class="changeStatusBtn">A</button>
+                            <button id="maxEnergyBtn" class="changeStatusBtn">M</button>
                             <input id="energyPointsLimitInput" type="number" name="limitPE" placeholder="Limite" onchange="setSkills()">
                         </div>
                         <div class="barDiv" id="energyBarDiv">
