@@ -1,9 +1,26 @@
+// Função para formatar a data e hora
+function formatDate() {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const months = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+    const month = months[now.getMonth()]; // Obtém o nome do mês
+    
+    return `${day} de ${month} de ${year} às ${hours}h ${minutes}min ${seconds}sec`; // Formato: DD-MM-YYYY às HH.MM.SS
+}
+
 // Função para baixar o conteúdo como um arquivo .txt
-function downloadFile(filename, content) {
+function downloadFile(filename, content, format = 'txt') {
     const element = document.createElement('a');
-    const file = new Blob([content], { type: 'text/plain' });
+    const file = new Blob([content], { type: `text/${format}` });
     element.href = URL.createObjectURL(file);
-    element.download = `${filename}.txt`; // Nome do arquivo
+    element.download = `${filename}.${format}`; // Nome do arquivo
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -91,8 +108,11 @@ function saveCharacterSheet() {
         const charName = charNameElement.value;
         const data = gatherData();
         
+        // Formata a data e hora
+        const formattedDate = formatDate();
+        
         // Chama a função para baixar o arquivo com o nome e conteúdo
-        downloadFile(charName, data);
+        downloadFile(`${charName} (${formattedDate})`, data);
     } else {
         console.error("Elemento com ID 'charName' não encontrado.");
     }

@@ -16,6 +16,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -665,17 +670,17 @@ body input:hover {
 }
 #main #section5 {
   display: none;
-  grid-template-columns: auto auto;
   -moz-column-gap: 10px;
        column-gap: 10px;
   width: 100%;
 }
 #main #section5 #editContent1 #wealth, #main #section5 #editContent1 #weight {
+  display: grid;
   margin-bottom: 15px;
 }
 #main #section5 #editContent1 #wealth div, #main #section5 #editContent1 #weight div {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  justify-content: space-evenly;
   gap: 15px;
 }
 #main #section5 #editContent1 #wealth div .wealthInput, #main #section5 #editContent1 #wealth div .weightInput, #main #section5 #editContent1 #weight div .wealthInput, #main #section5 #editContent1 #weight div .weightInput {
@@ -683,14 +688,7 @@ body input:hover {
   font-size: 20px;
   background-color: black;
   padding: 5px;
-}
-#main #section5 #editContent1 #weight {
-  margin-bottom: 15px;
-}
-#main #section5 #editContent1 #weight div {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 15px;
+  width: 100%;
 }
 #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
   display: grid;
@@ -760,7 +758,6 @@ body input:hover {
   word-break: break-all;
   border: solid 1px gray;
   background-color: black;
-  width: 100%;
   padding: 10px;
 }
 #main #section6 {
@@ -920,17 +917,9 @@ body input:hover {
   }
   #main #section5 {
     display: none;
-    grid-template-columns: auto;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
   }
   #main #section5 #editContent1 #wealth {
     margin-bottom: 15px;
-  }
-  #main #section5 #editContent1 #wealth div {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 15px;
   }
   #main #section5 #editContent1 #wealth div .wealthInput {
     text-align: center;
@@ -1334,10 +1323,5 @@ body input:hover {
   #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 45px;
     padding: 2px;
-  }
-  #main #section5 #editContent1 #weight div {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 15px;
   }
 }/*# sourceMappingURL=styles.css.map */
