@@ -267,20 +267,27 @@ body input:hover {
   padding: 10px;
   align-items: center;
 }
-#main #section3 #statusDiv #barsDiv #lifeStatus .changeStatusBtn, #main #section3 #statusDiv #barsDiv #sanityStatus .changeStatusBtn, #main #section3 #statusDiv #barsDiv #energyStatus .changeStatusBtn {
+#main #section3 #statusDiv #barsDiv #lifeStatus .changeBarStatusDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .changeBarStatusDiv, #main #section3 #statusDiv #barsDiv #energyStatus .changeBarStatusDiv {
+  display: flex;
+  gap: 10px;
+}
+#main #section3 #statusDiv #barsDiv #lifeStatus .changeBarStatusDiv .changeStatusBtn, #main #section3 #statusDiv #barsDiv #sanityStatus .changeBarStatusDiv .changeStatusBtn, #main #section3 #statusDiv #barsDiv #energyStatus .changeBarStatusDiv .changeStatusBtn {
   background-color: black;
-  color: white;
-  text-align: center;
-  font-size: 12px;
-  width: 22px;
   font-weight: bold;
+  align-items: center;
+  cursor: pointer;
+  width: 50px;
+  border-color: gray;
+}
+#main #section3 #statusDiv #barsDiv #lifeStatus .changeBarStatusDiv .changeStatusBtn:hover, #main #section3 #statusDiv #barsDiv #sanityStatus .changeBarStatusDiv .changeStatusBtn:hover, #main #section3 #statusDiv #barsDiv #energyStatus .changeBarStatusDiv .changeStatusBtn:hover {
+  border-color: white;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus #energyPointsLimitInput, #main #section3 #statusDiv #barsDiv #sanityStatus #energyPointsLimitInput, #main #section3 #statusDiv #barsDiv #energyStatus #energyPointsLimitInput {
   background-color: black;
   color: white;
   text-align: center;
   font-size: 15px;
-  width: 50px;
+  width: 80px;
   font-weight: bold;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #lifeStatus .lifeChecks, #main #section3 #statusDiv #barsDiv #sanityStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .lifeChecks, #main #section3 #statusDiv #barsDiv #energyStatus .statusCheckDiv, #main #section3 #statusDiv #barsDiv #energyStatus .lifeChecks {
@@ -304,12 +311,13 @@ body input:hover {
   text-align: center;
   cursor: pointer;
   font-size: 14px;
+  width: 60px;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus #exhaustSelect:hover, #main #section3 #statusDiv #barsDiv #sanityStatus #exhaustSelect:hover, #main #section3 #statusDiv #barsDiv #energyStatus #exhaustSelect:hover {
   border-color: white;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus #lifeBarDiv, #main #section3 #statusDiv #barsDiv #lifeStatus #sanityBarDiv, #main #section3 #statusDiv #barsDiv #lifeStatus #energyBarDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #lifeBarDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #sanityBarDiv, #main #section3 #statusDiv #barsDiv #sanityStatus #energyBarDiv, #main #section3 #statusDiv #barsDiv #energyStatus #lifeBarDiv, #main #section3 #statusDiv #barsDiv #energyStatus #sanityBarDiv, #main #section3 #statusDiv #barsDiv #energyStatus #energyBarDiv {
-  display: grid;
+  display: flex;
   width: 100%;
   background-color: gray;
 }
@@ -327,7 +335,9 @@ body input:hover {
   gap: 15px;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv {
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
 #main #section3 #statusDiv #barsDiv #lifeStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #sanityStatus .barDiv .bar, #main #section3 #statusDiv #barsDiv #energyStatus .barDiv .bar {
   padding: 3px;
@@ -1235,6 +1245,11 @@ body input:hover {
   }
   #main #section3 #statusDiv #barsDiv .statusCheckDiv #checkSpan2, #main #section3 #statusDiv #barsDiv .statusCheckDiv #checkSpans3, #main #section3 #statusDiv #barsDiv .lifeChecks #checkSpan2, #main #section3 #statusDiv #barsDiv .lifeChecks #checkSpans3 {
     font-size: 17px;
+  }
+  #main #section3 #statusDiv #barsDiv #sanityStatus #sanityCheckDiv {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
   }
   #main #section3 #statusDiv #barsDiv #lifeStatus #lifeCheckDiv {
     display: grid;

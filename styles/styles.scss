@@ -314,13 +314,22 @@ body {
 
                 #lifeStatus, #sanityStatus, #energyStatus {
 
-                    .changeStatusBtn {
-                        background-color: black;
-                        color: white;
-                        text-align: center;
-                        font-size: 12px;
-                        width: 22px;
-                        font-weight: bold;
+                    .changeBarStatusDiv {
+                        display: flex;
+                        gap: 10px;
+
+                        .changeStatusBtn {
+                            background-color: black;
+                            font-weight: bold;
+                            align-items: center;
+                            cursor: pointer;
+                            width: 50px;
+                            border-color: gray;
+                        }
+                
+                        .changeStatusBtn:hover {
+                            border-color: white;
+                        }
                     }
 
                     #energyPointsLimitInput {
@@ -328,7 +337,7 @@ body {
                         color: white;
                         text-align: center;
                         font-size: 15px;
-                        width: 50px;
+                        width: 80px;
                         font-weight: bold;
                     }
 
@@ -357,6 +366,7 @@ body {
                         text-align: center;
                         cursor: pointer;
                         font-size: 14px;
+                        width: 60px;
                     }
 
                     #exhaustSelect:hover {
@@ -364,7 +374,7 @@ body {
                     }    
 
                     #lifeBarDiv, #sanityBarDiv, #energyBarDiv {
-                        display: grid;
+                        display: flex;
                         width: 100%;
                         background-color: gray;
     
@@ -387,7 +397,10 @@ body {
                     }
     
                     .barDiv {
-                        border: 1px solid black;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 5px;
+                        
     
                         .bar {
                             padding: 3px;
@@ -1629,6 +1642,15 @@ body {
 
                         #checkSpan2, #checkSpans3 {
                             font-size: 17px;
+                        }
+                    }
+
+                    #sanityStatus {
+
+                        #sanityCheckDiv {
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            gap: 12px;
                         }
                     }
 

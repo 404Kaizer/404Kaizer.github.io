@@ -99,10 +99,12 @@
                 <div id="barsDiv">
                     <div id="lifeStatus">
                         <span class="statusSpan">Vida</span>
-                        <button id="currentLifeBtn" class="changeStatusBtn">A</button>
-                        <button id="maxLifeBtn" class="changeStatusBtn">M</button>
-                        <div class="barDiv" id="lifeBarDiv">
-                            <span class="bar" id="lifeBar">1 / 1</span>
+                        <div class="changeBarStatusDiv">
+                            <button id="currentLifeBtn" class="changeStatusBtn">A</button>
+                            <div class="barDiv" id="lifeBarDiv">
+                                <span class="bar" id="lifeBar">1 / 1</span>
+                            </div>
+                            <button id="maxLifeBtn" class="changeStatusBtn">M</button>
                         </div>
                         <div id="lifeCheckDiv">
                             <div class="lifeChecks">
@@ -120,6 +122,7 @@
                             <div class="statusCheckDiv lifeChecks">
                                 <input class="statusChecks" type="checkbox" name="wounded" id="woundedCheck">
                                 <span id="checkSpans2">Lesão Grave</span>
+                                <span id="checkSpans3">L. Grave</span>
                             </div>
                             <div class="statusCheckDiv lifeChecks">
                                 <input class="statusChecks" type="checkbox" name="dyeing" id="dyeingCheck">
@@ -135,19 +138,21 @@
                     </div>
                     <div id="sanityStatus">
                         <span class="statusSpan">Sanidade</span>
-                        <button id="currentSanityBtn" class="changeStatusBtn">A</button>
-                        <button id="maxSanityBtn" class="changeStatusBtn">M</button>
-                        <div class="barDiv" id="sanityBarDiv">
-                            <span class="bar" id="sanityBar">1 / 1</span>
+                        <div class="changeBarStatusDiv">
+                            <button id="currentSanityBtn" class="changeStatusBtn">A</button>
+                            <div class="barDiv" id="sanityBarDiv">
+                                <span class="bar" id="sanityBar">1 / 1</span>
+                            </div>
+                            <button id="maxSanityBtn" class="changeStatusBtn">M</button>
                         </div>
                         <div id="sanityCheckDiv">
                             <div class="statusCheckDiv sanityChecks">
                                 <input class="statusChecks" type="checkbox" name="terrorized" id="terrorizedCheck">
-                                <span class="checkSpans">Aterrorizado</span>
+                                <span class="checkSpans">Terror</span>
                             </div>
                             <div class="statusCheckDiv sanityChecks">
                                 <input class="statusChecks" type="checkbox" name="traumatized" id="traumatizedCheck">
-                                <span class="checkSpans">Traumatizado</span>
+                                <span class="checkSpans">Trauma</span>
                             </div>
                             <div class="statusCheckDiv sanityChecks">
                                 <input class="statusChecks" type="checkbox" name="insane" id="insaneCheck">
@@ -164,12 +169,14 @@
                     <div id="energyStatus">
                         <div>
                             <span class="statusSpan">Energia</span>
-                            <button id="currentEnergyBtn" class="changeStatusBtn">A</button>
-                            <button id="maxEnergyBtn" class="changeStatusBtn">M</button>
                             <input id="energyPointsLimitInput" type="number" name="limitPE" placeholder="Limite" onchange="setSkills()">
                         </div>
-                        <div class="barDiv" id="energyBarDiv">
-                            <span class="bar" id="energyBar">1 / 1</span>
+                        <div class="changeBarStatusDiv">
+                            <button id="currentEnergyBtn" class="changeStatusBtn">A</button>
+                            <div class="barDiv" id="energyBarDiv">
+                                <span class="bar" id="energyBar">1 / 1</span>
+                            </div>
+                            <button id="maxEnergyBtn" class="changeStatusBtn">M</button>
                         </div>
                     </div>
                 </div>
