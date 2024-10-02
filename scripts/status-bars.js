@@ -33,8 +33,8 @@ const charStatus = {
 let calculateBar = (current, max) => {
     if (current > max) {
         return 100;
-    } else if (current < 0) {
-        return 0;
+    } else if (current <= 0) {
+        return "zero";
     } else {
         const value = (100 / max) * current;
         const string = value.toString().split('.')[0];
@@ -48,7 +48,33 @@ function updateBar(barId, statusTextId, current, max) {
     const statusText = document.getElementById(statusTextId);
     const statusBar = document.getElementById(barId);
     const percentage = calculateBar(current, max);
-    statusBar.style.width = `${percentage}%`;
+
+    // Define a transição de 2 segundos para a largura
+    statusBar.style.transition = 'width 2s';
+
+    // Adiciona um ouvinte para o fim da transição de largura
+    statusBar.addEventListener('transitionend', () => {
+        // Verifica se a largura é 1% e esconde a barra
+        if (statusBar.style.width <= '1%') {
+            statusBar.style.display = 'none';
+        }
+    });
+
+    if (percentage === 0) {
+        // Se percentage for 0, faz a transição para 1% e depois oculta a barra
+        statusBar.style.width = '1%';
+    } else {
+        // Torna a barra visível e faz a transição de 1% para o valor correto
+        statusBar.style.display = 'block';
+        statusBar.style.width = '1%';
+
+        // Pequeno atraso para garantir que a transição ocorra suavemente
+        setTimeout(() => {
+            statusBar.style.width = `${percentage}%`;
+        }, 50);
+    }
+
+    // Atualiza o texto da barra
     statusText.innerText = `${current} / ${max}`;
 }
 
