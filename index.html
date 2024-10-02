@@ -27,6 +27,7 @@
     <script src="scripts/hamburguer-menu.js" defer></script>
     <script src="scripts/html-open-and-close-pages.js" defer></script>
     <script src="scripts/text-editor-scripts.js" defer></script>
+    <script src="scripts/add-item-modal.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -102,7 +103,8 @@
                         <div class="changeBarStatusDiv">
                             <button id="currentLifeBtn" class="changeStatusBtn">A</button>
                             <div class="barDiv" id="lifeBarDiv">
-                                <span class="bar" id="lifeBar">1 / 1</span>
+                                <p class="statusText" id="lifeStatusText">1 / 1</p>
+                                <span class="bar" id="lifeBar"></span>
                             </div>
                             <button id="maxLifeBtn" class="changeStatusBtn">M</button>
                         </div>
@@ -141,7 +143,8 @@
                         <div class="changeBarStatusDiv">
                             <button id="currentSanityBtn" class="changeStatusBtn">A</button>
                             <div class="barDiv" id="sanityBarDiv">
-                                <span class="bar" id="sanityBar">1 / 1</span>
+                                <p class="statusText" id="sanityStatusText">1 / 1</p>
+                                <span class="bar" id="sanityBar"></span>
                             </div>
                             <button id="maxSanityBtn" class="changeStatusBtn">M</button>
                         </div>
@@ -174,7 +177,8 @@
                         <div class="changeBarStatusDiv">
                             <button id="currentEnergyBtn" class="changeStatusBtn">A</button>
                             <div class="barDiv" id="energyBarDiv">
-                                <span class="bar" id="energyBar">1 / 1</span>
+                                <p class="statusText" id="energyStatusText">1 / 1</p>
+                                <span class="bar" id="energyBar"></span>
                             </div>
                             <button id="maxEnergyBtn" class="changeStatusBtn">M</button>
                         </div>
@@ -1354,41 +1358,64 @@
                     <h1>Peso</h1>
                     <div>
                         <input class="weightInput" type="number" name="actualWeight" id="weight1" placeholder="Peso Atual">
-                        <input class="weightInput" type="number" name="totalWeight" id="weight2" placeholder="Peso Total">
+                        <input class="weightInput" type="number" name="totalWeight" id="weight2" placeholder="Peso Suportado">
                     </div>
                 </div>
                 <div>
-                    <h1>Sua Mochila</h1>
-                    <fieldset class="editOpts">
-                        <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
-                        <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
-                        <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
-                        <select class="fontColor" id="myColor5" onchange="chooseColor5()" title="Mudar a Cor do Texto">
-                            <option value="#ffffff" style="background-color: #ffffff;" selected></option>
-                            <option value="#000000" style="background-color: #000000;"></option>
-                            <option value="#ff0000" style="background-color: #ff0000;"></option>
-                            <option value="#0000ff" style="background-color: #0000ff;"></option>
-                            <option value="#800080" style="background-color: #800080;"></option>
-                            <option value="#ffff00" style="background-color: #ffff00;"></option>
-                            <option value="#008000" style="background-color: #008000;"></option>
-                        </select>
-                        <select id="fontSize5" class="inputStyle" onclick="changeSize5()" title="Mudar Tamanho da Fonte">
-                            <option style="font-size: 11px;" value="1">11px</option>
-                            <option style="font-size: 13px;" value="2">13px</option>
-                            <option style="font-size: 16px;" value="3" selected>*16px</option>
-                            <option style="font-size: 19px;" value="4">19px</option>
-                            <option style="font-size: 24px;" value="5">24px</option>
-                            <option style="font-size: 32px;" value="6">32px</option>
-                            <option style="font-size: 48px;" value="7">48px</option>
-                        </select>
-                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
-                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
-                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
-                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
-                        <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
-                        <button class="unorderedList fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
-                    </fieldset>
-                    <div class="editableArea" id="editableArea1" contenteditable="true" data-placeholder="Itens na sua mochila..."></div>
+                    <div class="bpDiv">
+                        <h1>Sua Mochila</h1>
+                        <button class="openModal" id="openModal">Add</button>
+                        <button class="delete-btn" id="delete-btn">Del</button>
+                        <button class="edit-btn" id="edit-btn">Edit</button>
+                    </div>
+                    <div id="modal" class="modal">
+                        <div class="modal-content" id="itemsList">
+                            <div>
+                                <span class="close" id="closeModal">&times;</span>
+                                <h2>Adicionar Item</h2>
+                            </div>
+                            <label for="itemName">Nome do Item:</label>
+                            <input type="text" id="itemName" placeholder="Katana" required>
+                            
+                            <div class="itemInfoDiv">
+                                <div>
+                                    <label for="itemQuantity">Quantidade:</label>
+                                    <input type="number" id="itemQuantity" placeholder="1" min="1" required> <!-- Novo campo de quantidade -->
+                                </div>
+                                
+                                <div>
+                                    <label for="itemWeight">Peso:</label>
+                                    <input type="number" id="itemWeight" placeholder="1">
+                                </div>
+                                
+                                <div>
+                                    <label for="itemValue">Valor:</label>
+                                    <input type="text" id="itemValue" placeholder="250 Pratas">
+                                </div>
+                            </div>
+                            
+                            <label for="itemDescription">Descrição:</label>
+                            <div class="editableArea" id="itemDescription" contenteditable="true" data-placeholder="1d8, leve, arma tática"></div>
+                            
+                            <button id="saveItem">Save</button>
+                        </div>
+                    </div>
+                
+                    <!-- Tabela para exibir os itens -->
+                    <table id="itemTable">
+                        <thead>
+                            <tr>
+                                <th id="thName">Nome</th>
+                                <th id="thQuant">Quant.</th> <!-- Nova coluna para quantidade -->
+                                <th id="thWeight">Peso</th>
+                                <th id="thPrice">Valor</th>
+                                <th id="thDesc">Desc.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Linhas de itens serão adicionadas aqui -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!--<div id="editContent2">

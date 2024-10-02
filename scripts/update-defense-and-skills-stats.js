@@ -45,6 +45,24 @@ function addCharExpListener() {
     document.getElementById('charExp').addEventListener('input', convertCharExpToNumber);
 }
 
+document.getElementById('saveItem').addEventListener('click', function() {
+    const tabela = document.getElementById('itemTable');
+    const tbody = tabela.getElementsByTagName('tbody')[0];
+    const linhas = tbody.getElementsByTagName('tr');
+    let soma = 0;
+
+    for (let i = 0; i < linhas.length; i++) {
+        const colunaValor = linhas[i].getElementsByTagName('td')[2]; // 2 representa a terceira coluna (índice 2)
+        if (colunaValor) {
+            // Se a célula estiver em branco, soma 0, caso contrário soma o valor convertido
+            const valor = parseFloat(colunaValor.innerText) || 0; // Considera célula em branco como 0
+            soma += valor;
+        }
+    }
+
+    document.getElementById('weight2').innerText = soma;
+});
+
 function showAlertBasedOnSelection() {
     // Obtém o valor selecionado
     const selectElement = document.getElementById('exhaustSelect');

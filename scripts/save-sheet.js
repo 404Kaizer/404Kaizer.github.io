@@ -30,8 +30,8 @@ function downloadFile(filename, content, format = 'txt') {
 const ids = [
     "charName", "charImg", "charExp", "charRaceSex", "charExpert", "charAge", "charAlignment", 
     "charStature", "charLangs", "backgroundArea", "textArea1", "textArea2", "textArea3", 
-    "textArea4", "lifeBar", "sanityBar", "energyBar", "exhaustSelect", "woundedCheck", 
-    "dyeingCheck", "fail1", "fail2", "fail3", "fail4", "fail5", "fail6", "terrorizedCheck", "traumatizedCheck", 
+    "textArea4", "exhaustSelect", "woundedCheck", "dyeingCheck", "fail1", "fail2", "fail3", 
+    "fail4", "fail5", "fail6", "terrorizedCheck", "traumatizedCheck", 
     "insaneCheck", "trainedSkillBonus", "nTrainedSkillBonus", "defense", "block", "dodge", 
     "armorDef", "extraDef", "physicalRDMG", "magicalRDMG", "velocity", "textArea5", "textArea6", 
     "strInput", "strModInput", "agiInput", "agiModInput", "vigInput", "vigModInput", 
@@ -66,12 +66,33 @@ const ids = [
     "skill25", "skill26", "editableArea3", "editableArea4", "editableArea6", "editableArea7", 
     "editableArea8", "editableArea9", "editableArea10", "editableArea11", "editableArea12", 
     "coin1", "coin2", "coin3", "weight1", "weight2", "editableArea1", "editableArea2", 
-    "editableArea"
+    "editableArea", "lifeStatusText", "sanityStatusText", "energyStatusText"
 ];
 
 // Função para capturar o valor dos elementos de diferentes tipos
 function gatherData() {
     let data = '';
+
+    // Captura os dados da tabela
+    const items = [];
+    const rows = itemTable.rows; // Supondo que itemTable seja o ID da tabela
+
+    for (let i = 0; i < rows.length; i++) {
+        const itemData = {};
+        const cells = rows[i].cells;
+
+        // Supondo que você tenha 4 colunas, ajuste conforme necessário
+        itemData.name = cells[0].innerHTML; // Nome do item
+        itemData.quantity = cells[1].innerHTML; // Valor 1
+        itemData.weight = cells[2].innerHTML; // Valor 2
+        itemData.price = cells[3].innerHTML; // Valor 3
+        itemData.description = cells[4].innerHTML; // Valor 4
+
+        items.push(itemData);
+    }
+
+    // Adiciona os dados do array como JSON
+    data += `items:: ${JSON.stringify(items)}\n\n`;
 
     ids.forEach(id => {
         const element = document.getElementById(id);
@@ -85,7 +106,7 @@ function gatherData() {
             } else if (element.type === 'radio') {
                 // Para radio buttons, armazenar se estão checadas
                 data += `${id}:: ${element.checked}\n\n`;
-            } else if (['lifeBar', 'sanityBar', 'energyBar'].includes(id)) {
+            } else if (['lifeStatusText', 'sanityStatusText', 'energyStatusText'].includes(id)) {
                 // Para barras de status, salvar innerText
                 data += `${id}:: ${element.innerText}\n\n`;
             } else if (id === 'charImg') {

@@ -10,6 +10,18 @@ h1 {
     font-size: 20px
 }
 
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    accent-color: red;
+}
+
+input[type="radio"] {
+    accent-color: red;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -132,6 +144,169 @@ body {
                 border-color: white;
             }
         }
+    }
+}
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1; /* Em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Ativa rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Fundo escuro com opacidade */
+}
+
+.modal-content {
+    background-color: #000000;
+    position: fixed; /* Fixa o modal no centro da tela */
+    top: 54%; /* Posiciona o topo do modal a 50% da altura da tela */
+    left: 50%; /* Posiciona o lado esquerdo do modal a 50% da largura da tela */
+    transform: translate(-50%, -50%); /* Move o modal para centralizar exatamente no meio */
+    padding: 20px;
+    border: 2px solid gray;
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 90vh; /* Limita a altura do modal a 90% da altura da janela */
+    overflow-y: auto; /* Habilita rolagem vertical se o conteúdo ultrapassar o tamanho */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    #itemDescription {
+        word-wrap: break-word; /* Faz a quebra de linha entre palavras */
+        word-break: break-all;
+        hyphens: auto; /* Hifeniza as palavras longas, se necessário */
+        overflow-y: scroll; /* Adiciona scroll vertical */
+        height: 250px;
+        max-height: 250px;
+        font-size: 13px;
+        border: 2px solid gray !important;
+        
+        p, div {
+            font-size: 13px;
+        }
+    }
+
+    #itemDescription:focus {
+        outline: none;
+    }
+
+    .itemInfoDiv {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        gap: 10px;
+
+        div {
+            max-width: 150px;
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, #saveItem {
+        background-color: black;
+        overflow-y: auto;
+    }
+
+    input {
+        padding: 5px;
+    }
+
+    #saveItem {
+        font-size: 16px;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    #saveItem:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo da tabela */
+#itemTable {
+    word-wrap: break-word; /* Faz a quebra de linha entre palavras */
+    word-break: break-all;
+    hyphens: auto; /* Hifeniza as palavras longas, se necessário */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(22, 22, 22); /* Fundo preto */
+    color: white; /* Letras brancas */
+    table-layout: auto;
+
+    th, td {
+        text-align: center;
+        border: 1px solid #ddd; /* Pode ser ajustado para uma cor que contraste melhor */
+    }
+    
+    th {
+        height: 45px;
+        font-size: 16px;
+        background-color: #000000; /* Cor mais escura para o cabeçalho */
+    }
+    
+    td {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 13px;
+        max-height: 50px; /* Limita a altura máxima */
+    }
+    
+    td.tdDesc {
+        max-width: 300px;
+    }
+    
+    .highlightDefault {
+        background-color: rgb(255, 255, 255); /* Cor de fundo ao passar o mouse *//* Cor do texto */
+        cursor: pointer;
+    
+        td {
+            color: black;
+            border: 1px solid rgb(0, 0, 0);
+        }
+    }
+    
+    /* Estilo para linha em modo de exclusão */
+    .highlight {
+        background-color: red; /* Cor de fundo ao passar o mouse */
+        color: white; /* Cor do texto */
+        cursor: pointer;
+    }
+    
+    .highlightEdit {
+        background-color: #70ff78; /* Cor de fundo ao passar o mouse */
+        color: black; /* Cor do texto */
+        cursor: pointer;
     }
 }
 
@@ -402,19 +577,28 @@ body {
                     }
     
                     .barDiv {
-                        display: flex;
-                        justify-content: space-between;
+                        position: relative;
+                        display: grid;
                         gap: 5px;
-                        
-    
+                        height: 30px;
+                    
                         .bar {
                             padding: 3px;
                             width: 100%;
                             transition: width 2s;
-                            text-align: center;
+                            z-index: 1; // Mantém a barra abaixo do texto
+                        }
+                    
+                        .statusText {
+                            position: absolute;
+                            top: 50%;   // Centraliza verticalmente
+                            left: 50%;  // Centraliza horizontalmente
+                            transform: translate(-50%, -50%);  // Ajuste de centralização
+                            z-index: 2; // Garante que o texto fique sobre a barra
+                            color: white; // Ajuste de cor para contraste
                         }
                     }
-    
+                    
                     .barDiv:hover {
                         border-color: white;
                     }
@@ -800,6 +984,46 @@ body {
         width: 100%;
 
         #editContent1 {
+
+            .bpDiv {
+                display: flex;
+                gap: 5px;
+
+                /* Botões */
+                #delete-btn, #edit-btn, #openModal {
+                    color: rgb(255, 255, 255);
+                    width: 125px;
+                    font-size: 13px;
+                    border: none;
+                    width: 50px;
+                    cursor: pointer;
+                }
+
+                #delete-btn{
+                    background-color: red;
+                }
+
+                #edit-btn {
+                    background-color: #45a049;
+                }
+
+                #delete-btn:hover {
+                    background-color: rgb(255, 77, 77);
+                }
+
+                #edit-btn:hover {
+                    background-color: #70ff78;
+                }
+
+                #openModal {
+                    background-color: black;
+                    border: 2px solid gray;
+                }
+
+                #openModal:hover {
+                    background-color: rgb(16, 16, 16);
+                }
+            }
 
             #wealth, #weight {
                 display: grid;
@@ -1471,6 +1695,21 @@ body {
             }
         }
 
+        #section5 {
+            .modal-content {
+                height: 550px;
+                width: 500px;
+                top: 49%;                    
+            }
+
+            #itemTable {
+
+                td.tdDesc, th#thDesc {
+                    display: none;
+                }
+            }
+        }
+
         #section6 {
     
             .editOpts {
@@ -1522,7 +1761,7 @@ body {
 }
 
 @media only screen and (max-width: 670px) {
-    
+
     #main {
         
         #section3 {
@@ -1623,7 +1862,7 @@ body {
 }
 
 @media only screen and (max-width: 615px) {
-    
+
     #main {
 
         #section3 {
