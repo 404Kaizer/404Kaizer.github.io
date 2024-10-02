@@ -65,6 +65,10 @@ body input:hover {
   display: none;
 }
 
+#header, #footer {
+  position: relative;
+  z-index: 10;
+}
 #header #navigationBar, #footer #navigationBar {
   width: 100%;
   position: fixed;
