@@ -1265,19 +1265,6 @@ body {
             display: none;
             grid-template-columns: auto;
             gap: 20px;
-            
-            #editContent1 {
-
-                #wealth {
-                        
-                    div {
-    
-                        .wealthInput {
-                            font-size: 25px;
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -1302,7 +1289,6 @@ body {
 
         #hamburguerMenuDiv {
             justify-content: center;
-            margin-bottom: 20px;
         }
     }
 
@@ -1374,30 +1360,8 @@ body {
         }
 
         #section5 {
-            display: none;
             //grid-template-columns: auto;
             //column-gap: 10px;
-
-            #editContent1 {
-    
-                #wealth {
-                    margin-bottom: 15px;
-                        
-                    div {
-                        //display: grid;
-                        //grid-template-columns: auto;
-                        //gap: 15px;
-    
-                        .wealthInput {
-                            text-align: center;
-                            width: 100%;
-                            font-size: 20px;
-                            background-color: black;
-                            padding: 10px;
-                        }
-                    }
-                }
-            }
     
             #editContent1, #editContent2 {
 
@@ -1914,8 +1878,74 @@ body {
 
 @media only screen and (max-width: 590px) {
 
+    .modal-content {
+        .modalHeader {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: space-between;
+            align-items: center;
+
+            #closeModal {
+                float: none;
+                font-size: 25px !important;
+            }
+        }
+    }
+
+    button, label {
+        font-size: 13px !important;
+    }
+
+    input[type=checkbox] {
+        width: 13px !important;
+    }
+
+    select {
+        font-size: 12px !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    #energyPointsLimitInput {
+        font-size: 12px !important;
+        width: 50px !important;
+    }
+
+    span {
+        font-size: 14px !important;
+    }
+
+    textarea {
+        font-size: 13px !important;
+    }
+
+    h1, h2 {
+        font-size: 16px !important;
+    }
+
+    .editableArea {
+        font-size: 13px !important;
+    }
+
+    table {
+        th {
+            font-size: 14px !important;
+            height: 35px !important;
+        }
+
+        td {
+            font-size: 13px !important;
+        }
+    }
+
     #main {
-        margin: 0;
+
+        #section1, #section2, #section3, #section4, #section5, #section6 {
+            max-width: 100%;
+            width: 100%;
+        }
 
         #section1, #section3 {
             margin-top: 70px;
@@ -2044,6 +2074,53 @@ body {
                         .imgBtn {
                             width: 45px;
                             padding: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #section6 {
+            .editOpts {
+                #myColor7 {
+                    display: block !important;
+                }
+
+                .editTextBtn {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #main {
+        margin-left: 1px;
+        margin-right: 1px;
+
+        #section5 {
+            .modal-content {
+                height: 100%;
+                max-height: 500px;
+                min-width: 370px;
+                width: 100%;
+            }
+    
+            #itemTable {
+    
+                .itemInfoDiv {
+                    display: grid;
+                    grid-auto-flow: column;
+                    justify-content: space-between;
+                    gap: 10px;
+            
+                    div {
+                        max-width: 150px;
+            
+                        input {
+                            width: 100%;
                         }
                     }
                 }

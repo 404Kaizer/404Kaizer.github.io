@@ -1052,9 +1052,6 @@ body input:hover {
     grid-template-columns: auto;
     gap: 20px;
   }
-  #main #section5 #editContent1 #wealth div .wealthInput {
-    font-size: 25px;
-  }
 }
 @media only screen and (max-width: 1340px) {
   #main #section4 #editContent {
@@ -1065,7 +1062,6 @@ body input:hover {
 @media only screen and (max-width: 1100px) {
   #header #hamburguerMenuDiv {
     justify-content: center;
-    margin-bottom: 20px;
   }
   #main #section1 #charInfos {
     display: grid;
@@ -1114,19 +1110,6 @@ body input:hover {
   #main #section4 #editContent {
     grid-template-columns: auto;
     gap: 15px;
-  }
-  #main #section5 {
-    display: none;
-  }
-  #main #section5 #editContent1 #wealth {
-    margin-bottom: 15px;
-  }
-  #main #section5 #editContent1 #wealth div .wealthInput {
-    text-align: center;
-    width: 100%;
-    font-size: 20px;
-    background-color: black;
-    padding: 10px;
   }
   #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
     display: flex;
@@ -1458,8 +1441,54 @@ body input:hover {
   }
 }
 @media only screen and (max-width: 590px) {
-  #main {
-    margin: 0;
+  .modal-content .modalHeader {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-content .modalHeader #closeModal {
+    float: none;
+    font-size: 25px !important;
+  }
+  button, label {
+    font-size: 13px !important;
+  }
+  input[type=checkbox] {
+    width: 13px !important;
+  }
+  select {
+    font-size: 12px !important;
+  }
+  input {
+    font-size: 15px !important;
+  }
+  #energyPointsLimitInput {
+    font-size: 12px !important;
+    width: 50px !important;
+  }
+  span {
+    font-size: 14px !important;
+  }
+  textarea {
+    font-size: 13px !important;
+  }
+  h1, h2 {
+    font-size: 16px !important;
+  }
+  .editableArea {
+    font-size: 13px !important;
+  }
+  table th {
+    font-size: 14px !important;
+    height: 35px !important;
+  }
+  table td {
+    font-size: 13px !important;
+  }
+  #main #section1, #main #section2, #main #section3, #main #section4, #main #section5, #main #section6 {
+    max-width: 100%;
+    width: 100%;
   }
   #main #section1, #main #section3 {
     margin-top: 70px;
@@ -1531,5 +1560,35 @@ body input:hover {
   #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 45px;
     padding: 2px;
+  }
+  #main #section6 .editOpts #myColor7 {
+    display: block !important;
+  }
+  #main #section6 .editOpts .editTextBtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #main {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  #main #section5 .modal-content {
+    height: 100%;
+    max-height: 500px;
+    min-width: 370px;
+    width: 100%;
+  }
+  #main #section5 #itemTable .itemInfoDiv {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  #main #section5 #itemTable .itemInfoDiv div {
+    max-width: 150px;
+  }
+  #main #section5 #itemTable .itemInfoDiv div input {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

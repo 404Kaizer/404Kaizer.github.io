@@ -1370,9 +1370,9 @@
                     </div>
                     <div id="modal" class="modal">
                         <div class="modal-content" id="itemsList">
-                            <div>
-                                <span class="close" id="closeModal">&times;</span>
+                            <div class="modalHeader">
                                 <h2>Adicionar Item</h2>
+                                <span class="close" id="closeModal">&times;</span>  
                             </div>
                             <label for="itemName">Nome do Item:</label>
                             <input type="text" id="itemName" placeholder="Katana" required>
@@ -1476,12 +1476,12 @@
                     <option style="font-size: 32px;" value="6">32px</option>
                     <option style="font-size: 48px;" value="7">48px</option>
                 </select>
-                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
-                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
-                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
-                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
-                <button class="fontStyle fontStyleEditor" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
-                <button class="unorderedList fontStyle fontStyleEditor" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
+                <button class="fontStyle fontStyleEditor editTextBtn" onclick="document.execCommand('outdent', false, null);" title="Remover Espaço ALT + &lt;-"><img class="editorImgs" src="imgs/outdent.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor editTextBtn" onclick="document.execCommand('indent', false, null);" title="Remover Espaço ALT + -&gt;"><img class="editorImgs" src="imgs/indent.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor editTextBtn" onclick="document.execCommand('justifyLeft',false,null);" title="Alinhar Texto à Esquerda SHIFT + &lt;-"><img class="editorImgs editorAlign" src="imgs/leftAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor editTextBtn" onclick="document.execCommand('justifyCenter',false,null);" title="Alinhar Texto ao Centro SHIFT + ^"><img class="editorImgs editorAlign" src="imgs/centerAlign.png" alt=""></button>
+                <button class="fontStyle fontStyleEditor editTextBtn" onclick="document.execCommand('justifyRight',false,null);" title="Alinhar Texto à Direita SHIFT + -&gt;"><img class="editorImgs editorAlign" src="imgs/rightAlign.png" alt=""></button>
+                <button class="unorderedList fontStyle fontStyleEditor editTextBtn" onclick="document.execCommand('insertUnorderedList',false, null)" title="Lista Desordenada CTRL + ."><img class="editorImgs editorList" src="imgs/unorderList.png" alt=""><insertUnorderedList></insertUnorderedList></button>
             </fieldset>
             <div id="editableArea" class="editableArea" contenteditable="true" data-placeholder="Suas anotações feitas durante a campanha..."></div>
         </section>
