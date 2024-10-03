@@ -47,10 +47,15 @@ function addCharExpListener() {
 
 document.getElementById('strInput').addEventListener('change', function(e) {
     let supportedWeight = document.getElementById('weight2');
-    let strAtt = e.target.value; // Acessa o valor do input corretamente
+    let strAtt = parseInt(e.target.value); // Acessa e converte o valor do input corretamente
 
-    supportedWeight.value = parseInt(strAtt) * 5; // Faz o cálculo e atualiza o campo de peso
+    if (strAtt === 0) {
+        supportedWeight.value = 5; // Se strAtt for 0, supportedWeight será 5
+    } else {
+        supportedWeight.value = strAtt * 5; // Faz o cálculo e atualiza o campo de peso
+    }
 });
+
 
 function sumThirdColumn() {
     let table = document.getElementById('itemTable');
