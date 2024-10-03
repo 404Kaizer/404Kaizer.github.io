@@ -52,8 +52,8 @@ function saveItem(event) {
     const itemDescription = document.getElementById("itemDescription").innerHTML;
 
     // Verifica se os campos obrigatórios estão preenchidos
-    if (!itemName || !itemQuantity || !itemDescription) {
-        alert("Por favor, preencha os campos Nome, Quantidade e Descrição.");
+    if (!itemName || !itemWeight || !itemQuantity) {
+        alert("Por favor, preencha os campos Nome, Peso e Quantidade.");
         return;
     }
 
@@ -88,6 +88,7 @@ function saveItem(event) {
     // Atualiza o estado dos botões
     resetButtonState();
     updateButtonState();
+    sumThirdColumn();
 }
 
 // Preenche o modal com os dados da linha selecionada
@@ -105,10 +106,11 @@ cancelEditButton.addEventListener('click', function() {
     editModal.style.display = 'none'; 
     selectedRow = null;
     clearModalInputs(); 
+    sumThirdColumn();
 });
 
 // Salva as alterações da edição ou adiciona um novo item
-saveItemButton.addEventListener('click', saveItem);
+saveItemButton.addEventListener('click', saveItem, sumThirdColumn());
 
 // Ativa/desativa o modo de exclusão ao clicar no botão
 deleteButton.addEventListener('click', function() {
@@ -120,6 +122,7 @@ deleteButton.addEventListener('click', function() {
         }
         updateButtonState(); // Atualiza estado dos botões após deletar
     }
+    sumThirdColumn();
 });
 
 editButton.addEventListener('click', function() {
@@ -128,6 +131,7 @@ editButton.addEventListener('click', function() {
         editButton.textContent = editEnabled ? 'Cancel Edit' : 'Edit';
         updateButtonState(); // Atualiza estado dos botões após editar
     }
+    sumThirdColumn();
 });
 
 // Delegação de eventos para seleção, edição e exclusão de linhas
@@ -161,16 +165,6 @@ itemTable.addEventListener('click', function(event) {
         openModal();
     }
 
-    // Verifica se o botão Excluir foi clicado
-    if (event.target.classList.contains('delete-btn')) {
-        const row = event.target.closest('tr');
-        const confirmDelete = confirm('Você tem certeza que deseja excluir esta linha?');
-        if (confirmDelete) {
-            itemTable.deleteRow(row.rowIndex - 1); // Remove a linha da tabela
-            updateButtonState(); // Atualiza o estado dos botões após deletar
-        }
-    }
-
     // Confirma e exclui a linha ao clicar no modo de exclusão
     if (deleteEnabled && !editEnabled && row) {
         const confirmDelete = confirm('Você tem certeza que deseja excluir esta linha?');
@@ -180,6 +174,8 @@ itemTable.addEventListener('click', function(event) {
         }
         resetButtonState();
     }
+
+    sumThirdColumn();
 });
 
 // Adiciona destaque nas linhas no modo de edição
@@ -251,3 +247,4 @@ function resetButtonState() {
 
 // Inicializa o estado dos botões na primeira execução
 updateButtonState();
+sumThirdColumn();

@@ -172,7 +172,7 @@
                     <div id="energyStatus">
                         <div>
                             <span class="statusSpan">Energia</span>
-                            <input id="energyPointsLimitInput" type="number" name="limitPE" placeholder="Limite" onchange="setSkills()">
+                            <input id="energyPointsLimitInput" type="number" name="limitPE" placeholder="Limite" disabled>
                         </div>
                         <div class="changeBarStatusDiv">
                             <button id="currentEnergyBtn" class="changeStatusBtn">A</button>
@@ -229,12 +229,12 @@
             </div>
             <div id="attackAndTraining">
                 <div id="textAreasDiv4">
-                    <span>Treinamento</span>
+                    <span>Treinamentos</span>
                     <textarea id="textArea5" class="infoTextarea" placeholder="Treinamentos em tipos de equipamentos, ferramentas, kits, etc..."></textarea>
                 </div>
                 <div id="textAreasDiv5">
-                    <span>Ataques</span>
-                    <textarea id="textArea6" class="infoTextarea" placeholder="Acesso rápido a informações sobre seus ataques e dano de armas..."></textarea>
+                    <span>Acesso Rápido</span>
+                    <textarea id="textArea6" class="infoTextarea" placeholder="Acesso rápido a informações básicas sobre seus poderes, armas, rituais, equipamentos..."></textarea>
                 </div>
             </div>
             <div id="skillsDiv">
@@ -244,35 +244,35 @@
                         <div>
                             <span class="attSkillSpan">Força</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="str" id="strInput" placeholder="0" onchange="setSkills()"></div>
+                                <div><input class="attInput" type="text" name="str" id="strInput" placeholder="0"></div>
                                 <!--<div><input class="attInput" type="text" name="strMod" id="strModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Agilidade</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="agi" id="agiInput" placeholder="0" onchange="setSkills()"></div>
+                                <div><input class="attInput" type="text" name="agi" id="agiInput" placeholder="0"></div>
                                 <!--<div><input class="attInput" type="text" name="agiMod" id="agiModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Vigor</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="vig" id="vigInput" placeholder="0" onchange="setSkills()"></div>
+                                <div><input class="attInput" type="text" name="vig" id="vigInput" placeholder="0"></div>
                                 <!--<div><input class="attInput" type="text" name="vigMod" id="vigModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Inteligência</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="int" id="intInput" placeholder="0" onchange="setSkills()"></div>
+                                <div><input class="attInput" type="text" name="int" id="intInput" placeholder="0"></div>
                                 <!--<div><input class="attInput" type="text" name="intMod" id="intModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Sabedoria</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="wis" id="wisInput" placeholder="0" onchange="setSkills()"></div>
+                                <div><input class="attInput" type="text" name="wis" id="wisInput" placeholder="0"></div>
                                 <!--<div><input class="attInput" type="text" name="wisMod" id="wisModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
@@ -1355,15 +1355,18 @@
                     </div>
                 </div>
                 <div id="weight">
-                    <h1>Peso</h1>
-                    <div>
-                        <input class="weightInput" type="number" name="actualWeight" id="weight1" placeholder="Peso Atual">
-                        <input class="weightInput" type="number" name="totalWeight" id="weight2" placeholder="Peso Suportado">
+                    <div class="weightDiv">
+                        <h1>Peso Atual</h1>
+                        <input class="weightInput" type="number" name="actualWeight" id="weight1" placeholder="Peso Atual" disabled>
+                    </div>
+                    <div class="weightDiv">
+                        <h1>Peso Suportado</h1>
+                        <input class="weightInput" type="number" name="totalWeight" id="weight2" placeholder="Peso Suportado" value="0" disabled>
                     </div>
                 </div>
                 <div>
                     <div class="bpDiv">
-                        <h1>Sua Mochila</h1>
+                        <h1>Seu Inventário</h1>
                         <button class="openModal" id="openModal">Add</button>
                         <button class="delete-btn" id="delete-btn">Del</button>
                         <button class="edit-btn" id="edit-btn">Edit</button>
@@ -1458,7 +1461,7 @@
                 <button class="fontStyle" onclick="document.execCommand('italic',false,null);" title="Transformar em Itálico CTRL + I"><i><b>I</b></i></button>
                 <button class="fontStyle" onclick="document.execCommand('bold',false,null);" title="Transformar em Negrito CTRL + B"><b>B</b></button>
                 <button class="fontStyle" onclick="document.execCommand('underline',false,null);" title="Sublinhar CTRL + U"><u><b>U</b></u></button>
-                <select class="fontColor" id="myColor7" onchange="chooseColor7()" title="Mudar a Cor do Texto">
+                <!--<select class="fontColor" id="myColor7" onchange="chooseColor7()" title="Mudar a Cor do Texto">
                     <option value="#ffffff" style="background-color: #ffffff;" selected></option>
                     <option value="#000000" style="background-color: #000000;"></option>
                     <option value="#ff0000" style="background-color: #ff0000;"></option>
@@ -1466,7 +1469,7 @@
                     <option value="#800080" style="background-color: #800080;"></option>
                     <option value="#ffff00" style="background-color: #ffff00;"></option>
                     <option value="#008000" style="background-color: #008000;"></option>
-                </select>
+                </select>-->
                 <select id="fontSize7" class="inputStyle" onclick="changeSize7()" title="Mudar Tamanho da Fonte">
                     <option style="font-size: 11px;" value="1">11px</option>
                     <option style="font-size: 13px;" value="2">13px</option>

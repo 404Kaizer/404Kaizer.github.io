@@ -45,23 +45,34 @@ function addCharExpListener() {
     document.getElementById('charExp').addEventListener('input', convertCharExpToNumber);
 }
 
-document.getElementById('saveItem').addEventListener('click', function() {
-    const tabela = document.getElementById('itemTable');
-    const tbody = tabela.getElementsByTagName('tbody')[0];
-    const linhas = tbody.getElementsByTagName('tr');
-    let soma = 0;
+document.getElementById('strInput').addEventListener('change', function(e) {
+    let supportedWeight = document.getElementById('weight2');
+    let strAtt = e.target.value; // Acessa o valor do input corretamente
 
-    for (let i = 0; i < linhas.length; i++) {
-        const colunaValor = linhas[i].getElementsByTagName('td')[2]; // 2 representa a terceira coluna (índice 2)
-        if (colunaValor) {
-            // Se a célula estiver em branco, soma 0, caso contrário soma o valor convertido
-            const valor = parseFloat(colunaValor.innerText) || 0; // Considera célula em branco como 0
-            soma += valor;
+    supportedWeight.value = parseInt(strAtt) * 5; // Faz o cálculo e atualiza o campo de peso
+});
+
+// Função que soma a terceira coluna
+function sumThirdColumn() {
+    let table = document.getElementById('itemTable');
+    let total = 0;
+
+    // Verifica se há apenas o cabeçalho na tabela
+    if (table.rows.length <= 1) {
+        document.getElementById('weight1').value = 0; // Define weight1 como 0
+        return;
+    }
+
+    for (let i = 1; i < table.rows.length; i++) {
+        let cellValue = parseFloat(table.rows[i].cells[2].innerText);
+        if (!isNaN(cellValue)) {
+            total += parseInt(cellValue);
         }
     }
 
-    document.getElementById('weight2').innerText = soma;
-});
+    console.log(total); // Você pode atribuir esse valor onde precisar
+    document.getElementById('weight1').value = total; // Exibe o valor no campo com o ID weight1
+}
 
 function showAlertBasedOnSelection() {
     // Obtém o valor selecionado

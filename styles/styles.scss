@@ -986,6 +986,8 @@ body {
         width: 100%;
 
         #editContent1 {
+            display: grid;
+            gap: 25px;
 
             .bpDiv {
                 display: flex;
@@ -1027,10 +1029,9 @@ body {
                 }
             }
 
-            #wealth, #weight {
+            #wealth {
                 display: grid;
-                margin-bottom: 15px;
-                    
+
                 div {
                     display: flex;
                     justify-content: space-evenly;
@@ -1039,6 +1040,24 @@ body {
                     //gap: 15px;
 
                     .wealthInput, .weightInput {
+                        text-align: center;
+                        font-size: 20px;
+                        background-color: black;
+                        padding: 5px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            #weight {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+
+                .weightDiv {
+                    width: 100%;
+
+                    .weightInput {
                         text-align: center;
                         font-size: 20px;
                         background-color: black;
@@ -1906,7 +1925,7 @@ body {
         font-size: 12px !important;
     }
 
-    input {
+    input, p {
         font-size: 15px !important;
     }
 
