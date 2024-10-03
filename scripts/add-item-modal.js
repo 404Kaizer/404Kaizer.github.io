@@ -105,8 +105,7 @@ function populateModal(row) {
 cancelEditButton.addEventListener('click', function() {
     editModal.style.display = 'none'; 
     selectedRow = null;
-    clearModalInputs(); 
-    sumThirdColumn();
+    clearModalInputs();
 });
 
 // Salva as alterações da edição ou adiciona um novo item
@@ -171,6 +170,7 @@ itemTable.addEventListener('click', function(event) {
         if (confirmDelete) {
             itemTable.deleteRow(row.rowIndex - 1); // Remove a linha da tabela
             updateButtonState(); // Atualiza o estado dos botões após deletar
+            sumThirdColumn();
         }
         resetButtonState();
     }

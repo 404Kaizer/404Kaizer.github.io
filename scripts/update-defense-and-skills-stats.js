@@ -52,17 +52,19 @@ document.getElementById('strInput').addEventListener('change', function(e) {
     supportedWeight.value = parseInt(strAtt) * 5; // Faz o cálculo e atualiza o campo de peso
 });
 
-// Função que soma a terceira coluna
 function sumThirdColumn() {
     let table = document.getElementById('itemTable');
     let total = 0;
 
     // Verifica se há apenas o cabeçalho na tabela
     if (table.rows.length <= 1) {
-        document.getElementById('weight1').value = 0; // Define weight1 como 0
-        return;
+        total = 0; // Define total como 0
+        document.getElementById('weight1').value = total; // Exibe 0 no campo com o ID weight1
+        checkOverload(total); // Verifica se está sobrecarregado com o total sendo 0
+        return; // Sai da função
     }
 
+    // Soma os valores da 3ª coluna
     for (let i = 1; i < table.rows.length; i++) {
         let cellValue = parseFloat(table.rows[i].cells[2].innerText);
         if (!isNaN(cellValue)) {
@@ -72,6 +74,35 @@ function sumThirdColumn() {
 
     console.log(total); // Você pode atribuir esse valor onde precisar
     document.getElementById('weight1').value = total; // Exibe o valor no campo com o ID weight1
+
+    // Verifica se está sobrecarregado
+    checkOverload(total);
+}
+
+// Função que verifica se está sobrecarregado
+function checkOverload(total) {
+    let weight2 = parseInt(document.getElementById('weight2').value);
+    let openModal = document.getElementById('openModal'); // Certifique-se de que o botão correto está sendo referenciado
+    let weight1Element = document.getElementById('weight1'); // Referência ao elemento para alterar o estilo (não o valor)
+
+    // Verifica sobrecarga extrema (>= strAtt * 10)
+    if (total > weight2 * 2) {
+        openModal.disabled = true; // Desabilita o modal para impedir mais itens
+        weight1Element.style.color = "red"; // Cor de aviso extremo
+        alert('Você não consegue carregar mais itens até que diminua seu peso!');
+        return; // Interrompe a execução para não passar para as outras verificações
+    }
+
+    // Verifica sobrecarga moderada (>= strAtt * 5)
+    if (total > weight2) {
+        weight1Element.style.color = "orange"; // Cor de alerta
+        alert('Você está sobrecarregado!\nVocê possui -2d em testes de Agilidade, -5 de defesa e seu deslocamento é reduzido pela metade até que seu peso diminua.');
+        return; // Interrompe a execução para não passar para a próxima condição
+    }
+
+    // Sem sobrecarga (menor que strAtt * 5)
+    openModal.disabled = false; // Habilita o modal
+    weight1Element.style.color = "white"; // Cor normal
 }
 
 function showAlertBasedOnSelection() {

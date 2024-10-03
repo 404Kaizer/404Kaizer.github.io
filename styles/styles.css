@@ -133,9 +133,9 @@ body input:hover {
 }
 
 .modal {
-  display: none; /* Escondido por padrão */
+  display: none;
   position: fixed;
-  z-index: 1; /* Em cima de outros elementos */
+  z-index: 99; /* Em cima de outros elementos */
   left: 0;
   top: 0;
   width: 100%; /* Largura total */
@@ -160,6 +160,16 @@ body input:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.modal-content .modalHeader {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-content .modalHeader #closeModal {
+  float: none;
+  font-size: 25px !important;
 }
 .modal-content #itemDescription {
   word-wrap: break-word; /* Faz a quebra de linha entre palavras */
@@ -1463,16 +1473,6 @@ body input:hover {
   }
 }
 @media only screen and (max-width: 590px) {
-  .modal-content .modalHeader {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .modal-content .modalHeader #closeModal {
-    float: none;
-    font-size: 25px !important;
-  }
   button, label {
     font-size: 13px !important;
   }
