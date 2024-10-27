@@ -46,9 +46,9 @@ function addCharExpListener() {
 }
 
 let currentWeightValue = 0; // Variável global para armazenar o valor
-
+const strInput = document.getElementById('strInput');
 // Listener para o campo de entrada de peso
-document.getElementById('strInput').addEventListener('change', function(e) {
+strInput.addEventListener('change', function(e) {
     let supportedWeight = document.getElementById('weight2');
     let strAtt = parseInt(e.target.value); // Acessa e converte o valor do input corretamente
 

@@ -99,5 +99,6 @@ function importData(content) {
     });
 
     updateButtonState();
-    sumThirdColumn();
+    const eventoChange = new Event('change');
+    strInput.dispatchEvent(eventoChange);
 }
