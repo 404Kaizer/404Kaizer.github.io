@@ -97,4 +97,7 @@ function importData(content) {
             }
         }
     });
+
+    updateButtonState();
+    sumThirdColumn();
 }

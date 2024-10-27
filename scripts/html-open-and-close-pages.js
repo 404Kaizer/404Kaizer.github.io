@@ -384,3 +384,14 @@ let openCloseSkillStatus24 = () => {
         openCloseRadioDiv24.style.display = "none";
     }
 };
+
+let openCloseRadioDivBP = () => {
+
+    if(document.getElementById("openCloseRadioDivBpBtn").innerHTML === "+") {
+        document.getElementById("openCloseRadioDivBpBtn").innerHTML = "X";
+        backpackOpenModalBP.style.display = "flex";
+    } else {
+        document.getElementById("openCloseRadioDivBpBtn").innerHTML = "+";
+        backpackOpenModalBP.style.display = "none";
+    }
+};

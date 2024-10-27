@@ -45,17 +45,52 @@ function addCharExpListener() {
     document.getElementById('charExp').addEventListener('input', convertCharExpToNumber);
 }
 
+let currentWeightValue = 0; // Variável global para armazenar o valor
+
+// Listener para o campo de entrada de peso
 document.getElementById('strInput').addEventListener('change', function(e) {
     let supportedWeight = document.getElementById('weight2');
     let strAtt = parseInt(e.target.value); // Acessa e converte o valor do input corretamente
 
+    // Atualiza currentWeightValue e o valor de supportedWeight
     if (strAtt === 0) {
         supportedWeight.value = 5; // Se strAtt for 0, supportedWeight será 5
+        currentWeightValue = 5; // Atualiza a variável global
     } else {
         supportedWeight.value = strAtt * 5; // Faz o cálculo e atualiza o campo de peso
+        currentWeightValue = strAtt * 5; // Atualiza a variável global
     }
+    
+    // Atualiza weight2 com o peso atual mais o peso adicional
+    updateTotalWeight();
 });
 
+// Listener para o tipo de mochila
+document.querySelectorAll('input[name="backpack1"]').forEach(function(element) {
+    element.addEventListener('change', updateTotalWeight);
+});
+
+// Função para atualizar o peso total
+function updateTotalWeight() {
+    let weight2 = document.getElementById('weight2');
+    const backpack2 = document.getElementById('backpackType2');
+    const backpack3 = document.getElementById('backpackType3');
+    let plusWeight = 0;
+
+    // Determina o peso adicional com base na mochila selecionada
+    if (backpack2.checked) {
+        plusWeight = 5;
+    } else if (backpack3.checked) {
+        plusWeight = 10;
+    } else {
+        plusWeight = 0;
+    }
+
+    // Atualiza o valor de weight2
+    weight2.value = currentWeightValue + plusWeight;
+
+    sumThirdColumn();
+}
 
 function sumThirdColumn() {
     let table = document.getElementById('itemTable');
@@ -89,11 +124,14 @@ function checkOverload(total) {
     let weight2 = parseInt(document.getElementById('weight2').value);
     let openModal = document.getElementById('openModal'); // Certifique-se de que o botão correto está sendo referenciado
     let weight1Element = document.getElementById('weight1'); // Referência ao elemento para alterar o estilo (não o valor)
+    let weightDisplayOverload = document.getElementById('weightDisplayOverload');
 
     // Verifica sobrecarga extrema (>= strAtt * 10)
     if (total > weight2 * 2) {
         openModal.disabled = true; // Desabilita o modal para impedir mais itens
         weight1Element.style.color = "red"; // Cor de aviso extremo
+        weightDisplayOverload.innerText = "Você Está Sobrecarregado";
+        weightDisplayOverload.style.color = "red"
         alert('Você não consegue carregar mais itens até que diminua seu peso!');
         return; // Interrompe a execução para não passar para as outras verificações
     }
@@ -101,11 +139,16 @@ function checkOverload(total) {
     // Verifica sobrecarga moderada (>= strAtt * 5)
     if (total > weight2) {
         weight1Element.style.color = "orange"; // Cor de alerta
+        weightDisplayOverload.innerText = "Você Está Pesado";
+        weightDisplayOverload.style.color = "orange";
         alert('Você está sobrecarregado!\nVocê possui -2d em testes de Agilidade, -5 de defesa e seu deslocamento é reduzido pela metade até que seu peso diminua.');
+        openModal.disabled = false; // Habilita o modal
         return; // Interrompe a execução para não passar para a próxima condição
     }
 
     // Sem sobrecarga (menor que strAtt * 5)
+    weightDisplayOverload.style.color = "white";
+    weightDisplayOverload.innerText = "Peso Atual";
     openModal.disabled = false; // Habilita o modal
     weight1Element.style.color = "white"; // Cor normal
 }

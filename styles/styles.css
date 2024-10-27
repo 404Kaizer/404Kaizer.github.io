@@ -913,6 +913,7 @@ body input:hover {
   gap: 15px;
 }
 #main #section5 #editContent1 #weight .weightDiv {
+  position: relative;
   width: 100%;
 }
 #main #section5 #editContent1 #weight .weightDiv .weightInput {
@@ -921,6 +922,41 @@ body input:hover {
   background-color: black;
   padding: 5px;
   width: 100%;
+}
+#main #section5 #editContent1 #weight .weightDiv .backpackTypeSelect {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+#main #section5 #editContent1 #weight .weightDiv .backpackTypeSelect .openSkillStatus {
+  color: yellow;
+  font-size: 16px;
+  cursor: pointer !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: bold;
+}
+#main #section5 #editContent1 #weight .weightDiv .backpackTypeSelect .spanan {
+  display: none;
+  background-color: white;
+  border: 2px solid gray;
+  color: black;
+  border-top: 0;
+  padding: 7px 7px 0 7px;
+  position: absolute;
+  top: 30px;
+}
+#main #section5 #editContent1 #weight .weightDiv .backpackTypeSelect .spanan .radioDiv {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: center;
+}
+#main #section5 #editContent1 #weight .weightDiv .backpackTypeSelect .spanan .radioDiv span {
+  color: black;
 }
 #main #section5 #editContent1 .editOpts, #main #section5 #editContent2 .editOpts {
   display: grid;
@@ -1582,6 +1618,15 @@ body input:hover {
   #main #section4 #editContentBtn .editBtnDiv .editBtn .imgBtn, #main #section4 #editContentBtn .editBtnDiv .xBtn .imgBtn {
     width: 45px;
     padding: 2px;
+  }
+  #main #section5 .weightDiv .backpackTypeSelect .spanan .radioDiv {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    justify-content: center;
+  }
+  #main #section5 .weightDiv .backpackTypeSelect .spanan .radioDiv span {
+    color: black;
   }
   #main #section6 .editOpts #myColor7 {
     display: block !important;

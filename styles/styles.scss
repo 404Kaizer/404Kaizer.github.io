@@ -1067,6 +1067,7 @@ body {
                 gap: 15px;
 
                 .weightDiv {
+                    position: relative;
                     width: 100%;
 
                     .weightInput {
@@ -1075,6 +1076,43 @@ body {
                         background-color: black;
                         padding: 5px;
                         width: 100%;
+                    }
+
+                    .backpackTypeSelect {
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 10px;
+
+                        .openSkillStatus {
+                            color: yellow;
+                            font-size: 16px;
+                            cursor: pointer !important;
+                            user-select: none;
+                            font-weight: bold;
+                        }
+                        
+                        .spanan {
+                            display: none;
+                            background-color: white;
+                            border: 2px solid gray;
+                            color: black;
+                            border-top: 0;
+                            padding: 7px 7px 0 7px;
+                            position: absolute;
+                            top: 30px;
+                            
+                            .radioDiv {
+                                display: grid;
+                                column-gap: 10px;
+                                justify-content: center;
+                                
+                                span {
+                                    color: black;
+                                }
+                            }                    
+                        }
                     }
                 }
             }
@@ -2094,6 +2132,28 @@ body {
                             width: 45px;
                             padding: 2px;
                         }
+                    }
+                }
+            }
+        }
+
+        #section5 {
+            
+            .weightDiv {
+
+                .backpackTypeSelect {
+                    
+                    .spanan {
+                        
+                        .radioDiv {
+                            display: grid;
+                            column-gap: 10px;
+                            justify-content: center;
+                            
+                            span {
+                                color: black;
+                            }
+                        }                    
                     }
                 }
             }

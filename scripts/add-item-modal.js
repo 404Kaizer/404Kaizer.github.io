@@ -13,7 +13,10 @@ let selectedRow = null; // Armazena a linha selecionada
 const originalEditButtonText = editButton.textContent;
 const originalDeleteButtonText = deleteButton.textContent;
 
-openModalButton.addEventListener('click', openModal);
+openModalButton.addEventListener('click', function() {
+    checkOverload()
+    openModal();
+});
 cancelEditButton.addEventListener('click', closeModal);
 
 // Função para abrir o modal
@@ -121,7 +124,6 @@ deleteButton.addEventListener('click', function() {
         }
         updateButtonState(); // Atualiza estado dos botões após deletar
     }
-    sumThirdColumn();
 });
 
 editButton.addEventListener('click', function() {
@@ -130,7 +132,6 @@ editButton.addEventListener('click', function() {
         editButton.textContent = editEnabled ? 'Cancel Edit' : 'Edit';
         updateButtonState(); // Atualiza estado dos botões após editar
     }
-    sumThirdColumn();
 });
 
 // Delegação de eventos para seleção, edição e exclusão de linhas
@@ -174,8 +175,6 @@ itemTable.addEventListener('click', function(event) {
         }
         resetButtonState();
     }
-
-    sumThirdColumn();
 });
 
 // Adiciona destaque nas linhas no modo de edição
@@ -244,7 +243,3 @@ function resetButtonState() {
     editButton.disabled = false;
     deleteButton.disabled = false;
 }
-
-// Inicializa o estado dos botões na primeira execução
-updateButtonState();
-sumThirdColumn();

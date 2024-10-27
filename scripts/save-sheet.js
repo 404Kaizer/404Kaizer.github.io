@@ -66,7 +66,8 @@ const ids = [
     "skill25", "skill26", "editableArea3", "editableArea4", "editableArea6", "editableArea7", 
     "editableArea8", "editableArea9", "editableArea10", "editableArea11", "editableArea12", 
     "coin1", "coin2", "coin3", "weight1", "weight2", "editableArea1", "editableArea2", 
-    "editableArea", "lifeStatusText", "sanityStatusText", "energyStatusText"
+    "editableArea", "lifeStatusText", "sanityStatusText", "energyStatusText", "backpackType1",
+    "backpackType2", "backpackType3"
 ];
 
 // Função para capturar o valor dos elementos de diferentes tipos
@@ -138,6 +139,38 @@ function saveCharacterSheet() {
         console.error("Elemento com ID 'charName' não encontrado.");
     }
 }
+
+const textAreaIDs = ["textArea1", "textArea2", "textArea3", "textArea4", "textArea5", "textArea6", "backgroundArea"];
+
+// Função que insere o hífen em uma linha vazia ao pressionar Enter
+function handleEnterWithDash(event) {
+    if (event.key === "Enter") {
+        const textarea = event.target;
+        const cursorPos = textarea.selectionStart;
+
+        // Obtém o conteúdo da linha antes do cursor
+        const textBefore = textarea.value.substring(0, cursorPos);
+        const lastLine = textBefore.split("\n").pop();
+
+        // Se a linha anterior está vazia, insere "-"
+        if (lastLine.trim() === "") {
+            event.preventDefault();
+            const textAfter = textarea.value.substring(cursorPos);
+
+            // Insere "-" antes da quebra de linha e move o cursor
+            textarea.value = textBefore + "-\n" + textAfter;
+            textarea.selectionStart = textarea.selectionEnd = cursorPos + 2;
+        }
+    }
+}
+
+// Adiciona o evento keydown para cada textarea pelo ID
+textAreaIDs.forEach(id => {
+    const textarea = document.getElementById(id);
+    if (textarea) {
+        textarea.addEventListener("keydown", handleEnterWithDash);
+    }
+});
 
 // Adiciona um evento de clique ao botão com ID 'saveSheet'
 document.getElementById('saveSheet').addEventListener('click', saveCharacterSheet);
