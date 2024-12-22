@@ -617,6 +617,7 @@ body input:hover {
 }
 #main #section3 #skillsDiv .powerAttSkillInput {
   width: 142.16px;
+  color: yellow !important;
 }
 #main #section3 #skillsDiv .attSkillInput, #main #section3 #skillsDiv .attInput {
   background-color: black;
@@ -720,6 +721,12 @@ body input:hover {
           user-select: none;
   font-weight: bold;
 }
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .dtSpanan {
+  height: 120px !important;
+}
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .dtSpanan #dtRadioDiv {
+  height: 100px;
+}
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan {
   display: none;
   background-color: white;
@@ -728,12 +735,25 @@ body input:hover {
   border-top: 0;
   padding: 7px 7px 0 7px;
   position: absolute;
+  width: 180px;
+  height: 165px;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv {
   display: grid;
   -moz-column-gap: 10px;
        column-gap: 10px;
   justify-content: center;
+  height: 150px;
+}
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv .skillBonusDiv {
+  display: flex;
+  gap: 10px;
+}
+#main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv .skillBonusDiv .skillBonus {
+  width: 40px;
+  text-align: center;
+  color: black;
+  font-size: 17px;
 }
 #main #section3 #skillsDiv #skills #skillsGridDiv .skillsGrid .spanan .radioDiv span {
   color: black;

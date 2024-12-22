@@ -153,71 +153,8 @@ function checkOverload(total) {
     weight1Element.style.color = "white"; // Cor normal
 }
 
-function showAlertBasedOnSelection() {
-    // Obtém o valor selecionado
-    const selectElement = document.getElementById('exhaustSelect');
-    const selectedValue = selectElement.value;
-
-    // Verifica o valor e exibe o alerta correspondente
-    switch (selectedValue) {
-        case '1':
-            alert('Você tem -2d em testes de perícia.');
-            break;
-        case '2':
-            alert('Você tem -2d em testes de perícia e deslocamento reduzido pela metade.');
-            break;
-        case '3':
-            alert('Você tem -2d em testes de perícia e em testes de ataque, e deslocamento reduzido pela metade.');
-            break;
-        case '4':
-            alert('Você tem -2d em testes de perícia e em testes de ataque, deslocamento e PV máximos reduzidos pela metade.');
-            break;
-        case '5':
-            alert('Você tem -2d em testes de perícia e em testes de ataque, deslocamento reduzido a 0 e PV máximos reduzidos pela metade.');
-            break;
-        case '6':
-            alert('Você está morto (Não há necessidade de teste contra a morte).');
-            break;
-        default:
-            // Nenhuma ação se for a opção 0 ou outro valor inválido
-            break;
-    }
-}
-
-// Adiciona o evento ao campo select para detectar a mudança de valor
-function addSelectOptionsListener() {
-    document.getElementById('exhaustSelect').addEventListener('change', showAlertBasedOnSelection);
-}
-
-function initCheckboxAlerts() {
-    // Função para exibir o alerta
-    function showAlert(message) {
-        alert(message);
-    }
-
-    // Função para adicionar os alertas a cada checkbox
-    function setupCheckboxAlert(checkboxId, message) {
-        const checkbox = document.getElementById(checkboxId);
-        
-        checkbox.addEventListener('change', function() {
-            if (checkbox.checked) {
-                showAlert(message);
-            }
-        });
-    }
-
-    // Adicionando os alertas para cada checkbox
-    setupCheckboxAlert('woundedCheck', 'Você recebe 3 níveis de exaustão até que seja tratado. Além disso, deve ser bem sucedido em um teste de Fortitude (DT 20) ou recebe a condição Sangrando.');
-    setupCheckboxAlert('dyeingCheck', 'Você recebe a condição Inconsciente e tem 3 chances pra sobreviver. Em cada turno seu, você deve rolar um teste de Vigor (DT 10), e deve ter 1 sucesso antes de 3 falhas, sendo cada falha é permanente.');
-    setupCheckboxAlert('terrorizedCheck', 'Por 1d4 rodadas você tem -1d em testes de perícia e rolagens de ataque enquanto estiver perto da sua fonte de medo, se houver alguma, e não pode se mover conscientemente para perto da mesma.');
-    setupCheckboxAlert('traumatizedCheck', 'O personagem adquire um trauma, fobia, compulsão ou amnésia temporariamente. Os efeitos causados duram por 1d10 dias.');
-    setupCheckboxAlert('insaneCheck', 'Você recebe a condição Aterrorizado e tem 3 chances pra não enlouquecer. Em cada turno seu, você deve rolar um teste de Vontade (DT 25), e deve ter 1 sucesso antes de 3 falhas, sendo cada falha é permanente.');
-}
-
 // Executa o código assim que a página carrega
 window.onload = function() {
-    initCheckboxAlerts();
-    addSelectOptionsListener();
     addEventListeners();
     addCharExpListener();
 };

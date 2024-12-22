@@ -118,6 +118,17 @@ let notesPage = () => {
     section6.style.display = "block";
 };
 
+let openCloseSkillStatus0 = () => {
+
+    if(document.getElementById("skillSpan0").innerHTML === "+") {
+        document.getElementById("skillSpan0").innerHTML = "X";
+        openCloseRadioDiv0.style.display = "flex";
+    } else {
+        document.getElementById("skillSpan0").innerHTML = "+";
+        openCloseRadioDiv0.style.display = "none";
+    }
+};
+
 let openCloseSkillStatus1 = () => {
 
     if(document.getElementById("skillSpan1").innerHTML === "+") {

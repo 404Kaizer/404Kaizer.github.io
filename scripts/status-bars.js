@@ -81,8 +81,16 @@ function updateBar(barId, statusTextId, current, max) {
 // Eventos para editar Vida Atual e Máxima
 document.getElementById("currentLifeBtn").addEventListener("click", () => {
     let current = Number(prompt("VIDA ATUAL:"));
+
     charStatus.life.current = current;
     updateBar('lifeBar', 'lifeStatusText', charStatus.life.current, charStatus.life.max);
+
+    if (current <= 0) {
+        document.getElementById("dyeingCheck").checked = true;
+        alert('VOCÊ ESTÁ MORRENDO!\n\nVocê recebe a condição Inconsciente e tem 3 chances pra sobreviver. Em cada turno seu, você deve rolar um teste de Vigor (DT 10), e deve ter 1 sucesso antes de 3 falhas, sendo cada falha é permanente.');
+    } else {
+        document.getElementById("dyeingCheck").checked = false;
+    }
 });
 
 document.getElementById("maxLifeBtn").addEventListener("click", () => {
@@ -109,6 +117,12 @@ document.getElementById("currentSanityBtn").addEventListener("click", () => {
     let current = Number(prompt("SANIDADE ATUAL:"));
     charStatus.sanity.current = current;
     updateBar('sanityBar', 'sanityStatusText', charStatus.sanity.current, charStatus.sanity.max);
+    if (current <= 0) {
+        document.getElementById("insaneCheck").checked = true;
+        alert('VOCÊ ESTÁ ENLOUQUECENDO!\n\nVocê recebe a condição Aterrorizado e tem 3 chances pra não enlouquecer. Em cada turno seu, você deve rolar um teste de Vontade (DT 25), e deve ter 1 sucesso antes de 3 falhas, sendo cada falha é permanente.');
+    } else {
+        document.getElementById("insaneCheck").checked = false;
+    }
 });
 
 document.getElementById("maxSanityBtn").addEventListener("click", () => {
@@ -116,3 +130,69 @@ document.getElementById("maxSanityBtn").addEventListener("click", () => {
     charStatus.sanity.max = max;
     updateBar('sanityBar', 'sanityStatusText', charStatus.sanity.current, charStatus.sanity.max);
 });
+
+function showAlertBasedOnSelection() {
+    // Obtém o valor selecionado
+    const selectElement = document.getElementById('exhaustSelect');
+    const selectedValue = selectElement.value;
+
+    // Verifica o valor e exibe o alerta correspondente
+    switch (selectedValue) {
+        case '1':
+            alert('Você tem -2d em testes de perícia.');
+            break;
+        case '2':
+            alert('Você tem -2d em testes de perícia e deslocamento reduzido pela metade.');
+            break;
+        case '3':
+            alert('Você tem -2d em testes de perícia e em testes de ataque, e deslocamento reduzido pela metade.');
+            break;
+        case '4':
+            alert('Você tem -2d em testes de perícia e em testes de ataque, deslocamento e PV máximos reduzidos pela metade.');
+            break;
+        case '5':
+            alert('Você tem -2d em testes de perícia e em testes de ataque, deslocamento reduzido a 0 e PV máximos reduzidos pela metade.');
+            break;
+        case '6':
+            alert('Você está morto (Não há necessidade de teste contra a morte).');
+            break;
+        default:
+            // Nenhuma ação se for a opção 0 ou outro valor inválido
+            break;
+    }
+}
+
+// Adiciona o evento ao campo select para detectar a mudança de valor
+function addSelectOptionsListener() {
+    document.getElementById('exhaustSelect').addEventListener('change', showAlertBasedOnSelection);
+}
+
+function initCheckboxAlerts() {
+    // Função para exibir o alerta
+    function showAlert(message) {
+        alert(message);
+    }
+
+    // Função para adicionar os alertas a cada checkbox
+    function setupCheckboxAlert(checkboxId, message) {
+        const checkbox = document.getElementById(checkboxId);
+        
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                showAlert(message);
+            }
+        });
+    }
+
+    // Adicionando os alertas para cada checkbox
+    setupCheckboxAlert('woundedCheck', 'VOCÊ ESTÁ GRAVEMENTE FERIDO!\n\nVocê recebe 3 níveis de exaustão até que seja tratado. Além disso, deve ser bem sucedido em um teste de Fortitude (DT 20) ou recebe a condição Sangrando.');
+    setupCheckboxAlert('dyeingCheck', 'VOCÊ ESTÁ MORRENDO!\n\nVocê recebe a condição Inconsciente e tem 3 chances pra sobreviver. Em cada turno seu, você deve rolar um teste de Vigor (DT 10), e deve ter 1 sucesso antes de 3 falhas, sendo cada falha é permanente.');
+    setupCheckboxAlert('terrorizedCheck', 'VOCÊ ESTÁ ATERRORIZADO!\n\nPor 1d4 rodadas você tem -1d em testes de perícia e rolagens de ataque enquanto estiver perto da sua fonte de medo, se houver alguma, e não pode se mover conscientemente para perto da mesma.');
+    setupCheckboxAlert('traumatizedCheck', 'VOCÊ ESTÁ TRAUMATIZADO!\n\nO personagem adquire um trauma, fobia, compulsão ou amnésia temporariamente. Os efeitos causados duram por 1d10 dias.');
+    setupCheckboxAlert('insaneCheck', 'VOCÊ ESTÁ ENLOUQUECENDO!\n\nVocê recebe a condição Aterrorizado e tem 3 chances pra não enlouquecer. Em cada turno seu, você deve rolar um teste de Vontade (DT 25), e deve ter 1 sucesso antes de 3 falhas, sendo cada falha é permanente.');
+}
+
+window.onload = function() {
+    initCheckboxAlerts();
+    addSelectOptionsListener();
+};

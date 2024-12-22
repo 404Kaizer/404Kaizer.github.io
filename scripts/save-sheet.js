@@ -63,9 +63,13 @@ const ids = [
     "skill0", "skill2", "skill3", "skill4", "skill5", "skill6", "skill7", "skill8", 
     "skill9", "skill10", "skill11", "skill12", "skill13", "skill14", "skill15", "skill16", 
     "skill17", "skill19", "skill20", "skill21", "skill22", "skill23", "skill24", 
-    "skill25", "skill26", "editableArea3", "editableArea4", "editableArea6", "editableArea7", 
-    "editableArea8", "editableArea9", "editableArea10", "editableArea11", "editableArea12", 
-    "coin1", "coin2", "coin3", "weight1", "weight2", "editableArea1", "editableArea2", 
+    "skill25", "skill26", "ritualSkill1", "ritualSkill2", "ritualSkill3", "dtBonus", "skillBonus2", 
+    "skillBonus3", "skillBonus4", "skillBonus5", "skillBonus6", "skillBonus7", "skillBonus8", "skillBonus9", 
+    "skillBonus10", "skillBonus11", "skillBonus12", "skillBonus13", "skillBonus14", "skillBonus15", 
+    "skillBonus16", "skillBonus17", "skillBonus19", "skillBonus20", "skillBonus21", "skillBonus22", 
+    "skillBonus23", "skillBonus24", "skillBonus25", "skillBonus26", "editableArea3", "editableArea4", 
+    "editableArea6", "editableArea7", "editableArea8", "editableArea9", "editableArea10", "editableArea11", 
+    "editableArea12", "coin1", "coin2", "coin3", "weight1", "weight2", "editableArea1", "editableArea2", 
     "editableArea", "lifeStatusText", "sanityStatusText", "energyStatusText", "backpackType1",
     "backpackType2", "backpackType3"
 ];

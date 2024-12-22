@@ -719,6 +719,7 @@ body {
 
             .powerAttSkillInput {
                 width: 142.16px;
+                color: yellow !important;;
             }
 
             .attSkillInput, .attInput {
@@ -831,6 +832,14 @@ body {
                             user-select: none;
                             font-weight: bold;
                         }
+
+                        .dtSpanan {
+                            height: 120px !important;
+
+                            #dtRadioDiv {
+                                height: 100px;
+                            }
+                        }
                         
                         .spanan {
                             display: none;
@@ -840,11 +849,26 @@ body {
                             border-top: 0;
                             padding: 7px 7px 0 7px;
                             position: absolute;
+                            width: 180px;
+                            height: 165px;
                             
                             .radioDiv {
                                 display: grid;
                                 column-gap: 10px;
                                 justify-content: center;
+                                height: 150px;
+
+                                .skillBonusDiv {
+                                    display: flex;
+                                    gap: 10px;
+
+                                    .skillBonus {
+                                        width: 40px;
+                                        text-align: center;
+                                        color: black;
+                                        font-size: 17px;
+                                    }
+                                }
                                 
                                 span {
                                     color: black;

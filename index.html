@@ -67,7 +67,7 @@
                 </div>
                 <div id="infoInput">
                     <div class="infoInputDiv"><span>* Nome:</span><input id="charName" type="text" name="name" placeholder="..." onchange="changeTitle()"></div>
-                    <div class="infoInputDiv"><span>Experiência:</span><input id="charExp" type="text" name="exp" placeholder="..."></div>
+                    <div class="infoInputDiv"><span>Experiência:</span><input id="charExp" type="text" name="exp" placeholder="..." onchange="setSkills()"></div>
                     <div class="infoInputDiv"><span>Ancestralidade e Sexo:</span><input id="charRaceSex" type="text" name="race" placeholder="..."></div>
                     <div class="infoInputDiv"><span>Arquétipo e Origem:</span><input id="charExpert" type="text" name="arch" placeholder="..."></div>
                     <div class="infoInputDiv"><span>Idade:</span><input id="charAge" type="text" name="age" placeholder="..."></div>
@@ -199,15 +199,15 @@
                         <div id="defType">
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Defesa</span>
-                                <div><input type="text" name="defense" id="defense" placeholder="10"></div>
+                                <div><input type="text" name="defense" id="defense" placeholder="10" disabled></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Bloqueio</span>
-                                <div><input type="text" name="block" id="block" placeholder="+0"></div>
+                                <div><input type="text" name="block" id="block" placeholder="+0" disabled></div>
                             </div>
                             <div class="statusSubDiv">
                                 <span class="statusSubSpan">Esquiva</span>
-                                <div><input type="text" name="dodge" id="dodge" placeholder="+0"></div>
+                                <div><input type="text" name="dodge" id="dodge" placeholder="+0" disabled></div>
                             </div>
                         </div>
                         <div id="dmgReductDiv">
@@ -234,7 +234,7 @@
                 </div>
                 <div id="textAreasDiv5">
                     <span>Acesso Rápido</span>
-                    <textarea id="textArea6" class="infoTextarea" placeholder="Acesso rápido a informações básicas sobre seus poderes, armas, rituais, equipamentos..."></textarea>
+                    <textarea id="textArea6" class="infoTextarea" placeholder="Acesso rápido a combos, informações rápidas sobre poderes, armas, rituais, equipamentos..."></textarea>
                 </div>
             </div>
             <div id="skillsDiv">
@@ -244,35 +244,35 @@
                         <div>
                             <span class="attSkillSpan">Força</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="str" id="strInput" placeholder="0"></div>
+                                <div><input class="attInput" type="text" name="str" id="strInput" placeholder="0" onchange="setSkills()"></div>
                                 <!--<div><input class="attInput" type="text" name="strMod" id="strModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Agilidade</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="agi" id="agiInput" placeholder="0"></div>
+                                <div><input class="attInput" type="text" name="agi" id="agiInput" placeholder="0" onchange="setSkills()"></div>
                                 <!--<div><input class="attInput" type="text" name="agiMod" id="agiModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Vigor</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="vig" id="vigInput" placeholder="0"></div>
+                                <div><input class="attInput" type="text" name="vig" id="vigInput" placeholder="0" onchange="setSkills()"></div>
                                 <!--<div><input class="attInput" type="text" name="vigMod" id="vigModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Inteligência</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="int" id="intInput" placeholder="0"></div>
+                                <div><input class="attInput" type="text" name="int" id="intInput" placeholder="0" onchange="setSkills()"></div>
                                 <!--<div><input class="attInput" type="text" name="intMod" id="intModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
                         <div>
                             <span class="attSkillSpan">Sabedoria</span>
                             <div class="attModGrid">
-                                <div><input class="attInput" type="text" name="wis" id="wisInput" placeholder="0"></div>
+                                <div><input class="attInput" type="text" name="wis" id="wisInput" placeholder="0" onchange="setSkills()"></div>
                                 <!--<div><input class="attInput" type="text" name="wisMod" id="wisModInput" placeholder="+0"></div>-->
                             </div>
                         </div>
@@ -295,8 +295,30 @@
                     </div>-->
                     <div id="skillsGridDiv">
                         <div class="skillsGrid">
+                            <span class="openSkillStatus" id="skillSpan0" onclick="openCloseSkillStatus0()">+</span>
                             <span>Poder de Rituais</span><span style="font-size: 12px;">(DT)</span>
-                            <input class="attSkillInput powerAttSkillInput" type="text" name="dt" id="skill0" placeholder="0">
+                            <div class="spanan spanRadioGrid dtSpanan" id="openCloseRadioDiv0">
+                                <!--<input type="checkbox" name="" id="skillCheck2" oninput="setSkills()">-->
+                                <div class="radioDiv" id="dtRadioDiv">
+                                    <div>
+                                        <input type="radio" name="ritualSkill" class="radio" id="ritualSkill1" onclick="setSkills()">
+                                        <span>Inteligencia</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="ritualSkill" class="radio" id="ritualSkill2" onclick="setSkills()">
+                                        <span>Sabedoria</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="ritualSkill" class="radio" id="ritualSkill3" onclick="setSkills()">
+                                        <span>Carisma</span>
+                                    </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="dtBonus" class="skillBonus" id="dtBonus" onchange="setSkills()">
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="attSkillInput powerAttSkillInput" type="text" name="dt" id="skill0" placeholder="0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <span class="openSkillStatus" id="skillSpan1" onclick="openCloseSkillStatus1()">+</span>
@@ -324,9 +346,13 @@
                                         <input type="radio" name="training1" class="radio" id="skillRadio73" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus2" class="skillBonus" id="skillBonus2" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill2" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill2" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <span class="openSkillStatus" id="skillSpan2" onclick="openCloseSkillStatus2()">+</span>                        
@@ -354,9 +380,13 @@
                                         <input type="radio" name="training2" class="radio" id="skillRadio74" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus3" class="skillBonus" id="skillBonus3" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill3" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill3" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <span class="openSkillStatus" id="skillSpan3" onclick="openCloseSkillStatus3()">+</span>
@@ -383,10 +413,14 @@
                                         <input type="radio" name="training3" class="radio" id="skillRadio75" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus4" class="skillBonus" id="skillBonus4" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
                             <!--<input type="checkbox" name="" id="skillCheck4" oninput="setSkills()">-->
-                            <input class="attSkillInput" type="text" name="" id="skill4" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill4" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <span class="openSkillStatus" id="skillSpan22" onclick="openCloseSkillStatus22()">+</span>
@@ -413,10 +447,14 @@
                                         <input type="radio" name="training22" class="radio" id="skillRadio76" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus24" class="skillBonus" id="skillBonus24" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
                             <!--<input type="checkbox" name="" id="skillCheck4" oninput="setSkills()">-->
-                            <input class="attSkillInput" type="text" name="" id="skill24" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill24" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck5" oninput="setSkills()">-->
@@ -444,9 +482,13 @@
                                         <input type="radio" name="training4" class="radio" id="skillRadio77" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus5" class="skillBonus" id="skillBonus5" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill5" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill5" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck6" oninput="setSkills()">-->
@@ -474,9 +516,13 @@
                                         <input type="radio" name="training5" class="radio" id="skillRadio78" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus6" class="skillBonus" id="skillBonus6" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill6" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill6" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck7" oninput="setSkills()">-->
@@ -504,9 +550,13 @@
                                         <input type="radio" name="training6" class="radio" id="skillRadio79" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus7" class="skillBonus" id="skillBonus7" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill7" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill7" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck8" oninput="setSkills()">-->
@@ -534,9 +584,13 @@
                                         <input type="radio" name="training7" class="radio" id="skillRadio80" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus8" class="skillBonus" id="skillBonus8" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill8" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill8" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck9" oninput="setSkills()">-->
@@ -564,9 +618,13 @@
                                         <input type="radio" name="training8" class="radio" id="skillRadio81" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus9" class="skillBonus" id="skillBonus9" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill9" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill9" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck10" oninput="setSkills()"-->
@@ -594,9 +652,13 @@
                                         <input type="radio" name="training9" class="radio" id="skillRadio82" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus10" class="skillBonus" id="skillBonus10" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill10" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill10" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck11" oninput="setSkills()"-->
@@ -624,9 +686,13 @@
                                         <input type="radio" name="training10" class="radio" id="skillRadio83" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus11" class="skillBonus" id="skillBonus11" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill11" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill11" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck12" oninput="setSkills()"-->
@@ -654,9 +720,13 @@
                                         <input type="radio" name="training11" class="radio" id="skillRadio84" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus12" class="skillBonus" id="skillBonus12" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill12" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill12" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck12" oninput="setSkills()"-->
@@ -684,9 +754,13 @@
                                         <input type="radio" name="training24" class="radio" id="skillRadio85" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus26" class="skillBonus" id="skillBonus26" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill26" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill26" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck13" oninput="setSkills()"-->
@@ -714,9 +788,13 @@
                                         <input type="radio" name="training12" class="radio" id="skillRadio86" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus13" class="skillBonus" id="skillBonus13" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill13" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill13" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck14" oninput="setSkills()"-->
@@ -744,9 +822,13 @@
                                         <input type="radio" name="training13" class="radio" id="skillRadio87" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus14" class="skillBonus" id="skillBonus14" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill14" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill14" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck15" oninput="setSkills()"-->
@@ -774,9 +856,13 @@
                                         <input type="radio" name="training14" class="radio" id="skillRadio88" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus15" class="skillBonus" id="skillBonus15" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill15" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill15" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck16" oninput="setSkills()"-->
@@ -804,9 +890,13 @@
                                         <input type="radio" name="training15" class="radio" id="skillRadio89" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus16" class="skillBonus" id="skillBonus16" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill16" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill16" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck17" oninput="setSkills()"-->
@@ -834,9 +924,13 @@
                                         <input type="radio" name="training16" class="radio" id="skillRadio90" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus17" class="skillBonus" id="skillBonus17" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill17" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill17" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck19" oninput="setSkills()"-->
@@ -864,9 +958,13 @@
                                         <input type="radio" name="training17" class="radio" id="skillRadio91" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus19" class="skillBonus" id="skillBonus19" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill19" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill19" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck19" oninput="setSkills()"-->
@@ -894,9 +992,13 @@
                                         <input type="radio" name="training23" class="radio" id="skillRadio92" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus25" class="skillBonus" id="skillBonus25" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill25" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill25" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck20" oninput="setSkills()"-->
@@ -924,9 +1026,13 @@
                                         <input type="radio" name="training18" class="radio" id="skillRadio93" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus20" class="skillBonus" id="skillBonus20" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill20" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill20" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck21" oninput="setSkills()"-->
@@ -954,9 +1060,13 @@
                                         <input type="radio" name="training19" class="radio" id="skillRadio94" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus21" class="skillBonus" id="skillBonus21" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill21" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill21" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck22" oninput="setSkills()"-->
@@ -984,9 +1094,13 @@
                                         <input type="radio" name="training20" class="radio" id="skillRadio95" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus22" class="skillBonus" id="skillBonus22" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill22" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill22" placeholder="+0" disabled>
                         </div>
                         <div class="skillsGrid">
                             <!--<input type="checkbox" name="" id="skillCheck23" oninput="setSkills()"-->
@@ -1014,9 +1128,13 @@
                                         <input type="radio" name="training21" class="radio" id="skillRadio96" onclick="setSkills()">
                                         <span>Mestre +20</span>
                                     </div>
+                                    <div class="skillBonusDiv">
+                                        <span>Outros Bônus</span>
+                                        <input type="number" name="skillBonus23" class="skillBonus" id="skillBonus23" onchange="setSkills()">
+                                    </div>
                                 </div>
                             </div>
-                            <input class="attSkillInput" type="text" name="" id="skill23" placeholder="+0">
+                            <input class="attSkillInput" type="text" name="" id="skill23" placeholder="+0" disabled>
                         </div>
                     </div>
                 </div>
