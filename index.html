@@ -10,24 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="scripts/main-script.js" defer></script>
     <!--<<script src="scripts/sheet-deleting.js" defer></script>
     <script src="scripts/sheet-id-change.js" defer></script>
     script src="scripts/sheet-saving.js" defer></script>
     <script src="scripts/sheet-selection.js" defer></script>-->
-    <script src="scripts/set-skills.js" defer></script>
-    <script src="scripts/save-sheet.js" defer></script>
-    <script src="scripts/load-sheet.js" defer></script>
-    <script src="scripts/update-defense-and-skills-stats.js" defer></script>
-    <script src="scripts/status-bars.js" defer></script>
-    <script src="scripts/combat-section.js" defer></script>
-    <script src="scripts/img-selector.js" defer></script>
-    <script src="scripts/change-title-mobile-only.js" defer></script>
-    <script src="scripts/char-secondary-infos.js" defer></script>
-    <script src="scripts/hamburguer-menu.js" defer></script>
-    <script src="scripts/html-open-and-close-pages.js" defer></script>
-    <script src="scripts/text-editor-scripts.js" defer></script>
-    <script src="scripts/add-item-modal.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -67,7 +53,7 @@
                 </div>
                 <div id="infoInput">
                     <div class="infoInputDiv"><span>* Nome:</span><input id="charName" type="text" name="name" placeholder="..." onchange="changeTitle()"></div>
-                    <div class="infoInputDiv"><span>Experiência:</span><input id="charExp" type="text" name="exp" placeholder="..." onchange="setSkills(); addCharExpListener()"></div>
+                    <div class="infoInputDiv"><span>Experiência:</span><input id="charExp" type="text" name="exp" placeholder="..."></div>
                     <div class="infoInputDiv"><span>Ancestralidade e Sexo:</span><input id="charRaceSex" type="text" name="race" placeholder="..."></div>
                     <div class="infoInputDiv"><span>Arquétipo e Origem:</span><input id="charExpert" type="text" name="arch" placeholder="..."></div>
                     <div class="infoInputDiv"><span>Idade:</span><input id="charAge" type="text" name="age" placeholder="..."></div>
@@ -1636,5 +1622,20 @@
             <div class="headerImgDiv" id="navBtnDiv5" title="Página de Anotações" onclick="notesPage()"><img class="headerImgs" src="imgs/noteBlock.png" alt="Página de Anotações"></div>
         </nav>
     </footer>
+
+    <script src="scripts/main-script.js"></script>
+    <script src="scripts/set-skills.js"></script>
+    <script src="scripts/save-sheet.js"></script>
+    <script src="scripts/load-sheet.js"></script>
+    <script src="scripts/update-defense-and-skills-stats.js"></script>
+    <script src="scripts/status-bars.js"></script>
+    <script src="scripts/combat-section.js"></script>
+    <script src="scripts/img-selector.js"></script>
+    <script src="scripts/change-title-mobile-only.js"></script>
+    <script src="scripts/char-secondary-infos.js"></script>
+    <script src="scripts/hamburguer-menu.js"></script>
+    <script src="scripts/html-open-and-close-pages.js"></script>
+    <script src="scripts/text-editor-scripts.js"></script>
+    <script src="scripts/add-item-modal.js"></script>
 </body>
 </html>

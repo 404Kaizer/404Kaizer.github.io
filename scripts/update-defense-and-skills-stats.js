@@ -1,48 +1,62 @@
 function calculateDefense() {
-    // Coletando os valores dos campos
-    const armorDef = parseFloat(document.getElementById('armorDef').value) || 0;
-    const agiInput = parseFloat(document.getElementById('agiInput').value) || 0;
-    const energyPointsLimitInput = parseFloat(document.getElementById('energyPointsLimitInput').value) || 0;
-    const extraDef = parseFloat(document.getElementById('extraDef').value) || 0;
+    const armorDef = parseFloat(document.getElementById('armorDef')?.value) || 0;
+    const agiInput = parseFloat(document.getElementById('agiInput')?.value) || 0;
+    const energyPointsLimitInput = parseFloat(document.getElementById('energyPointsLimitInput')?.value) || 0;
+    const extraDef = parseFloat(document.getElementById('extraDef')?.value) || 0;
 
-    // Somando 10 aos valores coletados
     const totalDefense = 10 + armorDef + agiInput + energyPointsLimitInput + extraDef;
 
-    // Atribuindo o valor da somatória ao ID defense
-    document.getElementById('defense').value = totalDefense;
-}
-
-// Função para adicionar o evento de mudança aos campos
-function addEventListeners() {
-    const ids = ['armorDef', 'agiInput', 'energyPointsLimitInput', 'extraDef'];
-
-    ids.forEach(id => {
-        document.getElementById(id).addEventListener('input', calculateDefense);
-    });
-}
-
-function convertCharExpToNumber() {
-    // Obtém o valor do campo charExp
-    const charExpValue = document.getElementById('charExp').value;
-
-    // Remove o símbolo '%' e converte a string em número
-    const numericValue = parseFloat(charExpValue.replace('%', ''));
-
-    // Verifica se o valor é um número válido
-    if (!isNaN(numericValue)) {
-        // Armazena o valor convertido em uma variável
-        const energyPointsValue = numericValue/5;
-
-        // Atribui o valor ao campo energyPointsLimitInput
-        document.getElementById('energyPointsLimitInput').value = energyPointsValue;
+    const defenseElement = document.getElementById('defense');
+    if (defenseElement) {
+        defenseElement.value = totalDefense;
     } else {
-        return 0;
+        console.error("Elemento 'defense' não encontrado no DOM.");
     }
 }
 
-// Adiciona o evento de alteração no campo charExp
-function addCharExpListener() {
-    document.getElementById('charExp').addEventListener('input', convertCharExpToNumber);
+function convertCharExpToNumber() {
+    const charExpInput = document.getElementById('charExp');
+    if (!charExpInput) {
+        console.error("Elemento 'charExp' não encontrado.");
+        return;
+    }
+
+    const charExpValue = charExpInput.value.trim();
+    const numericValue = parseFloat(charExpValue.replace('%', ''));
+
+    if (!isNaN(numericValue)) {
+        const energyPointsValue = numericValue / 5;
+        const energyPointsInput = document.getElementById('energyPointsLimitInput');
+        if (energyPointsInput) {
+            energyPointsInput.value = energyPointsValue;
+        } else {
+            console.error("Elemento 'energyPointsLimitInput' não encontrado no DOM.");
+        }
+    } else {
+        console.warn("Valor inválido em 'charExp'.");
+    }
+}
+
+function addDefEventListeners() {
+    const ids = ['armorDef', 'agiInput', 'energyPointsLimitInput', 'extraDef', 'charExp'];
+
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('input', calculateDefense);
+        } else {
+            console.warn(`Elemento com ID '${id}' não encontrado.`);
+        }
+    });
+}
+
+function addExpEventListeners() {
+    const expElement = document.getElementById('charExp');
+    if (expElement) {
+        expElement.addEventListener('input', convertCharExpToNumber);
+    } else {
+        console.warn("Elemento 'charExp' não encontrado no DOM.");
+    }
 }
 
 let currentWeightValue = 0; // Variável global para armazenar o valor
@@ -154,10 +168,12 @@ function checkOverload(total) {
 }
 
 // Executa o código assim que a página carrega
-window.onload = function() {
-    addEventListeners();
-    addCharExpListener();
-};
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("Página carregada. Adicionando eventos...");
+    calculateDefense();
+    addDefEventListeners();
+    addExpEventListeners();
+});
 
 //let updateAttMods = () => {
 //   let strInput = document.getElementById("strInput").value;
