@@ -154,6 +154,8 @@ let setSkills = () => {
         document.getElementById("skill0").value = 10 + parseFloat(document.getElementById("wisInput").value || 0) + parseFloat(document.getElementById("energyPointsLimitInput").value || 0) + dtBonus;
     } else if (ritualSkill3 === true) {
         document.getElementById("skill0").value = 10 + parseFloat(document.getElementById("chaInput").value || 0) + parseFloat(document.getElementById("energyPointsLimitInput").value || 0) + dtBonus;
+    } else {
+        document.getElementById("skill0").value = 10;
     }
 
     if (radio1 === true) {
@@ -562,3 +564,22 @@ let updateDodge = () => {
         document.getElementById("dodge").value = "+" + document.getElementById("dodge").value;
     }
 }
+
+function addSkillsEventListeners() {
+    const ids = ['charExp', 'agiInput', 'strInput', 'chaInput', 'vigInput', 'wisInput', 'intInput', 'dtBonus'];
+
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('input', setSkills);
+        } else {
+            console.warn(`Elemento com ID '${id}' não encontrado.`);
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("Página carregada. Adicionando eventos...");
+    setSkills();
+    addSkillsEventListeners();
+});

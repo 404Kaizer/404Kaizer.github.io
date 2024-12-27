@@ -1,10 +1,9 @@
 function calculateDefense() {
     const armorDef = parseFloat(document.getElementById('armorDef')?.value) || 0;
     const agiInput = parseFloat(document.getElementById('agiInput')?.value) || 0;
-    const energyPointsLimitInput = parseFloat(document.getElementById('energyPointsLimitInput')?.value) || 0;
     const extraDef = parseFloat(document.getElementById('extraDef')?.value) || 0;
 
-    const totalDefense = 10 + armorDef + agiInput + energyPointsLimitInput + extraDef;
+    const totalDefense = 10 + armorDef + agiInput + extraDef;
 
     const defenseElement = document.getElementById('defense');
     if (defenseElement) {
